@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: "Introduction to Guides"
-description: "Step-by-step Kubernetes security guides and best practices."
+title: "Guides Introduction"
+description: "Introduction to Kubernetes Security Guides"
 ---
 
 # Introduction to Guides
