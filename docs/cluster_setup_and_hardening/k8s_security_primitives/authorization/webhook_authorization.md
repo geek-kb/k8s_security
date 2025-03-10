@@ -1,5 +1,5 @@
 ---
-title: Webhook Authorization in Kubernetes
+title: Webhook Authorization
 sidebar_position: 4
 ---
 

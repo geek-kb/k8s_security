@@ -1,5 +1,5 @@
 ---
-title: Attribute-Based Access Control (ABAC) in Kubernetes
+title: Attribute-Based Access Control (ABAC)
 sidebar_position: 2
 ---
 
