@@ -1,0 +1,9 @@
+{
+  "label": "Common Attack Vectors",
+  "collapsed": true,
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore examples of common Kubernetes attack vectors."
+  }
+}
