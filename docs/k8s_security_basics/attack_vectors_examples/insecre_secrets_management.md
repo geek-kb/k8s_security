@@ -23,7 +23,7 @@ kubectl get secrets -o yaml
 The **attacker** extracts and **decodes** a **Base64-encoded secret**:
 
 ```bash
-kubectl get secret db-secret -o jsonpath='{.data.password}' | base64 --decode
+kubectl get secret db-secret -o go-template='{{.data.password|base64decode}}'
 ```
 
 ### 2. Access Sensitive Services Using Exposed Credentials
