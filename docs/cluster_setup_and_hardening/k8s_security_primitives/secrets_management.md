@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 7
 title: "Secrets Management"
 description: "Securely manage sensitive data in Kubernetes using Secrets and best practices for data encryption."
 ---
