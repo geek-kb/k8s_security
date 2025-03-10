@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 1
 title: Compromised API Server
 description: Exploiting Kubernetes API server vulnerabilities and best practices for securing API endpoints.
 ---
