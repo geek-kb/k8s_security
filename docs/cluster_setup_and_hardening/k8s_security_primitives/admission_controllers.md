@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 8
 title: "Admission Controllers"
 description: "Learn how Admission Controllers in Kubernetes enforce policies and enhance cluster security."
 ---
