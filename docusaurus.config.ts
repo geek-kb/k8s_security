@@ -18,9 +18,9 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/docs',
           path: 'docs',
+          routeBasePath: 'docs',
+          sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
         },
         blog: {
@@ -56,7 +56,7 @@ const config: Config = {
       },
       items: [
         { to: '/docs/intro', label: 'Docs', position: 'left' },
-        { to: '/guides/intro', label: 'How-Tos', position: 'left' },
+        { to: '/guides/intro', label: 'Guides', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/geek-kb/k8s_security',
@@ -73,8 +73,8 @@ const config: Config = {
           items: [{ label: 'Introduction', to: '/docs/intro' }],
         },
         {
-          title: 'How-Tos',
-          items: [{ label: 'How-Tos Introduction', to: '/guides/intro' }],
+          title: 'Guides',
+          items: [{ label: 'Guides Introduction', to: '/guides/intro' }],
         },
         {
           title: 'Community',
