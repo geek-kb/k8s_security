@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: Understanding the Kubernetes Attack Surface
 description: A comprehensive guide to identifying and mitigating Kubernetes attack surfaces for enhanced cluster security.
 ---

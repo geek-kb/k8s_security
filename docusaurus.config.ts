@@ -19,6 +19,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/docs',
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
         },
         blog: {
