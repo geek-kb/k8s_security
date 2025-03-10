@@ -1,5 +1,5 @@
 ---
-title: Understanding CIS Benchmarks for Kubernetes
+title: "CIS Benchmarks for Kubernetes"
 sidebar_position: 2
 ---
 
