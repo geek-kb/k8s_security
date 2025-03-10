@@ -24,8 +24,12 @@ const config: Config = {
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: false,
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
+          routeBasePath: 'blog',
+          blogSidebarTitle: 'Under Construction',
+          blogSidebarCount: 'ALL',
+          postsPerPage: 1,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
