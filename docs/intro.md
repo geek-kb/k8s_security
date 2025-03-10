@@ -1,47 +1,56 @@
 ---
 sidebar_position: 1
+title: Introduction to K8s Security
 ---
 
-# Tutorial Intro
+# Kubernetes Security Best Practices
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to **K8s Security**, a comprehensive resource dedicated to mastering security best practices in Kubernetes environments. This site is designed to help developers, DevOps engineers, and Kubernetes administrators implement robust security measures following the principles of the **Certified Kubernetes Security Specialist (CKS)** certification.
 
-## Getting Started
+---
 
-Get started by **creating a new site**.
+## 🚀 **About This Project**
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+The **K8s Security** site provides a series of in-depth articles covering all aspects of securing Kubernetes clusters, including:
 
-### What you'll need
+- **Cluster Setup and Hardening:** Secure your Kubernetes infrastructure from the ground up.
+- **Application Security:** Implement security best practices at the pod and container level.
+- **Network Policies:** Isolate and control traffic within your cluster.
+- **Data Protection:** Manage secrets and ensure data is encrypted at rest and in transit.
+- **Monitoring and Auditing:** Detect and respond to potential security threats.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+---
 
-## Generate a new site
+## 🧠 **Key Topics Covered**
 
-Generate a new Docusaurus site using the **classic template**.
+1. **API Server Security:** Restrict access and secure API communications.
+2. **RBAC (Role-Based Access Control):** Enforce the principle of least privilege.
+3. **Pod Security Policies (PSP) and Pod Security Standards (PSS):** Apply policies to prevent privilege escalation.
+4. **Network Policies:** Control traffic flow using tools like **Calico** or **Cilium**.
+5. **Runtime Security:** Monitor for anomalies using tools like **Falco** and **kube-bench**.
 
-The classic template will automatically be added to your project after you run the command:
+---
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## 🛠️ **Who Should Use This Site?**
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- **DevOps Engineers:** Looking to enhance the security of Kubernetes environments.
+- **Developers:** Implementing secure practices in microservices and containerized applications.
+- **CKS Candidates:** Preparing for the **Certified Kubernetes Security Specialist** exam.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+---
 
-## Start your site
+## 🌐 **How to Use This Site**
 
-Run the development server:
+- Navigate through the **Documentation** section to find **step-by-step guides**.
+- Check out the **Blog** for **insights and real-world scenarios**.
+- Use the **Search** feature to quickly find relevant **best practices** and **examples**.
 
-```bash
-cd my-website
-npm run start
-```
+---
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## 🎯 **Get Involved**
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+Have questions or want to contribute? Visit our **GitHub repository**:
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+[github.com/geek-kb/k8s_security](https://github.com/geek-kb/k8s_security)
+
+Let's build a **safer Kubernetes ecosystem** together!
