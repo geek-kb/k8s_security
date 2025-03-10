@@ -1,5 +1,5 @@
 ---
-title: Pod Security Standards (PSS) in Kubernetes
+title: Pod Security Standards (PSS)
 sidebar_position: 6
 ---
 
