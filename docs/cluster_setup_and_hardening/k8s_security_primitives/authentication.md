@@ -1,5 +1,5 @@
 ---
-title: Authentication in Kubernetes
+title: Authentication
 sidebar_position: 1
 ---
 

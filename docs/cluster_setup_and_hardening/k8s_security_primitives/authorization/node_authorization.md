@@ -1,5 +1,5 @@
 ---
-title: Node Authorization in Kubernetes
+title: Node Authorization
 sidebar_position: 3
 ---
 
