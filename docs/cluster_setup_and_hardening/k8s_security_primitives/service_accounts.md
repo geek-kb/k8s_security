@@ -3,7 +3,7 @@ title: Service Accounts in Kubernetes
 sidebar_position: 4
 ---
 
-# Service Accounts in Kubernetes
+# Service Accounts
 
 ## 🔍 **What is a Service Account?**
 
