@@ -1,5 +1,6 @@
 {
   "label": "Minimize Microservice Vulnerabilities",
   "collapsible": true,
+  "position": 4,
   "collapsed": false
 }

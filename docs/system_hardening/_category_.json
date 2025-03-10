@@ -1,5 +1,6 @@
 {
   "label": "System Hardening",
   "collapsible": true,
+  "position": 3,
   "collapsed": false
 }
