@@ -1,5 +1,5 @@
 ---
-title: "Certificates in Kubernetes"
+title: Certificates
 description: "Understand the role of certificates in Kubernetes, including client certificates, server certificates, and automating certificate management with Cert-Manager."
 ---
 
