@@ -20,6 +20,7 @@ const config: Config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/docs',
+          path: 'docs',
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
         },
         blog: {
@@ -29,6 +30,19 @@ const config: Config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      },
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'guides',
+        path: 'guides',
+        routeBasePath: 'guides',
+        sidebarPath: require.resolve('./sidebarsGuides.js'),
+        editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
       },
     ],
   ],
