@@ -73,7 +73,7 @@ resources:
 
 ### 2. Use External Secret Management Solutions
 
-**Issue:** Kubernetes Secrets alone do not provide advanced security features.<br>
+**Issue:** Kubernetes Secrets alone do not provide advanced security features.<br/>
 **Fix:** Integrate with external secret management tools like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault.
 
 #### Example of Using External Secrets with Kubernetes
@@ -97,7 +97,7 @@ spec:
 
 ### 3. Limit Access to Secrets with RBAC
 
-**Issue:** Lack of access controls allows unauthorized access to secrets.<br>
+**Issue:** Lack of access controls allows unauthorized access to secrets.<br/>
 **Fix:** Implement Role-Based Access Control (RBAC) to restrict secret access.
 
 #### Example of RBAC Policy for Secret Access
