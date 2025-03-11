@@ -1,7 +1,7 @@
 ---
 title: "Egress Control in Kubernetes"
 description: "Restrict and monitor outbound traffic from Kubernetes workloads to prevent unauthorized data transfers and malware communication."
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Egress Control in Kubernetes
