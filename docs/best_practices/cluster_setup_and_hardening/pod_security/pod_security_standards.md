@@ -1,6 +1,6 @@
 ---
 title: "Pod Security Standards (PSS)"
-sidebar_position: 7
+sidebar_position: 1
 description: "Learn how Kubernetes Pod Security Standards (PSS) enforce security controls for workloads and replace the deprecated Pod Security Policies (PSP)."
 ---
 
