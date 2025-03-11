@@ -22,7 +22,7 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 
 ### 1. Secure Kubelet Communication
 
-**Issue:** Unencrypted communication to and from the Kubelet can lead to data exposure.<br>
+**Issue:** Unencrypted communication to and from the Kubelet can lead to data exposure.<br/>
 **Fix:** Ensure all communications are **encrypted** using **TLS certificates**.
 
 ```yaml
@@ -34,7 +34,7 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 
 ### 2. Enable Authentication and Authorization
 
-**Issue:** Unauthenticated and unauthorized access to the Kubelet API can lead to cluster compromise.<br>
+**Issue:** Unauthenticated and unauthorized access to the Kubelet API can lead to cluster compromise.<br/>
 **Fix:** Require **client certificates** and enable **Webhook Authorization**.
 
 ```yaml
@@ -46,7 +46,7 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 
 ### 3. Disable Anonymous Access
 
-**Issue:** Allowing anonymous access can lead to unauthorized API calls.<br>
+**Issue:** Allowing anonymous access can lead to unauthorized API calls.<br/>
 **Fix:** Prevent unauthorized users from accessing the **Kubelet API**.
 
 ```bash
@@ -55,7 +55,7 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 
 ### 4. Restrict Kubelet API Access
 
-**Issue:** Exposing the Kubelet API to external networks increases the risk of attacks.<br>
+**Issue:** Exposing the Kubelet API to external networks increases the risk of attacks.<br/>
 **Fix:** Limit the **Kubelet API** exposure to **localhost** or the **internal network** only.
 
 ```bash
@@ -65,7 +65,7 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 
 ### 5. Enforce Pod Security Standards
 
-**Issue:** Insecure pod configurations can lead to privilege escalation.<br>
+**Issue:** Insecure pod configurations can lead to privilege escalation.<br/>
 **Fix:** Use **Pod Security Policies (PSP)** or **Pod Security Admission** to restrict **privileged containers**.
 
 ```yaml
@@ -85,7 +85,7 @@ spec:
 
 ### 6. Limit Kubelet Permissions
 
-**Issue:** Excessive permissions can lead to unauthorized actions within the cluster.<br>
+**Issue:** Excessive permissions can lead to unauthorized actions within the cluster.<br/>
 **Fix:** Apply **Role-Based Access Control (RBAC)** to limit Kubelet API permissions.
 
 ```yaml
@@ -102,7 +102,7 @@ rules:
 
 ### 7. Regularly Update and Patch the Kubelet
 
-**Issue:** Outdated Kubelet versions may contain known vulnerabilities.<br>
+**Issue:** Outdated Kubelet versions may contain known vulnerabilities.<br/>
 **Fix:** Keep the **Kubelet** updated and apply **security patches** promptly.
 
 ---
@@ -111,7 +111,7 @@ rules:
 
 ### 1. Pod Security Admission (PSA)
 
-**Issue:** Deprecated **Pod Security Policies (PSP)** need modern alternatives.<br>
+**Issue:** Deprecated **Pod Security Policies (PSP)** need modern alternatives.<br/>
 **Fix:** Use **Pod Security Admission** to enforce security standards.
 
 ```yaml
@@ -128,7 +128,7 @@ metadata:
 
 ### 2. Enable Kubelet Audit Logs
 
-**Issue:** Lack of auditing makes it difficult to track API requests and detect anomalies.<br>
+**Issue:** Lack of auditing makes it difficult to track API requests and detect anomalies.<br/>
 **Fix:** Enable **Kubelet auditing** to monitor activities.
 
 ```bash
@@ -138,7 +138,7 @@ metadata:
 
 ### 3. Limit Resource Consumption
 
-**Issue:** Unrestricted resource usage can lead to resource exhaustion attacks.<br>
+**Issue:** Unrestricted resource usage can lead to resource exhaustion attacks.<br/>
 **Fix:** Set **resource limits** on the **Kubelet**.
 
 ```bash
