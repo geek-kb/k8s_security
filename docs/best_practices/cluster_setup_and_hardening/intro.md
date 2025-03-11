@@ -10,13 +10,13 @@ A well-secured Kubernetes cluster begins with **proper setup and hardening**. Th
 
 ## Topics Covered
 
+- [Understanding CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks)
 - [CIS Benchmark for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_for_k8s)
 - [Using kube-bench for CIS Compliance](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_kube_bench)
-- [Kubelet Security Hardening](/docs/best_practices/cluster_setup_and_hardening/kubelet_security)
-- [Network Policies and Isolation](/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies)
 - [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)
+- [Kubelet Security Hardening](/docs/best_practices/cluster_setup_and_hardening/kubelet_security)
+- [Network Security](/docs/best_practices/cluster_setup_and_hardening/network_security/intro)
 - [Managing Secrets Securely](/docs/best_practices/cluster_setup_and_hardening/secrets_management)
-- [Understanding CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks)
 
 ### **Where to Go Next?**
 
