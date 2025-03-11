@@ -6,13 +6,13 @@ description: Exploiting an exposed Kubernetes Dashboard and implementing best pr
 
 # Exposed Kubernetes Dashboard
 
-The **Kubernetes Dashboard** is a powerful tool for **managing Kubernetes clusters**, but if **improperly secured**, it can become a significant **attack vector**. An **exposed dashboard** with **admin privileges** and **no authentication** can allow an attacker to **gain full control** over the cluster.
+The Kubernetes Dashboard is a web-based interface for managing Kubernetes clusters. However, if not properly secured, it can become a significant attack vector. An exposed dashboard with admin privileges and no authentication can allow an attacker to gain full control over the cluster.
 
 ---
 
-## 🚩 Exploitation Steps: Exposed Dashboard
+## Exploitation Steps: Exposed Dashboard
 
-An attacker scans for an **open Kubernetes Dashboard** using a **port scan**:
+An attacker can identify an open Kubernetes Dashboard by performing a port scan:
 
 ```bash
 nmap -p 30000-32767 <cluster-ip>
@@ -20,7 +20,7 @@ nmap -p 30000-32767 <cluster-ip>
 
 ### 1. Access the Dashboard Without Authentication
 
-The **attacker** finds the **dashboard** on a **NodePort** and **opens it** in a **browser**:
+The attacker locates the dashboard on a NodePort and accesses it through a web browser:
 
 ```bash
 http://<cluster-ip>:<node-port>/
@@ -28,7 +28,7 @@ http://<cluster-ip>:<node-port>/
 
 ### 2. Execute Commands in the Cluster
 
-The **attacker** uses the **dashboard's terminal** to **execute commands** in a **privileged pod**:
+The attacker uses the dashboard's terminal to execute commands in a privileged pod:
 
 ```bash
 kubectl exec -it privileged-pod -- /bin/sh
@@ -36,7 +36,7 @@ kubectl exec -it privileged-pod -- /bin/sh
 
 ### 3. Create a New Admin User
 
-The **attacker** creates a **new admin ServiceAccount** and **binds it** to the **cluster-admin role**:
+The attacker creates a new admin ServiceAccount and binds it to the cluster-admin role:
 
 ```yaml
 apiVersion: v1
@@ -59,20 +59,20 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-### ✅ Result
+### Result
 
-The attacker gains **admin access** to the cluster, allowing them to **deploy malicious workloads**, **exfiltrate data**, or **destroy resources**.
+The attacker gains admin access to the cluster, enabling them to deploy malicious workloads, exfiltrate data, or destroy resources.
 
 ---
 
-## 🛡️ Mitigation Techniques and Fixes
+## Mitigation Techniques and Fixes
 
 ### 1. Avoid Exposing the Dashboard Publicly
 
-- **Issue:** Dashboard is accessible without authentication over a **NodePort**.
-- **Fix:** Use a **secure network proxy** or **port-forwarding** instead.
+**Issue:** The dashboard is accessible without authentication over a NodePort.
+**Fix:** Use a secure network proxy or port-forwarding instead.
 
-#### ✅ Secure Access with Port Forwarding
+#### Secure Access with Port Forwarding
 
 ```bash
 kubectl proxy
@@ -82,10 +82,10 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 
 ### 2. Enforce Authentication
 
-- **Issue:** The dashboard **does not require login**, allowing **unauthorized access**.
-- **Fix:** Enable **token-based authentication** and **disable guest access**.
+**Issue:** Lack of authentication allows unauthorized access.
+**Fix:** Implement token-based authentication and disable guest access.
 
-#### ✅ Enable Authentication via Service Account Token
+#### Enable Authentication via Service Account Token
 
 ```bash
 kubectl create serviceaccount dashboard-admin -n kube-system
@@ -98,10 +98,10 @@ kubectl describe secret <dashboard-admin-token> -n kube-system
 
 ### 3. Restrict Dashboard Privileges
 
-- **Issue:** Dashboard runs with **cluster-admin privileges**, exposing the **entire cluster** to risk.
-- **Fix:** Limit the **ServiceAccount permissions** using **RBAC**.
+**Issue:** The dashboard runs with cluster-admin privileges, exposing the entire cluster to risk.
+**Fix:** Limit the ServiceAccount permissions using RBAC.
 
-#### ✅ Create a Restricted Role for the Dashboard
+#### Create a Restricted Role for the Dashboard
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -131,10 +131,10 @@ roleRef:
 
 ---
 
-## ✅ Key Takeaway
+## Conclusion
 
-To secure the **Kubernetes Dashboard**:
+To secure the Kubernetes Dashboard:
 
-- **Never expose** the dashboard **directly to the internet**.
-- Always **enforce authentication** using **Service Account tokens**.
-- Apply **principle of least privilege** by assigning **restricted roles** to the dashboard.
+- Never expose the dashboard directly to the internet.
+- Always enforce authentication using Service Account tokens.
+- Apply the principle of least privilege by assigning restricted roles to the dashboard.
