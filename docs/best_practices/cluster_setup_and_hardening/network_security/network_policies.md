@@ -6,6 +6,8 @@ description: "Explore how Network Policies in Kubernetes control traffic flow an
 
 # Network Policies
 
+**Required knowledge for the CKS certification.**
+
 **Network Policies** in **Kubernetes** are a fundamental security mechanism used to **control traffic flow** between **pods** and **external services**. They provide **network segmentation** and help enforce security policies within the **cluster**.
 
 ## How Network Policies Work
@@ -31,8 +33,8 @@ metadata:
 spec:
   podSelector: {}
   policyTypes:
-  - Ingress
-  - Egress
+    - Ingress
+    - Egress
 ```
 
 ## Example: Allow Ingress from Specific Pods
@@ -50,15 +52,15 @@ spec:
     matchLabels:
       app: backend
   policyTypes:
-  - Ingress
+    - Ingress
   ingress:
-  - from:
-    - podSelector:
-        matchLabels:
-          app: frontend
-    ports:
-    - protocol: TCP
-      port: 80
+    - from:
+        - podSelector:
+            matchLabels:
+              app: frontend
+      ports:
+        - protocol: TCP
+          port: 80
 ```
 
 ## Key Takeaways

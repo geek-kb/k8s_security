@@ -6,7 +6,11 @@ description: "An overview of Kubernetes security best practices, covering attack
 
 # Introduction to Kubernetes Security
 
-Welcome to **K8s Security**, a resource created by **Itai Ganot** to provide comprehensive guides and best practices for securing Kubernetes environments. This site is dedicated to helping developers, DevOps engineers, and Kubernetes administrators implement robust security measures aligned with the principles of the **Certified Kubernetes Security Specialist (CKS)** certification.
+**Required knowledge for the CKS certification.**
+
+Welcome to **K8s Security**, a resource created by **Itai Ganot** to provide comprehensive guides and best practices for securing Kubernetes environments.
+This site is dedicated to helping developers, DevOps engineers, and Kubernetes administrators implement robust security measures aligned with the principles of the **Certified Kubernetes Security Specialist (CKS)** certification and more.
+The topics that are relevant for the CKS certification are marked as such.
 
 The information is up to date with the latest Kubernetes versions and security tools based on the CKS curriculum.
 

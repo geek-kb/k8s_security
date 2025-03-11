@@ -5,26 +5,32 @@ description: "An overview of potential attack vectors in Kubernetes and strategi
 
 # Understanding the Kubernetes Attack Surface
 
+**Required knowledge for the CKS certification.**
+
 Kubernetes is a powerful yet complex system, and its attack surface consists of multiple components that must be secured to prevent unauthorized access and exploitation. This article provides an overview of the different layers of the Kubernetes attack surface and how to mitigate associated risks.
 
 ## **Key Attack Surfaces in Kubernetes**
 
 1. **Infrastructure Layer**
+
    - Host OS vulnerabilities
    - Misconfigured container runtime
    - Unpatched Kubernetes nodes
 
 2. **Control Plane Security Risks**
+
    - Exposed Kubernetes API server
    - Unauthorized access to `etcd`
    - Weak authentication and RBAC misconfigurations
 
 3. **Workload and Pod-Level Risks**
+
    - Privileged container execution
    - Insecure pod-to-pod communication
    - Compromised service accounts
 
 4. **Networking Risks**
+
    - Lack of network segmentation
    - Misconfigured ingress/egress rules
    - Service mesh vulnerabilities

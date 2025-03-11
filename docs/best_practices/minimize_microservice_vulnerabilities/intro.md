@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Minimizing Microservice Vulnerabilities
 
+**Required knowledge for the CKS certification.**
+
 Microservices architecture in Kubernetes introduces unique security challenges. Securing microservices requires enforcing **secure coding practices**, **container security**, and **API protection** to reduce exposure to attacks.
 
 This section covers best practices to **harden microservices** against common vulnerabilities and threats.

@@ -26,6 +26,8 @@ This section provides guidance on **effective observability** and **real-time se
 
 ### **Runtime Security**
 
+**Required knowledge for the CKS certification.**
+
 - Use **Falco** to detect unexpected process executions, privilege escalations, and network anomalies.
 - Implement **AppArmor** or **SELinux** for process-level confinement and enforcement.
 - Enable **audit logging** in the Kubernetes API server to track **security-related events**.

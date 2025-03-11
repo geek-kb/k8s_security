@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 title: "Kubelet Security"
 description: "Learn best practices for securing the Kubernetes Kubelet to maintain cluster integrity and prevent security risks."
 ---
@@ -15,6 +15,8 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 - **API Exploits:** The Kubelet exposes an API that, if not properly configured, could allow **unauthorized access**.
 
 ## Kubelet Security Best Practices
+
+**Required knowledge for the CKS certification.**
 
 ### 1. Restrict Kubelet API Access
 
