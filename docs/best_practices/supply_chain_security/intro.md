@@ -1,7 +1,7 @@
 ---
 title: "Supply Chain Security"
 description: "Best practices for securing the Kubernetes software supply chain, including container image security, CI/CD pipeline protection, and artifact integrity."
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Supply Chain Security
