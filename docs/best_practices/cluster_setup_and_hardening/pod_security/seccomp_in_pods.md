@@ -117,8 +117,8 @@ This ensures that only **explicitly allowed system calls** are executed.
 
 ## Related Security Features
 
-- **[Pod Security Standards (PSS)](/docs/best_practices/cluster_setup_and_hardening/pod_security_standards)** ensure that seccomp is enabled by default.
-- **[AppArmor Profiles](/docs/best_practices/cluster_setup_and_hardening/pod_security/apparmor_profiles)** provide additional security layers for containers.
+- **[Pod Security Standards (PSS)](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)** ensure that seccomp is enabled by default.
+- **[AppArmor Profiles](/docs/best_practices/cluster_setup_and_hardening/pod_security/app_armor_profiles)** provide additional security layers for containers.
 - **[Kernel Hardening](/docs/best_practices/system_hardening/intro)** helps restrict system-level attack surfaces.
 
 ---
