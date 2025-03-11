@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkk_8_s_security=self.webpackChunkk_8_s_security||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Under Construction","items":[{"title":"Blog Under Construction","permalink":"/k8s_security/blog/","unlisted":false,"date":"2025-03-11T18:45:42.000Z"}]}')}}]);
