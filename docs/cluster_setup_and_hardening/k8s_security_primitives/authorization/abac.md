@@ -7,14 +7,14 @@ sidebar_position: 2
 
 ## What is ABAC?
 
-**Attribute-Based Access Control (ABAC)** is an **authorization strategy** in Kubernetes that evaluates **attributes** of the **requester**, the **requested resource**, and the **current environment** to determine whether access should be granted. Unlike **RBAC (Role-Based Access Control)**, ABAC uses **policies** defined in **JSON files** to provide **fine-grained control** over **API access**.
+**Attribute-Based Access Control (ABAC)** is an **authorization strategy** in Kubernetes that evaluates **attributes** of the **requester**, the **requested resource**, and the **current environment** to determine whether access should be granted. Unlike **RBAC (Role-Based Access Control)**, ABAC uses **policies** defined in **JSONL (JSON Lines) files** to provide **fine-grained control** over **API access**.
 
 ---
 
 ## How Does ABAC Work?
 
 1. **Request Evaluation:** When a user or service makes a request, the **API server** evaluates it against a set of **policies**.
-2. **Policy Matching:** Policies are stored in a **JSON file** that defines **allowed actions** based on specific **attributes**.
+2. **Policy Matching:** Policies are stored in a **JSON Lines file** that defines **allowed actions** based on specific **attributes**.
 3. **Decision Making:** If the **request attributes** match a **policy**, access is **granted**; otherwise, access is **denied**.
 
 ---
@@ -85,7 +85,7 @@ kubectl auth can-i list pods --as=john.doe --namespace=production
 
 | Feature                      | **ABAC**                             | **RBAC**                              |
 |------------------------------|--------------------------------------|--------------------------------------|
-| **Policy Format**            | **JSON** files                        | **Kubernetes API resources**          |
+| **Policy Format**            | **JSONL** files                        | **Kubernetes API resources**          |
 | **Management**               | Requires **file updates** and **restarts** | Dynamic updates via **kubectl**       |
 | **Use Case**                 | Complex, **attribute-based rules**   | **Standard role-based** access control|
 | **Flexibility**              | High, but **harder to manage**       | Easier to **audit and manage**        |
