@@ -1,17 +1,16 @@
 ---
+sidebar_position: 3
 title: "Kubelet Security"
-sidebar_position: 5
+description: "Learn best practices for securing the Kubernetes Kubelet to maintain cluster integrity and prevent security risks."
 ---
 
 # Kubelet Security
-
-## 📌 **Introduction**
 
 The **Kubelet** is a critical component of a **Kubernetes node**, responsible for managing containers and ensuring that the desired **containers** are running. Due to its powerful control over **containers**, securing the **Kubelet** is paramount to maintaining the overall security of the **Kubernetes cluster**.
 
 ---
 
-## 🔐 **Why Kubelet Security Matters?**
+## Why Kubelet Security Matters
 
 - **Node Compromise Risk:** The Kubelet has direct access to **container runtimes**, posing a potential risk if not properly secured.
 - **Cluster-wide Impact:** A compromised Kubelet can lead to unauthorized access to **pods**, **secrets**, and other cluster resources.
@@ -19,11 +18,12 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 
 ---
 
-## ✅ **Kubelet Security Best Practices (CKS)**
+## Kubelet Security Best Practices
 
-### 1. **Secure Kubelet Communication**
+### 1. Secure Kubelet Communication
 
-Ensure all communications to and from the **Kubelet** are **encrypted** using **TLS certificates**.
+**Issue:** Unencrypted communication to and from the Kubelet can lead to data exposure.<br>
+**Fix:** Ensure all communications are **encrypted** using **TLS certificates**.
 
 ```yaml
 # Example Kubelet TLS Configuration
@@ -32,10 +32,10 @@ Ensure all communications to and from the **Kubelet** are **encrypted** using **
 --client-ca-file=/var/lib/kubernetes/pki/ca.crt
 ```
 
-### 2. **Enable Authentication and Authorization**
+### 2. Enable Authentication and Authorization
 
-- **Authentication:** Require **client certificates** to authenticate to the Kubelet API.
-- **Authorization:** Use **Node Authorization** and **Webhook Authorization**.
+**Issue:** Unauthenticated and unauthorized access to the Kubelet API can lead to cluster compromise.<br>
+**Fix:** Require **client certificates** and enable **Webhook Authorization**.
 
 ```yaml
 # Kubelet Authentication and Authorization
@@ -44,27 +44,29 @@ Ensure all communications to and from the **Kubelet** are **encrypted** using **
 --client-ca-file=/var/lib/kubernetes/pki/ca.crt
 ```
 
-### 3. **Disable Anonymous Access**
+### 3. Disable Anonymous Access
 
-Prevent unauthorized users from accessing the **Kubelet API**.
+**Issue:** Allowing anonymous access can lead to unauthorized API calls.<br>
+**Fix:** Prevent unauthorized users from accessing the **Kubelet API**.
 
-```yaml
+```bash
 --anonymous-auth=false
 ```
 
-### 4. **Restrict Kubelet API Access**
+### 4. Restrict Kubelet API Access
 
-- Limit the **Kubelet API** exposure to **localhost** or the **internal network** only.
-- Use **firewalls** or **network policies** to restrict **external access**.
+**Issue:** Exposing the Kubelet API to external networks increases the risk of attacks.<br>
+**Fix:** Limit the **Kubelet API** exposure to **localhost** or the **internal network** only.
 
-```yaml
+```bash
 --address=127.0.0.1
 --read-only-port=0
 ```
 
-### 5. **Enforce Pod Security Standards**
+### 5. Enforce Pod Security Standards
 
-- Use **Pod Security Policies (PSP)** or **Pod Security Admission** to prevent **privileged containers** or **hostPath mounts**.
+**Issue:** Insecure pod configurations can lead to privilege escalation.<br>
+**Fix:** Use **Pod Security Policies (PSP)** or **Pod Security Admission** to restrict **privileged containers**.
 
 ```yaml
 # Example Pod Security Policy
@@ -81,10 +83,10 @@ spec:
     rule: "MustRunAsNonRoot"
 ```
 
-### 6. **Limit Kubelet Permissions**
+### 6. Limit Kubelet Permissions
 
-- The **Kubelet** should not run as **root**.
-- Set up **Role-Based Access Control (RBAC)** rules to minimize **API permissions**.
+**Issue:** Excessive permissions can lead to unauthorized actions within the cluster.<br>
+**Fix:** Apply **Role-Based Access Control (RBAC)** to limit Kubelet API permissions.
 
 ```yaml
 # Example RBAC for Kubelet
@@ -98,18 +100,19 @@ rules:
     verbs: ["get", "list"]
 ```
 
-### 7. **Regularly Update and Patch the Kubelet**
+### 7. Regularly Update and Patch the Kubelet
 
-- Apply **security patches** and keep the **Kubelet** updated to mitigate **known vulnerabilities**.
-- Use tools like **kured** (Kubernetes Reboot Daemon) for **automated node reboots** when needed.
+**Issue:** Outdated Kubelet versions may contain known vulnerabilities.<br>
+**Fix:** Keep the **Kubelet** updated and apply **security patches** promptly.
 
 ---
 
-## 🛠️ **Additional Security Features**
+## Additional Security Features
 
-### 1. **Pod Security Admission (PSA)**
+### 1. Pod Security Admission (PSA)
 
-Use **Pod Security Admission** to replace the deprecated **Pod Security Policies (PSP)**.
+**Issue:** Deprecated **Pod Security Policies (PSP)** need modern alternatives.<br>
+**Fix:** Use **Pod Security Admission** to enforce security standards.
 
 ```yaml
 # Example PSA Configuration
@@ -123,28 +126,30 @@ metadata:
     pod-security.kubernetes.io/warn: "restricted"
 ```
 
-### 2. **Audit Logs**
+### 2. Enable Kubelet Audit Logs
 
-Enable **Kubelet auditing** to monitor **API requests** and detect **suspicious activities**.
+**Issue:** Lack of auditing makes it difficult to track API requests and detect anomalies.<br>
+**Fix:** Enable **Kubelet auditing** to monitor activities.
 
-```yaml
+```bash
 --audit-log-path=/var/log/kubelet-audit.log
 --audit-policy-file=/etc/kubernetes/audit-policy.yaml
 ```
 
-### 3. **Limit Resource Consumption**
+### 3. Limit Resource Consumption
 
-Set **resource limits** on the **Kubelet** to prevent **resource exhaustion attacks**.
+**Issue:** Unrestricted resource usage can lead to resource exhaustion attacks.<br>
+**Fix:** Set **resource limits** on the **Kubelet**.
 
-```yaml
+```bash
 --kube-reserved=cpu=200m,memory=512Mi,ephemeral-storage=1Gi
 --system-reserved=cpu=100m,memory=256Mi,ephemeral-storage=1Gi
 ```
 
 ---
 
-## 🧠 **Key Takeaways**
+## Key Takeaways
 
 - Securing the **Kubelet** is crucial for maintaining the **integrity** and **security** of the **Kubernetes cluster**.
-- Follow **CKS best practices** by enabling **authentication**, **authorization**, and **audit logs**.
+- Follow **best practices** by enabling **authentication**, **authorization**, and **audit logs**.
 - Regularly **update** and **monitor** the **Kubelet** to prevent **exploitation** of known vulnerabilities.
