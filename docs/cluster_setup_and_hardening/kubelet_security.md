@@ -75,10 +75,10 @@ metadata:
 spec:
   privileged: false
   volumes:
-  - 'configMap'
-  - 'emptyDir'
+    - "configMap"
+    - "emptyDir"
   runAsUser:
-    rule: 'MustRunAsNonRoot'
+    rule: "MustRunAsNonRoot"
 ```
 
 ### 6. **Limit Kubelet Permissions**
@@ -93,9 +93,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: kubelet-read-only
 rules:
-- apiGroups: [""]
-  resources: ["pods", "nodes"]
-  verbs: ["get", "list"]
+  - apiGroups: [""]
+    resources: ["pods", "nodes"]
+    verbs: ["get", "list"]
 ```
 
 ### 7. **Regularly Update and Patch the Kubelet**
@@ -148,108 +148,3 @@ Set **resource limits** on the **Kubelet** to prevent **resource exhaustion atta
 - Securing the **Kubelet** is crucial for maintaining the **integrity** and **security** of the **Kubernetes cluster**.
 - Follow **CKS best practices** by enabling **authentication**, **authorization**, and **audit logs**.
 - Regularly **update** and **monitor** the **Kubelet** to prevent **exploitation** of known vulnerabilities.
-
----
-
-## 🔗 **Related Resources**
-
-- [Kubernetes Documentation: Kubelet Configuration](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)
-- [How to Issue a Certificate for a Kubernetes User](https://geek-kb.github.io/k8s_security/guides/certificates/issue_certificate_for_k8s_user/)
-- [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/)
-
-You said:
-provide an article about kubelet security that resembles this article structure: <https://geek-kb.github.io/k8s_security/docs/cluster_setup_and_hardening/cis_benchmark_kube_bench/>
-ChatGPT said:
-markdown
-Copy
-Edit
----
-
-title: "Kubelet Security Best Practices"
-description: "Learn about securing the Kubelet in Kubernetes according to CKS (Certified Kubernetes Security Specialist) best practices."
-sidebar_position: 2
----
-
-# Kubelet Security Best Practices
-
-## 📖 Overview
-
-The **Kubelet** is a critical component of each **Kubernetes node**. It is responsible for managing **containers** and ensuring that the desired state specified in **PodSpecs** is maintained. However, if not properly secured, the Kubelet can be an attack vector, leading to potential **node compromises** and even **cluster-wide breaches**.
-
----
-
-## 🔍 Why Secure the Kubelet?
-
-- **Node Access:** The Kubelet has **elevated access** to the node's **container runtime**.
-- **API Server Communication:** The Kubelet communicates with the **Kubernetes API Server**, and compromising it may lead to **API abuse**.
-- **Pod Management:** The Kubelet can create, delete, and modify **pods** running on the node.
-
----
-
-## 🛡️ Kubelet Security Best Practices
-
-### 1. **Enable Authentication and Authorization**
-
-Ensure all **API requests** to the Kubelet are **authenticated** and **authorized**.
-
-```yaml
-# Kubelet authentication and authorization configuration
---authentication-token-webhook=true
---authorization-mode=Webhook
---client-ca-file=/var/lib/kubernetes/pki/ca.crt
-```
-
-### 2. **Disable Anonymous Access**
-
-Prevent **unauthenticated access** to the Kubelet API.
-
-```yaml
---anonymous-auth=false
-```
-
-### 3. **Restrict Kubelet API Access**
-
-- Bind the Kubelet API to **localhost** or the **internal network** only.
-- Use **network policies** and **firewalls** to prevent **external access**.
-
-```yaml
---address=127.0.0.1
---read-only-port=0
-```
-
-### 4. **Enforce TLS and Certificates**
-
-All communications with the Kubelet should be **encrypted** using **TLS certificates**.
-
-```yaml
-# Example TLS configuration
---tls-cert-file=/var/lib/kubelet/pki/kubelet.crt
---tls-private-key-file=/var/lib/kubelet/pki/kubelet.key
---client-ca-file=/var/lib/kubernetes/pki/ca.crt
-```
-
-### 5. **Set Resource Limits for Kubelet**
-
-Prevent **resource exhaustion attacks** by limiting the **resources** allocated to the Kubelet.
-
-```yaml
---kube-reserved=cpu=200m,memory=512Mi,ephemeral-storage=1Gi
---system-reserved=cpu=100m,memory=256Mi,ephemeral-storage=1Gi
-```
-
----
-
-## 🚧 Common Misconfigurations
-
-- **Allowing Anonymous Access:** Setting `--anonymous-auth=true` can lead to **unauthorized API access**.
-- **Open Kubelet Port:** Binding the Kubelet API to a **public IP** can expose it to the **internet**.
-- **No Authentication:** Not using `--client-ca-file` allows **unverified clients** to connect to the Kubelet.
-
----
-
-## ✅ Key Takeaways
-
-1. **Always use TLS** to encrypt Kubelet communications.
-2. **Disable anonymous access** and enforce **authorization policies**.
-3. **Restrict network access** to the Kubelet API.
-4. Regularly **monitor** and **audit** Kubelet logs for **suspicious activities**.
