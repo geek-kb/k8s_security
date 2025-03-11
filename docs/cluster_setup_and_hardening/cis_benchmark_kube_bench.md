@@ -63,7 +63,7 @@ cat kube-bench-results.json | jq '.[] | select(.status == "FAIL")'
 
 ### 1. Correct File Permissions
 
-**Issue:** The **API server** pod specification file **permissions** are **too permissive**.<br>
+**Issue:** The **API server** pod specification file **permissions** are **too permissive**.<br/>
 **Fix:** Set the **correct permissions**:
 
 ```bash
@@ -72,7 +72,7 @@ sudo chmod 644 /etc/kubernetes/manifests/kube-apiserver.yaml
 
 ### 2. Enforce File Ownership
 
-**Issue:** The **API server** pod specification file **ownership** is **incorrect**.<br>
+**Issue:** The **API server** pod specification file **ownership** is **incorrect**.<br/>
 **Fix:** Ensure **root ownership**:
 
 ```bash
@@ -81,7 +81,7 @@ sudo chown root:root /etc/kubernetes/manifests/kube-apiserver.yaml
 
 ### 3. Configure Secure API Server Flags
 
-**Issue:** The **API server** is **not securely configured**.<br>
+**Issue:** The **API server** is **not securely configured**.<br/>
 **Fix:** Set **secure flags** in **kube-apiserver.yaml**:
 
 ```yaml
