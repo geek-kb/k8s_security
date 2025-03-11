@@ -17,7 +17,7 @@ RBAC is based on four key components:
 1. **Role:** Defines a set of **permissions** for **resources**.<br/>
 2. **ClusterRole:** Similar to **Role**, but can be **applied across all namespaces**.<br/>
 3. **RoleBinding:** Assigns a **Role** to **users**, **groups**, or **service accounts** within a **specific namespace**.<br/>
-4. **ClusterRoleBinding:** Binds a **ClusterRole** to **users**, **groups**, or **service accounts** **cluster-wide**.<br/
+4. **ClusterRoleBinding:** Binds a **ClusterRole** to **users**, **groups**, or **service accounts** **cluster-wide**.<br/>
 
 ---
 
