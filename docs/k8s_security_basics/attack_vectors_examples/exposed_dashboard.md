@@ -69,7 +69,7 @@ The attacker gains admin access to the cluster, enabling them to deploy maliciou
 
 ### 1. Avoid Exposing the Dashboard Publicly
 
-**Issue:** The dashboard is accessible without authentication over a NodePort.<br>
+**Issue:** The dashboard is accessible without authentication over a NodePort.<br/>
 **Fix:** Use a secure network proxy or port-forwarding instead.
 
 #### Secure Access with Port Forwarding
@@ -82,7 +82,7 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 
 ### 2. Enforce Authentication
 
-**Issue:** Lack of authentication allows unauthorized access.<br>
+**Issue:** Lack of authentication allows unauthorized access.<br/>
 **Fix:** Implement token-based authentication and disable guest access.
 
 #### Enable Authentication via Service Account Token
@@ -98,7 +98,7 @@ kubectl describe secret <dashboard-admin-token> -n kube-system
 
 ### 3. Restrict Dashboard Privileges
 
-**Issue:** The dashboard runs with cluster-admin privileges, exposing the entire cluster to risk.<br>
+**Issue:** The dashboard runs with cluster-admin privileges, exposing the entire cluster to risk.<br/>
 **Fix:** Limit the ServiceAccount permissions using RBAC.
 
 #### Create a Restricted Role for the Dashboard
