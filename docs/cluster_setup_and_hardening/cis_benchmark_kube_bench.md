@@ -10,13 +10,13 @@ description: "Learn how to use Kube-Bench to assess your Kubernetes cluster agai
 
 ---
 
-## 🚩 What Are CIS Benchmarks?
+## What Are CIS Benchmarks?
 
 **CIS Benchmarks** are **security best practices** developed by **cybersecurity experts** to **secure IT systems**. The **Kubernetes CIS Benchmark** provides **guidelines** and **checks** to ensure **Kubernetes components** are configured securely.
 
 ---
 
-## 🛠️ Installing Kube-Bench
+## Installing Kube-Bench
 
 ### 1. Install Kube-Bench on a Kubernetes Node
 
@@ -33,7 +33,7 @@ sudo mv kube-bench /usr/local/bin/
 sudo kube-bench
 ```
 
-### ✅ Example Output
+### Example Output
 
 ```text
 [INFO] 1.1 - Master Node Configuration
@@ -43,7 +43,7 @@ sudo kube-bench
 
 ---
 
-## 🔍 Analyzing Kube-Bench Results
+## Analyzing Kube-Bench Results
 
 ### 1. View Detailed Results in JSON Format
 
@@ -59,12 +59,12 @@ cat kube-bench-results.json | jq '.[] | select(.status == "FAIL")'
 
 ---
 
-## 🛡️ Remediation Techniques Based on Kube-Bench Findings
+## Remediation Techniques Based on Kube-Bench Findings
 
 ### 1. Correct File Permissions
 
-- **Issue:** The **API server** pod specification file **permissions** are **too permissive**.
-- **Fix:** Set the **correct permissions**:
+**Issue:** The **API server** pod specification file **permissions** are **too permissive**.<br>
+**Fix:** Set the **correct permissions**:
 
 ```bash
 sudo chmod 644 /etc/kubernetes/manifests/kube-apiserver.yaml
@@ -72,8 +72,8 @@ sudo chmod 644 /etc/kubernetes/manifests/kube-apiserver.yaml
 
 ### 2. Enforce File Ownership
 
-- **Issue:** The **API server** pod specification file **ownership** is **incorrect**.
-- **Fix:** Ensure **root ownership**:
+**Issue:** The **API server** pod specification file **ownership** is **incorrect**.<br>
+**Fix:** Ensure **root ownership**:
 
 ```bash
 sudo chown root:root /etc/kubernetes/manifests/kube-apiserver.yaml
@@ -81,8 +81,8 @@ sudo chown root:root /etc/kubernetes/manifests/kube-apiserver.yaml
 
 ### 3. Configure Secure API Server Flags
 
-- **Issue:** The **API server** is **not securely configured**.
-- **Fix:** Set **secure flags** in **kube-apiserver.yaml**:
+**Issue:** The **API server** is **not securely configured**.<br>
+**Fix:** Set **secure flags** in **kube-apiserver.yaml**:
 
 ```yaml
 spec:
@@ -97,6 +97,6 @@ spec:
 
 ---
 
-## ✅ Key Takeaway
+## Key Takeaway
 
 Using **Kube-Bench** to **regularly assess** your **Kubernetes cluster** against the **CIS Benchmarks** can **identify vulnerabilities** and **guide remediation efforts**. Integrate **Kube-Bench** into your **CI/CD pipelines** and **monitoring workflows** to **maintain a strong security posture**.
