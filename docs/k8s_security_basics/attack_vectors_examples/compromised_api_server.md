@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: Compromised API Server
-description: Exploiting Kubernetes API server vulnerabilities and best practices for securing API endpoints.
+title: "Compromised API Server"
+description: "Exploiting Kubernetes API server vulnerabilities and best practices for securing API endpoints."
 ---
 
 # Compromised API Server
@@ -10,7 +10,7 @@ A **compromised API server** can provide attackers with **unauthorized access** 
 
 ---
 
-## 🚩 Exploitation Steps: Exposed API Endpoints
+## Exploitation Steps: Exposed API Endpoints
 
 An attacker identifies an exposed API server using a port scan:
 
@@ -18,7 +18,7 @@ An attacker identifies an exposed API server using a port scan:
 nmap -p 6443 <cluster-ip>
 ```
 
-### 1. Access API Server Without Authentication
+### Access API Server Without Authentication
 
 The attacker tries to list all pods using a curl request:
 
@@ -26,7 +26,7 @@ The attacker tries to list all pods using a curl request:
 curl -k https://<api-server-ip>:6443/api/v1/pods
 ```
 
-### 2. Delete Critical Resources
+### Delete Critical Resources
 
 The attacker attempts to delete a specific pod:
 
@@ -34,20 +34,20 @@ The attacker attempts to delete a specific pod:
 curl -k -X DELETE https://<api-server-ip>:6443/api/v1/namespaces/default/pods/victim-pod
 ```
 
-### ✅ Result
+### Result
 
 The attacker can delete pods, causing service disruptions and potentially leading to a Denial of Service (DoS).
 
 ---
 
-## 🛡️ Mitigation Techniques and Fixes
+## Mitigation Techniques and Fixes
 
 ### 1. Restrict API Access
 
 - **Issue:** Publicly exposed API server allows unauthorized access.
 - **Fix:** Use firewalls or private networking to limit access.
 
-#### ✅ Firewall Rule Example
+#### Firewall Rule Example
 
 ```bash
 # Allow access to the API server only from a specific IP range
@@ -60,7 +60,7 @@ iptables -A INPUT -p tcp --dport 6443 -j DROP
 - **Issue:** Lack of authentication enables any user to access the API server.
 - **Fix:** Implement Role-Based Access Control (RBAC) and use API server tokens for secure access.
 
-#### ✅ Enforcing Authentication via RBAC
+#### Enforcing Authentication via RBAC
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -93,7 +93,7 @@ roleRef:
 - **Issue:** External access to the API server is not restricted.
 - **Fix:** Block external access using Kubernetes Network Policies.
 
-#### ✅ Example Network Policy to Restrict API Server Access
+#### Example Network Policy to Restrict API Server Access
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -116,10 +116,6 @@ spec:
 
 ---
 
-## ✅ Key Takeaway
+## Conclusion
 
-To prevent unauthorized access to your Kubernetes API server, ensure that:
-
-- API server access is **restricted** through **networking controls**.
-- **Authentication and authorization** are enforced using **RBAC**.
-- **Network policies** are implemented to block **unwanted traffic** to the **API server**.
+Securing your Kubernetes API server is critical to maintaining the integrity and security of your cluster. Implement best practices by restricting API access, enabling authentication through Role-Based Access Control (RBAC), and applying network policies to prevent unauthorized access. Regularly monitor and audit API server logs to detect and respond to potential threats promptly.
