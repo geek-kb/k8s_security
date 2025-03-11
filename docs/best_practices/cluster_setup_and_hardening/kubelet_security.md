@@ -6,7 +6,7 @@ description: "Learn best practices for securing the Kubernetes Kubelet to mainta
 
 # Kubelet Security
 
-The **Kubelet** is a critical component of a **Kubernetes node**, responsible for managing containers and ensuring that the desired workloads are running. Since it has direct control over the **node's container runtime and API interactions**, securing the **Kubelet** is essential to prevent unauthorized access and mitigate security risks.
+The **Kubelet** is a critical component of a **Kubernetes node**, responsible for managing containers and ensuring that workloads are running as expected. Since it has direct control over the **node's container runtime and API interactions**, securing the **Kubelet** is essential to prevent unauthorized access and mitigate security risks.
 
 ## Key Risks of an Insecure Kubelet
 
@@ -29,6 +29,8 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 - Setting `--read-only-port=0` disables the unauthenticated read-only Kubelet API.
 - Configuring `--address=127.0.0.1` ensures that only local processes can access the Kubelet API.
 
+For more information, refer to [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication).
+
 ### 2. Enforce TLS Encryption
 
 **Issue:** Unencrypted communication with the Kubelet can expose sensitive data.<br/>
@@ -41,7 +43,7 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 --client-ca-file=/var/lib/kubernetes/pki/ca.crt
 ```
 
-This ensures **secure authentication** between the Kubelet and the **Kubernetes API server**.
+For more information on TLS and securing communication in Kubernetes, refer to [Certificates in Kubernetes](/docs/fundamentals/k8s_security_primitives/authentication/certificates).
 
 ### 3. Enable Authentication and Authorization
 
@@ -57,6 +59,8 @@ This ensures **secure authentication** between the Kubelet and the **Kubernetes 
 
 - `--authorization-mode=Webhook` enforces **Kubernetes RBAC policies**.
 - `--authentication-token-webhook=true` requires **API authentication tokens**.
+
+For more details, refer to [Role-Based Access Control (RBAC)](/docs/fundamentals/k8s_security_primitives/authorization/rbac).
 
 ### 4. Disable Anonymous Access
 
@@ -103,7 +107,7 @@ rules:
     verbs: ["get", "list"]
 ```
 
-Learn more about **RBAC security** in [Role-Based Access Control](/docs/fundamentals/k8s_security_primitives/authorization/rbac).
+For more details on **RBAC security**, refer to [Role-Based Access Control](/docs/fundamentals/k8s_security_primitives/authorization/rbac).
 
 ### 7. Enable Audit Logging for Kubelet Actions
 
@@ -114,6 +118,8 @@ Learn more about **RBAC security** in [Role-Based Access Control](/docs/fundamen
 --audit-log-path=/var/log/kubelet-audit.log
 --audit-policy-file=/etc/kubernetes/audit-policy.yaml
 ```
+
+For a comprehensive approach to **monitoring and logging**, refer to [Monitoring, Logging, and Runtime Security](/docs/best_practices/monitoring_logging_and_runtime_security/intro).
 
 ### 8. Regularly Update and Patch the Kubelet
 
@@ -136,6 +142,8 @@ For more details on **patching and updates**, refer to [Kubernetes Hardening Gui
 --kube-reserved=cpu=200m,memory=512Mi,ephemeral-storage=1Gi
 --system-reserved=cpu=100m,memory=256Mi,ephemeral-storage=1Gi
 ```
+
+For more on securing workloads and limiting resource consumption, see [Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro).
 
 ## Key Takeaways
 
