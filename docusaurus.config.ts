@@ -49,6 +49,16 @@ const config: Config = {
         editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
       },
     ],
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexPages: true,
+        highlightSearchTermsOnTargetPage: true,
+        searchBarShortcut: true, // Allows using Ctrl+K to focus the search bar
+        searchBarPosition: 'right',
+      },
+    ],
   ],
 
   themeConfig: {
