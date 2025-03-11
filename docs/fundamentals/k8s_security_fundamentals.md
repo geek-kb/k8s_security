@@ -26,7 +26,7 @@ Security in Kubernetes is an ongoing process that requires collaboration across 
 
 A Kubernetes cluster consists of multiple components, including the **API server, worker nodes, networking stack, and workloads**. Each component presents an **attack surface** that could be exploited if not properly secured. Misconfigurations, exposed services, and weak authentication mechanisms can introduce risks.
 
-For a deeper dive into attack surfaces in Kubernetes, refer to **[Understanding Kubernetes Attack Surface](../fundamentals/understanding_k8s_attack_surface.md)**.
+For a deeper dive into attack surfaces in Kubernetes, refer to **[Understanding Kubernetes Attack Surface](./understanding_k8s_attack_surface.md)**.
 
 ## The 4C Model of Kubernetes Security
 
@@ -37,7 +37,7 @@ The **4C Model of Kubernetes Security** provides a structured approach to securi
 3. **Container Security:** Ensuring containers are built, deployed, and executed securely.
 4. **Code Security:** Implementing secure coding practices to prevent vulnerabilities in applications.
 
-Each layer builds upon the previous one, creating a **defense-in-depth** security model. For a comprehensive explanation, read **[The 4C Model of Cloud Native Security](../fundamentals/the_4_c_cloud_native_security.md)**.
+Each layer builds upon the previous one, creating a **defense-in-depth** security model. For a comprehensive explanation, read **[The 4C Model of Cloud Native Security](./the_4_c_cloud_native_security.md)**.
 
 ## Common Kubernetes Security Challenges
 
