@@ -5,13 +5,13 @@ sidebar_position: 4
 
 # Webhook Authorization in Kubernetes
 
-## 🔍 What is Webhook Authorization?
+## What is Webhook Authorization?
 
 **Webhook Authorization** allows Kubernetes to **delegate authorization decisions** to an **external service** via a **webhook**. It is ideal for **custom authorization scenarios** that go beyond the capabilities of **RBAC** and **Node Authorization**.
 
 ---
 
-## 🚦 **How Does Webhook Authorization Work?**
+## How Does Webhook Authorization Work?
 
 1. **Request Handling:** When a **request** is made to the **API server**, it is sent to the **Webhook service**.
 2. **Decision Making:** The **Webhook service** evaluates the request against **custom policies**.
@@ -19,7 +19,7 @@ sidebar_position: 4
 
 ---
 
-## 🛠️ **Enabling Webhook Authorization:**
+## Enabling Webhook Authorization
 
 To enable **Webhook Authorization**, configure the **API server** with the appropriate **flags**:
 
@@ -29,10 +29,9 @@ kube-apiserver \
   --authorization-webhook-config-file=/etc/kubernetes/webhook-config.yaml
 ```
 
-### 🔍 **Example Webhook Configuration:**
+### Example Webhook Configuration
 
 ```yaml
-# /etc/kubernetes/webhook-config.yaml
 apiVersion: v1
 kind: Config
 clusters:
@@ -52,9 +51,9 @@ current-context: webhook-authz
 
 ---
 
-## 📡 **Webhook Authorization Request and Response:**
+## Webhook Authorization Request and Response
 
-### 🔗 **Request Example:**
+### Request Example
 
 The **API server** sends a **JSON request** to the **webhook** service:
 
@@ -74,7 +73,7 @@ The **API server** sends a **JSON request** to the **webhook** service:
 }
 ```
 
-### ✅ **Response Example:**
+### Response Example
 
 The **webhook service** returns **ALLOW** or **DENY**:
 
@@ -91,38 +90,33 @@ The **webhook service** returns **ALLOW** or **DENY**:
 
 ---
 
-## 💡 **Best Practices for Webhook Authorization:**
+## Best Practices for Webhook Authorization
 
 1. **Secure Webhook Communication:**
-   - Use **HTTPS** with **mutual TLS** to secure communications between the **API server** and the **Webhook service**.
-
+   Use **HTTPS** with **mutual TLS** to secure communications between the **API server** and the **Webhook service**.<br/>
 2. **Implement High Availability:**
-   - Ensure the **Webhook service** is **highly available** to avoid **authorization disruptions**.
-
+   Ensure the **Webhook service** is **highly available** to avoid **authorization disruptions**.<br/>
 3. **Timeouts and Failures:**
-   - Configure **timeouts** and **failure policies** to handle **webhook unavailability** gracefully:
+   Configure **timeouts** and **failure policies** to handle **webhook unavailability** gracefully.<br/>
 
 ```yaml
-# Example of Failure Policy
 failurePolicy: Ignore
 timeoutSeconds: 5
 ```
 
 4. **Logging and Auditing:**
-   - Enable **logging** on the **Webhook service** to **audit authorization decisions**.
+   Enable **logging** on the **Webhook service** to **audit authorization decisions**.<br/>
 
 ---
 
-## ❓ **When to Use Webhook Authorization:**
+## When to Use Webhook Authorization
 
-- When **RBAC** and **ABAC** do not meet specific **authorization requirements**.
-- To **integrate external systems** with **custom business logic**.
-- When using **dynamic policies** that need to be **centrally managed**.
+- When **RBAC** and **ABAC** do not meet specific **authorization requirements**.<br/>
+- To **integrate external systems** with **custom business logic**.<br/>
+- When using **dynamic policies** that need to be **centrally managed**.<br/>
 
 ---
 
-## 🔐 **Conclusion: Flexibility and Control with Webhook Authorization**
+## Conclusion: Flexibility and Control with Webhook Authorization
 
 **Webhook Authorization** offers **flexibility** by allowing **custom authorization logic** via **external services**. It is particularly useful in **enterprise environments** with **complex authorization requirements** that need to integrate with **external identity or policy services**.
-
-Would you like help setting up a **custom Webhook Authorization service**, or do you need more examples of **advanced use cases**? Let me know!

@@ -10,18 +10,18 @@ description: "Learn how Role-Based Access Control (RBAC) in Kubernetes manages a
 
 ---
 
-## 🚩 How RBAC Works
+## How RBAC Works
 
 RBAC is based on four key components:
 
-1. **Role:** Defines a set of **permissions** for **resources**.
-2. **ClusterRole:** Similar to **Role**, but can be **applied across all namespaces**.
-3. **RoleBinding:** Assigns a **Role** to **users**, **groups**, or **service accounts** within a **specific namespace**.
-4. **ClusterRoleBinding:** Binds a **ClusterRole** to **users**, **groups**, or **service accounts** **cluster-wide**.
+1. **Role:** Defines a set of **permissions** for **resources**.<br/>
+2. **ClusterRole:** Similar to **Role**, but can be **applied across all namespaces**.<br/>
+3. **RoleBinding:** Assigns a **Role** to **users**, **groups**, or **service accounts** within a **specific namespace**.<br/>
+4. **ClusterRoleBinding:** Binds a **ClusterRole** to **users**, **groups**, or **service accounts** **cluster-wide**.<br/
 
 ---
 
-## 🛠️ Example: Create an RBAC Role and Binding
+## Example: Create an RBAC Role and Binding
 
 ### 1. Define a Role
 
@@ -57,12 +57,13 @@ roleRef:
 
 ---
 
-## ✅ Key Takeaway
+## Key Takeaway
 
 RBAC helps enforce the **principle of least privilege** by ensuring that **users** and **applications** have **only the permissions they need**.
 
 ---
 
-## 🔐 **Conclusion: Enforcing Security with RBAC in Kubernetes**
+## Conclusion: Enforcing Security with RBAC in Kubernetes
 
 **Role-Based Access Control (RBAC)** is an essential **security primitive** in Kubernetes, providing **fine-grained authorization** and enforcing the **principle of least privilege**. By correctly defining **roles**, **role bindings**, and **permissions**, you can significantly **reduce the attack surface** of your cluster and maintain **tight access controls**.
+>
