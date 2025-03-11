@@ -1,6 +1,6 @@
 ---
 title: "Intro"
-sidebar_position: 1
+sidebar_position: 2
 description: "Guidelines and best practices for securing Kubernetes clusters, covering CIS benchmarks, kubelet security, network policies, pod security, and secrets management."
 ---
 

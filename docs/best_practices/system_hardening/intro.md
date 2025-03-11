@@ -1,7 +1,7 @@
 ---
 title: "System Hardening"
 description: "Best practices for securing the underlying infrastructure supporting Kubernetes, including OS security, node hardening, and kernel protections."
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # System Hardening

@@ -1,7 +1,7 @@
 ---
 title: "Minimizing Microservice Vulnerabilities"
 description: "Best practices for securing microservices in Kubernetes, including secure development, dependency management, and API security."
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Minimizing Microservice Vulnerabilities
