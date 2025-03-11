@@ -44,7 +44,7 @@ The attacker can delete pods, causing service disruptions and potentially leadin
 
 ### 1. Restrict API Access
 
-- **Issue:** Publicly exposed API server allows unauthorized access.
+- **Issue:** Publicly exposed API server allows unauthorized access.<br/>
 - **Fix:** Use firewalls or private networking to limit access.
 
 #### Firewall Rule Example
@@ -57,7 +57,7 @@ iptables -A INPUT -p tcp --dport 6443 -j DROP
 
 ### 2. Enable Authentication
 
-- **Issue:** Lack of authentication enables any user to access the API server.
+- **Issue:** Lack of authentication enables any user to access the API server.<br/>
 - **Fix:** Implement Role-Based Access Control (RBAC) and use API server tokens for secure access.
 
 #### Enforcing Authentication via RBAC
@@ -90,7 +90,7 @@ roleRef:
 
 ### 3. Use Network Policies
 
-- **Issue:** External access to the API server is not restricted.
+- **Issue:** External access to the API server is not restricted.<br/>
 - **Fix:** Block external access using Kubernetes Network Policies.
 
 #### Example Network Policy to Restrict API Server Access

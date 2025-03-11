@@ -52,7 +52,7 @@ The attacker can access and exfiltrate sensitive data, potentially causing data 
 
 ### 1. Encrypt Secrets at Rest
 
-**Issue:** Secrets stored in etcd are not encrypted by default.<br />
+**Issue:** Secrets stored in etcd are not encrypted by default.<br/>
 **Fix:** Enable encryption at rest in the Kubernetes configuration.
 
 #### Example Encryption Configuration for etcd
