@@ -1,41 +1,47 @@
 ---
-title: "Introduction to Kubernetes Security Best Practices"
-description: "An overview of best practices for securing Kubernetes clusters, workloads, and infrastructure."
+title: "Kubernetes Security Best Practices"
+description: "A collection of best practices for securing Kubernetes environments, covering cluster hardening, microservice security, monitoring, and supply chain integrity."
 sidebar_position: 1
 ---
 
 # Kubernetes Security Best Practices
 
-Securing a Kubernetes environment requires a multi-layered approach that addresses the cluster infrastructure, workloads, and runtime security. This section provides best practices to mitigate risks and improve security at every level of your deployment.
+Securing Kubernetes environments requires a multi-layered approach, covering infrastructure, workloads, and supply chain integrity. This section provides best practices to **harden Kubernetes clusters**, **minimize microservice vulnerabilities**, **enhance observability**, and **secure the software supply chain**.
 
-## Structure of Best Practices
+## Topics Covered
 
-This section is organized into several key areas of Kubernetes security:
+### **[Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro)**
 
-### [Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/)
+- Follow **CIS Benchmarks** to enforce Kubernetes security standards.
+- Secure the **Kubelet**, **API Server**, and **control plane components**.
+- Implement **network security policies** and **pod security restrictions**.
 
-Learn how to harden your Kubernetes control plane and worker nodes to minimize security vulnerabilities. Topics include the **CIS Kubernetes Benchmark**, **Kubelet security**, **Pod security**, and **network policies**.
+### **[Minimize Microservice Vulnerabilities](/docs/best_practices/minimize_microservice_vulnerabilities/intro)**
 
-### [Minimizing Microservice Vulnerabilities](/docs/best_practices/minimize_microservice_vulnerabilities/)
+- Use **secure coding practices** and **least privilege principles**.
+- Harden container images with **distroless** or **scratch** bases.
+- Implement **runtime security** to detect malicious activity.
 
-Explore security best practices for securing containerized applications, including **supply chain security**, **container image scanning**, and **application runtime security**.
+### **[Monitoring, Logging, and Runtime Security](/docs/best_practices/monitoring_logging_and_runtime_security/intro)**
 
-### [Monitoring, Logging, and Runtime Security](/docs/best_practices/monitoring_logging_and_runtime_security/)
+- Enable **Kubernetes audit logs** to detect suspicious activity.
+- Use **Falco**, **Sysdig**, and **eBPF** for real-time anomaly detection.
+- Implement **centralized logging and alerting** with **Prometheus** and **Grafana**.
 
-Implement effective **logging, monitoring, and alerting** to detect security incidents and respond in real-time.
+### **[Supply Chain Security](/docs/best_practices/supply_chain_security/intro)**
 
-### [Supply Chain Security](/docs/best_practices/supply_chain_security/)
+- Verify software integrity using **SBOMs**, **Sigstore**, and **cosign**.
+- Secure CI/CD pipelines to prevent **malicious code injection**.
+- Enforce **image provenance** and **admission controls** for deployments.
 
-Protect your software supply chain by securing container images, dependencies, and CI/CD pipelines.
+### **[System Hardening](/docs/best_practices/system_hardening/intro)**
 
-### [System Hardening](/docs/best_practices/system_hardening/)
-
-Strengthen the overall security posture of your Kubernetes infrastructure by enforcing **least privilege access**, **host security**, and **API hardening**.
-
-## How to Use This Section
-
-Each topic contains a structured guide with **step-by-step configurations**, **best practices**, and **security recommendations**. Follow these guides to improve your Kubernetes security and align with industry best practices.
-
-For a fundamental understanding of Kubernetes security concepts, refer to the [Fundamentals Section](/docs/fundamentals/intro).
+- Lock down Kubernetes nodes with **minimal OS images**.
+- Enable **seccomp**, **AppArmor**, and **kernel protections**.
+- Restrict **SSH access** and apply **secure boot configurations**.
 
 ---
+
+## Next Steps
+
+Review each section for in-depth security practices tailored to **Kubernetes administrators**, **DevOps teams**, and **security engineers**. Implementing these best practices will help **mitigate risks** and **enhance cluster security** at every layer.
