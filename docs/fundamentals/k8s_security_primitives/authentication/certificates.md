@@ -32,6 +32,8 @@ Certificates play a critical role in Kubernetes security by enabling secure comm
 
 ### 1. Client Certificates
 
+**Required knowledge for the CKS certification.**
+
 Client certificates are essential for secure communication between Kubernetes components. They provide mutual authentication, enabling the API server and internal services to verify each other's identities.
 
 #### Use Cases for Client Certificates
@@ -49,10 +51,10 @@ openssl x509 -req -in user.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out use
 
 #### Key Differences Between Client and User Certificates
 
-| Certificate Type | Purpose                              | Example Use Case                   |
-|------------------|--------------------------------------|-----------------------------------|
+| Certificate Type   | Purpose                               | Example Use Case                    |
+| ------------------ | ------------------------------------- | ----------------------------------- |
 | Client Certificate | Component-to-component authentication | API Server to Kubelet communication |
-| User Certificate   | API access for external users        | Developer access via `kubectl`     |
+| User Certificate   | API access for external users         | Developer access via `kubectl`      |
 
 #### Cross-Reference
 
@@ -61,6 +63,8 @@ For a detailed guide on issuing a certificate for a Kubernetes user, refer to th
 ---
 
 ### 2. Server Certificates
+
+**Required knowledge for the CKS certification.**
 
 - Secures **server endpoints** with **TLS encryption**.
 - Commonly used for the **API server**, **Kubelets**, and **webhooks**.
@@ -101,11 +105,11 @@ spec:
 
 ### 4. Service Account Tokens vs. Certificates
 
-| **Feature**                 | **Service Account Token** | **Certificate**                  |
-|-----------------------------|---------------------------|---------------------------------|
-| **Use Case**                | **Pod authentication**    | **User and server authentication** |
-| **Renewal**                 | Automatic                 | Requires **manual** or **automated rotation** |
-| **Security**                | Token-based **JWT**       | Encrypted **X.509 certificates** |
+| **Feature**  | **Service Account Token** | **Certificate**                               |
+| ------------ | ------------------------- | --------------------------------------------- |
+| **Use Case** | **Pod authentication**    | **User and server authentication**            |
+| **Renewal**  | Automatic                 | Requires **manual** or **automated rotation** |
+| **Security** | Token-based **JWT**       | Encrypted **X.509 certificates**              |
 
 ---
 
@@ -155,12 +159,15 @@ spec:
 ## Best Practices for Managing Certificates
 
 1. **Automate Renewal:**
+
    - Use **Cert-Manager** to avoid **expired certificates**.
 
 2. **Enforce TLS Everywhere:**
+
    - Enable **TLS** for all **internal** and **external communications**.
 
 3. **Rotate Certificates Regularly:**
+
    - Automate with **cert-manager** or **kubeadm cert renew**.
 
 4. **Monitor Certificate Expiry:**

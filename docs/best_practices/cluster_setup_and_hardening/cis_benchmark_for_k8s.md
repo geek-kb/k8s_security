@@ -1,9 +1,11 @@
 ---
 title: "CIS Benchmarks for Kubernetes"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Understanding CIS Benchmarks for Kubernetes
+
+**Required knowledge for the CKS certification.**
 
 ## What are CIS Benchmarks?
 

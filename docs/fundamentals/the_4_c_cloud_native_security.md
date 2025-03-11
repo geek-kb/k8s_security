@@ -6,6 +6,8 @@ description: "Understand the Four C's of Cloud Native Security: Code, Container,
 
 # The Four C's of Cloud Native Security
 
+**Required knowledge for the CKS certification.**
+
 Securing cloud-native applications requires a holistic approach that spans multiple layers of the technology stack. The **Four C's of Cloud Native Security** — **Code**, **Container**, **Cluster**, and **Cloud** — provide a framework to help organizations build robust and secure systems. By securing each of these layers, you create a **defense-in-depth strategy** that minimizes the **attack surface** of your **Kubernetes** and **cloud-native environments**.
 
 ---

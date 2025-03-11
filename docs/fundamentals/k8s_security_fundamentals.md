@@ -31,6 +31,8 @@ For a deeper dive into attack surfaces in Kubernetes, refer to **[Understanding 
 
 ## The 4C Model of Kubernetes Security
 
+**Required knowledge for the CKS certification.**
+
 The **4C Model of Kubernetes Security** provides a structured approach to securing Kubernetes environments across different layers:
 
 1. **Cloud Security:** Protecting the infrastructure and platform hosting the Kubernetes cluster.
@@ -66,25 +68,35 @@ Even with strong pre-deployment security measures, threats can emerge at runtime
 
 ### Authentication and Authorization
 
+**Required knowledge for the CKS certification.**
+
 - **Authentication:** Verifies the identity of users and workloads accessing the cluster.
 - **Authorization:** Defines permissions and access policies using RBAC.
 
 ### Network Security
+
+**Required knowledge for the CKS certification.**
 
 - **Network Policies:** Control pod-to-pod and external communication.
 - **Ingress and Egress Controls:** Restrict unauthorized traffic in and out of the cluster.
 
 ### Pod Security
 
+**Required knowledge for the CKS certification.**
+
 - **Pod Security Admission (PSA):** Enforces predefined security standards at the pod level.
 - **Security Contexts:** Define security constraints such as privilege restrictions and filesystem controls.
 
 ### Secrets and Configuration Management
 
+**Required knowledge for the CKS certification.**
+
 - **Kubernetes Secrets:** Securely store and manage sensitive data such as credentials and API keys.
 - **Encryption at Rest:** Protect stored Secrets using encryption mechanisms.
 
 ### Monitoring and Logging
+
+**Required knowledge for the CKS certification.**
 
 - **Audit Logs:** Record API requests and cluster activity for security analysis.
 - **Runtime Monitoring:** Detect anomalies and unauthorized activity using security tools.
@@ -94,10 +106,12 @@ Even with strong pre-deployment security measures, threats can emerge at runtime
 A proactive security mindset is essential for securing Kubernetes environments. The following principles help guide security strategies:
 
 1. **Zero Trust Approach**
+
    - Every request should be authenticated and authorized, even within the cluster.
    - Default-deny policies should be applied to workloads and network traffic.
 
 2. **Least Privilege Principle**
+
    - Workloads, users, and services should only have the minimum permissions necessary.
    - Privileged containers should be avoided unless explicitly required.
 

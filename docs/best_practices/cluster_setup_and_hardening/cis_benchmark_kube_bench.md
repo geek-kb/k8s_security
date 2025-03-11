@@ -1,10 +1,12 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: "Kube-Bench: Kubernetes CIS Benchmarking Tool"
 description: "Learn how to use Kube-Bench to assess your Kubernetes cluster against CIS Benchmarks and enhance security practices."
 ---
 
 # Kube-Bench: Kubernetes CIS Benchmarking Tool
+
+**Required knowledge for the CKS certification.**
 
 **Kube-Bench** is an **open-source tool** developed by **Aqua Security** to assess **Kubernetes clusters** against the **CIS (Center for Internet Security) Kubernetes Benchmark**. This tool helps identify **security gaps** and provides **remediation advice** to improve your **cluster's security posture**.
 
@@ -87,12 +89,12 @@ sudo chown root:root /etc/kubernetes/manifests/kube-apiserver.yaml
 ```yaml
 spec:
   containers:
-  - name: kube-apiserver
-    command:
-    - kube-apiserver
-    - --anonymous-auth=false
-    - --kubelet-https=true
-    - --kubelet-certificate-authority=/var/lib/kubelet/pki/ca.crt
+    - name: kube-apiserver
+      command:
+        - kube-apiserver
+        - --anonymous-auth=false
+        - --kubelet-https=true
+        - --kubelet-certificate-authority=/var/lib/kubelet/pki/ca.crt
 ```
 
 ---

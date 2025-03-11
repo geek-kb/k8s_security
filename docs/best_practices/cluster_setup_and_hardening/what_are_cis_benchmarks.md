@@ -1,10 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Understanding CIS Benchmarks
 description: Learn what CIS Benchmarks are and how they help enhance security best practices for systems, networks, and applications.
 ---
 
 # Understanding CIS Benchmarks
+
+**Required knowledge for the CKS certification.**
 
 **CIS Benchmarks** are a set of best practices and guidelines developed by the **Center for Internet Security (CIS)** to help organizations improve their **security posture**. These benchmarks provide **configuration baselines** and **security recommendations** for a wide range of **systems**, **networks**, and **applications**.
 
