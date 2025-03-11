@@ -55,10 +55,10 @@ The attacker gains persistent access to the host system, allowing them to execut
 
 ### 1. Avoid Running Privileged Containers
 
-Issue: Privileged containers can bypass security boundaries and access the host.
-Fix: Set privileged: false in the PodSecurityContext.
+**Issue:** Privileged containers can bypass security boundaries and access the host.<br/>
+**Fix:** Set **privileged: false** in the **PodSecurityContext**.
 
-Example Pod Configuration:
+#### Example Pod Configuration
 
 ```yaml
 apiVersion: v1
@@ -75,10 +75,10 @@ spec:
 
 ### 2. Use Pod Security Standards (PSS)
 
-Issue: Lack of security policies allows privileged containers to run.
-Fix: Enforce Pod Security Policies (PSP) or Pod Security Standards (PSS).
+**Issue:** Lack of security policies allows privileged containers to run.<br/>
+**Fix:** Enforce **Pod Security Policies (PSP)** or **Pod Security Standards (PSS)**.
 
-Example of a Restricted Pod Security Policy:
+#### Example of a Restricted Pod Security Policy
 
 ```yaml
 apiVersion: policy/v1beta1
@@ -102,10 +102,10 @@ spec:
 
 ### 3. Implement Admission Controllers
 
-Issue: Privileged containers can be created without restriction.
-Fix: Use admission controllers to block privileged containers.
+**Issue:** Privileged containers can be created without restriction.<br/>
+**Fix:** Use **admission controllers** to **block privileged containers**.
 
-Example Using OPA Gatekeeper Policy:
+#### Example Using OPA Gatekeeper Policy
 
 ```yaml
 apiVersion: templates.gatekeeper.sh/v1beta1
@@ -140,10 +140,10 @@ spec:
 
 ---
 
-## Key Takeaway
+## Conclusion
 
 To mitigate risks associated with privileged containers:
 
-- Disable privileged mode by setting privileged: false in the securityContext.
-- Enforce Pod Security Standards (PSS) to restrict risky configurations.
-- Use admission controllers to prevent privileged container deployments.
+- Disable privileged mode by setting **privileged: false** in the **securityContext**.
+- Enforce **Pod Security Standards (PSS)** to restrict **risky configurations**.
+- Use **admission controllers** to **prevent privileged container deployments**.
