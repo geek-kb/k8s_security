@@ -29,7 +29,7 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 - Setting `--read-only-port=0` disables the unauthenticated read-only Kubelet API.
 - Configuring `--address=127.0.0.1` ensures that only local processes can access the Kubelet API.
 
-For more information, refer to [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication).
+For more information, refer to [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication_methods).
 
 ### 2. Enforce TLS Encryption
 
