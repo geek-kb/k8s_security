@@ -21,7 +21,7 @@ For an in-depth guide on securing Kubernetes workloads, refer to [Pod Security S
 - Can be **mounted as files**, **injected as environment variables**, or accessed through the **Kubernetes API**.
 - By default, **Secrets are stored in etcd**, requiring additional encryption for protection.
 
-For securing API access and authentication, see [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication).
+For securing API access and authentication, see [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication_methods).
 
 ---
 

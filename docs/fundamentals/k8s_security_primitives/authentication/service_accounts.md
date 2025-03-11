@@ -10,7 +10,7 @@ description: "Learn how Kubernetes Service Accounts provide authentication for p
 
 Kubernetes **Service Accounts** allow **pods** to authenticate with the **API server**. Unlike **user accounts**, which are meant for **human users**, service accounts are designed for **workloads running inside Kubernetes**.
 
-For more details on Kubernetes authentication mechanisms, refer to [Authentication in Kubernetes](/docs/fundamentals/k8s_security_primitives/authentication/authentication).
+For more details on Kubernetes authentication mechanisms, refer to [Authentication in Kubernetes](/docs/fundamentals/k8s_security_primitives/authentication/authentication_methods).
 
 ---
 
@@ -120,7 +120,7 @@ For more details on implementing fine-grained access controls, see [Role-Based A
 - **Rotate service account tokens** to prevent unauthorized access.
 - **Use Kubernetes secrets or external secret managers** for authentication credentials.
 
-For securing API access and authentication mechanisms, see [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication).
+For securing API access and authentication mechanisms, see [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication_methods).
 
 ---
 
