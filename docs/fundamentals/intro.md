@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Security Fundamentals"
+title: "Section Intro"
 sidebar_position: 1
 description: "Core Kubernetes security principles, covering authentication, authorization, and encryption."
 ---

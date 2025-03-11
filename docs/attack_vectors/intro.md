@@ -1,5 +1,5 @@
 ---
-title: "Common Kubernetes Attack Vectors"
+title: "Section Intro"
 sidebar_position: 1
 description: "An overview of common Kubernetes attack vectors and how attackers exploit misconfigurations."
 ---
