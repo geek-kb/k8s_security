@@ -1,5 +1,5 @@
 ---
-title: "Network Security in Kubernetes"
+title: "Intro"
 description: "An overview of Kubernetes network security strategies, including ingress security, egress controls, service mesh, and DDoS mitigation."
 sidebar_position: 1
 ---

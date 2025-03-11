@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 title: "Network Policies"
 description: "Explore how Network Policies in Kubernetes control traffic flow and enhance security."
 ---

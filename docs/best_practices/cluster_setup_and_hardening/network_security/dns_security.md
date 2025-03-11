@@ -1,7 +1,7 @@
 ---
 title: "DNS Security in Kubernetes"
 description: "Protect CoreDNS from spoofing, cache poisoning, and unauthorized modifications to enhance cluster security."
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # DNS Security in Kubernetes
