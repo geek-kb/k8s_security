@@ -23,24 +23,24 @@ CIS (Center for Internet Security) Benchmarks are a set of **best practices and 
 
 The CIS Benchmarks for Kubernetes cover several **critical areas**:
 
-### 1. **Control Plane Components**
+### 1. Control Plane Components
 
 - **Kube-apiserver:** Authentication, authorization, and audit log configuration.
 - **Kube-controller-manager:** Securing certificates and minimizing privileges.
 - **Kube-scheduler:** Ensuring secure communication.
 
-### 2. **Worker Nodes Security**
+### 2. Worker Nodes Security
 
 - Securing the **kubelet** process.
 - Using **read-only ports** and **TLS authentication**.
 - Configuring **Pod Security Policies (PSP)** and **Pod Security Standards (PSS)**.
 
-### 3. **Networking**
+### 3. Networking
 
 - Enforcing **Network Policies** to control ingress and egress traffic.
 - Avoiding insecure **HostNetwork** and **HostPort** usage.
 
-### 4. **Policies and Configuration**
+### 4. Policies and Configuration
 
 - Using **RBAC (Role-Based Access Control)** for granular permissions.
 - Implementing **Security Contexts** and **Pod Security Standards**.
