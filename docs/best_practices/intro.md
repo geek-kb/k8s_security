@@ -1,5 +1,5 @@
 ---
-title: "Section Intro"
+title: "Best Practices Intro"
 description: "A collection of best practices for securing Kubernetes environments, covering cluster hardening, microservice security, monitoring, and supply chain integrity."
 sidebar_position: 1
 ---
