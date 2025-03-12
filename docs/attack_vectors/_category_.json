@@ -1,5 +1,6 @@
 {
   "label": "Common Attack Vectors Examples",
+  "collapsible": true,
   "collapsed": true,
   "position": 3
 }
