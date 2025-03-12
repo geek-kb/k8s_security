@@ -4,7 +4,7 @@
   "position": 6,
   "collapsed": false,
   "link": {
-    "type": "generated-index",
-    "description": "Explore best practices",
+    "type": "doc",
+    "href": "best_practices/intro"
   }
 }
