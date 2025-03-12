@@ -1,5 +1,5 @@
 ---
-title: Authentication
+title: Authentication Methods
 sidebar_position: 1
 ---
 
