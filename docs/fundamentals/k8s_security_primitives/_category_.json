@@ -1,9 +1,5 @@
 {
   "label": "K8s Security Primitives",
   "collapsed": true,
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "Explore k8s security primitives"
-  }
+  "position": 4
 }
