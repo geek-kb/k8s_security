@@ -2,5 +2,9 @@
   "label": "Best Practices",
   "collapsible": true,
   "position": 6,
-  "collapsed": false
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore best practices",
+  }
 }
