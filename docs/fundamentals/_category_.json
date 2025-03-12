@@ -2,9 +2,5 @@
   "label": "Fundamentals",
   "collapsible": true,
   "position": 2,
-  "collapsed": false,
-  "link": {
-    "type": "generated-index",
-    "description": "Explore fundamentals"
-  }
+  "collapsed": false
 }
