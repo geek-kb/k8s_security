@@ -20,8 +20,8 @@ The information is up to date with the latest Kubernetes versions and security t
 
 The **K8s Security** site is structured into three main categories:
 
-- **[Attack Vectors](/docs/attack_vectors/intro)**: Common security risks and real-world Kubernetes exploits.
 - **[Fundamentals](/docs/fundamentals/intro)**: Core security principles, authentication, authorization, and Kubernetes security models.
+- **[Attack Vectors](/docs/attack_vectors/intro)**: Common security risks and real-world Kubernetes exploits.
 - **[Best Practices](/docs/best_practices/intro)**: Essential steps to harden Kubernetes clusters, workloads, and network configurations.
 
 Each section provides **detailed security insights** with step-by-step **guides**, **code examples**, and **mitigation techniques**.
@@ -38,10 +38,10 @@ Each section provides **detailed security insights** with step-by-step **guides*
 
 ## How to Use This Site
 
-- Explore the **Attack Vectors** section to understand common Kubernetes threats.
 - Learn **Fundamentals** to build a strong security foundation.
+- Explore the **Attack Vectors** section to understand common Kubernetes threats.
 - Follow **Best Practices** to implement security hardening techniques.
-- Use the **Search** feature to quickly find relevant security guides.
+- Use the **Search** feature (in the upper left corner) to quickly find relevant security guides.
 
 ---
 
