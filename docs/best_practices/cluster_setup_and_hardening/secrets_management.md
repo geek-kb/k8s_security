@@ -21,7 +21,7 @@ For an in-depth guide on securing Kubernetes workloads, refer to [Pod Security S
 - Can be **mounted as files**, **injected as environment variables**, or accessed through the **Kubernetes API**.
 - By default, **Secrets are stored in etcd**, requiring additional encryption for protection.
 
-For securing API access and authentication, see [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication_methods).
+For securing API access and authentication, see [Kubernetes API Security](/docs/fundamentals/authentication/authentication_methods).
 
 ---
 
@@ -75,7 +75,7 @@ spec:
 
 This pod retrieves the **username** stored in the `db-secret` and assigns it to the **DB_USERNAME** environment variable.
 
-For more details on managing authentication credentials securely, see [Service Accounts](/docs/fundamentals/k8s_security_primitives/authentication/service_accounts).
+For more details on managing authentication credentials securely, see [Service Accounts](/docs/fundamentals/authentication/service_accounts).
 
 ---
 
@@ -118,7 +118,7 @@ rules:
     verbs: ["get", "list"]
 ```
 
-For more details on securing access, refer to [RBAC](/docs/fundamentals/k8s_security_primitives/authorization/rbac).
+For more details on securing access, refer to [RBAC](/docs/fundamentals/authorization/rbac).
 
 ### 3. Use External Secret Management Tools
 

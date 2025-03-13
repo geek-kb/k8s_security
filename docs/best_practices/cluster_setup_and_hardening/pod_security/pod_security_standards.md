@@ -54,7 +54,7 @@ metadata:
     pod-security.kubernetes.io/enforce-version: "v1.25"
 ```
 
-For more details on enforcing security at the namespace level, see [Kubernetes Namespace Security](/docs/fundamentals/k8s_security_primitives/authorization/rbac).
+For more details on enforcing security at the namespace level, see [Kubernetes Namespace Security](/docs/fundamentals/authorization/rbac).
 
 ---
 
@@ -65,7 +65,7 @@ For more details on enforcing security at the namespace level, see [Kubernetes N
 - **Avoid the "privileged" level** unless absolutely necessary.
 - **Combine PSS with Role-Based Access Control (RBAC)** for **granular access control**.
 
-For securing authentication and authorization in Kubernetes, refer to [Role-Based Access Control (RBAC)](/docs/fundamentals/k8s_security_primitives/authorization/rbac).
+For securing authentication and authorization in Kubernetes, refer to [Role-Based Access Control (RBAC)](/docs/fundamentals/authorization/rbac).
 
 ---
 
