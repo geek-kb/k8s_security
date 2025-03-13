@@ -59,6 +59,6 @@ The attacker now has **full administrative access**, enabling them to modify wor
 
 To secure RBAC configurations and prevent privilege escalation, follow the security best practices outlined in:
 
-➡ **[Securing RBAC Permissions](/docs/best_practices/cluster_setup_and_hardening/rbac_security)**
+➡ **[Securing RBAC Permissions](/docs/best_practices/cluster_setup_and_hardening/insecure_rbac_permissions_mitigation)**
 
 This guide covers techniques such as **principle of least privilege, role scoping, avoiding wildcard permissions, and enforcing least privilege bindings** to mitigate RBAC security risks.

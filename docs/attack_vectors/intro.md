@@ -21,8 +21,8 @@ This section explores **common Kubernetes attack vectors**, including:
 - **[Supply Chain Attacks](/docs/attack_vectors/supply_chain_attacks)**: Injecting malicious code into container images or dependencies.
 - **[Unrestricted etcd Access](/docs/attack_vectors/unrestricted_etcd_access)**: Accessing etcd storage to retrieve secrets and cluster configurations.
 - **[Cluster Takeover via Misconfigured Admission Controllers](/docs/attack_vectors/misconfigured_admission_controllers)**: Exploiting improperly secured admission controllers to run unauthorized workloads.
-- **[Denial of Service (DoS) Attacks](/docs/attack_vectors/denial_of_service_attacks)**: Exploiting Kubernetes resource limits to exhaust cluster resources.
-- **[Compromised Helm Charts](/docs/attack_vectors/compromised_helm_charts)**: Deploying insecure or tampered Helm charts that introduce vulnerabilities.
+- **[Denial of Service (DoS) Attacks](/docs/attack_vectors/ddos_attacks)**: Exploiting Kubernetes resource limits to exhaust cluster resources.
+- **[Compromised Helm Charts](/docs/attack_vectors/supply_chain_attacks)**: Deploying insecure or tampered Helm charts that introduce vulnerabilities.
 - **[Unrestricted HostPath Mounts](/docs/attack_vectors/unrestricted_hostpath_mounts)**: Allowing pods to mount the host filesystem, leading to potential system compromise.
 - **[Ingress/Egress Traffic Hijacking](/docs/attack_vectors/traffic_hijacking)**: Manipulating misconfigured network policies to intercept or reroute cluster traffic.
 - **[Exploiting Insecure CSI Drivers](/docs/attack_vectors/insecure_csi_drivers)**: Attacking Kubernetes Container Storage Interface (CSI) drivers to gain unauthorized access to persistent storage.
