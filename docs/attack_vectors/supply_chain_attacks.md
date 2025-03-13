@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 10
 title: "Supply Chain Attacks"
 description: "How attackers compromise container images, dependencies, CI/CD pipelines, and Helm charts to infiltrate Kubernetes clusters."
 ---

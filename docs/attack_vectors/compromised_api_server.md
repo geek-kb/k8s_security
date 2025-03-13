@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: "Compromised API Server"
 description: "Exploiting Kubernetes API server vulnerabilities and best practices for securing API endpoints."
 ---
