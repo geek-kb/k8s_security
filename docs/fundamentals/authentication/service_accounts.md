@@ -20,7 +20,7 @@ For more details on Kubernetes authentication mechanisms, refer to [Authenticati
 - By default, every pod is **automatically assigned a service account**.
 - Service accounts can be used with **Role-Based Access Control (RBAC)** to define what actions they can perform.
 
-For an overview of Kubernetes security principles, see [Kubernetes Security Fundamentals](/docs/fundamentals/fundamentals_intro).
+For an overview of Kubernetes security principles, see [Kubernetes Security Fundamentals](/docs/fundamentals/intro).
 
 ---
 

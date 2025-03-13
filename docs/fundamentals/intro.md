@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: "Kubernetes Security Fundamentals"
+title: "Fundamentals Intro"
 description: "An introduction to Kubernetes security, covering key concepts, challenges, and foundational security principles."
 ---
 
