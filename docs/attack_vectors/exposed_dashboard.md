@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Exposed Kubernetes Dashboard
 description: Exploiting an exposed Kubernetes Dashboard and implementing best practices to secure dashboard access.
 ---
@@ -50,9 +50,9 @@ kind: ClusterRoleBinding
 metadata:
   name: attacker-admin-binding
 subjects:
-- kind: ServiceAccount
-  name: attacker-admin
-  namespace: kube-system
+  - kind: ServiceAccount
+    name: attacker-admin
+    namespace: kube-system
 roleRef:
   kind: ClusterRole
   name: cluster-admin
@@ -110,9 +110,9 @@ metadata:
   name: restricted-dashboard-role
   namespace: kube-system
 rules:
-- apiGroups: [""]
-  resources: ["pods", "services"]
-  verbs: ["get", "list"]
+  - apiGroups: [""]
+    resources: ["pods", "services"]
+    verbs: ["get", "list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -120,9 +120,9 @@ metadata:
   name: restricted-dashboard-binding
   namespace: kube-system
 subjects:
-- kind: ServiceAccount
-  name: dashboard
-  namespace: kube-system
+  - kind: ServiceAccount
+    name: dashboard
+    namespace: kube-system
 roleRef:
   kind: Role
   name: restricted-dashboard-role

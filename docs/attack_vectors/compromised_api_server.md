@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: "Compromised API Server"
 description: "Exploiting Kubernetes API server vulnerabilities and best practices for securing API endpoints."
 ---
@@ -69,9 +69,9 @@ metadata:
   namespace: default
   name: pod-reader
 rules:
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get", "list"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -79,9 +79,9 @@ metadata:
   name: read-pods
   namespace: default
 subjects:
-- kind: User
-  name: "api-user"
-  apiGroup: rbac.authorization.k8s.io
+  - kind: User
+    name: "api-user"
+    apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
   name: pod-reader

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 title: Insecure Secrets Management
 description: Understanding the risks of insecure secrets management in Kubernetes and best practices to securely handle sensitive data.
 ---
@@ -61,14 +61,14 @@ The attacker can access and exfiltrate sensitive data, potentially causing data 
 apiVersion: apiserver.config.k8s.io/v1
 kind: EncryptionConfiguration
 resources:
-- resources:
-  - secrets
-  providers:
-  - aescbc:
-      keys:
-      - name: key1
-        secret: c2VjcmV0LWtleS1mb3ItZW5jcnlwdGlvbg==
-  - identity: {}
+  - resources:
+      - secrets
+    providers:
+      - aescbc:
+          keys:
+            - name: key1
+              secret: c2VjcmV0LWtleS1mb3ItZW5jcnlwdGlvbg==
+      - identity: {}
 ```
 
 ### 2. Use External Secret Management Solutions
@@ -109,9 +109,9 @@ metadata:
   namespace: default
   name: secret-reader
 rules:
-- apiGroups: [""]
-  resources: ["secrets"]
-  verbs: ["get"]
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["get"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -119,8 +119,8 @@ metadata:
   name: read-secrets
   namespace: default
 subjects:
-- kind: ServiceAccount
-  name: secret-reader-sa
+  - kind: ServiceAccount
+    name: secret-reader-sa
 roleRef:
   kind: Role
   name: secret-reader

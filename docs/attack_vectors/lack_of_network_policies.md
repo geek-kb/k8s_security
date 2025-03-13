@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: Lack of Network Policies
 description: Understanding the risks of unregulated network traffic in Kubernetes and implementing best practices with Network Policies.
 ---
@@ -67,8 +67,8 @@ metadata:
 spec:
   podSelector: {}
   policyTypes:
-  - Ingress
-  - Egress
+    - Ingress
+    - Egress
 ```
 
 ### 2. Create Allow-Only Policies
@@ -89,15 +89,15 @@ spec:
     matchLabels:
       app: my-app
   policyTypes:
-  - Ingress
+    - Ingress
   ingress:
-  - from:
-    - podSelector:
-        matchLabels:
-          role: frontend
-    ports:
-    - protocol: TCP
-      port: 80
+    - from:
+        - podSelector:
+            matchLabels:
+              role: frontend
+      ports:
+        - protocol: TCP
+          port: 80
 ```
 
 ### 3. Restrict Egress Traffic
@@ -118,14 +118,14 @@ spec:
     matchLabels:
       role: database
   policyTypes:
-  - Egress
+    - Egress
   egress:
-  - to:
-    - ipBlock:
-        cidr: 10.0.0.0/24
-    ports:
-    - protocol: TCP
-      port: 5432
+    - to:
+        - ipBlock:
+            cidr: 10.0.0.0/24
+      ports:
+        - protocol: TCP
+          port: 5432
 ```
 
 ---
