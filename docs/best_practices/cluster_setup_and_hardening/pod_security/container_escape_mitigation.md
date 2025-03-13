@@ -33,45 +33,12 @@ spec:
 
 ### Why It Matters
 
-- **Prevents** access to kernel modules and sensitive host files.
+- **Prevents** access to kernel modules and sensitive host files.<br/>
 - **Restricts** direct interaction with the host’s networking and devices.
 
 ---
 
-## 2. Restrict Host Filesystem Access
-
-Containers should not have unrestricted access to the host filesystem. **Avoid `hostPath` mounts** unless absolutely necessary.
-
-### Secure Volume Mounting
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: restricted-pod
-spec:
-  containers:
-    - name: app-container
-      image: secure-image
-      volumeMounts:
-        - name: host-root
-          mountPath: /host
-          readOnly: true
-  volumes:
-    - name: host-root
-      hostPath:
-        path: /
-        type: Directory
-```
-
-### Why It Matters
-
-- **Prevents** modification of critical system files.<br/>
-- **Reduces** the risk of attackers accessing host credentials or executing system-level commands.
-
----
-
-## 3. Use Seccomp to Restrict Syscalls
+## 2. Use Seccomp to Restrict Syscalls
 
 **Seccomp (Secure Computing Mode)** filters system calls available to containers, reducing the attack surface.
 
@@ -97,7 +64,7 @@ spec:
 
 ---
 
-## 4. Enforce Pod Security Standards
+## 3. Enforce Pod Security Standards
 
 Use **Pod Security Admission (PSA)** to enforce security policies that restrict dangerous configurations.
 
@@ -125,7 +92,7 @@ spec:
 
 ---
 
-## 5. Implement Container Sandboxing
+## 4. Implement Container Sandboxing
 
 Use **Kata Containers, gVisor, or Firecracker** to provide additional security layers between the container and the host.
 
@@ -152,6 +119,4 @@ spec:
 
 ## Conclusion
 
-**Preventing container escape** is essential for Kubernetes security. By **disabling privileged containers, restricting filesystem access, enforcing security profiles, and using sandboxed runtimes**, you can significantly reduce the risk of container breakout attacks.
-
-➡ For more security recommendations, visit **[Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security)**.
+**Preventing container escape** is essential for Kubernetes security. By **disabling privileged containers, enforcing security profiles, and using sandboxed runtimes**, you can significantly reduce the risk of container breakout attacks.

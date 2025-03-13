@@ -60,6 +60,6 @@ The attacker has escaped the container and now has **full access to the host**, 
 
 To prevent container escape vulnerabilities, follow the security best practices outlined in:
 
-➡ **[Preventing Container Escape](/docs/best_practices/container_escape_mitigation)**
+➡ **[Preventing Container Escape](/docs/best_practices/cluster_setup_and_hardening/pod_security/container_escape_mitigation)**
 
 This guide covers techniques such as **disabling privileged containers, restricting host filesystem access, enforcing least privilege principles, and applying security policies** to mitigate container escape risks.

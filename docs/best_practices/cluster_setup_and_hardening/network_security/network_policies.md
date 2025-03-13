@@ -20,9 +20,13 @@ Network Policies use **selectors** and **rules** to define allowed traffic:
 
 By default, Kubernetes allows **all traffic** between pods unless a **Network Policy** is defined to restrict it.
 
-## Example: Default Deny All Policy
+---
 
-The following **Network Policy** enforces a **default deny-all** rule, blocking **all ingress and egress traffic** for pods in the `default` namespace:
+## 1. Enforce Default Deny-All Policies
+
+To prevent unrestricted communication between pods, enforce a **deny-all** policy by default.
+
+### Secure Default Deny Policy
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -37,9 +41,18 @@ spec:
     - Egress
 ```
 
-## Example: Allow Ingress from Specific Pods
+### Why It Matters
 
-The example below allows ingress traffic **only from pods with the label `app=frontend`** to pods with the label `app=backend`:
+- **Blocks** all traffic by default, enforcing a least-privilege model.<br/>
+- **Requires** explicit allow rules for necessary communication.
+
+---
+
+## 2. Restrict Ingress Traffic to Specific Pods
+
+Allow ingress traffic only from trusted sources.
+
+### Secure Ingress Policy Example
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -63,11 +76,104 @@ spec:
           port: 80
 ```
 
-## Key Takeaways
+### Why It Matters
 
-- **By default, all pod-to-pod communication is allowed.**
-- **Network Policies** restrict communication based on **selectors** and **rules**.
-- Use **default deny-all policies** and explicitly allow traffic where needed.
-- Combine Network Policies with **RBAC** and **Pod Security Standards** for a layered security approach.
+- **Prevents** unauthorized pods from accessing sensitive services.<br/>
+- **Allows** only traffic from the specified frontend application.
 
-For more best practices on **Kubernetes security**, see [Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro).
+---
+
+## 3. Restrict Egress Traffic to External Endpoints
+
+Limit pod communication with external networks to reduce attack exposure.
+
+### Secure Egress Policy Example
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: restrict-egress
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: backend
+  policyTypes:
+    - Egress
+  egress:
+    - to:
+        - ipBlock:
+            cidr: 192.168.1.0/24
+      ports:
+        - protocol: TCP
+          port: 443
+```
+
+### Why It Matters
+
+- **Prevents** unauthorized outbound connections to untrusted networks.<br/>
+- **Reduces** the risk of data exfiltration.
+
+---
+
+## 4. Protect the Kubernetes API Server
+
+Restrict access to the Kubernetes API server to prevent unauthorized requests.
+
+### Secure API Server Access Policy
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: restrict-api-access
+  namespace: kube-system
+spec:
+  podSelector:
+    matchLabels:
+      component: kube-apiserver
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - ipBlock:
+            cidr: 10.0.0.0/16
+```
+
+### Why It Matters
+
+- **Limits** API access to trusted networks.<br/>
+- **Prevents** external reconnaissance and brute-force attacks.
+
+---
+
+## 5. Enforce Namespace Isolation
+
+Prevent pods in one namespace from communicating with pods in another namespace.
+
+### Secure Namespace Isolation Policy
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: namespace-isolation
+  namespace: default
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+  ingress: []
+```
+
+### Why It Matters
+
+- **Prevents** cross-namespace attacks and lateral movement.<br/>
+- **Ensures** workload segregation for multi-tenant clusters.
+
+---
+
+## Conclusion
+
+**Network Policies** provide critical security controls for **traffic segmentation, access control, and workload isolation** in Kubernetes. By **defaulting to deny-all, restricting ingress and egress, securing the API server, and enforcing namespace isolation**, administrators can prevent unauthorized access and **minimize the attack surface**.
