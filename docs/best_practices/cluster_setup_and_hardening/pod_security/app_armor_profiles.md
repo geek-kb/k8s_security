@@ -113,7 +113,7 @@ This ensures that the container follows the **custom AppArmor profile restrictio
 
 - **[Seccomp Profiles](/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods)** limit system calls at the kernel level.
 - **[Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)** enforce security policies for workloads.
-- **[RBAC and Least Privilege](/docs/fundamentals/k8s_security_primitives/authorization/rbac)** ensure that workloads only have necessary permissions.
+- **[RBAC and Least Privilege](/docs/fundamentals/authorization/rbac)** ensure that workloads only have necessary permissions.
 
 ---
 

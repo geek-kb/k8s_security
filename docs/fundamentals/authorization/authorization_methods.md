@@ -50,7 +50,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-[Read more about RBAC](/docs/fundamentals/k8s_security_primitives/authorization/rbac)
+[Read more about RBAC](/docs/fundamentals/authorization/rbac)
 
 ---
 
@@ -78,7 +78,7 @@ roleRef:
 kube-apiserver --authorization-policy-file=policy.json --authorization-mode=ABAC
 ```
 
-[Read more about ABAC](/docs/fundamentals/k8s_security_primitives/authorization/abac)
+[Read more about ABAC](/docs/fundamentals/authorization/abac)
 
 ---
 
@@ -108,7 +108,7 @@ rules:
 kube-apiserver --authorization-mode=Node,RBAC
 ```
 
-[Read more about Node Authorization](/docs/fundamentals/k8s_security_primitives/authorization/node_authorization)
+[Read more about Node Authorization](/docs/fundamentals/authorization/node_authorization)
 
 ---
 
@@ -143,7 +143,7 @@ current-context: webhook
 kube-apiserver --authorization-mode=Webhook --authorization-webhook-config-file=/etc/kubernetes/authz-webhook-config.yaml
 ```
 
-[Read more about Webhook Authorization](/docs/fundamentals/k8s_security_primitives/authorization/webhook_authorization)
+[Read more about Webhook Authorization](/docs/fundamentals/authorization/webhook_authorization)
 
 ---
 

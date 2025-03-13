@@ -31,7 +31,7 @@ The **Kubelet** is a critical component of a **Kubernetes node**, responsible fo
 - Setting `--read-only-port=0` disables the unauthenticated read-only Kubelet API.
 - Configuring `--address=127.0.0.1` ensures that only local processes can access the Kubelet API.
 
-For more information, refer to [Kubernetes API Security](/docs/fundamentals/k8s_security_primitives/authentication/authentication_methods).
+For more information, refer to [Kubernetes API Security](/docs/fundamentals/authentication/authentication_methods).
 
 ### 2. Enforce TLS Encryption
 
@@ -45,7 +45,7 @@ For more information, refer to [Kubernetes API Security](/docs/fundamentals/k8s_
 --client-ca-file=/var/lib/kubernetes/pki/ca.crt
 ```
 
-For more information on TLS and securing communication in Kubernetes, refer to [Certificates in Kubernetes](/docs/fundamentals/k8s_security_primitives/authentication/certificates).
+For more information on TLS and securing communication in Kubernetes, refer to [Certificates in Kubernetes](/docs/fundamentals/authentication/certificates).
 
 ### 3. Enable Authentication and Authorization
 
@@ -62,7 +62,7 @@ For more information on TLS and securing communication in Kubernetes, refer to [
 - `--authorization-mode=Webhook` enforces **Kubernetes RBAC policies**.
 - `--authentication-token-webhook=true` requires **API authentication tokens**.
 
-For more details, refer to [Role-Based Access Control (RBAC)](/docs/fundamentals/k8s_security_primitives/authorization/rbac).
+For more details, refer to [Role-Based Access Control (RBAC)](/docs/fundamentals/authorization/rbac).
 
 ### 4. Disable Anonymous Access
 
@@ -109,7 +109,7 @@ rules:
     verbs: ["get", "list"]
 ```
 
-For more details on **RBAC security**, refer to [Role-Based Access Control](/docs/fundamentals/k8s_security_primitives/authorization/rbac).
+For more details on **RBAC security**, refer to [Role-Based Access Control](/docs/fundamentals/authorization/rbac).
 
 ### 7. Enable Audit Logging for Kubelet Actions
 
