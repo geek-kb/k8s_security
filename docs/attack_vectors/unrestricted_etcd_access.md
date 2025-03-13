@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 11
 title: "Unrestricted etcd Access"
 description: "How attackers exploit unrestricted access to etcd to retrieve Kubernetes secrets and take control of the cluster."
 ---

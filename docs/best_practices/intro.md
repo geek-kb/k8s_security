@@ -28,11 +28,11 @@ Securing Kubernetes environments requires a multi-layered approach, covering inf
 - Use **Falco**, **Sysdig**, and **eBPF** for real-time anomaly detection.
 - Implement **centralized logging and alerting** with **Prometheus** and **Grafana**.
 
-### **[Supply Chain Security](/docs/best_practices/supply_chain_security/intro)**
+<!-- ### **[Supply Chain Security](/docs/best_practices/supply_chain_security/intro)**
 
 - Verify software integrity using **SBOMs**, **Sigstore**, and **cosign**.
 - Secure CI/CD pipelines to prevent **malicious code injection**.
-- Enforce **image provenance** and **admission controls** for deployments.
+- Enforce **image provenance** and **admission controls** for deployments. -->
 
 ### **[System Hardening](/docs/best_practices/system_hardening/intro)**
 

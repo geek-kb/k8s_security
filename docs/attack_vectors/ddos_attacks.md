@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 13
 title: "Denial of Service (DoS) Attacks"
 description: "How attackers exploit Kubernetes resources to exhaust system capacity, disrupt workloads, and cause service outages."
 ---

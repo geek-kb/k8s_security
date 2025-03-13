@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 9
 title: "Exposed Kubelet API"
 description: "How an exposed Kubelet API can be exploited to execute commands on nodes and compromise Kubernetes clusters."
 ---

@@ -59,7 +59,7 @@ By injecting a rogue DNS entry:
 
 ```yaml
 .:53 {
-    forward . malicious-dns.com
+forward . malicious-dns.com
 }
 ```
 

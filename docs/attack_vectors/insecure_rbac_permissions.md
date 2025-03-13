@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 8
 title: "Insecure RBAC Permissions"
 description: "Understanding how overly permissive RBAC configurations can lead to unauthorized access and privilege escalation in Kubernetes."
 ---
