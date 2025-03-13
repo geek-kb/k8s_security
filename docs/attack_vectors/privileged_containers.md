@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 title: Privileged Containers
 description: Understanding the risks of privileged containers in Kubernetes and implementing best practices to secure workloads.
 ---
@@ -67,10 +67,10 @@ metadata:
   name: non-privileged-pod
 spec:
   containers:
-  - name: app-container
-    image: nginx
-    securityContext:
-      privileged: false
+    - name: app-container
+      image: nginx
+      securityContext:
+        privileged: false
 ```
 
 ### 2. Use Pod Security Standards (PSS)
