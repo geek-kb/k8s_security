@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 title: "Understanding the Kubernetes Attack Surface"
 description: "An overview of potential attack vectors in Kubernetes and strategies to mitigate security risks."
 ---
