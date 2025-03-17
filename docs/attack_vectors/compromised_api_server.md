@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
 title: "Compromised API Server"
-description: "Exploiting Kubernetes API server vulnerabilities and best practices for securing API endpoints."
+description: "Exploiting Kubernetes API server vulnerabilities and how attackers gain unauthorized access."
 ---
 
 # Compromised API Server
 
-A **compromised API server** can provide attackers with **unauthorized access** to your **Kubernetes cluster**, allowing them to **view**, **modify**, or **delete resources**. This type of attack can lead to severe disruptions, including unauthorized data exposure, service downtime, and potential breaches of sensitive environments.
+A compromised API server can provide attackers with unauthorized access to a Kubernetes cluster, allowing them to view, modify, or delete resources. This type of attack can lead to severe disruptions, including unauthorized data exposure, service downtime, and potential breaches of sensitive environments.
 
 ---
 
@@ -20,11 +20,13 @@ nmap -p 6443 <cluster-ip>
 
 ### Access API Server Without Authentication
 
-The attacker tries to list all pods using a curl request:
+The attacker attempts to list all pods using a curl request:
 
 ```bash
 curl -k https://<api-server-ip>:6443/api/v1/pods
 ```
+
+If authentication is misconfigured or disabled, the API server may respond with a list of active pods in the cluster.
 
 ### Delete Critical Resources
 
@@ -34,88 +36,18 @@ The attacker attempts to delete a specific pod:
 curl -k -X DELETE https://<api-server-ip>:6443/api/v1/namespaces/default/pods/victim-pod
 ```
 
+If the API server does not enforce strict authentication and authorization policies, this request may succeed, resulting in service disruptions.
+
+### Escalating Access
+
+If the attacker is able to retrieve service account tokens, Kubernetes secrets, or privileged credentials, they may escalate their access and gain control over additional cluster resources. Exploiting weak RBAC policies or misconfigured admission controllers can allow unauthorized privilege escalation.
+
 ### Result
 
-The attacker can delete pods, causing service disruptions and potentially leading to a Denial of Service (DoS).
+A compromised API server can be used to manipulate cluster resources, exfiltrate sensitive data, deploy malicious workloads, or escalate privileges to gain full control of the cluster. In extreme cases, attackers can use the API server as an entry point to compromise the underlying infrastructure.
 
 ---
 
-## Mitigation Techniques and Fixes
+To learn how to secure the API server and prevent such attacks, refer to the mitigation guide:
 
-### 1. Restrict API Access
-
-- **Issue:** Publicly exposed API server allows unauthorized access.<br/>
-- **Fix:** Use firewalls or private networking to limit access.
-
-#### Firewall Rule Example
-
-```bash
-# Allow access to the API server only from a specific IP range
-iptables -A INPUT -p tcp -s <trusted-ip-range> --dport 6443 -j ACCEPT
-iptables -A INPUT -p tcp --dport 6443 -j DROP
-```
-
-### 2. Enable Authentication
-
-- **Issue:** Lack of authentication enables any user to access the API server.<br/>
-- **Fix:** Implement Role-Based Access Control (RBAC) and use API server tokens for secure access.
-
-#### Enforcing Authentication via RBAC
-
-```yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
-metadata:
-  namespace: default
-  name: pod-reader
-rules:
-  - apiGroups: [""]
-    resources: ["pods"]
-    verbs: ["get", "list"]
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: read-pods
-  namespace: default
-subjects:
-  - kind: User
-    name: "api-user"
-    apiGroup: rbac.authorization.k8s.io
-roleRef:
-  kind: Role
-  name: pod-reader
-  apiGroup: rbac.authorization.k8s.io
-```
-
-### 3. Use Network Policies
-
-- **Issue:** External access to the API server is not restricted.<br/>
-- **Fix:** Block external access using Kubernetes Network Policies.
-
-#### Example Network Policy to Restrict API Server Access
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: restrict-api-access
-  namespace: default
-spec:
-  podSelector:
-    matchLabels:
-      component: kube-apiserver
-  policyTypes:
-    - Ingress
-  ingress:
-    - from:
-        - podSelector:
-            matchLabels:
-              role: internal
-```
-
----
-
-## Conclusion
-
-Securing your Kubernetes API server is critical to maintaining the integrity and security of your cluster. Implement best practices by restricting API access, enabling authentication through Role-Based Access Control (RBAC), and applying network policies to prevent unauthorized access. Regularly monitor and audit API server logs to detect and respond to potential threats promptly.
+➡ [Securing the Kubernetes API Server](https://geek-kb.github.io/k8s_security/docs/best_practices/cluster_setup_and_hardening/api_server_security/)
