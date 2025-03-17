@@ -50,9 +50,31 @@ The attacker spawns a shell on the host system:
 chroot /mnt/host /bin/bash
 ```
 
-### Result
+At this stage, the attacker has modified the host’s filesystem and potentially created a persistent backdoor, but they are still within the container’s **process namespace**, meaning they do not fully control the host yet.
 
-The attacker has escaped the container and now has **full access to the host**, enabling them to modify files, execute commands, and potentially compromise the entire cluster.
+### Step 5: Escape to the Host's Namespaces
+
+To gain full control over the host, the attacker must enter the **host's namespaces**:
+
+```bash
+nsenter --target 1 --mount --uts --ipc --net --pid
+```
+
+#### **Explanation of the Flags:**
+
+- `--target 1` → Targets **PID 1** (which is `systemd` or `init` on the host).
+- `--mount` → Joins the host's **mount namespace**.
+- `--uts` → Joins the host's **UTS (hostname) namespace**.
+- `--ipc` → Joins the host's **inter-process communication namespace**.
+- `--net` → Joins the host's **network namespace**.
+- `--pid` → Joins the host's **process namespace**, making `ps aux` show all host processes.
+
+### **Expected Result**
+
+- Running `hostname` should now return **the host’s real name** (e.g., `controlplane`).
+- Running `ps aux` should now display **all host processes**.
+
+Once these steps are completed, the attacker has fully escaped the container and can execute arbitrary commands on the host.
 
 ---
 
