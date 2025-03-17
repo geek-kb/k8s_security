@@ -167,7 +167,25 @@ metadata:
 
 Containers should not have access to the host’s filesystem, especially directories like `/proc`, `/sys`, and `/var/run/docker.sock`.
 
-### Secure Configuration
+### **Key Directories That Must Be Protected**
+
+| **Path** | **Risk** |
+|----------|---------|
+| `/proc`  | Grants access to host processes, kernel settings, and system info. `/proc/1/root` exposes the **host’s root filesystem**. |
+| `/sys`   | Allows modification of kernel parameters and hardware configurations. |
+| `/var/run/docker.sock` | Provides full control over Docker and allows spawning new privileged containers. |
+| `/dev`   | Exposes host devices and can be abused to gain raw disk access. |
+| `/etc`   | Contains system-wide configuration files, including sensitive credentials. |
+| `/root`  | Contains the root user’s home directory, which may include SSH keys and configuration files. |
+
+### **Stronger Secure Pod Configuration**
+
+To truly **restrict host filesystem access**, use a combination of:
+
+- **Read-only root filesystem**
+- **Explicitly disabling hostPath volumes**
+- **Using AppArmor, Seccomp, and SELinux policies**
+- **Denying all unnecessary mounts**
 
 ```yaml
 apiVersion: v1
@@ -180,19 +198,29 @@ spec:
       image: secure-image
       securityContext:
         readOnlyRootFilesystem: true
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+            - ALL
+        seccompProfile:
+          type: RuntimeDefault
+        appArmorProfile: runtime/default
         volumeMounts:
-          - name: sensitive-dir
-            mountPath: /host
-            readOnly: true
+          - name: tmp
+            mountPath: /tmp
   volumes:
-    - name: sensitive-dir
+    - name: tmp
       emptyDir: {}
 ```
 
 ### Why It Matters
 
-- Prevents attackers from modifying critical host files.<br/>
-- Ensures that containers cannot persist malicious changes.
+- **Prevents modifying critical system files** → `readOnlyRootFilesystem: true`
+- **Blocks privilege escalation techniques** → `allowPrivilegeEscalation: false`
+- **Reduces attack surface by dropping all capabilities** → `capabilities.drop: ALL`
+- **Restricts syscalls with Seccomp** → `seccompProfile: RuntimeDefault`
+- **Applies additional restrictions with AppArmor** → `appArmorProfile: runtime/default`
+- **Prevents unnecessary filesystem mounts** → No hostPath or sensitive volume mounts
 
 ---
 
