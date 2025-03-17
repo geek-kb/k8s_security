@@ -30,3 +30,13 @@ This section explores **common Kubernetes attack vectors**, including:
 - **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Exploiting sidecar containers to attack the main application.
 
 Each article provides **examples, real-world risks, and mitigation strategies** to help secure Kubernetes clusters against these threats.
+
+---
+
+## **Warning: Security Risk**
+
+The information and the scripts included in this section are intended for **educational and security research purposes only**. They demonstrate how attackers exploit misconfigurations and vulnerabilities in Kubernetes clusters. Running these scripts on a production system or in an unauthorized environment can lead to **severe security breaches, data loss, and system compromise**.
+
+Use this content only in a **controlled, isolated testing environment** where you have explicit permission. Misuse of this information may violate company policies or legal regulations.
+
+**You are responsible for how you use this information. Proceed with caution.**
