@@ -131,7 +131,7 @@ This adds a new user `attacker` with UID 0 (root privileges).
 To verify:
 
 ```bash
-cat /mnt/host/etc/passwd | grep attacker
+grep attacker /mnt/host/etc/passwd
 ```
 
 Expected output:
