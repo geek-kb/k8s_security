@@ -41,7 +41,7 @@ Each section provides **detailed security insights** with step-by-step **guides*
 - Learn **Fundamentals** to build a strong security foundation.
 - Explore the **Attack Vectors** section to understand common Kubernetes threats.
 - Follow **Best Practices** to implement security hardening techniques.
-- Use the **Search** feature (in the upper left corner) to quickly find relevant security guides.
+- Use the **Search** feature (in the upper right corner) to quickly find relevant security guides.
 
 ---
 
