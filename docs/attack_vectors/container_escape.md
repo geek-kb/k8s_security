@@ -10,7 +10,7 @@ This guide provides a detailed walkthrough of escaping from a container to gain 
 
 ## **Warning: Security Risk**
 
-**This script is intended for educational and security research purposes only.** It demonstrates how an attacker can escape a container and gain access to the host system. Running this script on a production system or unauthorized environment can lead to **severe security breaches, data loss, and system compromise.**
+**The information and the script included in this article are intended for educational and security research purposes only.** It demonstrates how an attacker can escape a container and gain access to the host system. Running this script on a production system or unauthorized environment can lead to **severe security breaches, data loss, and system compromise.**
 
 **Use this script only in a controlled, isolated testing environment where you have explicit permission.** Misuse of this information may violate company policies or legal regulations.
 
