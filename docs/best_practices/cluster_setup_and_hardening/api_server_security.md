@@ -15,7 +15,7 @@ To secure the API server, implement the following best practices.
 ## Restrict API Access
 
 **Issue:** Publicly exposed API servers allow unauthorized access.<br/>
-**Fix:** Use firewalls or private networking to limit access.
+**Fix:** Use firewalls, private networking or CiliumNetworkPolicy to limit access.
 
 #### Firewall Rule Example
 
@@ -23,6 +23,28 @@ To secure the API server, implement the following best practices.
 # Allow access to the API server only from a specific IP range
 iptables -A INPUT -p tcp -s <trusted-ip-range> --dport 6443 -j ACCEPT
 iptables -A INPUT -p tcp --dport 6443 -j DROP
+```
+
+#### CiliumNetworkPolicy Configuration Example
+
+```yaml
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: allow-dev-to-apiserver
+  namespace: kube-system # API server runs in kube-system
+spec:
+  endpointSelector: {} # Applies to all endpoints in the cluster
+  egress:
+    - toEntities:
+        - kube-apiserver # Cilium entity representing the Kubernetes API server
+      fromEndpoints:
+        - matchLabels:
+            env: dev
+      toPorts:
+        - ports:
+            - port: "6443"
+              protocol: TCP
 ```
 
 ### Additional Best Practices
