@@ -14,13 +14,8 @@ To secure the API server, implement the following best practices.
 
 ## Restrict API Access
 
-### Issue
-
-Publicly exposed API servers allow unauthorized access.
-
-### Fix
-
-Use firewalls or private networking to limit access.
+**Issue:** Publicly exposed API servers allow unauthorized access.<br/>
+**Fix:** Use firewalls or private networking to limit access.
 
 #### Firewall Rule Example
 
@@ -39,13 +34,8 @@ iptables -A INPUT -p tcp --dport 6443 -j DROP
 
 ## Enforce Authentication and Authorization
 
-### Issue
-
-Lack of authentication enables any user to access the API server.
-
-### Fix
-
-Enable Role-Based Access Control (RBAC) and use secure authentication methods.
+**Issue:** Lack of authentication enables any user to access the API server.<br/>
+**Fix:** Enable Role-Based Access Control (RBAC) and use secure authentication methods.
 
 #### RBAC Configuration Example
 
@@ -84,11 +74,8 @@ roleRef:
 
 ## Secure API Server Communication
 
-### Issue
-
-Unencrypted traffic to the API server allows interception of sensitive data.
-
-### Fix
+**Issue:** Unencrypted traffic to the API server allows interception of sensitive data.<br/>
+**Fix:**
 
 - Enforce TLS encryption for all API server communications.
 - Use certificates to authenticate API requests.
@@ -111,13 +98,8 @@ Modify `kube-apiserver` startup parameters:
 
 ## Use Network Policies to Restrict API Server Access
 
-### Issue
-
-Unrestricted network access allows unauthorized users to reach the API server.
-
-### Fix
-
-Block external access using Kubernetes Network Policies.
+**Issue:** Unrestricted network access allows unauthorized users to reach the API server.<br/>
+**Fix:** Block external access using Kubernetes Network Policies.
 
 #### Example Network Policy to Restrict API Server Access
 
@@ -149,13 +131,8 @@ spec:
 
 ## Enable Audit Logging for API Server Requests
 
-### Issue
-
-Lack of logging prevents detection of unauthorized access.
-
-### Fix
-
-Enable audit logging to monitor API server activity.
+**Issue:** Lack of logging prevents detection of unauthorized access.<br/>
+**Fix:** Enable audit logging to monitor API server activity.
 
 #### Enable Logging in `kube-apiserver`
 
