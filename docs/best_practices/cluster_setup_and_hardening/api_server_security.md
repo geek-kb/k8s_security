@@ -75,7 +75,7 @@ roleRef:
 ## Secure API Server Communication
 
 **Issue:** Unencrypted traffic to the API server allows interception of sensitive data.<br/>
-**Fix:**
+**Fixes:**
 
 - Enforce TLS encryption for all API server communications.
 - Use certificates to authenticate API requests.
