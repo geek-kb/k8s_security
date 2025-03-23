@@ -1,7 +1,7 @@
 ---
 title: "Service Mesh Security"
 description: "Improve Kubernetes security by implementing mutual TLS (mTLS), zero-trust networking, and policy-based access control using service meshes."
-sidebar_position: 5
+sidebar_position: 8
 ---
 
 # Service Mesh Security

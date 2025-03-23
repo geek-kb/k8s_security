@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: "Preventing Container Escape"
 description: "Best practices for securing Kubernetes containers to prevent escape attacks and host system compromise."
 ---
@@ -169,14 +169,14 @@ Containers should not have access to the host’s filesystem, especially directo
 
 ### **Key Directories That Must Be Protected**
 
-| **Path** | **Risk** |
-|----------|---------|
-| `/proc`  | Grants access to host processes, kernel settings, and system info. `/proc/1/root` exposes the **host’s root filesystem**. |
-| `/sys`   | Allows modification of kernel parameters and hardware configurations. |
-| `/var/run/docker.sock` | Provides full control over Docker and allows spawning new privileged containers. |
-| `/dev`   | Exposes host devices and can be abused to gain raw disk access. |
-| `/etc`   | Contains system-wide configuration files, including sensitive credentials. |
-| `/root`  | Contains the root user’s home directory, which may include SSH keys and configuration files. |
+| **Path**               | **Risk**                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `/proc`                | Grants access to host processes, kernel settings, and system info. `/proc/1/root` exposes the **host’s root filesystem**. |
+| `/sys`                 | Allows modification of kernel parameters and hardware configurations.                                                     |
+| `/var/run/docker.sock` | Provides full control over Docker and allows spawning new privileged containers.                                          |
+| `/dev`                 | Exposes host devices and can be abused to gain raw disk access.                                                           |
+| `/etc`                 | Contains system-wide configuration files, including sensitive credentials.                                                |
+| `/root`                | Contains the root user’s home directory, which may include SSH keys and configuration files.                              |
 
 ### **Stronger Secure Pod Configuration**
 

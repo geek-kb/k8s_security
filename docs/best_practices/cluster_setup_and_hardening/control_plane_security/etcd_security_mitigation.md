@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 1
 title: "Securing etcd in Kubernetes"
 description: "Best practices for securing etcd, Kubernetes' key-value store, to prevent unauthorized access and data compromise."
 ---
