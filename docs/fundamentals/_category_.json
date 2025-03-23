@@ -2,5 +2,8 @@
   "label": "Fundamentals",
   "collapsible": true,
   "position": 2,
-  "collapsed": true
+  "link": {
+    "type": "doc",
+    "id": "fundamentals/intro"
+  }
 }
