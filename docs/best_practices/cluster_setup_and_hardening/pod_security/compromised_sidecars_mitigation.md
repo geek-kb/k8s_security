@@ -1,5 +1,5 @@
 ---
-sidebar_position: 16
+sidebar_position: 2
 title: "Securing Kubernetes Sidecars"
 description: "Best practices for securing sidecar containers to prevent data interception, privilege escalation, and persistence attacks."
 ---

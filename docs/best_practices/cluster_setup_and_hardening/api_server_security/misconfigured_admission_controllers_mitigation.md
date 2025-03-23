@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 2
 title: "Securing Kubernetes Admission Controllers"
 description: "Best practices for securing Kubernetes Admission Controllers to prevent unauthorized workloads and enforce security policies."
 ---

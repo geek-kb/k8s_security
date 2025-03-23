@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 5
 title: "Exposed Kubernetes Dashboard Mitigation"
 description: "Techniques and configuration examples to prevent unauthorized access to the Kubernetes Dashboard."
 ---
@@ -35,7 +35,7 @@ spec:
   ingress:
     - from:
         - ipBlock:
-            cidr: 10.0.0.0/16  # Your internal CIDR
+            cidr: 10.0.0.0/16 # Your internal CIDR
   policyTypes:
     - Ingress
 ```
@@ -160,7 +160,7 @@ rules:
     users: ["system:serviceaccount:kubernetes-dashboard:dashboard-reader"]
     verbs: ["get", "list", "create"]
     resources:
-      - group: ""     # core API group
+      - group: "" # core API group
         resources: ["pods", "services", "configmaps"]
 ```
 

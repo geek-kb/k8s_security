@@ -1,6 +1,6 @@
 ---
 title: "Pod Sandboxing"
-sidebar_position: 4
+sidebar_position: 5
 description: "Learn how pod sandboxing enhances security by isolating workloads in Kubernetes."
 ---
 

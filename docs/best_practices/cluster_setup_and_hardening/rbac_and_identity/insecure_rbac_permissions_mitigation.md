@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 title: "Securing RBAC Permissions"
 description: "Best practices for securing Kubernetes RBAC configurations to prevent privilege escalation and unauthorized access."
 ---

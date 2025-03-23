@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 2
 title: "Securing Kubernetes Service Accounts"
 description: "Best practices for securing Kubernetes Service Accounts to prevent unauthorized access, privilege escalation, and persistent attacks."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "AppArmor Profiles"
-sidebar_position: 3
+sidebar_position: 1
 description: "Learn how to use AppArmor profiles to enforce mandatory access control (MAC) on Kubernetes pods."
 ---
 

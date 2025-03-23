@@ -1,7 +1,7 @@
 ---
 title: "Ingress Security"
 description: "Learn how to secure Kubernetes ingress traffic with TLS encryption, authentication, and Web Application Firewalls (WAF)."
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 # Ingress Security
@@ -25,7 +25,7 @@ metadata:
 spec:
   tls:
     - hosts:
-      - example.com
+        - example.com
       secretName: tls-secret
   rules:
     - host: example.com

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 4
 title: "Securing Kubernetes CSI Drivers"
 description: "Best practices for securing Container Storage Interface (CSI) drivers to prevent unauthorized access, privilege escalation, and data breaches."
 ---

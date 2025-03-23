@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 8
 title: "Restricting HostPath Mounts in Kubernetes"
 description: "Best practices for securing Kubernetes hostPath mounts to prevent unauthorized access to the host filesystem."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 title: "Securing the Kubernetes API Server"
 description: "Best practices for protecting the Kubernetes API server against unauthorized access and exploitation."
 ---

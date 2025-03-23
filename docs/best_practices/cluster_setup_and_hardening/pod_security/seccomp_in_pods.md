@@ -1,6 +1,6 @@
 ---
 title: "Seccomp in Pods"
-sidebar_position: 2
+sidebar_position: 7
 description: "Learn how to use seccomp to restrict system calls in Kubernetes pods and enhance container security."
 ---
 

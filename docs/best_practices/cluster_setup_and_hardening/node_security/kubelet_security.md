@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 title: "Kubelet Security"
 description: "Learn best practices for securing the Kubernetes Kubelet to maintain cluster integrity and prevent security risks."
 ---

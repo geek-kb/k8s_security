@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 9
 title: "Securing Kubernetes Network Traffic"
 description: "Best practices for securing Kubernetes network traffic against hijacking, interception, and unauthorized manipulation."
 ---
