@@ -12,6 +12,19 @@ Each article in this section helps you reduce the attack surface, implement defe
 
 ---
 
+## CIS Benchmarks and Auditing
+
+Audit your cluster using the [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) to validate configuration and hardening.
+
+- [What Are CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks)  
+  Understand the purpose and structure of the benchmark.
+- [CIS Benchmark for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_for_k8s)  
+  Manual overview of CIS controls and remediation strategies.
+- [CIS Benchmark with kube-bench](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_kube_bench)  
+  Use `kube-bench` to automate CIS compliance checks.
+
+---
+
 ## API Server Security
 
 Harden the Kubernetes API server by limiting exposure, validating requests, and securing access.
@@ -104,19 +117,6 @@ Store and access secrets securely, both inside Kubernetes and via external tools
 
 - [Insecure Secrets Management Mitigation](/docs/best_practices/cluster_setup_and_hardening/secrets_management/insecure_secrets_management_mitigation)  
   Enable encryption at rest, and integrate with external secret stores like Vault, AWS SSM, and Akeyless.
-
----
-
-## CIS Benchmarks and Auditing
-
-Audit your cluster using the [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) to validate configuration and hardening.
-
-- [What Are CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks)  
-  Understand the purpose and structure of the benchmark.
-- [CIS Benchmark for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_for_k8s)  
-  Manual overview of CIS controls and remediation strategies.
-- [CIS Benchmark with kube-bench](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_kube_bench)  
-  Use `kube-bench` to automate CIS compliance checks.
 
 ---
 
