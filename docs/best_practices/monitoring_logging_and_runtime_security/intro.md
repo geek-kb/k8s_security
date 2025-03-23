@@ -4,6 +4,8 @@ description: "Best practices for monitoring, logging, and securing runtime envir
 sidebar_position: 4
 ---
 
+**This category is still under development**
+
 # Monitoring, Logging, and Runtime Security
 
 Monitoring, logging, and runtime security are essential components of a **defense-in-depth** strategy for Kubernetes. By continuously collecting and analyzing data from clusters, administrators can detect **anomalies**, **unauthorized access**, and **potential attacks** before they escalate.
