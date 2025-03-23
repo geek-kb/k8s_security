@@ -1,9 +1,37 @@
 {
   "label": "Fundamentals",
   "collapsible": true,
+  "collapsed": false,
   "position": 2,
-  "link": {
-    "type": "doc",
-    "id": "fundamentals/intro"
-  }
+  "items": [
+    "fundamentals/intro",
+    "fundamentals/k8s_security_fundamentals",
+    {
+      "type": "category",
+      "label": "Kubernetes Security Primitives",
+      "items": [
+        {
+          "type": "category",
+          "label": "Authentication",
+          "items": [
+            "fundamentals/k8s_security_primitives/authentication/authentication",
+            "fundamentals/k8s_security_primitives/authentication/certificates",
+            "fundamentals/k8s_security_primitives/authentication/service_accounts"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Authorization",
+          "items": [
+            "fundamentals/k8s_security_primitives/authorization/abac",
+            "fundamentals/k8s_security_primitives/authorization/node_authorization",
+            "fundamentals/k8s_security_primitives/authorization/rbac",
+            "fundamentals/k8s_security_primitives/authorization/webhook_authorization"
+          ]
+        }
+      ]
+    },
+    "fundamentals/the_4_c_cloud_native_security",
+    "fundamentals/understanding_k8s_attack_surface"
+  ]
 }
