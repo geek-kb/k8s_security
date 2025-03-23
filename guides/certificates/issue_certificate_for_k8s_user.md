@@ -101,6 +101,6 @@ kubectl config use-context myuser
 
 ---
 
-## ✅ Key Takeaway
+## Key Takeaway
 
 By following these steps, you can securely create a certificate for a Kubernetes user, assign appropriate roles, and configure kubeconfig to authenticate the user with the Kubernetes API server.
