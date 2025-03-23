@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Insecure Secrets Management
-description: Understanding the risks of insecure secrets management in Kubernetes and best practices to securely handle sensitive data.
+description: Understanding the risks of insecure secrets management in Kubernetes and how it can lead to sensitive data exposure.
 ---
 
 # Insecure Secrets Management
@@ -48,91 +48,8 @@ The attacker can access and exfiltrate sensitive data, potentially causing data 
 
 ---
 
-## Mitigation Techniques and Fixes
+## Mitigation
 
-### 1. Encrypt Secrets at Rest
+For guidance on how to prevent this attack vector, refer to the mitigation article:
 
-**Issue:** Secrets stored in etcd are not encrypted by default.<br/>
-**Fix:** Enable encryption at rest in the Kubernetes configuration.
-
-#### Example Encryption Configuration for etcd
-
-```yaml
-apiVersion: apiserver.config.k8s.io/v1
-kind: EncryptionConfiguration
-resources:
-  - resources:
-      - secrets
-    providers:
-      - aescbc:
-          keys:
-            - name: key1
-              secret: c2VjcmV0LWtleS1mb3ItZW5jcnlwdGlvbg==
-      - identity: {}
-```
-
-### 2. Use External Secret Management Solutions
-
-**Issue:** Kubernetes Secrets alone do not provide advanced security features.<br/>
-**Fix:** Integrate with external secret management tools like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault.
-
-#### Example of Using External Secrets with Kubernetes
-
-```yaml
-apiVersion: secrets-store.csi.x-k8s.io/v1
-kind: SecretProviderClass
-metadata:
-  name: vault-secrets
-spec:
-  provider: vault
-  parameters:
-    vaultAddress: "https://vault.example.com"
-    roleName: "k8s-role"
-    objects: |
-      array:
-        - objectName: "db-password"
-          secretPath: "secret/data/db"
-          secretKey: "password"
-```
-
-### 3. Limit Access to Secrets with RBAC
-
-**Issue:** Lack of access controls allows unauthorized access to secrets.<br/>
-**Fix:** Implement Role-Based Access Control (RBAC) to restrict secret access.
-
-#### Example of RBAC Policy for Secret Access
-
-```yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
-metadata:
-  namespace: default
-  name: secret-reader
-rules:
-  - apiGroups: [""]
-    resources: ["secrets"]
-    verbs: ["get"]
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: read-secrets
-  namespace: default
-subjects:
-  - kind: ServiceAccount
-    name: secret-reader-sa
-roleRef:
-  kind: Role
-  name: secret-reader
-  apiGroup: rbac.authorization.k8s.io
-```
-
----
-
-## Conclusion
-
-To securely manage Kubernetes secrets:
-
-- Always enable encryption at rest using etcd encryption.
-- Utilize external secret management solutions for enhanced security.
-- Apply RBAC policies to restrict access to sensitive data.
+[Securing Secrets in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/secrets_management/insecure_secrets_management_mitigation)
