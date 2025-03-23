@@ -5,7 +5,6 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Fundamentals',
-      collapsed: false,
       collapsible: true,
       items: [
         'fundamentals/intro',
@@ -36,7 +35,6 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Best Practices',
-      collapsed: false,
       collapsible: true,
       items: [
         'best_practices/intro',
@@ -62,7 +60,6 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Attack Vectors',
-      collapsed: false,
       collapsible: true,
       items: [
         'attack_vectors/intro',
