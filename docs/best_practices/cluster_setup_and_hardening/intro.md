@@ -1,112 +1,127 @@
 ---
-title: "Intro"
 sidebar_position: 1
-description: "Guidelines and best practices for securing Kubernetes clusters, covering CIS benchmarks, control plane and node hardening, network policies, RBAC, and secrets management."
+title: "Section Introduction"
+description: "Overview of cluster setup and hardening practices in Kubernetes, covering the critical domains necessary to build a secure and resilient environment."
 ---
 
 # Cluster Setup and Hardening
 
-A secure Kubernetes deployment starts with properly configuring and hardening all layers of the cluster. This includes the control plane, node infrastructure, networking, identity and access management, pod configuration, and secret storage.
+Securing a Kubernetes cluster starts with configuring its components securely from the ground up. This section provides practical best practices for hardening the Kubernetes control plane, networking, pod specifications, access controls, and secrets management.
 
-This section offers structured guidance to help teams reduce the attack surface, enforce strong security controls, and align with industry standards such as the CIS Kubernetes Benchmark.
+Each article in this section helps you reduce the attack surface, implement defense-in-depth, and align with industry standards such as the CIS Kubernetes Benchmark.
 
 ---
 
-## Topics Covered
+## API Server Security
 
-### Benchmarks and Compliance
-
-- [Understanding CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks)  
-  Overview of CIS Benchmarks and how they apply to Kubernetes security.
-
-- [CIS Benchmarks for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_for_k8s)  
-  A detailed look at the benchmark requirements and their implications.
-
-- [Kube-Bench: Kubernetes CIS Benchmarking Tool](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_kube_bench)  
-  How to use the kube-bench tool to automate CIS benchmark checks.
-
-### API Server Security
+Harden the Kubernetes API server by limiting exposure, validating requests, and securing access.
 
 - [API Server Security](/docs/best_practices/cluster_setup_and_hardening/api_server_security/compromised_api_server_mitigation)  
-  Secure the Kubernetes API server by restricting access and configuring it securely.
-
+  Understand the core threats to the API server and how to restrict its attack surface.
 - [Mitigating Misconfigured Admission Controllers](/docs/best_practices/cluster_setup_and_hardening/api_server_security/misconfigured_admission_controllers_mitigation)  
-  Reduce risk by controlling which resources are allowed into the cluster.
+  Prevent insecure resource admission through proper controller configuration.
 
-### Control Plane Security
+---
+
+## Control Plane Security
+
+Protect critical components like etcd, which store and manage sensitive cluster state.
 
 - [etcd Security Mitigation](/docs/best_practices/cluster_setup_and_hardening/control_plane_security/etcd_security_mitigation)  
-  Protect etcd access, enable encryption, and secure communication with the control plane.
+  Secure etcd access, enforce encryption, and limit access to only necessary components.
 
-### Network Security
+---
 
-- [Intro to Network Security](/docs/best_practices/cluster_setup_and_hardening/network_security/intro)  
-  Overview of network security strategies in Kubernetes.
+## Network Security
 
-- [Network Policies](/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies)  
-  Restrict traffic between pods to enforce network boundaries.
-
-- [Egress Control](/docs/best_practices/cluster_setup_and_hardening/network_security/egress_control)  
-  Limit outbound traffic from pods to prevent data exfiltration.
-
-- [Ingress Security](/docs/best_practices/cluster_setup_and_hardening/network_security/ingress_security)  
-  Secure public-facing services and protect ingress controllers.
-
-- [Service Mesh Security](/docs/best_practices/cluster_setup_and_hardening/network_security/service_mesh_security)  
-  Use service mesh features like mTLS and traffic control for internal security.
-
-- [DNS Security](/docs/best_practices/cluster_setup_and_hardening/network_security/dns_security)  
-  Secure CoreDNS and protect internal service discovery.
-
-- [Exposed Dashboard Mitigation](/docs/best_practices/cluster_setup_and_hardening/network_security/exposed_dashboard_mitigation)  
-  Prevent unauthorized access to the Kubernetes Dashboard.
+Control inter-pod and external traffic, apply segmentation, and reduce exposure.
 
 - [DDoS Mitigation](/docs/best_practices/cluster_setup_and_hardening/network_security/ddos_mitigation)  
-  Defend against denial-of-service attacks targeting services or ingress points.
-
+  Prevent abuse of exposed services through rate limiting and throttling.
+- [DNS Security](/docs/best_practices/cluster_setup_and_hardening/network_security/dns_security)  
+  Secure internal name resolution and prevent DNS poisoning.
+- [Egress Control](/docs/best_practices/cluster_setup_and_hardening/network_security/egress_control)  
+  Limit which external services workloads can access.
+- [Exposed Dashboard Mitigation](/docs/best_practices/cluster_setup_and_hardening/network_security/exposed_dashboard_mitigation)  
+  Prevent unauthorized access to the Kubernetes Dashboard.
+- [Ingress Security](/docs/best_practices/cluster_setup_and_hardening/network_security/ingress_security)  
+  Harden ingress controllers to enforce authentication and sanitize inputs.
+- [Network Policies](/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies)  
+  Use Kubernetes Network Policies to isolate workloads.
+- [Service Mesh Security](/docs/best_practices/cluster_setup_and_hardening/network_security/service_mesh_security)  
+  Secure service-to-service communication using service mesh features.
 - [Traffic Hijacking Mitigation](/docs/best_practices/cluster_setup_and_hardening/network_security/traffic_hijacking_mitigation)  
-  Prevent malicious redirection or interception of cluster traffic.
+  Prevent interception or redirection of internal or external traffic.
 
-### Node Security
+---
+
+## Node Security
+
+Harden Kubernetes nodes to reduce the risk of host compromise.
 
 - [Kubelet Security](/docs/best_practices/cluster_setup_and_hardening/node_security/kubelet_security)  
-  Harden the Kubelet by disabling insecure ports and enforcing strong authorization.
+  Secure the Kubelet API and disable insecure ports.
 
-### Pod Security
+---
+
+## Pod Security
+
+Restrict container capabilities and prevent lateral movement through unsafe pod configurations.
 
 - [AppArmor Profiles](/docs/best_practices/cluster_setup_and_hardening/pod_security/app_armor_profiles)  
-  Restrict container behavior at the syscall level using AppArmor.
-
+  Apply AppArmor to restrict syscalls available to containers.
 - [Compromised Sidecars Mitigation](/docs/best_practices/cluster_setup_and_hardening/pod_security/compromised_sidecars_mitigation)  
-  Prevent privilege escalation through untrusted or misbehaving sidecars.
-
+  Prevent sidecars from becoming privilege escalation vectors.
 - [Container Escape Mitigation](/docs/best_practices/cluster_setup_and_hardening/pod_security/container_escape_mitigation)  
-  Protect against attacks that attempt to escape from containers to the host.
-
+  Secure containers to prevent escapes into the host.
 - [CSI Driver Mitigation](/docs/best_practices/cluster_setup_and_hardening/pod_security/csi_driver_mitigation)  
-  Avoid misusing CSI drivers that may expose host-level access.
-
+  Avoid misuse or over-privileging of custom CSI drivers.
 - [Pod Sandboxing](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_sandboxing)  
-  Isolate workloads using technologies like gVisor or Kata Containers.
-
+  Isolate workloads using gVisor, Kata Containers, or Firecracker.
 - [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)  
-  Apply Kubernetes native pod security enforcement using built-in standards.
-
+  Enforce Kubernetes Pod Security admission with baseline, restricted, or privileged profiles.
 - [Seccomp in Pods](/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods)  
-  Use Seccomp to limit available syscalls to containers.
-
+  Limit syscalls through Seccomp profiles.
 - [Unrestricted hostPath Mitigation](/docs/best_practices/cluster_setup_and_hardening/pod_security/unrestricted_hostpath_mitigation)  
   Prevent containers from mounting arbitrary host paths.
 
-### RBAC and Identity
+---
+
+## RBAC and Identity
+
+Apply least privilege and control access using Kubernetes-native identity and permission models.
 
 - [Insecure RBAC Permissions Mitigation](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)  
-  Enforce least privilege and avoid wildcard permissions in roles and bindings.
-
+  Avoid over-permissioned roles that allow privilege escalation.
 - [Service Account Mitigation](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/service_account_mitigation)  
-  Secure workload identity by restricting token usage and permissions.
+  Secure workload identity and token usage.
 
-### Secrets Management
+---
+
+## Secrets Management
+
+Store and access secrets securely, both inside Kubernetes and via external tools.
 
 - [Insecure Secrets Management Mitigation](/docs/best_practices/cluster_setup_and_hardening/secrets_management/insecure_secrets_management_mitigation)  
-  Enable encryption at rest, use RBAC for access control, and integrate with secure external secret stores.
+  Enable encryption at rest, and integrate with external secret stores like Vault, AWS SSM, and Akeyless.
+
+---
+
+## CIS Benchmarks and Auditing
+
+Audit your cluster using the [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) to validate configuration and hardening.
+
+- [What Are CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks)  
+  Understand the purpose and structure of the benchmark.
+- [CIS Benchmark for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_for_k8s)  
+  Manual overview of CIS controls and remediation strategies.
+- [CIS Benchmark with kube-bench](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_kube_bench)  
+  Use `kube-bench` to automate CIS compliance checks.
+
+---
+
+## Conclusion
+
+Cluster setup and hardening is the foundation of Kubernetes security. Each component — from nodes to API access to pod policies — contributes to the overall security posture.
+
+Use this section as a hands-on guide to secure every layer of your Kubernetes control and data planes, following both community best practices and formal compliance frameworks.
