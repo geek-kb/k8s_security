@@ -17,18 +17,19 @@ This section explores **common Kubernetes attack vectors**, including:
 - **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape)**: Exploiting vulnerabilities to break out of a container and gain host access.
 - **[Insecure RBAC Permissions](/docs/attack_vectors/insecure_rbac_permissions)**: Misconfigured Role-Based Access Control (RBAC) settings leading to unauthorized access.
 - **[Exposed Kubelet API](/docs/attack_vectors/exposed_kubelet_api)**: Unauthorized access to Kubelet APIs allowing attackers to control nodes or pods.
-- **[Supply Chain Attacks](/docs/attack_vectors/supply_chain_attacks)**: Injecting malicious code into container images or dependencies.
-- **[Supply Chain Attacks - Compromised Helm Charts](/docs/attack_vectors/supply_chain_attacks)**: Deploying insecure or tampered Helm charts that introduce vulnerabilities.
+- **[Supply Chain Attacks](/docs/attack_vectors/supply_chain_attacks)**: Injecting malicious code into container images, dependencies, or CI/CD pipelines.
 - **[Unrestricted etcd Access](/docs/attack_vectors/unrestricted_etcd_access)**: Accessing etcd storage to retrieve secrets and cluster configurations.
-- **[Cluster Takeover via Misconfigured Admission Controllers and Malicious Webhooks](/docs/attack_vectors/misconfigured_admission_controllers)**: Exploiting improperly secured admission controllers and webhooks to run unauthorized workloads.
+- **[Cluster Takeover via Misconfigured Admission Controllers](/docs/attack_vectors/misconfigured_admission_controllers)**: Exploiting insecure admission controllers and malicious webhooks to bypass policies.
 - **[Denial of Service (DoS) Attacks](/docs/attack_vectors/ddos_attacks)**: Exploiting Kubernetes resource limits to exhaust cluster resources.
-- **[Unrestricted HostPath Mounts](/docs/attack_vectors/unrestricted_hostpath_mounts)**: Allowing pods to mount the host filesystem, leading to potential system compromise.
-- **[Ingress/Egress Traffic Hijacking](/docs/attack_vectors/traffic_hijacking)**: Manipulating misconfigured network policies to intercept or reroute cluster traffic.
-- **[Exploiting Insecure CSI Drivers](/docs/attack_vectors/insecure_csi_drivers)**: Attacking Kubernetes Container Storage Interface (CSI) drivers to gain unauthorized access to persistent storage.
-- **[Overly Privileged Service Accounts](/docs/attack_vectors/privileged_service_accounts)**: Granting excessive permissions to service accounts, leading to privilege escalation.
-- **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Exploiting sidecar containers to attack the main application.
+- **[Unrestricted HostPath Mounts](/docs/attack_vectors/unrestricted_hostpath_mounts)**: Allowing pods to mount the host filesystem, leading to full node compromise.
+- **[Ingress/Egress Traffic Hijacking](/docs/attack_vectors/traffic_hijacking)**: Manipulating network policies to intercept or redirect cluster traffic.
+- **[Exploiting Insecure CSI Drivers](/docs/attack_vectors/insecure_csi_drivers)**: Abusing insecure Container Storage Interface drivers to access or tamper with persistent volumes.
+- **[Privileged Service Accounts](/docs/attack_vectors/privileged_service_accounts)**: Overprivileged service accounts granting unauthorized access and escalation.
+- **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Injecting or abusing sidecars to intercept data or maintain persistence.
+- **[Container Escape](/docs/attack_vectors/container_escape)**: Escaping from a container to execute commands on the host node.
+- **[Compromised Helm Charts](/docs/attack_vectors/supply_chain_attacks)**: Installing malicious or unverified Helm charts that introduce backdoors or privilege escalation.
 
-Each article provides **examples, real-world risks, and mitigation strategies** to help secure Kubernetes clusters against these threats.
+Each article provides **step-by-step exploitation techniques, real-world risks, and a link to the corresponding mitigation guide** to help you harden your Kubernetes environments.
 
 ---
 
