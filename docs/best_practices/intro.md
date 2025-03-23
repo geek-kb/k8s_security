@@ -16,7 +16,7 @@ Each article in this section helps you reduce the attack surface, implement defe
 
 Harden the Kubernetes API server by limiting exposure, validating requests, and securing access.
 
-- [API Server Security](/docs/best_practices/cluster_setup_and_hardening/api_server_security/api_server_security)  
+- [API Server Security](/docs/best_practices/cluster_setup_and_hardening/api_server_security/compromised_api_server_mitigation)  
   Understand the core threats to the API server and how to restrict its attack surface.
 - [Mitigating Misconfigured Admission Controllers](/docs/best_practices/cluster_setup_and_hardening/api_server_security/misconfigured_admission_controllers_mitigation)  
   Prevent insecure resource admission through proper controller configuration.
