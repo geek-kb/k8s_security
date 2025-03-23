@@ -49,7 +49,7 @@ For a detailed breakdown of common attack techniques targeting Kubernetes cluste
 - [Exposed Kubernetes Dashboard](/docs/attack_vectors/exposed_dashboard)
 - [Insecure Secrets Management](/docs/attack_vectors/insecure_secrets_management)
 - [Lack of Network Policies](/docs/attack_vectors/lack_of_network_policies)
-- [Privileged Containers](/docs/attack_vectors/privileged_containers)
+- [Privileged Containers Escape](/docs/attack_vectors/privileged_container_escape)
 
 ## **How to Reduce the Attack Surface?**
 

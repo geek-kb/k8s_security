@@ -1,10 +1,10 @@
 ---
 sidebar_position: 8
-title: "Container Escape Guide"
-description: "Step-by-step guide on breaking out of a container and gaining control over the host system."
+title: "Container Escape"
+description: "How an attacker can break out of a container and gain control over the host system in Kubernetes."
 ---
 
-# Container Escape Guide
+# Container Escape
 
 This guide provides a detailed walkthrough of escaping from a container to gain full control over the host system. The process involves entering the host's namespaces and modifying critical system files.
 
@@ -188,4 +188,4 @@ You successfully escaped the container by:
 
 To learn how to prevent container escape vulnerabilities, refer to the mitigation guide:
 
-➡ [Preventing Container Escape](https://geek-kb.github.io/k8s_security/docs/best_practices/cluster_setup_and_hardening/pod_security/container_escape_mitigation/)
+➡ [Preventing Container Escape](/docs/best_practices/cluster_setup_and_hardening/pod_security/container_escape_mitigation)
