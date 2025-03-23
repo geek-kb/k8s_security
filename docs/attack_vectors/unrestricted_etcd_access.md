@@ -60,6 +60,6 @@ The attacker has **complete control over Kubernetes**, allowing them to **modify
 
 To protect against **unrestricted etcd access**, follow the security best practices outlined in:
 
-➡ **[Securing etcd in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/etcd_security_mitigation)**
+➡ **[Securing etcd in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/control_plane_security/etcd_security_mitigation)**
 
 This guide covers techniques such as **enforcing TLS encryption, restricting access with RBAC, securing backups, and isolating etcd from untrusted networks** to prevent unauthorized access.

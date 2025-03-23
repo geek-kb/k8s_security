@@ -127,6 +127,6 @@ The attacker successfully **intercepted sensitive data, modified traffic, escala
 
 To protect against **compromised sidecars**, follow the security best practices outlined in:
 
-➡ **[Securing Kubernetes Sidecars](/docs/best_practices/cluster_setup_and_hardening/compromised_sidecars_mitigation)**
+➡ **[Securing Kubernetes Sidecars](/docs/best_practices/cluster_setup_and_hardening/pod_security/compromised_sidecars_mitigation)**
 
 This guide covers techniques such as **restricting sidecar permissions, enforcing strict security contexts, implementing service mesh policies, and monitoring sidecar activity** to prevent unauthorized use.

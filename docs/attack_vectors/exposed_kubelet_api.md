@@ -56,6 +56,6 @@ The attacker now has **remote code execution** on a Kubernetes worker node and c
 
 To protect against **Kubelet API exposure**, follow the security best practices outlined in:
 
-➡ **[Kubelet Security](/docs/best_practices/cluster_setup_and_hardening/kubelet_security)**
+➡ **[Kubelet Security](/docs/best_practices/cluster_setup_and_hardening/node_security/kubelet_security)**
 
 This guide covers techniques such as **disabling anonymous access, enforcing authentication, using RBAC to restrict API actions, and securing network access** to prevent unauthorized control over Kubelet APIs.

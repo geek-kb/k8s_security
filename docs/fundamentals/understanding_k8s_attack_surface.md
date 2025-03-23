@@ -57,7 +57,7 @@ Best practices for securing Kubernetes clusters are covered extensively in the [
 
 - [Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro)
 - [Pod and Network Security](/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies)
-- [Secure Secrets Management](/docs/best_practices/cluster_setup_and_hardening/secrets_management)
+- [Secure Secrets Management](/docs/best_practices/cluster_setup_and_hardening/secrets_management/insecure_secrets_management_mitigation)
 - [Monitoring and Runtime Security](/docs/best_practices/monitoring_logging_and_runtime_security/intro)
 
 ## **Conclusion**

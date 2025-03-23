@@ -118,6 +118,6 @@ The attacker successfully **gained persistent access, escalated privileges, and 
 
 To protect against **privileged Service Account abuse**, follow the security best practices outlined in:
 
-➡ **[Securing Kubernetes Service Accounts](/docs/best_practices/cluster_setup_and_hardening/service_account_mitigation)**
+➡ **[Securing Kubernetes Service Accounts](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/service_account_mitigation)**
 
 This guide covers techniques such as **restricting RBAC permissions, disabling automatic Service Account mounting, enforcing least privilege, and auditing Service Account usage** to prevent unauthorized access.

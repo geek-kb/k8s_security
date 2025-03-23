@@ -103,6 +103,6 @@ The attacker successfully **accessed unauthorized data, modified storage volumes
 
 To protect against **insecure CSI drivers**, follow the security best practices outlined in:
 
-➡ **[Securing Kubernetes CSI Drivers](/docs/best_practices/cluster_setup_and_hardening/csi_driver_mitigation)**
+➡ **[Securing Kubernetes CSI Drivers](/docs/best_practices/cluster_setup_and_hardening/pod_security/csi_driver_mitigation)**
 
 This guide covers techniques such as **restricting volume attachments, enforcing PodSecurity policies, disabling privileged CSI plugins, and enabling RBAC controls** to secure storage operations in Kubernetes.
