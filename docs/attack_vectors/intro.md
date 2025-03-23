@@ -23,9 +23,9 @@ This section explores **common Kubernetes attack vectors**, including:
 - **[Cluster Takeover via Misconfigured Admission Controllers and Malicious Webhooks](/docs/attack_vectors/misconfigured_admission_controllers)**: Exploiting improperly secured admission controllers and webhooks to run unauthorized workloads.
 - **[Denial of Service (DoS) Attacks](/docs/attack_vectors/ddos_attacks)**: Exploiting Kubernetes resource limits to exhaust cluster resources.
 - **[Unrestricted HostPath Mounts](/docs/attack_vectors/unrestricted_hostpath_mounts)**: Allowing pods to mount the host filesystem, leading to potential system compromise.
-<!-- - **[Ingress/Egress Traffic Hijacking](/docs/attack_vectors/traffic_hijacking)**: Manipulating misconfigured network policies to intercept or reroute cluster traffic. -->
+- **[Ingress/Egress Traffic Hijacking](/docs/attack_vectors/traffic_hijacking)**: Manipulating misconfigured network policies to intercept or reroute cluster traffic.
 - **[Exploiting Insecure CSI Drivers](/docs/attack_vectors/insecure_csi_drivers)**: Attacking Kubernetes Container Storage Interface (CSI) drivers to gain unauthorized access to persistent storage.
-<!-- - **[Overly Privileged Service Accounts](/docs/attack_vectors/privileged_service_accounts)**: Granting excessive permissions to service accounts, leading to privilege escalation. -->
+- **[Overly Privileged Service Accounts](/docs/attack_vectors/privileged_service_accounts)**: Granting excessive permissions to service accounts, leading to privilege escalation.
 - **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Exploiting sidecar containers to attack the main application.
 
 Each article provides **examples, real-world risks, and mitigation strategies** to help secure Kubernetes clusters against these threats.

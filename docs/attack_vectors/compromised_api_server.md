@@ -1,53 +1,73 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: "Compromised API Server"
 description: "Exploiting Kubernetes API server vulnerabilities and how attackers gain unauthorized access."
 ---
 
 # Compromised API Server
 
-A compromised API server can provide attackers with unauthorized access to a Kubernetes cluster, allowing them to view, modify, or delete resources. This type of attack can lead to severe disruptions, including unauthorized data exposure, service downtime, and potential breaches of sensitive environments.
+A compromised Kubernetes API server allows attackers to interact directly with the cluster’s control plane. If authentication or authorization is misconfigured—or worse, disabled entirely—an attacker may gain full control over workloads, resources, and data.
+
+This article demonstrates how attackers identify exposed API servers and exploit them to disrupt services or escalate privileges.
 
 ---
 
 ## Exploitation Steps: Exposed API Endpoints
 
-An attacker identifies an exposed API server using a port scan:
+### 1. Scan for an Exposed API Server
+
+An attacker performs a port scan to discover the Kubernetes API server:
 
 ```bash
 nmap -p 6443 <cluster-ip>
 ```
 
-### Access API Server Without Authentication
+Port 6443 is the default Kubernetes API server port. If reachable from outside the cluster, it may be vulnerable.
 
-The attacker attempts to list all pods using a curl request:
+### 2. Access the API Server Without Authentication
+
+The attacker sends an unauthenticated request to list pods:
 
 ```bash
 curl -k https://<api-server-ip>:6443/api/v1/pods
 ```
 
-If authentication is misconfigured or disabled, the API server may respond with a list of active pods in the cluster.
+If authentication is misconfigured or disabled, the server may return a list of all pods in the cluster.
 
-### Delete Critical Resources
+### 3. Delete Cluster Resources
 
-The attacker attempts to delete a specific pod:
+The attacker attempts to delete a critical pod:
 
 ```bash
 curl -k -X DELETE https://<api-server-ip>:6443/api/v1/namespaces/default/pods/victim-pod
 ```
 
-If the API server does not enforce strict authentication and authorization policies, this request may succeed, resulting in service disruptions.
+Without proper access controls, the request may succeed, resulting in service downtime or disruption.
 
-### Escalating Access
+### 4. Escalate Privileges
 
-If the attacker is able to retrieve service account tokens, Kubernetes secrets, or privileged credentials, they may escalate their access and gain control over additional cluster resources. Exploiting weak RBAC policies or misconfigured admission controllers can allow unauthorized privilege escalation.
+After gaining API access, the attacker attempts to retrieve service account tokens or secrets:
 
-### Result
+```bash
+curl -k https://<api-server-ip>:6443/api/v1/secrets
+```
 
-A compromised API server can be used to manipulate cluster resources, exfiltrate sensitive data, deploy malicious workloads, or escalate privileges to gain full control of the cluster. In extreme cases, attackers can use the API server as an entry point to compromise the underlying infrastructure.
+They may exploit these credentials to impersonate other services or users, bypass RBAC policies, and further compromise the cluster.
 
 ---
 
-To learn how to secure the API server and prevent such attacks, refer to the mitigation guide:
+### Result
+
+An attacker with access to a misconfigured API server can:
+
+- View, modify, or delete workloads and configurations.
+- Exfiltrate secrets and service account tokens.
+- Deploy malicious containers or alter existing ones.
+- Escalate privileges and compromise other components.
+- Fully control or destroy the Kubernetes cluster.
+
+---
+
+## Mitigation
 
 ➡ [Securing the Kubernetes API Server](/docs/best_practices/cluster_setup_and_hardening/api_server_security/compromised_api_server_mitigation)

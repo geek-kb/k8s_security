@@ -1,32 +1,32 @@
 ---
-sidebar_position: 13
+sidebar_position: 9
 title: "Denial of Service (DoS) Attacks"
 description: "How attackers exploit Kubernetes resources to exhaust system capacity, disrupt workloads, and cause service outages."
 ---
 
 # Denial of Service (DoS) Attacks
 
-A **Denial of Service (DoS) attack** targets a Kubernetes cluster by **exhausting system resources, overloading the API server, or overwhelming network capacity**. These attacks can cause **service downtime, degraded performance, and complete cluster unavailability**.
+A **Denial of Service (DoS) attack** targets a Kubernetes cluster by exhausting system resources, overloading the API server, or overwhelming network capacity. These attacks can lead to service downtime, degraded performance, or total cluster unavailability.
 
 ---
 
-## Exploitation Steps: Overloading Cluster Resources
+## Exploitation Steps
 
-An attacker generates **excessive traffic, high CPU usage, or memory exhaustion** to disrupt Kubernetes workloads.
+### 1. Flood the Kubernetes API Server
 
-### Step 1: Flood the Kubernetes API Server
-
-An attacker repeatedly sends API requests to **overload the control plane**:
+An attacker sends repeated API requests to overload the control plane:
 
 ```bash
 while true; do kubectl get pods --all-namespaces; done
 ```
 
-If **unauthenticated API access** is allowed, this can cause **latency spikes and request failures**.
+If unauthenticated or loosely authenticated access is permitted, the API server experiences high latency and dropped requests.
 
-### Step 2: Deploy Resource-Exhausting Pods
+---
 
-If **resource limits** are not enforced, the attacker deploys multiple high-consumption pods:
+### 2. Deploy Resource-Exhausting Pods
+
+Without Pod resource limits, the attacker creates high-load containers to consume CPU and memory:
 
 ```yaml
 apiVersion: apps/v1
@@ -60,38 +60,40 @@ spec:
 kubectl apply -f overload-pods.yaml
 ```
 
-Without **Pod Resource Limits**, the cluster experiences **CPU and memory starvation**.
+This can starve other workloads and destabilize the cluster.
 
-### Step 3: Exploit Insecure Network Policies
+---
 
-If **network policies** are missing, the attacker floods a Kubernetes Service with **large requests**:
+### 3. Exploit Missing Network Policies
+
+If no Network Policies are enforced, an attacker can flood internal services:
 
 ```bash
 hping3 -S -p 443 <service-ip> --flood
 ```
 
-This **overwhelms** the target service, causing delays and timeouts.
+This overwhelms the service backend, resulting in dropped connections and timeout errors.
 
-### Step 4: Abuse Persistent Storage
+---
 
-If **storage quotas** are missing, the attacker fills up available storage:
+### 4. Abuse Persistent Storage
+
+If storage usage is not constrained, the attacker fills up a PersistentVolume:
 
 ```bash
 dd if=/dev/zero of=/mnt/persistent-volume/attack bs=1M count=100000
 ```
 
-Once storage reaches **100% capacity**, workloads that rely on persistence **fail or crash**.
-
-### Result
-
-The attacker successfully **disrupts Kubernetes services**, leading to **downtime, increased latency, and operational failures**.
+Full disk usage disrupts stateful workloads relying on persistent storage.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **Denial of Service (DoS) attacks**, follow the security best practices outlined in:
+The attacker causes **resource exhaustion, service unavailability, latency spikes, and application crashes**. Without proper controls, even a low-privileged user can perform widespread denial of service.
 
-➡ **[Mitigating DoS Attacks in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/network_security/ddos_mitigation)**
+---
 
-This guide covers techniques such as **rate limiting, API request quotas, network policy enforcement, resource limits, and autoscaling defenses** to prevent Kubernetes disruptions.
+## Mitigation
+
+➡ [Mitigating DoS Attacks in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/network_security/ddos_mitigation)

