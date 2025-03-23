@@ -1,5 +1,6 @@
 {
   "label": "Node Security",
-  "collapsed": true,
+  "collapsible": true,
+  "collapsed": false,
   "position": 5
 }

@@ -1,5 +1,6 @@
 {
   "label": "API Server Security",
-  "collapsed": true,
+  "collapsible": true,
+  "collapsed": false,
   "position": 2
 }
