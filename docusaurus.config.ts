@@ -23,7 +23,6 @@ const config: Config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
           sidebarItemsGenerator: undefined,
-          sidebarCollapsed: false,
           sidebarCollapsible: true,
         },
         blog: {
