@@ -4,6 +4,8 @@ sidebar_position: 1
 description: "Explore best practices for securing Kubernetes environments across cluster setup, system hardening, microservice security, runtime monitoring, and supply chain protection."
 ---
 
+**This category is still under development**
+
 # Kubernetes Security Best Practices
 
 Securing Kubernetes environments requires a defense-in-depth approach that spans the cluster lifecycle, from initial setup to daily operations and software supply chain hygiene. This section provides practical guidance organized by domain, helping you harden your infrastructure, reduce workload risks, and enforce security controls consistently.

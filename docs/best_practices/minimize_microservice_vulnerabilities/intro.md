@@ -4,6 +4,8 @@ description: "Best practices for securing microservices in Kubernetes, including
 sidebar_position: 3
 ---
 
+**This category is still under development**
+
 # Minimizing Microservice Vulnerabilities
 
 **Required knowledge for the CKS certification.**
