@@ -27,7 +27,7 @@ This section offers structured guidance to help teams reduce the attack surface,
 
 ### API Server Security
 
-- [API Server Security](/docs/best_practices/cluster_setup_and_hardening/api_server_security/api_server_security)  
+- [API Server Security](/docs/best_practices/cluster_setup_and_hardening/api_server_security/compromised_api_server_mitigation)  
   Secure the Kubernetes API server by restricting access and configuring it securely.
 
 - [Mitigating Misconfigured Admission Controllers](/docs/best_practices/cluster_setup_and_hardening/api_server_security/misconfigured_admission_controllers_mitigation)  
