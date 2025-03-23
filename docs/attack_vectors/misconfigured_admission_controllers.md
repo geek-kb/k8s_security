@@ -131,6 +131,6 @@ The attacker successfully **bypassed admission controls, manipulated security po
 
 To protect against **misconfigured admission controllers and insecure webhooks**, follow the security best practices outlined in:
 
-➡ **[Securing Kubernetes Admission Controllers and Webhooks](/docs/best_practices/cluster_setup_and_hardening/misconfigured_admission_controllers_mitigation.md)**
+➡ **[Securing Kubernetes Admission Controllers and Webhooks](/docs/best_practices/cluster_setup_and_hardening/api_server_security/misconfigured_admission_controllers_mitigation.md)**
 
 This guide covers techniques such as **enforcing admission control best practices, securing webhook authentication, enabling TLS encryption, and auditing webhook activity** to prevent unauthorized modifications to cluster configurations.

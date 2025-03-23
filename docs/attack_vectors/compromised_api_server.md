@@ -50,4 +50,4 @@ A compromised API server can be used to manipulate cluster resources, exfiltrate
 
 To learn how to secure the API server and prevent such attacks, refer to the mitigation guide:
 
-➡ [Securing the Kubernetes API Server](https://geek-kb.github.io/k8s_security/docs/best_practices/cluster_setup_and_hardening/api_server_security/)
+➡ [Securing the Kubernetes API Server](/docs/best_practices/cluster_setup_and_hardening/api_server_security/compromised_api_server_mitigation)

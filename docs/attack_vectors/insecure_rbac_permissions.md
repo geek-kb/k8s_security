@@ -62,9 +62,9 @@ kind: ClusterRoleBinding
 metadata:
   name: pwned-cluster-admin
 subjects:
-- kind: User
-  name: admin
-  apiGroup: rbac.authorization.k8s.io
+  - kind: User
+    name: admin
+    apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
   name: cluster-admin
@@ -136,4 +136,4 @@ To prevent abuse of RBAC:
 
 For more comprehensive mitigation techniques, refer to:
 
-➡ **[Securing RBAC Permissions](/docs/best_practices/cluster_setup_and_hardening/insecure_rbac_permissions_mitigation)**
+➡ **[Securing RBAC Permissions](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)**

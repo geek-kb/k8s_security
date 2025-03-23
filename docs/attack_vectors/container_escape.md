@@ -45,14 +45,14 @@ metadata:
 spec:
   hostPID: true
   containers:
-  - image: busybox
-    command: ["sleep", "infinity"]
-    securityContext:
-      runAsUser: 0
-      allowPrivilegeEscalation: true
-      privileged: true
-    name: test
-    resources: {}
+    - image: busybox
+      command: ["sleep", "infinity"]
+      securityContext:
+        runAsUser: 0
+        allowPrivilegeEscalation: true
+        privileged: true
+      name: test
+      resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
