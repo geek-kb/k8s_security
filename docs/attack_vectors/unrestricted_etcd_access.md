@@ -1,65 +1,79 @@
 ---
-sidebar_position: 11
+sidebar_position: 7
 title: "Unrestricted etcd Access"
 description: "How attackers exploit unrestricted access to etcd to retrieve Kubernetes secrets and take control of the cluster."
 ---
 
 # Unrestricted etcd Access
 
-**etcd** is the **key-value store** used by Kubernetes to store **configuration data, secrets, and cluster state**. If **unrestricted access** is allowed, attackers can retrieve sensitive information, escalate privileges, and take full control of the cluster.
+**etcd** is the key-value store that holds all Kubernetes cluster data, including **secrets, configuration, and state**. If exposed or misconfigured, it becomes a high-value target for attackers who can **retrieve credentials, modify cluster settings, or delete critical resources**.
 
 ---
 
-## Exploitation Steps: Extracting Secrets from etcd
+## Exploitation Steps
 
-An attacker gains access to an **unprotected etcd instance** and extracts sensitive Kubernetes data.
+An attacker targets an unprotected `etcd` endpoint to access or manipulate cluster-wide data.
 
-### Step 1: Scan for Open etcd Endpoints
+### 1. Scan for Open etcd Endpoints
 
-The attacker checks for an **exposed etcd API** on port **2379**:
+The attacker scans the network to locate accessible etcd instances (port `2379`):
 
 ```bash
 nmap -p 2379 --open <cluster-ip-range>
 ```
 
-If an open etcd instance is found, the attacker proceeds.
+If port `2379` is exposed, the attacker targets it for further exploitation.
 
-### Step 2: Query etcd for Cluster Data
+---
 
-If authentication is not enforced, the attacker directly queries etcd for Kubernetes secrets:
+### 2. Enumerate etcd Keys
+
+Without authentication or TLS, the attacker can query the keyspace:
 
 ```bash
 ETCDCTL_API=3 etcdctl --endpoints=<etcd-ip>:2379 get / --prefix --keys-only
 ```
 
-### Step 3: Extract Kubernetes Secrets
+This reveals the structure and contents of etcd, including keys under `/registry/` that store Kubernetes resources.
 
-The attacker retrieves stored credentials, service tokens, and API keys:
+---
+
+### 3. Extract Kubernetes Secrets
+
+The attacker dumps secrets directly from etcd:
 
 ```bash
 ETCDCTL_API=3 etcdctl --endpoints=<etcd-ip>:2379 get /registry/secrets --prefix
 ```
 
-If etcd stores **admin credentials**, the attacker gains **full cluster control**.
+This includes service account tokens, API keys, kubeconfig files, and other sensitive credentials.
 
-### Step 4: Modify Cluster Configuration
+---
 
-If write access is enabled, the attacker modifies **Kubernetes RBAC settings** to escalate privileges:
+### 4. Modify Cluster Configuration
+
+With write access, the attacker injects new configuration or escalates privileges:
 
 ```bash
 ETCDCTL_API=3 etcdctl --endpoints=<etcd-ip>:2379 put /registry/rbac/rolebindings/cluster-admin '{"user": "attacker", "role": "cluster-admin"}'
 ```
 
-### Result
-
-The attacker has **complete control over Kubernetes**, allowing them to **modify workloads, access secrets, and delete cluster resources**.
+This effectively grants `cluster-admin` rights to any user they choose.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **unrestricted etcd access**, follow the security best practices outlined in:
+The attacker achieves full compromise of the Kubernetes cluster by:
 
-➡ **[Securing etcd in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/control_plane_security/etcd_security_mitigation)**
+- Extracting sensitive secrets
+- Gaining persistent admin access
+- Modifying or deleting critical cluster resources
 
-This guide covers techniques such as **enforcing TLS encryption, restricting access with RBAC, securing backups, and isolating etcd from untrusted networks** to prevent unauthorized access.
+If etcd is not protected, the **entire cluster is at risk**.
+
+---
+
+## Mitigation
+
+➡ [Securing etcd in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/control_plane_security/etcd_security_mitigation)

