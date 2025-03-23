@@ -14,8 +14,7 @@ This section explores **common Kubernetes attack vectors**, including:
 - **[Exposed Dashboard](/docs/attack_vectors/exposed_dashboard)**: Unauthorized access to Kubernetes dashboards.
 - **[Insecure Secrets Management](/docs/attack_vectors/insecure_secrets_management)**: Leaking secrets due to weak storage and access controls.
 - **[Lack of Network Policies](/docs/attack_vectors/lack_of_network_policies)**: Allowing lateral movement within the cluster.
-- **[Privileged Containers](/docs/attack_vectors/privileged_containers)**: Using overprivileged containers to break out of the sandbox.
-- **[Container Escape](/docs/attack_vectors/container_escape)**: Exploiting vulnerabilities to break out of a container and gain host access.
+- **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape)**: Exploiting vulnerabilities to break out of a container and gain host access.
 - **[Insecure RBAC Permissions](/docs/attack_vectors/insecure_rbac_permissions)**: Misconfigured Role-Based Access Control (RBAC) settings leading to unauthorized access.
 - **[Exposed Kubelet API](/docs/attack_vectors/exposed_kubelet_api)**: Unauthorized access to Kubelet APIs allowing attackers to control nodes or pods.
 - **[Supply Chain Attacks](/docs/attack_vectors/supply_chain_attacks)**: Injecting malicious code into container images or dependencies.
