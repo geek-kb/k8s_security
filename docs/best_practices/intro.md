@@ -1,5 +1,5 @@
 ---
-title: "Section Introduction"
+title: "Introduction"
 description: "Explore best practices for securing Kubernetes environments across cluster setup, system hardening, microservice security, runtime monitoring, and supply chain protection."
 sidebar_position: 1
 ---
@@ -17,9 +17,9 @@ Securing Kubernetes environments requires a defense-in-depth approach that spans
 Secure your Kubernetes control plane, nodes, network, and workload configurations using battle-tested best practices and compliance-focused frameworks.
 
 - [Intro to Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro)
-- [Understanding CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks)
-- [CIS Benchmarks for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_for_k8s)
-- [Kube-Bench: Kubernetes CIS Benchmarking Tool](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_kube_bench)
+- [Understanding CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/cis/understanding_cis_benchmarks)
+- [CIS Benchmarks for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_for_k8s)
+- [Kube-Bench: Kubernetes CIS Benchmarking Tool](/docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_kube_bench)
 
 Subcategories:
 

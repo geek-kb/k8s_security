@@ -16,11 +16,11 @@ Each article in this section helps you reduce the attack surface, implement defe
 
 Audit your cluster using the [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) to validate configuration and hardening.
 
-- [What Are CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks)  
+- [What Are CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/cis/understanding_cis_benchmarks)  
   Understand the purpose and structure of the benchmark.
-- [CIS Benchmark for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_for_k8s)  
+- [CIS Benchmark for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_for_k8s)  
   Manual overview of CIS controls and remediation strategies.
-- [CIS Benchmark with kube-bench](/docs/best_practices/cluster_setup_and_hardening/cis_benchmark_kube_bench)  
+- [CIS Benchmark with kube-bench](/docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_kube_bench)  
   Use `kube-bench` to automate CIS compliance checks.
 
 ---
