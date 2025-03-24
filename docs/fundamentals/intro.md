@@ -52,4 +52,4 @@ A proactive security mindset is essential for securing Kubernetes environments. 
 
 ## Conclusion
 
-Kubernetes security requires a layered and proactive approach. Understanding its shared responsibility model, attack surfaces, and security controls is critical to building a secure environment. This foundational knowledge prepares teams to explore deeper topics such as **security primitives, attack vectors, and best practices for hardening Kubernetes clusters**. Ongoing monitoring, policy enforcement, and adherence to security principles are essential for maintaining a secure and resilient Kubernetes deployment.
+Kubernetes security requires a layered and proactive approach. Understanding its shared responsibility model, attack surfaces, and security controls is critical to building a secure environment. This foundational knowledge prepares teams to explore deeper topics such as **fundamentals, attack vectors, and best practices for hardening Kubernetes clusters**. Ongoing monitoring, policy enforcement, and adherence to security principles are essential for maintaining a secure and resilient Kubernetes deployment.
