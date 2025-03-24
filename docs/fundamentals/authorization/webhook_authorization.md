@@ -5,6 +5,8 @@ sidebar_position: 4
 
 # Webhook Authorization in Kubernetes
 
+**Required knowledge for the CKS certification.**
+
 ## What is Webhook Authorization?
 
 **Webhook Authorization** allows Kubernetes to **delegate authorization decisions** to an **external service** via a **webhook**. It is ideal for **custom authorization scenarios** that go beyond the capabilities of **RBAC** and **Node Authorization**.
@@ -35,17 +37,17 @@ kube-apiserver \
 apiVersion: v1
 kind: Config
 clusters:
-- name: webhook-authz
-  cluster:
-    server: https://authz.example.com/authorize
-    certificate-authority: /path/to/ca.crt
+  - name: webhook-authz
+    cluster:
+      server: https://authz.example.com/authorize
+      certificate-authority: /path/to/ca.crt
 users:
-- name: webhook-authz
+  - name: webhook-authz
 contexts:
-- name: webhook-authz
-  context:
-    cluster: webhook-authz
-    user: webhook-authz
+  - name: webhook-authz
+    context:
+      cluster: webhook-authz
+      user: webhook-authz
 current-context: webhook-authz
 ```
 

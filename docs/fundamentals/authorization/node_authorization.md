@@ -5,6 +5,8 @@ sidebar_position: 3
 
 # Node Authorization in Kubernetes
 
+**Required knowledge for the CKS certification.**
+
 ## What is Node Authorization?
 
 **Node Authorization** is a **specialized authorization mode** in Kubernetes designed to control what **Kubelets** (Kubernetes nodes) can **access**. It ensures that **nodes** only perform operations that affect their own **pods** and **resources**, enhancing **cluster security**.
@@ -70,12 +72,15 @@ data:
 ## Best Practices
 
 1. **Use in Combination with RBAC:**<br/>
+
    - Node authorization works best when combined with **RBAC** to enforce **fine-grained permissions**.<br/>
 
 2. **Secure Kubelet Communication:**<br/>
+
    - Enable **TLS** and **certificate-based authentication** for all **Kubelet-to-API server** communications.<br/>
 
 3. **Regularly Rotate Node Certificates:**<br/>
+
    - Use **cert-manager** or **kubeadm** for **automated certificate renewal**.<br/>
 
 4. **Monitor Node Activity:**<br/>

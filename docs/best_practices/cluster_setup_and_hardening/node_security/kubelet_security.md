@@ -6,6 +6,8 @@ description: "Learn best practices for securing the Kubernetes Kubelet to mainta
 
 # Kubelet Security
 
+**Required knowledge for the CKS certification.**
+
 The **Kubelet** is a critical component of a **Kubernetes node**, responsible for managing containers and ensuring that workloads are running as expected. Since it has direct control over the **node's container runtime and API interactions**, securing the **Kubelet** is essential to prevent unauthorized access and mitigate security risks.
 
 ## Key Risks of an Insecure Kubelet

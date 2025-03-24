@@ -32,6 +32,8 @@ By using pod sandboxing, organizations can **prevent privilege escalation**, **r
 
 ### 1. Kata Containers
 
+**Required knowledge for the CKS certification.**
+
 [Kata Containers](https://katacontainers.io/) provide **hardware-virtualized isolation** by running each pod inside a lightweight virtual machine (VM). This creates an extra security boundary between the workload and the host.
 
 #### Example: Deploying a Pod with Kata Containers
@@ -58,6 +60,8 @@ spec:
 ---
 
 ### 2. gVisor
+
+**Required knowledge for the CKS certification.**
 
 [gVisor](https://gvisor.dev/) is a **user-space kernel** designed to sandbox workloads by intercepting and handling syscalls in a controlled environment.
 
@@ -98,6 +102,8 @@ Firecracker-based runtimes, such as **AWS Firecracker-containerd**, can be integ
 ---
 
 ### 4. Using RuntimeClass for Sandboxing
+
+**Required knowledge for the CKS certification.**
 
 Kubernetes allows selecting **different runtimes** for workloads using `RuntimeClass`.
 

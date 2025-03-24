@@ -14,6 +14,8 @@ To mitigate these risks, Kubernetes administrators should enforce **strict secur
 
 ## 1. Restrict Sidecar Permissions and Privileges
 
+**Required knowledge for the CKS certification.**
+
 **Issue:** If a sidecar container runs with **privileged access**, attackers can escalate privileges and gain control over the host.<br/>
 **Fix:** Use strict **securityContext** settings to prevent privilege escalation.
 
@@ -86,6 +88,8 @@ spec:
 
 ## 3. Use Pod Security Admission to Enforce Sidecar Security Policies
 
+**Required knowledge for the CKS certification.**
+
 **Issue:** If no security policies are enforced, a compromised sidecar can run with excessive privileges.<br/>
 **Fix:** Implement **Pod Security Admission (PSA)** to restrict dangerous configurations.
 
@@ -119,6 +123,8 @@ spec:
 **Fix:** Restrict volume mounts and use read-only settings where possible.
 
 ### Secure Volume Mount Policy
+
+**Required knowledge for the CKS certification.**
 
 ```yaml
 apiVersion: v1

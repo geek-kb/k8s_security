@@ -12,6 +12,8 @@ sidebar_position: 4
 
 ### 1. Apply Egress Network Policies
 
+**Required knowledge for the CKS certification.**
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy

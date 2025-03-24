@@ -6,6 +6,8 @@ description: "Techniques and configuration examples to prevent unauthorized acce
 
 # Exposed Kubernetes Dashboard Mitigation
 
+**Required knowledge for the CKS certification.**
+
 The Kubernetes Dashboard can become a serious security liability when exposed to the public internet without proper access control, authentication, and least-privilege configuration.
 
 This guide outlines practical steps and examples to harden the Dashboard and reduce the attack surface in Kubernetes clusters.

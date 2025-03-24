@@ -5,6 +5,8 @@ sidebar_position: 2
 
 # Attribute-Based Access Control (ABAC) in Kubernetes
 
+**Required knowledge for the CKS certification.**
+
 ## What is ABAC?
 
 **Attribute-Based Access Control (ABAC)** is an **authorization strategy** in Kubernetes that evaluates **attributes** of the **requester**, the **requested resource**, and the **current environment** to determine whether access should be granted. Unlike **RBAC (Role-Based Access Control)**, ABAC uses **policies** defined in **JSONL (JSON Lines) files** to provide **fine-grained control** over **API access**.
@@ -83,13 +85,13 @@ kubectl auth can-i list pods --as=john.doe --namespace=production
 
 ## When to Use ABAC vs. RBAC
 
-| Feature                      | **ABAC**                             | **RBAC**                              |
-|------------------------------|--------------------------------------|--------------------------------------|
-| **Policy Format**            | **JSONL** files                        | **Kubernetes API resources**          |
-| **Management**               | Requires **file updates** and **restarts** | Dynamic updates via **kubectl**       |
-| **Use Case**                 | Complex, **attribute-based rules**   | **Standard role-based** access control|
-| **Flexibility**              | High, but **harder to manage**       | Easier to **audit and manage**        |
-| **Preferred For**            | Legacy systems, **custom conditions** | Most **modern Kubernetes deployments**|
+| Feature           | **ABAC**                                   | **RBAC**                               |
+| ----------------- | ------------------------------------------ | -------------------------------------- |
+| **Policy Format** | **JSONL** files                            | **Kubernetes API resources**           |
+| **Management**    | Requires **file updates** and **restarts** | Dynamic updates via **kubectl**        |
+| **Use Case**      | Complex, **attribute-based rules**         | **Standard role-based** access control |
+| **Flexibility**   | High, but **harder to manage**             | Easier to **audit and manage**         |
+| **Preferred For** | Legacy systems, **custom conditions**      | Most **modern Kubernetes deployments** |
 
 ---
 
