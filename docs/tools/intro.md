@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: "Tools"
+title: "Tools List"
 description: "A curated list of tools used to secure, audit, and monitor Kubernetes environments across various stages of the container lifecycle."
 ---
 
@@ -20,13 +20,19 @@ Tools in this category analyze container images or Kubernetes configurations to 
 
 ### [Trivy](/docs/best_practices/monitoring_logging_and_runtime_security/trivy)
 
+**Required knowledge for the CKS certification.**
+
 A comprehensive vulnerability scanner for container images, Kubernetes YAML, Terraform, and more. It can detect OS and language-level CVEs, secrets, and misconfigurations.
 
 ### [Syft](/docs/best_practices/supply_chain_security/syft)
 
+**Required knowledge for the CKS certification.**
+
 A tool for generating Software Bill of Materials (SBOMs) from container images or file systems. Useful for inventorying what goes into your containers.
 
 ### [Grype](/docs/best_practices/monitoring_logging_and_runtime_security/grype)
+
+**Required knowledge for the CKS certification.**
 
 A vulnerability scanner that works with Syft SBOMs to identify known CVEs in container images.
 
@@ -49,6 +55,8 @@ Validates Kubernetes YAML files and live clusters against a set of security and 
 These tools monitor your cluster during operation to detect abnormal behavior or unauthorized access.
 
 ### [Falco](/docs/best_practices/monitoring_logging_and_runtime_security/falco)
+
+**Required knowledge for the CKS certification.**
 
 A runtime security tool that uses Linux kernel events to detect malicious behavior in containers, such as unexpected system calls, privilege escalations, or network activity.
 
