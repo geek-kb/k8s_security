@@ -1,6 +1,5 @@
 ---
 title: "Section Introduction"
-sidebar_position: 1
 description: "Explore best practices for securing Kubernetes environments across cluster setup, system hardening, microservice security, runtime monitoring, and supply chain protection."
 ---
 
