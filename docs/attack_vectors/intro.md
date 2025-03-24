@@ -2,6 +2,7 @@
 sidebar_position: 1
 id: intro
 title: "Section Introduction"
+sidebar_label: null
 description: "An overview of common Kubernetes attack vectors and how attackers exploit misconfigurations."
 ---
 
