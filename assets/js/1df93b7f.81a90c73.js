@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkk_8_s_security=self.webpackChunkk_8_s_security||[]).push([[4583],{6107:(s,u,e)=>{e.r(u),e.d(u,{default:()=>r});var t=e(6540),c=e(6347);function r(){const s=(0,c.W6)();return(0,t.useEffect)((()=>{s.push("/k8s_security/docs/intro")}),[s]),null}}}]);
