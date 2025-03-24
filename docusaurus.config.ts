@@ -11,7 +11,7 @@ const config: Config = {
   organizationName: 'geek-kb', // GitHub username
   projectName: 'k8s_security',  // Repo name
   deploymentBranch: 'gh-pages',
-  trailingSlash: false,
+  trailingSlash: true,
 
   presets: [
     [
@@ -92,13 +92,14 @@ const config: Config = {
       logo: {
         alt: 'K8s Security Logo',
         src: 'img/logo.svg',
+        href: 'https://k8s-security.geek-kb.com/docs/intro/',
       },
       items: [
         { to: '/docs/intro', label: 'Docs', position: 'left' },
         // { to: '/guides/intro', label: 'Guides', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://k8s-security.geek-kb.com',
+          href: 'https://github.com/geek-kb/k8s_security',
           label: 'GitHub',
           position: 'right',
         },
