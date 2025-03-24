@@ -26,7 +26,7 @@ This section explores **common Kubernetes attack vectors**, including:
 - **[Exploiting Insecure CSI Drivers](/docs/attack_vectors/insecure_csi_drivers)**: Abusing insecure Container Storage Interface drivers to access or tamper with persistent volumes.
 - **[Privileged Service Accounts](/docs/attack_vectors/privileged_service_accounts)**: Overprivileged service accounts granting unauthorized access and escalation.
 - **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Injecting or abusing sidecars to intercept data or maintain persistence.
-- **[Container Escape](/docs/attack_vectors/container_escape)**: Escaping from a container to execute commands on the host node.
+- **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape)**: Escaping from a container to execute commands on the host node.
 - **[Compromised Helm Charts](/docs/attack_vectors/supply_chain_attacks)**: Installing malicious or unverified Helm charts that introduce backdoors or privilege escalation.
 
 Each article provides **step-by-step exploitation techniques, real-world risks, and a link to the corresponding mitigation guide** to help you harden your Kubernetes environments.
