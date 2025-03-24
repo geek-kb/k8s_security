@@ -3,13 +3,13 @@ import type { Config } from '@docusaurus/types';
 const config: Config = {
   title: 'K8s Security',
   tagline: 'Mastering Kubernetes Security Best Practices',
-  url: 'https://k8s-security.geek-kb.com',
+  url: 'https://geek-kb.github.io',
   baseUrl: '/k8s_security/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'geek-kb', // GitHub username
-  projectName: '',  // Repo name
+  projectName: 'k8s_security',  // Repo name
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
