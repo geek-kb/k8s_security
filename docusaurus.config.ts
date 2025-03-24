@@ -87,9 +87,7 @@ const config: Config = {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QNPKC33Q9L', {
-            anonymize_ip: true
-          });
+          gtag('config', 'G-QNPKC33Q9L');
         `,
       },
     ],
