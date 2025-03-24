@@ -175,4 +175,4 @@ Scans Terraform code and Kubernetes manifests for misconfigurations and policy v
 
 Using the right tools is crucial for securing Kubernetes across its entire lifecycle—from development and CI/CD to deployment and runtime. In this section, you’ll find detailed breakdowns of how these tools work, how to configure them securely, and how they support security best practices discussed throughout the site.
 
-> For CKS candidates, it
+ts**, and **SOPS\*\*. These tools appear frequently in exam scenarios and real-world production environments alike.
