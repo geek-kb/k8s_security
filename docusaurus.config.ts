@@ -25,6 +25,7 @@ const config: Config = {
           sidebarItemsGenerator: undefined,
           sidebarCollapsible: true,
           showLastUpdateAuthor: true,
+          enableUpdateTime: true,
         },
         blog: {
           showReadingTime: false,
