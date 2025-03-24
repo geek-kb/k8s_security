@@ -77,12 +77,13 @@ const config: Config = {
       {
         tagName: 'script',
         attributes: {
-          async: true,
+          async: 'true', // must be a string
           src: 'https://www.googletagmanager.com/gtag/js?id=G-QNPKC33Q9L',
         },
       },
       {
         tagName: 'script',
+        attributes: {}, // required even if empty
         innerHTML: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
