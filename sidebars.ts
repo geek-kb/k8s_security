@@ -41,7 +41,7 @@ const sidebars: SidebarsConfig = {
       label: 'Attack Vectors',
       link: {
         type: 'doc',
-        id: 'attack_vectors/intro', // This doc opens when you click the section name
+        id: 'attack_vectors/intro/index', // This doc opens when you click the section name
       },
       items: [
         // Autogenerate everything except the intro.md
