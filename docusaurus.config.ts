@@ -11,7 +11,7 @@ const config: Config = {
   organizationName: 'geek-kb', // GitHub username
   projectName: 'k8s_security',  // Repo name
   deploymentBranch: 'gh-pages',
-  trailingSlash: true,
+  trailingSlash: false,
 
   presets: [
     [
