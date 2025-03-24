@@ -8,8 +8,8 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  // organizationName: 'geek-kb', // GitHub username
-  // projectName: 'k8s_security',  // Repo name
+  organizationName: 'geek-kb', // GitHub username
+  projectName: 'k8s_security',  // Repo name
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
