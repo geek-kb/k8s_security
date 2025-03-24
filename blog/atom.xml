@@ -14,7 +14,7 @@
         <updated>2025-03-10T19:23:46.000Z</updated>
         <summary type="html"><![CDATA[Stay tuned for insightful articles about Kubernetes security best practices.]]></summary>
         <content type="html"><![CDATA[<p>We are currently working on creating valuable content for our blog. Stay tuned for insightful articles about <strong>Kubernetes security best practices</strong>, <strong>cluster hardening</strong>, <strong>attack vector mitigations</strong>, and more.</p>
-<p>In the meantime, feel free to explore our <a href="https://geek-kb.github.io/k8s_security/docs/intro" target="_blank" rel="noopener noreferrer">Documentation</a> and <a href="https://geek-kb.github.io/k8s_security/guides/intro" target="_blank" rel="noopener noreferrer">How-To Guides</a>.</p>
+<p>In the meantime, feel free to explore our <a href="https://geek-kb.github.io/k8s_security/docs/intro" target="_blank" rel="noopener noreferrer">Documentation</a>.</p>
 <p>See you soon!</p>]]></content>
     </entry>
 </feed>
