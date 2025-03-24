@@ -64,6 +64,13 @@ const config: Config = {
         searchBarPosition: 'right',
       },
     ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-QNPKC33Q9L', // Your GA4 Measurement ID
+        anonymizeIP: true, // Recommended for privacy
+      },
+    ],
   ],
 
   // headTags: [
