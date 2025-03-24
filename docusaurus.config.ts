@@ -29,6 +29,7 @@ const config: Config = {
         },
         blog: {
           showReadingTime: false,
+          onInlineAuthors: 'ignore',
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
           routeBasePath: 'blog',
           blogSidebarTitle: 'Under Construction',
