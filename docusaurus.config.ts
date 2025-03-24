@@ -98,7 +98,7 @@ const config: Config = {
         // { to: '/guides/intro', label: 'Guides', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/geek-kb/k8s_security',
+          href: '/',
           label: 'GitHub',
           position: 'right',
         },
