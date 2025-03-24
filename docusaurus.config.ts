@@ -22,7 +22,7 @@ const config: Config = {
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
-          sidebarItemsGenerator: require.resolve('./sidebarItemsGenerator.js'),
+          sidebarItemsGenerator: undefined,
           sidebarCollapsible: true,
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
