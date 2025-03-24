@@ -1,10 +1,10 @@
 ---
 sidebar_position: 6
-title: "Securing the Kubernetes Supply Chain"
+title: "Supply Chain Security Best Practices"
 description: "Best practices for securing the Kubernetes software supply chain, including image signing, dependency verification, Helm security, and CI/CD hardening."
 ---
 
-# Securing the Kubernetes Supply Chain
+# Supply Chain Security Best Practices
 
 **Supply chain attacks** target **container images, dependencies, CI/CD pipelines, and Helm charts** to inject malicious code into Kubernetes workloads. **Securing the Kubernetes supply chain** helps prevent **unauthorized code execution, privilege escalation, and data exfiltration**.
 

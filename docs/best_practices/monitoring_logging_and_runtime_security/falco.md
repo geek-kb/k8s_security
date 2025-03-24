@@ -6,6 +6,8 @@ sidebar_position: 4
 
 # Falco
 
+**Required knowledge for the CKS certification.**
+
 **Falco** is an open-source runtime security engine developed by the CNCF. It detects unexpected or malicious behavior in Kubernetes clusters by monitoring **kernel-level system calls** and applying customizable security rules. Falco helps identify real-time threats such as container escapes, privilege escalations, cryptomining, and filesystem tampering.
 
 By combining behavioral detection with Kubernetes context, Falco provides deep visibility into what’s happening inside containers and nodes at runtime.
