@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://geek-kb.github.io/k8s_security/blog/</id>
+    <id>https://k8s-security.geek-kb.com/blog/</id>
     <title>K8s Security Blog</title>
     <updated>2025-03-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://geek-kb.github.io/k8s_security/blog/"/>
+    <link rel="alternate" href="https://k8s-security.geek-kb.com/blog/"/>
     <subtitle>K8s Security Blog</subtitle>
-    <icon>https://geek-kb.github.io/k8s_security/img/favicon.ico</icon>
+    <icon>https://k8s-security.geek-kb.com/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[CKS Curriculum and Tooling Updates]]></title>
-        <id>https://geek-kb.github.io/k8s_security/blog/cks-update-history/</id>
-        <link href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/"/>
+        <id>https://k8s-security.geek-kb.com/blog/cks-update-history/</id>
+        <link href="https://k8s-security.geek-kb.com/blog/cks-update-history/"/>
         <updated>2025-03-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Stay up to date with the latest changes to the Certified Kubernetes Security Specialist (CKS) exam curriculum and associated tools.]]></summary>
         <content type="html"><![CDATA[<p>The Certified Kubernetes Security Specialist (CKS) exam is frequently updated to stay aligned with the Kubernetes ecosystem and its evolving security landscape.
 This post tracks <strong>official updates</strong> to the CKS curriculum and tooling environment provided by the CNCF.</p>
 <p>The goal is to help CKS candidates stay on top of the exam’s scope and prepare accordingly.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-update-log">✅ Update Log<a href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/#-update-log" class="hash-link" aria-label="Direct link to ✅ Update Log" title="Direct link to ✅ Update Log">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2024-07-01--cks-updated-to-kubernetes-v128">2024-07-01 — <strong>CKS Updated to Kubernetes v1.28</strong><a href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/#2024-07-01--cks-updated-to-kubernetes-v128" class="hash-link" aria-label="Direct link to 2024-07-01--cks-updated-to-kubernetes-v128" title="Direct link to 2024-07-01--cks-updated-to-kubernetes-v128">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-update-log">✅ Update Log<a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#-update-log" class="hash-link" aria-label="Direct link to ✅ Update Log" title="Direct link to ✅ Update Log">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2024-07-01--cks-updated-to-kubernetes-v128">2024-07-01 — <strong>CKS Updated to Kubernetes v1.28</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2024-07-01--cks-updated-to-kubernetes-v128" class="hash-link" aria-label="Direct link to 2024-07-01--cks-updated-to-kubernetes-v128" title="Direct link to 2024-07-01--cks-updated-to-kubernetes-v128">​</a></h3>
 <ul>
 <li><strong>New Kubernetes version</strong>: v1.28</li>
 <li>Tools like <code>kubectl</code>, <code>kube-bench</code>, and <code>trivy</code> updated to reflect this version.</li>
 <li>Removal of deprecated APIs.</li>
 <li>Minor updates to audit logging objectives.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-06-30--curriculum-realignment">2023-06-30 — <strong>Curriculum Realignment</strong><a href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/#2023-06-30--curriculum-realignment" class="hash-link" aria-label="Direct link to 2023-06-30--curriculum-realignment" title="Direct link to 2023-06-30--curriculum-realignment">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-06-30--curriculum-realignment">2023-06-30 — <strong>Curriculum Realignment</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2023-06-30--curriculum-realignment" class="hash-link" aria-label="Direct link to 2023-06-30--curriculum-realignment" title="Direct link to 2023-06-30--curriculum-realignment">​</a></h3>
 <ul>
 <li>Topics under “Supply Chain Security” restructured for clarity.</li>
 <li>Emphasis added on detecting insecure base images and signed artifacts.</li>
 <li>Link time attacks and tampering highlighted as new subtopics.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-09-01--cks-upgraded-to-kubernetes-v125">2022-09-01 — <strong>CKS Upgraded to Kubernetes v1.25</strong><a href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/#2022-09-01--cks-upgraded-to-kubernetes-v125" class="hash-link" aria-label="Direct link to 2022-09-01--cks-upgraded-to-kubernetes-v125" title="Direct link to 2022-09-01--cks-upgraded-to-kubernetes-v125">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-09-01--cks-upgraded-to-kubernetes-v125">2022-09-01 — <strong>CKS Upgraded to Kubernetes v1.25</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2022-09-01--cks-upgraded-to-kubernetes-v125" class="hash-link" aria-label="Direct link to 2022-09-01--cks-upgraded-to-kubernetes-v125" title="Direct link to 2022-09-01--cks-upgraded-to-kubernetes-v125">​</a></h3>
 <ul>
 <li>Updated exam clusters to Kubernetes v1.25</li>
 <li>Introduced <code>seccomp</code> profiles under the “Pod Security” domain</li>
 <li>Deprecated <code>PodSecurityPolicies</code> officially removed from exam scope</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-10-15--cks-environment-tooling-updated">2021-10-15 — <strong>CKS Environment Tooling Updated</strong><a href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/#2021-10-15--cks-environment-tooling-updated" class="hash-link" aria-label="Direct link to 2021-10-15--cks-environment-tooling-updated" title="Direct link to 2021-10-15--cks-environment-tooling-updated">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-10-15--cks-environment-tooling-updated">2021-10-15 — <strong>CKS Environment Tooling Updated</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2021-10-15--cks-environment-tooling-updated" class="hash-link" aria-label="Direct link to 2021-10-15--cks-environment-tooling-updated" title="Direct link to 2021-10-15--cks-environment-tooling-updated">​</a></h3>
 <ul>
 <li>Switched to using <code>crictl</code> as the primary container runtime interface tool</li>
 <li>Default editor changed from <code>vi</code> to <code>nano</code> (optionally configurable)</li>
 <li>Introduction of <code>kube-bench</code>, <code>trivy</code>, and <code>kyverno</code> as allowed tools</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-06-01--initial-cks-curriculum-launch">2021-06-01 — <strong>Initial CKS Curriculum Launch</strong><a href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/#2021-06-01--initial-cks-curriculum-launch" class="hash-link" aria-label="Direct link to 2021-06-01--initial-cks-curriculum-launch" title="Direct link to 2021-06-01--initial-cks-curriculum-launch">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-06-01--initial-cks-curriculum-launch">2021-06-01 — <strong>Initial CKS Curriculum Launch</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2021-06-01--initial-cks-curriculum-launch" class="hash-link" aria-label="Direct link to 2021-06-01--initial-cks-curriculum-launch" title="Direct link to 2021-06-01--initial-cks-curriculum-launch">​</a></h3>
 <ul>
 <li>Focused on 6 domains:<!-- -->
 <ul>
@@ -57,7 +57,7 @@ This post tracks <strong>official updates</strong> to the CKS curriculum and too
 </li>
 </ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-stay-updated">🔁 Stay Updated<a href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/#-stay-updated" class="hash-link" aria-label="Direct link to 🔁 Stay Updated" title="Direct link to 🔁 Stay Updated">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-stay-updated">🔁 Stay Updated<a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#-stay-updated" class="hash-link" aria-label="Direct link to 🔁 Stay Updated" title="Direct link to 🔁 Stay Updated">​</a></h2>
 <p>To ensure you're always prepared:</p>
 <ul>
 <li>Review the <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist-cks/" target="_blank" rel="noopener noreferrer">official CNCF CKS curriculum</a></li>
@@ -77,8 +77,8 @@ This post tracks <strong>official updates</strong> to the CKS curriculum and too
     </entry>
     <entry>
         <title type="html"><![CDATA[Blog Under Construction]]></title>
-        <id>https://geek-kb.github.io/k8s_security/blog/</id>
-        <link href="https://geek-kb.github.io/k8s_security/blog/"/>
+        <id>https://k8s-security.geek-kb.com/blog/</id>
+        <link href="https://k8s-security.geek-kb.com/blog/"/>
         <updated>2025-03-10T19:23:46.000Z</updated>
         <summary type="html"><![CDATA[Stay tuned for insightful articles about Kubernetes security best practices.]]></summary>
         <content type="html"><![CDATA[<p>We are currently working on creating valuable content for our blog. Stay tuned for insightful articles about <strong>Kubernetes security best practices</strong>, <strong>cluster hardening</strong>, <strong>attack vector mitigations</strong>, and more.</p>
