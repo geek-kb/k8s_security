@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "Section Introduction"
 description: "An introduction to Kubernetes security, covering key concepts, challenges, and foundational security principles."
+sidebar_class_name: hidden
 ---
 
 # Kubernetes Security Fundamentals
