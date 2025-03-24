@@ -18,7 +18,7 @@
 This post tracks <strong>official updates</strong> to the CKS curriculum and tooling environment provided by the CNCF.</p>
 <p>The goal is to help CKS candidates stay on top of the exam’s scope and prepare accordingly.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-update-log">✅ Update Log<a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#-update-log" class="hash-link" aria-label="Direct link to ✅ Update Log" title="Direct link to ✅ Update Log">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="update-log">Update Log<a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#update-log" class="hash-link" aria-label="Direct link to Update Log" title="Direct link to Update Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2024-07-01--cks-updated-to-kubernetes-v128">2024-07-01 — <strong>CKS Updated to Kubernetes v1.28</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2024-07-01--cks-updated-to-kubernetes-v128" class="hash-link" aria-label="Direct link to 2024-07-01--cks-updated-to-kubernetes-v128" title="Direct link to 2024-07-01--cks-updated-to-kubernetes-v128">​</a></h3>
 <ul>
 <li><strong>New Kubernetes version</strong>: v1.28</li>
@@ -58,7 +58,7 @@ This post tracks <strong>official updates</strong> to the CKS curriculum and too
 </li>
 </ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-stay-updated">🔁 Stay Updated<a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#-stay-updated" class="hash-link" aria-label="Direct link to 🔁 Stay Updated" title="Direct link to 🔁 Stay Updated">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="stay-updated">Stay Updated<a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#stay-updated" class="hash-link" aria-label="Direct link to Stay Updated" title="Direct link to Stay Updated">​</a></h2>
 <p>To ensure you're always prepared:</p>
 <ul>
 <li>Review the <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist-cks/" target="_blank" rel="noopener noreferrer">official CNCF CKS curriculum</a></li>
@@ -79,7 +79,7 @@ This post tracks <strong>official updates</strong> to the CKS curriculum and too
             <pubDate>Mon, 10 Mar 2025 19:23:46 GMT</pubDate>
             <description><![CDATA[Stay tuned for insightful articles about Kubernetes security best practices.]]></description>
             <content:encoded><![CDATA[<p>We are currently working on creating valuable content for our blog. Stay tuned for insightful articles about <strong>Kubernetes security best practices</strong>, <strong>cluster hardening</strong>, <strong>attack vector mitigations</strong>, and more.</p>
-<p>In the meantime, feel free to explore our <a href="https://geek-kb.github.io/k8s_security/docs/intro" target="_blank" rel="noopener noreferrer">Documentation</a>.</p>
+<p>In the meantime, feel free to explore our <a href="https://k8s-security.geek-kb.com/" target="_blank" rel="noopener noreferrer">Documentation</a>.</p>
 <p>See you soon!</p>]]></content:encoded>
         </item>
     </channel>
