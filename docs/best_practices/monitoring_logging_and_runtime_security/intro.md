@@ -1,7 +1,7 @@
 ---
 title: "Monitoring, Logging, and Runtime Security"
 description: "Best practices for monitoring, logging, and securing runtime environments in Kubernetes to detect and respond to threats."
-sidebar_position: 4
+sidebar_position: 1
 ---
 
 **This category is still under development**
