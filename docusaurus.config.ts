@@ -60,11 +60,31 @@ const config: Config = {
         hashed: true,
         indexPages: true,
         highlightSearchTermsOnTargetPage: true,
-        searchBarShortcut: true, // Allows using Ctrl+K to focus the search bar
+        searchBarShortcut: true,
         searchBarPosition: 'right',
       },
     ],
   ],
+
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        async: 'true',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-QNPKC33Q9L',
+      },
+    },
+    {
+      tagName: 'script',
+      attributes: {}, // Required even if empty
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QNPKC33Q9L');
+      `,
+    },
+  ],  
 
   themeConfig: {
     navbar: {
@@ -75,7 +95,7 @@ const config: Config = {
       },
       items: [
         { to: '/docs/intro', label: 'Docs', position: 'left' },
-//        { to: '/guides/intro', label: 'Guides', position: 'left' },
+        // { to: '/guides/intro', label: 'Guides', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/geek-kb/k8s_security',
@@ -108,4 +128,3 @@ const config: Config = {
 };
 
 export default config;
-
