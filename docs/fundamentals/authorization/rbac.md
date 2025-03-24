@@ -6,6 +6,8 @@ description: "Learn how Role-Based Access Control (RBAC) in Kubernetes manages a
 
 # Role-Based Access Control (RBAC)
 
+**Required knowledge for the CKS certification.**
+
 **Role-Based Access Control (RBAC)** is a **Kubernetes security primitive** that manages **authorization** by defining **roles** and **permissions** for **users**, **groups**, and **service accounts**. It allows administrators to control **who can perform actions** on **specific resources** within the **cluster**.
 
 ---
@@ -32,9 +34,9 @@ metadata:
   namespace: default
   name: pod-reader
 rules:
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get", "list", "watch"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list", "watch"]
 ```
 
 ### 2. Create a RoleBinding
@@ -46,9 +48,9 @@ metadata:
   name: read-pods
   namespace: default
 subjects:
-- kind: User
-  name: "api-user"
-  apiGroup: rbac.authorization.k8s.io
+  - kind: User
+    name: "api-user"
+    apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
   name: pod-reader
@@ -66,4 +68,5 @@ RBAC helps enforce the **principle of least privilege** by ensuring that **users
 ## Conclusion: Enforcing Security with RBAC in Kubernetes
 
 **Role-Based Access Control (RBAC)** is an essential **security primitive** in Kubernetes, providing **fine-grained authorization** and enforcing the **principle of least privilege**. By correctly defining **roles**, **role bindings**, and **permissions**, you can significantly **reduce the attack surface** of your cluster and maintain **tight access controls**.
+
 >

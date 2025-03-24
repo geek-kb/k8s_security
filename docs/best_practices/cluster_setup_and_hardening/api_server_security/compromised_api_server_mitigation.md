@@ -6,6 +6,8 @@ description: "Best practices for protecting the Kubernetes API server against un
 
 # Securing the Kubernetes API Server
 
+**Required knowledge for the CKS certification.**
+
 A compromised Kubernetes API server can lead to unauthorized access, data breaches, and full cluster compromise. Attackers may exploit misconfigurations or exposed endpoints to manipulate workloads, disrupt services, or exfiltrate sensitive data.
 
 To secure the API server, implement the following best practices.

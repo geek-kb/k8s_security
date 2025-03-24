@@ -20,11 +20,15 @@ This section provides best practices to **harden Kubernetes nodes, secure the OS
 
 ### **Node Hardening**
 
+**Required knowledge for the CKS certification.**
+
 - Restrict SSH access to Kubernetes nodes and **enforce key-based authentication**.
 - Use **hardened container runtimes** (e.g., **containerd**, **gVisor**, **Kata Containers**).
 - Enable **AppArmor** or **SELinux** to restrict process execution.
 
 ### **Kernel Security Enhancements**
+
+**Required knowledge for the CKS certification.**
 
 - Enable **seccomp profiles** to limit system call access for containers.
 - Implement **eBPF-based security monitoring** with tools like **Falco**.

@@ -5,6 +5,8 @@ sidebar_position: 1
 
 # Authorization in Kubernetes
 
+**Required knowledge for the CKS certification.**
+
 ## What is Authorization?
 
 **Authorization** in Kubernetes determines whether a **user**, **service account**, or **component** is allowed to perform a specific **action** on a given **resource**. Once authentication verifies **who you are**, authorization ensures you have the necessary **permissions** to proceed.

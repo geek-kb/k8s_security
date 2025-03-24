@@ -12,6 +12,8 @@ description: "Best practices for securing Kubernetes RBAC configurations to prev
 
 ## 1. Enforce the Principle of Least Privilege
 
+**Required knowledge for the CKS certification.**
+
 RBAC should grant **only the necessary permissions** required for a user or workload.
 
 ### Secure Role Example
@@ -36,6 +38,8 @@ rules:
 ---
 
 ## 2. Avoid Wildcard Permissions
+
+**Required knowledge for the CKS certification.**
 
 Using `'*'` for API groups, resources, or verbs grants **unrestricted access**, leading to security risks.
 
@@ -75,6 +79,8 @@ rules:
 ---
 
 ## 3. Restrict Cluster-Wide Privileges
+
+**Required knowledge for the CKS certification.**
 
 Cluster-wide roles (`ClusterRole`) should be **limited** to essential users and services.
 
@@ -128,6 +134,8 @@ rules:
 ---
 
 ## 5. Use Service Accounts for Automated Workloads
+
+**Required knowledge for the CKS certification.**
 
 Workloads should use **dedicated service accounts** with restricted permissions.
 

@@ -6,6 +6,8 @@ description: "Best practices for securing Kubernetes Admission Controllers to pr
 
 # Securing Kubernetes Admission Controllers
 
+**Required knowledge for the CKS certification.**
+
 **Admission controllers** in Kubernetes play a crucial role in **validating and mutating requests** before they are persisted in the cluster. **Misconfigurations** in admission controllers can allow attackers to bypass security policies, deploy unauthorized workloads, and escalate privileges.
 
 ---

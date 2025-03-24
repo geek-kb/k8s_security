@@ -12,6 +12,8 @@ description: "Best practices for securing Kubernetes network traffic against hij
 
 ## 1. Restrict Traffic Flow with Network Policies
 
+**Required knowledge for the CKS certification.**
+
 To control pod-to-pod communication and prevent unauthorized traffic flows, use Kubernetes **Network Policies**.
 
 ➡ **For a detailed guide on implementing Network Policies, see [Network Policies in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies)**.

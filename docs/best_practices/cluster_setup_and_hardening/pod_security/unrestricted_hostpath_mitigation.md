@@ -39,6 +39,8 @@ metadata:
 
 ## 2. Use readOnly hostPath Mounts
 
+**Required knowledge for the CKS certification.**
+
 **Issue:** Read-write `hostPath` mounts allow pods to modify critical system files.<br/>
 **Fix:** Set `readOnly: true` for any required `hostPath` mount.
 
@@ -73,6 +75,8 @@ spec:
 
 ## 3. Use AppArmor to Restrict File Access
 
+**Required knowledge for the CKS certification.**
+
 **Issue:** Even with `readOnly: true`, an attacker may exploit the mounted files.<br/>
 **Fix:** Use **AppArmor** to limit file system access.
 
@@ -99,6 +103,8 @@ spec:
 ---
 
 ## 4. Enforce SecurityContext Constraints
+
+**Required knowledge for the CKS certification.**
 
 **Issue:** Containers running as **privileged** can access the entire host.<br/>
 **Fix:** Restrict privileged access in **SecurityContext**.

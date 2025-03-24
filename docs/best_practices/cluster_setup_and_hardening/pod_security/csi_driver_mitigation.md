@@ -117,6 +117,8 @@ spec:
 
 ## 4. Enforce Read-Only Volume Access for Sensitive Data
 
+**Required knowledge for the CKS certification.**
+
 **Issue:** If volumes containing sensitive data are mounted with `ReadWriteMany (RWX)`, attackers can modify or inject malicious content.<br/>
 **Fix:** Use **ReadOnlyMany (ROX)** for sensitive workloads.
 

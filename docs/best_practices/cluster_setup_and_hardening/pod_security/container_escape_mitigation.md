@@ -14,6 +14,8 @@ To mitigate container escape risks, Kubernetes administrators should enforce **s
 
 ## 1. Disable Privileged Containers
 
+**Required knowledge for the CKS certification.**
+
 Running a container with `privileged: true` grants it full access to the host system, increasing the risk of escape. Attackers can leverage this setting to mount the host’s filesystem, manipulate system processes, or escalate privileges.
 
 ### Secure Configuration
@@ -67,6 +69,8 @@ spec:
 
 ## 3. Use Seccomp to Restrict Syscalls
 
+**Required knowledge for the CKS certification.**
+
 **Seccomp (Secure Computing Mode)** filters system calls available to containers, reducing the attack surface.
 
 ### Secure Configuration with Seccomp
@@ -96,6 +100,8 @@ spec:
 
 ## 4. Drop Unnecessary Linux Capabilities
 
+**Required knowledge for the CKS certification.**
+
 By default, containers have a set of capabilities that allow interactions with system resources. Reducing these capabilities minimizes the potential attack surface.
 
 ### Secure Configuration
@@ -123,6 +129,8 @@ spec:
 ---
 
 ## 5. Enforce Pod Security Standards
+
+**Required knowledge for the CKS certification.**
 
 Use **Pod Security Admission (PSA)** or **PodSecurityPolicies (PSP) (deprecated in Kubernetes 1.21+)** to enforce security restrictions that block high-risk configurations.
 
@@ -225,6 +233,8 @@ spec:
 ---
 
 ## 7. Implement Container Sandboxing
+
+**Required knowledge for the CKS certification.**
 
 Using **sandboxed runtimes** like Kata Containers, gVisor, or Firecracker adds additional isolation layers between the container and the host.
 

@@ -18,20 +18,28 @@ This section covers best practices to **harden microservices** against common vu
 
 ### **Secure Development Practices**
 
+**Required knowledge for the CKS certification.**
+
 - Implement **Static Application Security Testing (SAST)** to identify vulnerabilities in code.
 - Enforce **peer code reviews** to detect security issues early in the development process.
 
 ### **Dependency Management**
+
+**Required knowledge for the CKS certification.**
 
 - Regularly update dependencies to patch known vulnerabilities.
 - Use tools like **OWASP Dependency-Check**, **Trivy**, or **Snyk** to scan for outdated or insecure libraries.
 
 ### **API Security**
 
+**Required knowledge for the CKS certification.**
+
 - Implement **authentication and authorization** for microservice endpoints using **JWT tokens**, **OAuth**, or **mTLS**.
 - Use **rate limiting** to prevent API abuse and denial-of-service (DoS) attacks.
 
 ### **Container Security**
+
+**Required knowledge for the CKS certification.**
 
 - Scan container images for vulnerabilities before deployment.
 - Use **distroless images** or minimal base images to reduce the attack surface.

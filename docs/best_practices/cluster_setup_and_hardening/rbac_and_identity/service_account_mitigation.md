@@ -12,6 +12,8 @@ description: "Best practices for securing Kubernetes Service Accounts to prevent
 
 ## 1. Disable Automatic Service Account Token Mounting
 
+**Required knowledge for the CKS certification.**
+
 **Issue:** By default, Kubernetes mounts Service Account tokens inside all pods, even if they do not require API access.<br/>
 **Fix:** Disable automatic token mounting for pods that do not interact with the Kubernetes API.
 
@@ -38,6 +40,8 @@ spec:
 ---
 
 ## 2. Enforce Least Privilege with RBAC
+
+**Required knowledge for the CKS certification.**
 
 **Issue:** If a Service Account is assigned excessive permissions, an attacker can escalate privileges.<br/>
 **Fix:** Restrict Service Accounts using **Role-Based Access Control (RBAC)**.
@@ -110,6 +114,8 @@ rules:
 
 ## 4. Restrict Service Account Usage Per Namespace
 
+**Required knowledge for the CKS certification.**
+
 **Issue:** If a Service Account is not restricted to a specific namespace, attackers can use it across multiple namespaces.<br/>
 **Fix:** Limit Service Account scope using **RBAC policies**.
 
@@ -168,6 +174,8 @@ kubectl create token secure-sa --duration=10m
 ---
 
 ## 6. Monitor and Audit Service Account Usage
+
+**Required knowledge for the CKS certification.**
 
 **Issue:** Without auditing, Service Account abuse may go unnoticed.<br/>
 **Fix:** Enable **Kubernetes audit logs** to detect unauthorized access.
