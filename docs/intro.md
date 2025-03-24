@@ -14,7 +14,7 @@ The topics that are relevant for the CKS certification are marked as such.
 
 The site is still under development and many CKS related topics are not yet covered.
 We're doing our best to add the missing content as quickly as possible.
-Thanks for your patient.
+Thanks for your patience.
 
 The information will soon be up to date with the latest Kubernetes versions and security tools based on the CKS curriculum.
 
@@ -45,6 +45,7 @@ Each section provides **detailed security insights** with step-by-step **guides*
 - Learn **Fundamentals** to build a strong security foundation.
 - Explore the **Attack Vectors** section to understand common Kubernetes threats.
 - Follow **Best Practices** to implement security hardening techniques.
+- Check the available list of **Tools** to help you achieve security best practices level.
 - Use the **Search** feature (in the upper right corner) to quickly find relevant security guides.
 
 ---
