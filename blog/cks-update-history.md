@@ -14,7 +14,7 @@ The goal is to help CKS candidates stay on top of the exam’s scope and prepare
 
 ---
 
-## ✅ Update Log
+## Update Log
 
 ### 2024-07-01 — **CKS Updated to Kubernetes v1.28**
 
@@ -53,7 +53,7 @@ The goal is to help CKS candidates stay on top of the exam’s scope and prepare
 
 ---
 
-## 🔁 Stay Updated
+## Stay Updated
 
 To ensure you're always prepared:
 
