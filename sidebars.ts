@@ -38,12 +38,11 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Best Practices',
+      link: {
+        type: 'doc',
+        id: 'best_practices/intro',
+      },
       items: [
-        {
-          type: 'doc',
-          id: 'best_practices/intro',
-          label: 'Section Introduction',
-        },
         {
           type: 'category',
           label: 'Cluster Setup and Hardening',
@@ -113,7 +112,7 @@ const sidebars: SidebarsConfig = {
               dirName: 'best_practices/supply_chain_security',
             },
           ],
-        },        
+        },
       ],
     },
     {
