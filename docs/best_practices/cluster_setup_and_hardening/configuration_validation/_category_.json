@@ -1,0 +1,9 @@
+{
+    "label": "Configuration Validation",
+    "position": 12,
+    "link": {
+        "type": "generated-index",
+        "title": "Configuration Validation",
+        "description": "Tools and practices for validating Kubernetes resource definitions to ensure secure, production-ready configurations."
+    }
+} 

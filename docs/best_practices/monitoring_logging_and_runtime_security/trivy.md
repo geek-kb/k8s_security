@@ -6,6 +6,8 @@ description: "Overview, usage, and best practices for using Trivy to scan contai
 
 # Trivy
 
+**Required knowledge for the CKS certification.**
+
 **Trivy** is a comprehensive and easy-to-use **vulnerability scanner** for containers, Kubernetes, IaC (Infrastructure as Code), file systems, and Git repositories. It helps identify security risks across different stages of the development lifecycle and is widely adopted in Kubernetes environments.
 
 It is an **open-source tool** maintained by **Aqua Security**, with a strong community and extensive documentation.
