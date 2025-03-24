@@ -135,7 +135,7 @@ For a comprehensive approach to **monitoring and logging**, refer to [Monitoring
 kubelet --version
 ```
 
-For more details on **patching and updates**, refer to [Kubernetes Hardening Guide](/docs/best_practices/cluster_setup_and_hardening/what_are_cis_benchmarks).
+For more details on **patching and updates**, refer to [Kubernetes Hardening Guide](/docs/best_practices/cluster_setup_and_hardening/cis/understanding_cis_benchmarks).
 
 ### 9. Limit Resource Consumption
 
