@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: "Section Introduction"
+title: "Introduction"
 description: "Overview of cluster setup and hardening practices in Kubernetes, covering the critical domains necessary to build a secure and resilient environment."
 ---
 
