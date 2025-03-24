@@ -74,7 +74,7 @@ const config: Config = {
       },
       items: [
         { to: '/docs/intro', label: 'Docs', position: 'left' },
-        { to: '/guides/intro', label: 'Guides', position: 'left' },
+//        { to: '/guides/intro', label: 'Guides', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/geek-kb/k8s_security',
