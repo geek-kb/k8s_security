@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: "Security Tooling for Kubernetes"
+title: "Section Introduction"
 description: "A curated list of tools used to secure, audit, and monitor Kubernetes environments across various stages of the container lifecycle."
 ---
 

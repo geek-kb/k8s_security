@@ -3,14 +3,12 @@ title: "CKS Curriculum and Tooling Updates"
 description: "Stay up to date with the latest changes to the Certified Kubernetes Security Specialist (CKS) exam curriculum and associated tools."
 slug: cks-update-history
 date: 2025-03-24
-authors:
-  - name: Itai Ganot
-    url: https://github.com/itaiganot
-    title: Site Creator
+authors: [itai]
 tags: [CKS, CNCF, Kubernetes, Certification]
 ---
 
-The Certified Kubernetes Security Specialist (CKS) exam is frequently updated to stay aligned with the Kubernetes ecosystem and its evolving security landscape. This post tracks **official updates** to the CKS curriculum and tooling environment provided by the CNCF.
+The Certified Kubernetes Security Specialist (CKS) exam is frequently updated to stay aligned with the Kubernetes ecosystem and its evolving security landscape. <!-- truncate -->
+This post tracks **official updates** to the CKS curriculum and tooling environment provided by the CNCF.
 
 The goal is to help CKS candidates stay on top of the exam’s scope and prepare accordingly.
 

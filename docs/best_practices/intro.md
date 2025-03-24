@@ -61,7 +61,7 @@ Ensure continuous visibility and threat detection within your Kubernetes environ
 
 Protect the integrity of the software your cluster builds and runs, from image creation to deployment.
 
-- [Supply Chain Mitigation](/docs/best_practices/supply_chain_mitigation)
+- [Supply Chain Mitigation](/docs/best_practices/supply_chain_security/intro)
 
 ---
 

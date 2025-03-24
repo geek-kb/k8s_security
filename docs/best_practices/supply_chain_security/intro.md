@@ -54,4 +54,4 @@ By following these supply chain security practices, you reduce the attack surfac
 
 ---
 
-➡ Start exploring by diving into the first guide on [detecting compromised images](./compromised_images.md) _(if available)_ or reviewing [CNCF’s Supply Chain Security Whitepaper](https://www.cncf.io/blog/2021/08/05/cloud-native-security-whitepaper-supply-chain-security/).
+➡ Learn more by reviewing the [CNCF Supply Chain Security Whitepaper](https://www.cncf.io/blog/2021/08/05/cloud-native-security-whitepaper-supply-chain-security/).
