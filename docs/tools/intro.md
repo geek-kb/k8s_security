@@ -18,27 +18,27 @@ This list includes tools for vulnerability scanning, access control, runtime sec
 
 Tools in this category analyze container images or Kubernetes configurations to find known vulnerabilities and insecure defaults.
 
-### Trivy
+### [Trivy](/docs/best_practices/monitoring_logging_and_runtime_security/trivy)
 
 A comprehensive vulnerability scanner for container images, Kubernetes YAML, Terraform, and more. It can detect OS and language-level CVEs, secrets, and misconfigurations.
 
-### Syft
+### [Syft](/docs/best_practices/supply_chain_security/syft)
 
 A tool for generating Software Bill of Materials (SBOMs) from container images or file systems. Useful for inventorying what goes into your containers.
 
-### Grype
+### [Grype](/docs/best_practices/monitoring_logging_and_runtime_security/grype)
 
 A vulnerability scanner that works with Syft SBOMs to identify known CVEs in container images.
 
-### kube-score
+### [kube-score](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/kube_score)
 
 Performs static analysis of Kubernetes manifests, identifying insecure configurations, privilege issues, or lack of resource limits.
 
-### kubescape
+### [kubescape](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/kubescape)
 
 An end-to-end Kubernetes security testing tool that scans for misconfigurations and compliance with industry frameworks like NSA-CISA and MITRE ATT&CK.
 
-### Polaris
+### [Polaris](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/polaris)
 
 Validates Kubernetes YAML files and live clusters against a set of security and reliability policies.
 
@@ -48,11 +48,11 @@ Validates Kubernetes YAML files and live clusters against a set of security and 
 
 These tools monitor your cluster during operation to detect abnormal behavior or unauthorized access.
 
-### Falco
+### [Falco](/docs/best_practices/monitoring_logging_and_runtime_security/falco)
 
 A runtime security tool that uses Linux kernel events to detect malicious behavior in containers, such as unexpected system calls, privilege escalations, or network activity.
 
-### Tetragon
+### [Tetragon](/docs/best_practices/monitoring_logging_and_runtime_security/tetragon)
 
 An eBPF-based runtime enforcement and visibility tool that can detect and block suspicious activity, with support for fine-grained process and network-level policies.
 
@@ -162,4 +162,4 @@ Scans Terraform code and Kubernetes manifests for misconfigurations and policy v
 
 Using the right tools is crucial for securing Kubernetes across its entire lifecycle—from development and CI/CD to deployment and runtime. In this section, you’ll find detailed breakdowns of how these tools work, how to configure them securely, and how they support security best practices discussed throughout the site.
 
-> For CKS candidates, it is essential to become familiar with tools like **Trivy, Falco, kube-bench, OPA/Gatekeeper, Kyverno, Sealed Secrets**, and **SOPS**. These tools appear frequently in exam scenarios and real-world production environments alike.
+> For CKS candidates, it
