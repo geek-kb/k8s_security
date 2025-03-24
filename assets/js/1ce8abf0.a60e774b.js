@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkk_8_s_security=self.webpackChunkk_8_s_security||[]).push([[3031],{8181:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/k8s_security/blog","page":1,"postsPerPage":1,"totalPages":2,"totalCount":2,"nextPage":"/k8s_security/blog/page/2","blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
