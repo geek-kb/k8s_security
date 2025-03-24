@@ -12,7 +12,6 @@ const sidebars: SidebarsConfig = {
       label: 'Fundamentals',
       link: { type: 'doc', id: 'fundamentals/intro' },
       items: [
-        'fundamentals/intro',
         'fundamentals/understanding_k8s_attack_surface',
         'fundamentals/the_4_c_cloud_native_security',
         {
@@ -42,7 +41,6 @@ const sidebars: SidebarsConfig = {
       label: 'Attack Vectors',
       link: { type: 'doc', id: 'attack_vectors/intro' },
       items: [
-        'attack_vectors/intro',
         'attack_vectors/compromised_api_server',
         'attack_vectors/exposed_dashboard',
         'attack_vectors/insecure_secrets_management',
