@@ -14,7 +14,8 @@
             <guid>https://geek-kb.github.io/k8s_security/blog/cks-update-history/</guid>
             <pubDate>Mon, 24 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Stay up to date with the latest changes to the Certified Kubernetes Security Specialist (CKS) exam curriculum and associated tools.]]></description>
-            <content:encoded><![CDATA[<p>The Certified Kubernetes Security Specialist (CKS) exam is frequently updated to stay aligned with the Kubernetes ecosystem and its evolving security landscape. This post tracks <strong>official updates</strong> to the CKS curriculum and tooling environment provided by the CNCF.</p>
+            <content:encoded><![CDATA[<p>The Certified Kubernetes Security Specialist (CKS) exam is frequently updated to stay aligned with the Kubernetes ecosystem and its evolving security landscape.
+This post tracks <strong>official updates</strong> to the CKS curriculum and tooling environment provided by the CNCF.</p>
 <p>The goal is to help CKS candidates stay on top of the exam’s scope and prepare accordingly.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-update-log">✅ Update Log<a href="https://geek-kb.github.io/k8s_security/blog/cks-update-history/#-update-log" class="hash-link" aria-label="Direct link to ✅ Update Log" title="Direct link to ✅ Update Log">​</a></h2>
