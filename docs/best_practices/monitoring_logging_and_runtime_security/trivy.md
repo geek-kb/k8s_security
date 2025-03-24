@@ -2,7 +2,6 @@
 sidebar_position: 2
 title: "Trivy"
 description: "Overview, usage, and best practices for using Trivy to scan container images, file systems, and Kubernetes resources for vulnerabilities."
-sidebar_position: 2
 ---
 
 # Trivy

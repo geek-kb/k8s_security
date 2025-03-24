@@ -174,4 +174,4 @@ The attacker successfully compromises the Kubernetes cluster via supply chain ve
 
 ## Mitigation
 
-➡ [Securing the Kubernetes Supply Chain](/docs/best_practices/supply_chain_mitigation)
+➡ [Securing the Kubernetes Supply Chain](/docs/best_practices/supply_chain_security/supply_chain_mitigation)
