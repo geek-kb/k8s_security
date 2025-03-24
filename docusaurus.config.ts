@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 const config: Config = {
   title: 'K8s Security',
   tagline: 'Mastering Kubernetes Security Best Practices',
-  url: 'https://geek-kb.github.io',
-  baseUrl: '/k8s_security/',
+  url: 'https://k8s-security.geek-kb.com',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
