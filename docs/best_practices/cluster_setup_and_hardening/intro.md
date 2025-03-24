@@ -120,6 +120,15 @@ Store and access secrets securely, both inside Kubernetes and via external tools
 
 ---
 
+## Configuration Validation
+
+Validate Kubernetes manifests to detect insecure configurations and enforce best practices before deployment.
+
+- [Kube-Score](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/kube_score)  
+  Analyze Kubernetes resource definitions for potential security risks, misconfigurations, and architectural issues.
+
+---
+
 ## Conclusion
 
 Cluster setup and hardening is the foundation of Kubernetes security. Each component — from nodes to API access to pod policies — contributes to the overall security posture.
