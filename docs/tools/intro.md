@@ -53,6 +53,10 @@ An end-to-end Kubernetes security testing tool that scans for misconfigurations 
 
 Validates Kubernetes YAML files and live clusters against a set of security and reliability policies.
 
+### [Checkov](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/checkov)
+
+A static analysis tool for infrastructure-as-code (IaC) to detect security and compliance misconfigurations across Kubernetes, Terraform, and more.
+
 ---
 
 ## Runtime Security and Threat Detection
@@ -75,15 +79,11 @@ An eBPF-based runtime enforcement and visibility tool that can detect and block 
 
 These tools analyze running clusters or resource definitions to ensure they conform to security baselines.
 
-### kube-bench
-
-Runs automated checks against the Kubernetes CIS Benchmarks to assess control plane and node configurations.
-
-### kube-hunter
+### [kube-hunter](/docs/best_practices/cluster_setup_and_hardening/network_security/kube_hunter)
 
 Scans Kubernetes clusters for common misconfigurations and vulnerabilities from an attacker’s perspective.
 
-### KubeAudit
+### [KubeAudit](/docs/best_practices/cluster_setup_and_hardening/pod_security/kubeaudit)
 
 A command-line tool that audits Kubernetes clusters for security compliance, especially around RBAC, pod specs, and resource configuration.
 
@@ -93,11 +93,11 @@ A command-line tool that audits Kubernetes clusters for security compliance, esp
 
 Managing secrets securely is critical in Kubernetes. The following tools help encrypt, audit, or safely inject secrets into your workloads.
 
-### Sealed Secrets
+### [Sealed Secrets](/docs/best_practices/cluster_setup_and_hardening/secrets_management/sealed_secrets)
 
 An encryption tool by Bitnami that allows you to store encrypted Kubernetes secrets in Git safely. Decryption is handled by a controller in the cluster.
 
-### Mozilla SOPS
+### [Mozilla SOPS](/docs/best_practices/cluster_setup_and_hardening/secrets_management/mozilla_sops)
 
 Encrypts secrets in YAML/JSON files for use with GitOps workflows. Works well with KMS providers like AWS KMS, GCP KMS, or PGP.
 
@@ -107,11 +107,11 @@ Encrypts secrets in YAML/JSON files for use with GitOps workflows. Works well wi
 
 These tools help verify the integrity and origin of artifacts that make it into your cluster.
 
-### Cosign
+### [Cosign](/docs/best_practices/supply_chain_security/cosign)
 
 Part of the Sigstore project, Cosign allows signing and verifying container images, ensuring they have not been tampered with.
 
-### Notation
+### [Notation](/docs/best_practices/supply_chain_security/notation)
 
 An OCI-compliant tool for signing container images using Notary v2. Used in environments that follow stricter image provenance controls.
 
@@ -121,11 +121,11 @@ An OCI-compliant tool for signing container images using Notary v2. Used in envi
 
 These tools allow defining and enforcing security policies across clusters during resource creation.
 
-### OPA (Open Policy Agent) / Gatekeeper
+### [OPA (Open Policy Agent) / Gatekeeper](/docs/best_practices/cluster_setup_and_hardening/api_server_security/opa_gatekeeper)
 
 Policy-as-code framework that allows enforcing custom rules at admission time, such as restricting privileged pods or requiring labels.
 
-### Kyverno
+### [Kyverno](/docs/best_practices/cluster_setup_and_hardening/api_server_security/kyverno)
 
 A Kubernetes-native policy engine that allows validating, mutating, and generating resources without external dependencies.
 
@@ -135,11 +135,11 @@ A Kubernetes-native policy engine that allows validating, mutating, and generati
 
 Monitoring and controlling traffic between Kubernetes services is essential for defense-in-depth.
 
-### Cilium
+### [Cilium](/docs/best_practices/cluster_setup_and_hardening/network_security/cilium)
 
 An eBPF-powered networking and security platform that includes L3-L7 network policies, observability, and runtime enforcement.
 
-### Calico
+### [Calico](/docs/best_practices/cluster_setup_and_hardening/network_security/calico)
 
 A popular networking and network policy engine that allows defining fine-grained ingress and egress controls.
 
@@ -149,11 +149,11 @@ A popular networking and network policy engine that allows defining fine-grained
 
 Tools for gaining visibility into cluster behavior and responding to incidents.
 
-### kubectl-snoop
+### [kubectl-snoop](/docs/best_practices/monitoring_logging_and_runtime_security/kubectl_snoop)
 
 A tool for gathering low-level syscall and performance information from nodes, useful during incident investigations.
 
-### kubectl-trace
+### [kubectl-trace](/docs/best_practices/monitoring_logging_and_runtime_security/kubectl_trace)
 
 Allows running BPFtrace programs in Kubernetes clusters to trace kernel and application behavior.
 
@@ -161,11 +161,11 @@ Allows running BPFtrace programs in Kubernetes clusters to trace kernel and appl
 
 ## CI/CD and GitOps Security
 
-### Conftest
+### [Conftest](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/conftest)
 
 Validates Kubernetes YAML files and Helm charts using OPA policies as part of CI pipelines.
 
-### Terrascan
+### [Terrascan](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/terrascan)
 
 Scans Terraform code and Kubernetes manifests for misconfigurations and policy violations.
 
@@ -175,4 +175,4 @@ Scans Terraform code and Kubernetes manifests for misconfigurations and policy v
 
 Using the right tools is crucial for securing Kubernetes across its entire lifecycle—from development and CI/CD to deployment and runtime. In this section, you’ll find detailed breakdowns of how these tools work, how to configure them securely, and how they support security best practices discussed throughout the site.
 
-ts**, and **SOPS\*\*. These tools appear frequently in exam scenarios and real-world production environments alike.
+> For CKS candidates, it is essential to become familiar with tools like **Trivy, Falco, kube-bench, OPA/Gatekeeper, Kyverno, Sealed Secrets**, and **SOPS**. These tools appear frequently in exam scenarios and real-world production environments alike.
