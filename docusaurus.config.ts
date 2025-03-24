@@ -24,8 +24,7 @@ const config: Config = {
           editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
           sidebarItemsGenerator: undefined,
           sidebarCollapsible: true,
-          showLastUpdateAuthor: true,
-          enableUpdateTime: true,
+          showLastUpdateAuthor: true
         },
         blog: {
           showReadingTime: false,
