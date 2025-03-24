@@ -91,8 +91,7 @@ const config: Config = {
       title: 'K8s Security',
       logo: {
         alt: 'K8s Security Logo',
-        src: 'img/logo.svg',
-        href: 'https://k8s-security.geek-kb.com/docs/intro/',
+        src: 'img/logo.svg'
       },
       items: [
         { to: '/docs/intro', label: 'Docs', position: 'left' },
