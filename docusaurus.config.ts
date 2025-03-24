@@ -4,7 +4,7 @@ const config: Config = {
   title: 'K8s Security',
   tagline: 'Mastering Kubernetes Security Best Practices',
   url: 'https://k8s-security.geek-kb.com',
-  baseUrl: '/',
+  baseUrl: '/k8s_security/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
