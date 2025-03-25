@@ -43,7 +43,7 @@ Kubernetes is a powerful yet complex system, and its attack surface consists of 
 
 ## **Common Attack Vectors**
 
-For a detailed breakdown of common attack techniques targeting Kubernetes clusters, refer to the [Attack Vectors](/docs/attack_vectors/intro) section. This section covers threats such as:
+For an in-depth overview of common attack techniques targeting Kubernetes clusters, explore the [Attack Vectors](/docs/attack_vectors/intro) section. It highlights threats such as the following (and more):
 
 - [Compromised API Server](/docs/attack_vectors/compromised_api_server)
 - [Exposed Kubernetes Dashboard](/docs/attack_vectors/exposed_dashboard)
@@ -53,7 +53,7 @@ For a detailed breakdown of common attack techniques targeting Kubernetes cluste
 
 ## **How to Reduce the Attack Surface?**
 
-Best practices for securing Kubernetes clusters are covered extensively in the [Best Practices](/docs/best_practices/intro) section, which includes:
+Comprehensive strategies for securing Kubernetes clusters are detailed in the [Best Practices](/docs/best_practices/intro) section, which covers topics such as the following (and more):
 
 - [Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro)
 - [Pod and Network Security](/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies)
