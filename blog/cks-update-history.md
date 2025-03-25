@@ -58,7 +58,7 @@ The goal is to help CKS candidates stay on top of the exam’s scope and prepare
 To ensure you're always prepared:
 
 - Review the [official CNCF CKS curriculum](https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist-cks/)
-- Monitor tool versions on the [CKS candidate handbook](https://docs.linuxfoundation.org/tc-docs/certification/tips-cks)
+- Monitor tool versions on the [CKS candidate handbook](https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-cks)
 - Follow CNCF and Kubernetes GitHub releases
 
 ---
