@@ -21,7 +21,6 @@ const config: Config = {
           path: 'docs',
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
           sidebarItemsGenerator: undefined,
           sidebarCollapsible: true,
           showLastUpdateAuthor: true,
@@ -30,7 +29,6 @@ const config: Config = {
         blog: {
           showReadingTime: false,
           onInlineAuthors: 'ignore',
-          editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
           routeBasePath: 'blog',
           blogSidebarTitle: 'Under Construction',
           blogSidebarCount: 'ALL',
@@ -51,7 +49,6 @@ const config: Config = {
         path: 'guides',
         routeBasePath: 'guides',
         sidebarPath: require.resolve('./sidebarsGuides.js'),
-        editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
       },
     ],
     [
