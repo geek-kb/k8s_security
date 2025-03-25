@@ -17,6 +17,11 @@ const config: Config = {
     [
       'classic',
       {
+        sitemap: {
+          changefreq: 'daily',
+          priority: 0.7,
+          filename: 'sitemap.xml',
+        },
         docs: {
           path: 'docs',
           routeBasePath: 'docs',
