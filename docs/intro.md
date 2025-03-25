@@ -52,6 +52,6 @@ Each section provides **detailed security insights** with step-by-step **guides*
 
 ## Get Involved
 
-Have questions or want to contribute? Visit our **GitHub repository**:
+Have questions or want to contribute? Visit my **GitHub repository**:
 
 [github.com/geek-kb/k8s_security](https://github.com/geek-kb/k8s_security)
