@@ -12,7 +12,7 @@ This site is dedicated to helping developers, DevOps engineers, and Kubernetes a
 The topics that are relevant for the CKS certification are marked as such.
 
 The site is still under development and many CKS-related topics are not yet covered.  
-We're doing our best to add the missing content as quickly as possible.
+I'm doing my best to add the missing content as quickly as possible.
 Thanks for your patience.
 
 The information will soon be up to date with the latest Kubernetes versions and security tools based on the CKS curriculum.
