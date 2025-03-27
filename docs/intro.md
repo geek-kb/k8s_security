@@ -11,7 +11,7 @@ Welcome to **K8s Security**, a resource created by **Itai Ganot** to provide com
 This site is dedicated to helping developers, DevOps engineers, and Kubernetes administrators implement robust security measures aligned with the principles of the **Certified Kubernetes Security Specialist (CKS)** certification and beyond.  
 The topics that are relevant for the CKS certification are marked as such.
 
-The site is still under development and many CKS-related topics are not yet covered.  
+The site is still under development as many CKS-related topics are not yet covered.  
 I'm doing my best to add the missing content as quickly as possible.
 Thanks for your patience.
 
