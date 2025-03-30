@@ -69,31 +69,31 @@ const config: Config = {
     [
       '@docusaurus/plugin-google-gtag',
       {
-        trackingID: 'G-QNPKC33Q9L', // Your GA4 Measurement ID
-        anonymizeIP: true, // Recommended for privacy
+        trackingID: 'G-QNPKC33Q9L',
+        anonymizeIP: true,
       },
     ],
   ],
 
-    headTags: [
-      {
-        tagName: 'script',
-        attributes: {
-          async: 'true', // must be a string
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-QNPKC33Q9L',
-        },
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        async: 'true', // must be a string
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-QNPKC33Q9L',
       },
-      {
-        tagName: 'script',
-        attributes: {}, // required even if empty
-        innerHTML: `
+    },
+    {
+      tagName: 'script',
+      attributes: {}, // required even if empty
+      innerHTML: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-QNPKC33Q9L');
         `,
-      },
-    ],
+    },
+  ],
 
   themeConfig: {
     navbar: {
