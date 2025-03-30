@@ -2,6 +2,8 @@
 title: "Introduction"
 description: "Explore best practices for securing Kubernetes environments across cluster setup, system hardening, microservice security, runtime monitoring, and supply chain protection."
 sidebar_position: 1
+unlisted: true
+sidebar_class_name: hidden
 ---
 
 **This category is still under development**
