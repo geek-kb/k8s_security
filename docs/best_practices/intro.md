@@ -1,71 +1,52 @@
 ---
-title: "Introduction"
-description: "Explore best practices for securing Kubernetes environments across cluster setup, system hardening, microservice security, runtime monitoring, and supply chain protection."
 sidebar_position: 1
+title: "Section Introduction"
+description: "Explore best practices for securing Kubernetes environments across cluster setup, system hardening, microservice security, runtime monitoring, and supply chain protection."
 sidebar_class_name: hidden
 ---
 
-**This category is still under development**
-
 # Kubernetes Security Best Practices
 
-Securing Kubernetes environments requires a defense-in-depth approach that spans the cluster lifecycle, from initial setup to daily operations and software supply chain hygiene. This section provides practical guidance organized by domain, helping you harden your infrastructure, reduce workload risks, and enforce security controls consistently.
+Securing Kubernetes environments requires a defense-in-depth strategy that spans infrastructure setup, workload deployment, runtime operations, and software supply chain integrity. This section introduces foundational best practices that support secure-by-default cluster architectures and reduce the risk of compromise throughout the Kubernetes lifecycle.
 
----
+## Why Kubernetes Security Best Practices Matter
 
-## Cluster Setup and Hardening
+Kubernetes offers powerful orchestration capabilities, but its flexibility also introduces complexity. Without strong operational security controls, clusters can be vulnerable to:
 
-Secure your Kubernetes control plane, nodes, network, and workload configurations using battle-tested best practices and compliance-focused frameworks.
+- Configuration drift
+- Escalated privileges
+- Insecure container workloads
+- Undetected runtime threats
+- Compromised third-party dependencies
 
-- [Intro to Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro)
-- [Understanding CIS Benchmarks](/docs/best_practices/cluster_setup_and_hardening/cis/understanding_cis_benchmarks)
-- [CIS Benchmarks for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_for_k8s)
-- [Kube-Bench: Kubernetes CIS Benchmarking Tool](/docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_kube_bench)
+Implementing Kubernetes security best practices helps mitigate these risks by enforcing security controls and hardening each layer of the stack.
 
-Subcategories:
+## This section covers the following topics
 
-- [API Server Security](/docs/best_practices/cluster_setup_and_hardening/api_server_security/compromised_api_server_mitigation)
-- [Control Plane Security](/docs/best_practices/cluster_setup_and_hardening/control_plane_security/etcd_security_mitigation)
-- [Node Security](/docs/best_practices/cluster_setup_and_hardening/node_security/kubelet_security)
-- [Network Security](/docs/best_practices/cluster_setup_and_hardening/network_security/intro)
-- [Pod Security](/docs/best_practices/cluster_setup_and_hardening/pod_security/app_armor_profiles)
-- [RBAC and Identity](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)
-- [Secrets Management](/docs/best_practices/cluster_setup_and_hardening/secrets_management/insecure_secrets_management_mitigation)
+- **[Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro)**: Secure the Kubernetes control plane, workloads, and networking using CIS benchmarks and validated tooling.
+- **[System Hardening](/docs/best_practices/system_hardening/intro)**: Lock down the host operating system and node configurations.
+- **[Microservice Security](/docs/best_practices/minimize_microservice_vulnerabilities/intro)**: Minimize application-layer vulnerabilities and reduce workload risk.
+- **[Monitoring, Logging, and Runtime Security](/docs/best_practices/monitoring_logging_and_runtime_security/intro)**: Gain visibility into cluster activity and respond to anomalies in real time.
+- **[Supply Chain Security](/docs/best_practices/supply_chain_security/intro)**: Protect workloads from tampering, malware, and untrusted sources during the build and deployment process.
 
----
+These sections contain in-depth articles, tools, and actionable controls mapped to real-world threats.
 
-## System Hardening
+## Security Principles Across the Stack
 
-Apply OS-level and infrastructure-layer protections to secure the nodes running your Kubernetes workloads.
+These best practices align with key cloud-native security principles:
 
-- [System Hardening Overview](/docs/best_practices/system_hardening/intro)
+1. **Secure by Default**
+   - Use tools and settings that prioritize safety, like restricted admission controllers and default-deny network policies.
 
----
+2. **Least Privilege**
+   - Assign only the minimum permissions required to users, workloads, and service accounts.
 
-## Minimize Microservice Vulnerabilities
+3. **Defense in Depth**
+   - Apply layered security from infrastructure and cluster components to application code and containers.
 
-Reduce security risks introduced by applications and workloads inside your cluster.
-
-- [Microservice Security Overview](/docs/best_practices/minimize_microservice_vulnerabilities/intro)
-
----
-
-## Monitoring, Logging, and Runtime Security
-
-Ensure continuous visibility and threat detection within your Kubernetes environment.
-
-- [Monitoring and Runtime Security Overview](/docs/best_practices/monitoring_logging_and_runtime_security/intro)
-
----
-
-## Securing the Kubernetes Supply Chain
-
-Protect the integrity of the software your cluster builds and runs, from image creation to deployment.
-
-- [Supply Chain Mitigation](/docs/best_practices/supply_chain_security/intro)
-
----
+4. **Continuous Verification**
+   - Monitor workloads and enforce policy throughout the runtime lifecycle, not just at deployment time.
 
 ## Conclusion
 
-The best practices in this section provide actionable guidance to help teams reduce risk across every layer of the Kubernetes stack. Use them to build secure-by-default clusters, defend against evolving threats, and align with modern cloud-native security principles.
+This section equips teams with tactical and strategic guidance for improving Kubernetes security posture. By following these best practices, organizations can reduce risk, increase visibility, and build resilient, compliant, and secure cloud-native systems.
