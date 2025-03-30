@@ -2,11 +2,11 @@
   "name": "k-8-s-security",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://geek-kb.github.io/k8s_security",
+  "homepage": "https://k8s-security.geek-kb.com",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "rm -rf build && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
+    "@docusaurus/plugin-client-redirects": "^3.7.0",
     "@docusaurus/preset-classic": "3.7.0",
     "@docusaurus/theme-live-codeblock": "^3.7.0",
     "@easyops-cn/docusaurus-search-local": "^0.48.5",
