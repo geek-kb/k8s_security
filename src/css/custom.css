@@ -29,6 +29,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.menu__link--hidden {
+.hidden {
   display: none !important;
 }
