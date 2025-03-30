@@ -21,141 +21,81 @@ This list includes tools for vulnerability scanning, access control, runtime sec
 
 ## Static Analysis and Image Scanning
 
-Tools in this category analyze container images or Kubernetes configurations to find known vulnerabilities and insecure defaults.
-
 ### [Trivy](/docs/best_practices/monitoring_logging_and_runtime_security/trivy)
-
-**Required knowledge for the CKS certification.**
-
-A comprehensive vulnerability scanner for container images, Kubernetes YAML, Terraform, and more. It can detect OS and language-level CVEs, secrets, and misconfigurations.
 
 ### [Syft](/docs/best_practices/supply_chain_security/syft)
 
-**Required knowledge for the CKS certification.**
-
-A tool for generating Software Bill of Materials (SBOMs) from container images or file systems. Useful for inventorying what goes into your containers.
-
 ### [Grype](/docs/best_practices/monitoring_logging_and_runtime_security/grype)
-
-**Required knowledge for the CKS certification.**
-
-A vulnerability scanner that works with Syft SBOMs to identify known CVEs in container images.
 
 ### [kube-score](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/kube_score)
 
-Performs static analysis of Kubernetes manifests, identifying insecure configurations, privilege issues, or lack of resource limits.
-
 ### [kubescape](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/kubescape)
-
-An end-to-end Kubernetes security testing tool that scans for misconfigurations and compliance with industry frameworks like NSA-CISA and MITRE ATT&CK.
 
 ### [Polaris](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/polaris)
 
-Validates Kubernetes YAML files and live clusters against a set of security and reliability policies.
-
 ### [Checkov](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/checkov)
 
-A static analysis tool for infrastructure-as-code (IaC) to detect security and compliance misconfigurations across Kubernetes, Terraform, and more.
+### [Kube-Linter](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/kube_linter)
 
 ---
 
 ## Runtime Security and Threat Detection
 
-These tools monitor your cluster during operation to detect abnormal behavior or unauthorized access.
-
 ### [Falco](/docs/best_practices/monitoring_logging_and_runtime_security/falco)
-
-**Required knowledge for the CKS certification.**
-
-A runtime security tool that uses Linux kernel events to detect malicious behavior in containers, such as unexpected system calls, privilege escalations, or network activity.
 
 ### [Tetragon](/docs/best_practices/monitoring_logging_and_runtime_security/tetragon)
 
-An eBPF-based runtime enforcement and visibility tool that can detect and block suspicious activity, with support for fine-grained process and network-level policies.
+### [Tracee](/docs/best_practices/monitoring_logging_and_runtime_security/tracee)
 
 ---
 
 ## Configuration Auditing and Compliance
 
-These tools analyze running clusters or resource definitions to ensure they conform to security baselines.
-
 ### [kube-hunter](/docs/best_practices/cluster_setup_and_hardening/network_security/kube_hunter)
 
-Scans Kubernetes clusters for common misconfigurations and vulnerabilities from an attacker’s perspective.
-
 ### [KubeAudit](/docs/best_practices/cluster_setup_and_hardening/pod_security/kubeaudit)
-
-A command-line tool that audits Kubernetes clusters for security compliance, especially around RBAC, pod specs, and resource configuration.
 
 ---
 
 ## Secrets Management
 
-Managing secrets securely is critical in Kubernetes. The following tools help encrypt, audit, or safely inject secrets into your workloads.
-
 ### [Sealed Secrets](/docs/best_practices/cluster_setup_and_hardening/secrets_management/sealed_secrets)
 
-An encryption tool by Bitnami that allows you to store encrypted Kubernetes secrets in Git safely. Decryption is handled by a controller in the cluster.
-
 ### [Mozilla SOPS](/docs/best_practices/cluster_setup_and_hardening/secrets_management/mozilla_sops)
-
-Encrypts secrets in YAML/JSON files for use with GitOps workflows. Works well with KMS providers like AWS KMS, GCP KMS, or PGP.
 
 ---
 
 ## Supply Chain Security and SBOM
 
-These tools help verify the integrity and origin of artifacts that make it into your cluster.
-
 ### [Cosign](/docs/best_practices/supply_chain_security/cosign)
 
-Part of the Sigstore project, Cosign allows signing and verifying container images, ensuring they have not been tampered with.
-
 ### [Notation](/docs/best_practices/supply_chain_security/notation)
-
-An OCI-compliant tool for signing container images using Notary v2. Used in environments that follow stricter image provenance controls.
 
 ---
 
 ## Policy Enforcement and Admission Control
 
-These tools allow defining and enforcing security policies across clusters during resource creation.
-
 ### [OPA (Open Policy Agent) / Gatekeeper](/docs/best_practices/cluster_setup_and_hardening/api_server_security/opa_gatekeeper)
 
-Policy-as-code framework that allows enforcing custom rules at admission time, such as restricting privileged pods or requiring labels.
-
 ### [Kyverno](/docs/best_practices/cluster_setup_and_hardening/api_server_security/kyverno)
-
-A Kubernetes-native policy engine that allows validating, mutating, and generating resources without external dependencies.
 
 ---
 
 ## Network Security and Traffic Control
 
-Monitoring and controlling traffic between Kubernetes services is essential for defense-in-depth.
-
 ### [Cilium](/docs/best_practices/cluster_setup_and_hardening/network_security/cilium)
-
-An eBPF-powered networking and security platform that includes L3-L7 network policies, observability, and runtime enforcement.
 
 ### [Calico](/docs/best_practices/cluster_setup_and_hardening/network_security/calico)
 
-A popular networking and network policy engine that allows defining fine-grained ingress and egress controls.
+### [Kong](/docs/best_practices/cluster_setup_and_hardening/network_security/kong)
 
 ---
 
 ## Observability and Forensics
 
-Tools for gaining visibility into cluster behavior and responding to incidents.
-
 ### [kubectl-snoop](/docs/best_practices/monitoring_logging_and_runtime_security/kubectl_snoop)
 
-A tool for gathering low-level syscall and performance information from nodes, useful during incident investigations.
-
 ### [kubectl-trace](/docs/best_practices/monitoring_logging_and_runtime_security/kubectl_trace)
-
-Allows running BPFtrace programs in Kubernetes clusters to trace kernel and application behavior.
 
 ---
 
@@ -163,11 +103,7 @@ Allows running BPFtrace programs in Kubernetes clusters to trace kernel and appl
 
 ### [Conftest](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/conftest)
 
-Validates Kubernetes YAML files and Helm charts using OPA policies as part of CI pipelines.
-
 ### [Terrascan](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/terrascan)
-
-Scans Terraform code and Kubernetes manifests for misconfigurations and policy violations.
 
 ---
 
