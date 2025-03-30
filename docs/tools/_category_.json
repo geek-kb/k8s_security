@@ -1,8 +1,9 @@
 {
-    "label": "Tools",
-    "link": {
-        "type": "doc",
-        "id": "tools/intro"
-    },
-    "collapsed": false
+  "label": "Tools",
+  "link": {
+    "type": "doc",
+    "id": "tools/intro"
+  },
+  "collapsed": false,
+  "collapsable": false
 }
