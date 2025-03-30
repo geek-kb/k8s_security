@@ -2,6 +2,7 @@
 title: "Introduction"
 description: "Understand the importance of securing the Kubernetes software supply chain and protecting your workloads from build-time and delivery-time threats."
 sidebar_position: 1
+sidebar_class_name: hidden
 ---
 
 # Introduction to Supply Chain Security

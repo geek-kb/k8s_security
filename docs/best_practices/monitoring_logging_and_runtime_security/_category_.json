@@ -1,5 +1,10 @@
 {
   "label": "Monitoring, Logging, and Runtime Security",
   "collapsible": true,
-  "position": 5
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "title": "Monitoring, Logging, and Runtime Security",
+    "description": "Learn how to secure your Kubernetes software supply chain against build-time and delivery-time threats. This section covers image signing, dependency auditing, Helm chart validation, CI/CD hardening, and admission control policies."
+  }
 }

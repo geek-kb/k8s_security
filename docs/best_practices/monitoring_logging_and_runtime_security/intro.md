@@ -2,6 +2,7 @@
 title: "Introduction"
 description: "Best practices for monitoring, logging, and securing runtime environments in Kubernetes to detect and respond to threats."
 sidebar_position: 1
+sidebar_class_name: hidden
 ---
 
 **This category is still under development**
