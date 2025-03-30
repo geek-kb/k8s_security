@@ -2,6 +2,7 @@
 title: "Minimizing Microservice Vulnerabilities"
 description: "Best practices for securing microservices in Kubernetes, including secure development, dependency management, and API security."
 sidebar_position: 3
+sidebar_class_name: hidden
 ---
 
 **This category is still under development**
@@ -29,13 +30,6 @@ This section covers best practices to **harden microservices** against common vu
 
 - Regularly update dependencies to patch known vulnerabilities.
 - Use tools like **OWASP Dependency-Check**, **Trivy**, or **Snyk** to scan for outdated or insecure libraries.
-
-### **API Security**
-
-**Required knowledge for the CKS certification.**
-
-- Implement **authentication and authorization** for microservice endpoints using **JWT tokens**, **OAuth**, or **mTLS**.
-- Use **rate limiting** to prevent API abuse and denial-of-service (DoS) attacks.
 
 ### **Container Security**
 
