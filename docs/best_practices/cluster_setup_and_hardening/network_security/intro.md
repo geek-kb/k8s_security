@@ -2,7 +2,6 @@
 sidebar_position: 1
 title: "Section Introduction"
 description: "Overview of Kubernetes network security hardening best practices, covering ingress and egress control, traffic isolation, DNS protection, and common attack mitigation strategies."
-sidebar_class_name: hidden
 ---
 
 # Network Security in Kubernetes
