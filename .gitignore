@@ -32,7 +32,6 @@ Thumbs.db
 
 # GitHub Actions cache (optional)
 .github/cache/
-.github/instructions/
 
 # Temporary files
 *.tmp
