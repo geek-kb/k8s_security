@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkk_8_s_security=self.webpackChunkk_8_s_security||[]).push([[4583],{6107:(s,u,e)=>{e.r(u),e.d(u,{default:()=>n});var t=e(6540),c=e(6347);function n(){const s=(0,c.W6)();return(0,t.useEffect)((()=>{s.push("/docs/intro")}),[s]),null}}}]);
