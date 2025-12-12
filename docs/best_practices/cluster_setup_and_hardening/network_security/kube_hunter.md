@@ -2,6 +2,7 @@
 title: "kube-hunter"
 description: "A penetration testing tool that helps identify security weaknesses in Kubernetes clusters by simulating real-world attack vectors."
 sidebar_position: 10
+keywords: [kubernetes security tool, kube-hunter, penetration testing, security scanning, vulnerability assessment, security audit, kubernetes pentesting, aqua security, CKS]
 ---
 
 # kube-hunter

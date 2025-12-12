@@ -2,6 +2,7 @@
 title: "Mozilla SOPS"
 description: "SOPS is a file encryption tool that helps secure secrets in GitOps and Kubernetes workflows by encrypting entire files or specific values."
 sidebar_position: 3
+keywords: [kubernetes security tool, mozilla SOPS, secrets encryption, gitops security, file encryption, KMS, age encryption, kubernetes secrets, secrets management, CKS]
 ---
 
 # Mozilla SOPS

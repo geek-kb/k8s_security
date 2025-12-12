@@ -1,6 +1,7 @@
 ---
 title: Authorization Methods
 sidebar_position: 1
+keywords: [kubernetes authorization, authorization methods, RBAC, ABAC, node authorization, webhook authorization, kubernetes security, access control, API server authorization, CKS]
 ---
 
 # Authorization in Kubernetes

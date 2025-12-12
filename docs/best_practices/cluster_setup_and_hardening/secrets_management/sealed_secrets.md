@@ -2,6 +2,7 @@
 title: "Sealed Secrets"
 description: "Sealed Secrets is a Kubernetes controller and CLI tool that encrypts secrets for safe storage in version control systems."
 sidebar_position: 2
+keywords: [kubernetes security tool, sealed secrets, kubernetes secrets, encryption, gitops, secret encryption, bitnami sealed secrets, kubeseal, secrets management, CKS]
 ---
 
 # Sealed Secrets

@@ -2,6 +2,7 @@
 title: "Ingress Security"
 description: "Learn how to secure Kubernetes ingress traffic with TLS encryption, authentication, and Web Application Firewalls (WAF)."
 sidebar_position: 6
+keywords: [kubernetes security best practices, ingress security, TLS encryption, web application firewall, WAF, ingress controller, SSL certificates, authentication, kubernetes networking, CKS]
 ---
 
 # Ingress Security

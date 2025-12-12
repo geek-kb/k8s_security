@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "Securing the Kubernetes API Server"
 description: "Best practices for protecting the Kubernetes API server against unauthorized access and exploitation."
+keywords: [kubernetes security best practices, API server security, kubernetes API, authentication, authorization, RBAC, TLS encryption, API server hardening, CIS kubernetes, CKS]
 ---
 
 # Securing the Kubernetes API Server

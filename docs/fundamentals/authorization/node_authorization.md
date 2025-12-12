@@ -1,6 +1,7 @@
 ---
 title: Node Authorization
 sidebar_position: 3
+keywords: [kubernetes node authorization, node authorizer, kubelet authorization, node security, kubernetes authorization, node access control, node permissions, kubernetes nodes, CKS]
 ---
 
 # Node Authorization in Kubernetes

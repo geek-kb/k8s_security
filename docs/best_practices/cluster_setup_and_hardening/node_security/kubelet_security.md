@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "Kubelet Security"
 description: "Learn best practices for securing the Kubernetes Kubelet to maintain cluster integrity and prevent security risks."
+keywords: [kubernetes security best practices, kubelet security, node security, kubelet configuration, authentication, authorization, CIS kubernetes, kubernetes hardening, CKS]
 ---
 
 # Kubelet Security

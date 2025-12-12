@@ -2,6 +2,7 @@
 sidebar_position: 9
 title: "Securing Kubernetes Network Traffic"
 description: "Best practices for securing Kubernetes network traffic against hijacking, interception, and unauthorized manipulation."
+keywords: [kubernetes security best practices, network traffic security, traffic hijacking prevention, mTLS, service mesh, network policies, encryption in transit, kubernetes networking, CKS]
 ---
 
 # Securing Kubernetes Network Traffic

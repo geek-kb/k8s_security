@@ -2,6 +2,7 @@
 sidebar_position: 2
 title: "Securing Kubernetes Admission Controllers"
 description: "Best practices for securing Kubernetes Admission Controllers to prevent unauthorized workloads and enforce security policies."
+keywords: [kubernetes security best practices, admission controllers, validating admission webhook, mutating admission webhook, pod security admission, OPA gatekeeper, kyverno, policy enforcement, CKS]
 ---
 
 # Securing Kubernetes Admission Controllers

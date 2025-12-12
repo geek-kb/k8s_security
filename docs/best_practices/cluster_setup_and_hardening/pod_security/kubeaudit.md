@@ -2,6 +2,7 @@
 title: "KubeAudit"
 description: "KubeAudit is a command-line tool that scans Kubernetes clusters for common security misconfigurations and generates actionable reports."
 sidebar_position: 9
+keywords: [kubernetes security tool, kubeaudit, security scanning, misconfiguration detection, security audit, compliance checking, pod security, CKS]
 ---
 
 # KubeAudit

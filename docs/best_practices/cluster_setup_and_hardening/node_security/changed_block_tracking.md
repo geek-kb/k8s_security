@@ -2,6 +2,7 @@
 title: "Changed Block Tracking for Volume Snapshots"
 description: "Optimize backup and disaster recovery with Kubernetes v1.34 Changed Block Tracking API for efficient incremental volume snapshots."
 sidebar_position: 7
+keywords: [kubernetes security, changed block tracking, volume snapshots, backup and recovery, incremental backups, CSI driver, disaster recovery, storage security, CKS]
 ---
 
 # Changed Block Tracking for Volume Snapshots

@@ -2,6 +2,7 @@
 title: "Kong"
 description: "Kong is an open-source API gateway and service mesh that helps manage, secure, and monitor traffic between services in Kubernetes environments."
 sidebar_position: 13
+keywords: [kubernetes security tool, kong, API gateway, ingress controller, service mesh, traffic management, authentication, rate limiting, kubernetes networking, CKS]
 ---
 
 # Kong

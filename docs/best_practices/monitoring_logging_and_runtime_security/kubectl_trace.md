@@ -2,6 +2,7 @@
 title: "kubectl-trace"
 description: "kubectl-trace allows you to run eBPF tracing programs across your Kubernetes cluster for performance debugging and security analysis."
 sidebar_position: 7
+keywords: [kubernetes security tool, kubectl-trace, eBPF tracing, performance debugging, security analysis, runtime tracing, kubernetes debugging, observability, CKS]
 ---
 
 # kubectl-trace

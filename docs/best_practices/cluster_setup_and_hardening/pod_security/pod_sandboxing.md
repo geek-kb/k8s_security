@@ -2,6 +2,7 @@
 title: "Pod Sandboxing"
 sidebar_position: 5
 description: "Learn how pod sandboxing enhances security by isolating workloads in Kubernetes."
+keywords: [kubernetes security best practices, pod sandboxing, workload isolation, gvisor, kata containers, container runtime, security isolation, CKS]
 ---
 
 # Pod Sandboxing in Kubernetes

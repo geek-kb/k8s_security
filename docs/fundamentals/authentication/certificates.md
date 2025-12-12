@@ -1,6 +1,7 @@
 ---
 title: Certificates
 description: "Understand the role of certificates in Kubernetes, including client certificates, server certificates, and automating certificate management with Cert-Manager."
+keywords: [kubernetes certificates, x509 certificates, TLS certificates, client certificates, server certificates, cert-manager, certificate management, PKI, kubernetes security, certificate rotation]
 ---
 
 ## Introduction

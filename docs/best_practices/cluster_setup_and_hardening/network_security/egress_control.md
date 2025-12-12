@@ -2,6 +2,7 @@
 title: "Egress Control in Kubernetes"
 description: "Restrict and monitor outbound traffic from Kubernetes workloads to prevent unauthorized data transfers and malware communication."
 sidebar_position: 4
+keywords: [kubernetes security best practices, egress control, outbound traffic, network policies, data exfiltration prevention, firewall rules, kubernetes networking, traffic monitoring, CKS]
 ---
 
 # Egress Control in Kubernetes

@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "Role-Based Access Control (RBAC)"
 description: "Learn how Role-Based Access Control (RBAC) in Kubernetes manages authorization and improves security."
+keywords: [kubernetes RBAC, role-based access control, kubernetes roles, cluster roles, role bindings, kubernetes authorization, RBAC security, least privilege, kubernetes permissions, CKS]
 ---
 
 # Role-Based Access Control (RBAC)

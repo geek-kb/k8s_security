@@ -2,6 +2,7 @@
 sidebar_position: 2
 title: "Securing Kubernetes Service Accounts"
 description: "Best practices for securing Kubernetes Service Accounts to prevent unauthorized access, privilege escalation, and persistent attacks."
+keywords: [kubernetes security best practices, service account security, service account tokens, RBAC, token projection, automountServiceAccountToken, identity management, privilege escalation prevention, CKS]
 ---
 
 # Securing Kubernetes Service Accounts

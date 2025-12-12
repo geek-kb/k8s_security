@@ -2,6 +2,7 @@
 sidebar_position: 5
 title: "Exposed Kubernetes Dashboard Mitigation"
 description: "Techniques and configuration examples to prevent unauthorized access to the Kubernetes Dashboard."
+keywords: [kubernetes security best practices, kubernetes dashboard, dashboard security, authentication, authorization, RBAC, ingress security, TLS encryption, kubectl proxy, CKS]
 ---
 
 # Exposed Kubernetes Dashboard Mitigation

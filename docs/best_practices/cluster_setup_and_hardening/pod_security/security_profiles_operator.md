@@ -2,6 +2,7 @@
 title: "Security Profiles Operator"
 sidebar_position: 10
 description: "Learn how to use the Security Profiles Operator to manage seccomp, AppArmor, and SELinux profiles at scale in Kubernetes."
+keywords: [kubernetes security best practices, security profiles operator, seccomp, apparmor, selinux, profile management, security profiles, kubernetes security, pod security, CKS]
 ---
 
 # Security Profiles Operator

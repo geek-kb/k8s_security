@@ -2,6 +2,7 @@
 sidebar_position: 2
 title: Understanding CIS Benchmarks
 description: Learn what CIS Benchmarks are and how they help enhance security best practices for systems, networks, and applications.
+keywords: [kubernetes security best practices, CIS benchmarks, center for internet security, security hardening, compliance, security standards, best practices, kubernetes security, CKS]
 ---
 
 # Understanding CIS Benchmarks

@@ -2,6 +2,7 @@
 title: "AppArmor Profiles"
 sidebar_position: 1
 description: "Learn how to use AppArmor profiles to enforce mandatory access control (MAC) on Kubernetes pods."
+keywords: [kubernetes security best practices, apparmor, mandatory access control, MAC, pod security, linux security, security profiles, container security, CKS]
 ---
 
 # AppArmor Profiles in Kubernetes

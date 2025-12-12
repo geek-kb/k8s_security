@@ -2,6 +2,7 @@
 sidebar_position: 3
 title: "Syft"
 description: "Generate Software Bill of Materials (SBOMs) to enhance Kubernetes supply chain security."
+keywords: [kubernetes security tool, syft, SBOM, software bill of materials, supply chain security, vulnerability scanning, container scanning, dependency tracking, anchore, security tool]
 ---
 
 # Syft

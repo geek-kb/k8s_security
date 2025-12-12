@@ -2,6 +2,7 @@
 title: "Tracee"
 description: "Tracee is a runtime security and forensics tool that uses eBPF to detect suspicious activity in Linux systems, including Kubernetes environments."
 sidebar_position: 8
+keywords: [kubernetes security tool, tracee, runtime security, eBPF, threat detection, forensics, linux security, container security, aqua security, CKS]
 ---
 
 # Tracee

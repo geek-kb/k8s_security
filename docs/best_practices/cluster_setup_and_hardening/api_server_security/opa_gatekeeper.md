@@ -2,6 +2,7 @@
 title: "Open Policy Agent (OPA) / Gatekeeper"
 description: "OPA and Gatekeeper bring policy-based governance to Kubernetes, enabling fine-grained access control, resource validation, and compliance enforcement."
 sidebar_position: 3
+keywords: [kubernetes security tool, OPA, open policy agent, gatekeeper, kubernetes policy, admission control, policy enforcement, rego, kubernetes governance, compliance, CKS]
 ---
 
 # Open Policy Agent (OPA) / Gatekeeper

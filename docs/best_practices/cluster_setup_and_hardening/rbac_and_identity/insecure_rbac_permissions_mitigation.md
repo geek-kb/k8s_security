@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "Securing RBAC Permissions"
 description: "Best practices for securing Kubernetes RBAC configurations to prevent privilege escalation and unauthorized access."
+keywords: [kubernetes security best practices, RBAC security, role-based access control, least privilege, RBAC hardening, kubernetes permissions, cluster roles, role bindings, authorization, CKS]
 ---
 
 # Securing RBAC Permissions

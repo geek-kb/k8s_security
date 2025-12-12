@@ -2,6 +2,7 @@
 sidebar_position: 3
 title: "Preventing Container Escape"
 description: "Best practices for securing Kubernetes containers to prevent escape attacks and host system compromise."
+keywords: [kubernetes security best practices, container escape prevention, pod security standards, seccomp, apparmor, selinux, privileged containers, container security, runtime security, CKS]
 ---
 
 # Preventing Container Escape

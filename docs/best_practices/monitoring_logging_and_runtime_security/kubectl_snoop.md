@@ -2,6 +2,7 @@
 title: "kubectl-snoop"
 description: "kubectl-snoop is a diagnostic tool for inspecting Kubernetes API server calls made by other clients in real time."
 sidebar_position: 6
+keywords: [kubernetes security tool, kubectl-snoop, API inspection, debugging, API server monitoring, diagnostics, kubernetes troubleshooting, observability, CKS]
 ---
 
 # kubectl-snoop
