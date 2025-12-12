@@ -49,13 +49,12 @@ const config: Config = {
 
   plugins: [
     [
-      "@easyops-cn/docusaurus-search-local",
+      require.resolve("@cmfcmf/docusaurus-search-local"),
       {
-        hashed: true,
+        indexDocs: true,
+        indexBlog: true,
         indexPages: true,
-        highlightSearchTermsOnTargetPage: true,
-        searchBarShortcut: true,
-        searchBarPosition: "right",
+        language: "en",
       },
     ],
     [
