@@ -121,8 +121,8 @@ This post tracks <strong>official updates</strong> to the CKS curriculum and too
     </entry>
     <entry>
         <title type="html"><![CDATA[Blog Under Construction]]></title>
-        <id>https://k8s-security.geek-kb.com/blog/</id>
-        <link href="https://k8s-security.geek-kb.com/blog/"/>
+        <id>https://k8s-security.geek-kb.com/blog/under-construction/</id>
+        <link href="https://k8s-security.geek-kb.com/blog/under-construction/"/>
         <updated>2025-03-10T19:23:46.000Z</updated>
         <summary type="html"><![CDATA[Stay tuned for insightful articles about Kubernetes security best practices.]]></summary>
         <content type="html"><![CDATA[<p>We are currently working on creating valuable content for our blog. Stay tuned for insightful articles about <strong>Kubernetes security best practices</strong>, <strong>cluster hardening</strong>, <strong>attack vector mitigations</strong>, and more.</p>
