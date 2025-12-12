@@ -2,6 +2,7 @@
 title: "Tetragon"
 description: "Tetragon is a Kubernetes-aware security observability and runtime enforcement tool built on eBPF, enabling detection of malicious behavior and policy enforcement in real time."
 sidebar_position: 5
+keywords: [kubernetes security tool, tetragon, eBPF, runtime security, security observability, policy enforcement, threat detection, cilium, CNCF, CKS]
 ---
 
 # Tetragon

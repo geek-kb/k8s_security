@@ -2,6 +2,7 @@
 sidebar_position: 4
 title: "Kube-Bench: Kubernetes CIS Benchmarking Tool"
 description: "Learn how to use Kube-Bench to assess your Kubernetes cluster against CIS Benchmarks and enhance security practices."
+keywords: [kubernetes security tool, kube-bench, CIS kubernetes, CIS benchmark, compliance checking, security audit, kubernetes hardening, aqua security, CKS]
 ---
 
 # Kube-Bench: Kubernetes CIS Benchmarking Tool

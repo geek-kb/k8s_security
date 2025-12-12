@@ -1,6 +1,7 @@
 ---
 title: "CIS Benchmarks for Kubernetes"
 sidebar_position: 3
+keywords: [kubernetes security best practices, CIS kubernetes, CIS benchmark, security hardening, compliance, kubernetes security standards, center for internet security, CKS]
 ---
 
 # Understanding CIS Benchmarks for Kubernetes

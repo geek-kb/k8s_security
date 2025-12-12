@@ -2,6 +2,7 @@
 sidebar_position: 2
 title: "Trivy"
 description: "Overview, usage, and best practices for using Trivy to scan container images, file systems, and Kubernetes resources for vulnerabilities."
+keywords: [kubernetes security tool, trivy, vulnerability scanning, container scanning, image scanning, SBOM, security scanning, aqua security, CVE detection, CKS]
 ---
 
 # Trivy

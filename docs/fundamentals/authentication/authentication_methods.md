@@ -1,6 +1,7 @@
 ---
 title: Authentication Methods
 sidebar_position: 1
+keywords: [kubernetes authentication, authentication methods, kubernetes identity, user authentication, service accounts, x509 certificates, authentication strategies, kubernetes security, API server authentication, CKS]
 ---
 
 # Authentication in Kubernetes

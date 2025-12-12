@@ -2,6 +2,7 @@
 title: "Service Mesh Security"
 description: "Improve Kubernetes security by implementing mutual TLS (mTLS), zero-trust networking, and policy-based access control using service meshes."
 sidebar_position: 8
+keywords: [kubernetes security best practices, service mesh, mTLS, mutual TLS, zero trust networking, istio, linkerd, service mesh security, policy-based access control, CKS]
 ---
 
 # Service Mesh Security

@@ -2,6 +2,7 @@
 title: "Understanding SBOM"
 description: "An overview of Software Bill of Materials (SBOM), its role in Kubernetes security, generation tools, and its importance for supply chain integrity."
 sidebar_position: 7
+keywords: [kubernetes security best practices, SBOM, software bill of materials, supply chain security, dependency management, vulnerability tracking, SPDX, CycloneDX, container security, compliance]
 ---
 
 # Understanding SBOM

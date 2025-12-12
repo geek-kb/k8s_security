@@ -2,6 +2,7 @@
 title: "Seccomp in Pods"
 sidebar_position: 7
 description: "Learn how to use seccomp to restrict system calls in Kubernetes pods and enhance container security."
+keywords: [kubernetes security best practices, seccomp, secure computing mode, system call filtering, pod security, container security, linux security, CKS]
 ---
 
 # Seccomp in Pods

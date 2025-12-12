@@ -2,6 +2,7 @@
 title: "Checkov"
 description: "Checkov is a static analysis security tool for Terraform, Kubernetes, Docker, and Helm infrastructure-as-code files."
 sidebar_position: 7
+keywords: [kubernetes security tool, checkov, static analysis, infrastructure as code security, IaC scanning, policy as code, terraform security, helm security, CKS]
 ---
 
 # Checkov

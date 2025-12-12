@@ -2,6 +2,7 @@
 title: "Kubescape"
 description: "Kubescape is a Kubernetes security scanner that assesses clusters, manifests, and Helm charts against security frameworks and misconfigurations."
 sidebar_position: 2
+keywords: [kubernetes security tool, kubescape, security scanning, compliance, NSA kubernetes hardening, CIS kubernetes, misconfiguration detection, ARMO, security assessment, CKS]
 ---
 
 # Kubescape

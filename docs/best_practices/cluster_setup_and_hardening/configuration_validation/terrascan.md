@@ -2,6 +2,7 @@
 title: "Terrascan"
 description: "Terrascan is a static code analyzer that detects compliance and security violations across Infrastructure as Code (IaC) configurations like Terraform, Kubernetes, and more."
 sidebar_position: 5
+keywords: [kubernetes security tool, terrascan, static analysis, infrastructure as code security, IaC scanning, compliance checking, terraform security, policy as code, CKS]
 ---
 
 # Terrascan

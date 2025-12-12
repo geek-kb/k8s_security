@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "kube-score"
 description: "Analyze Kubernetes manifests for security, reliability, and performance issues using kube-score."
+keywords: [kubernetes security tool, kube-score, manifest validation, static analysis, configuration validation, best practices checker, kubernetes linting, security audit, CKS]
 ---
 
 # kube-score

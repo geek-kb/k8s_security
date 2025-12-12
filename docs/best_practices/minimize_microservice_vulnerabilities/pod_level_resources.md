@@ -2,6 +2,7 @@
 title: "Pod-Level Resource Management"
 description: "Secure and optimize resource allocation with Kubernetes v1.34 Pod-Level Resources feature for enhanced workload isolation and multi-tenancy."
 sidebar_position: 8
+keywords: [kubernetes security best practices, pod level resources, resource management, resource allocation, workload isolation, multi-tenancy, resource quota, pod security, CKS]
 ---
 
 # Pod-Level Resource Management

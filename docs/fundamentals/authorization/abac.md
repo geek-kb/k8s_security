@@ -1,6 +1,7 @@
 ---
 title: Attribute-Based Access Control (ABAC)
 sidebar_position: 2
+keywords: [kubernetes ABAC, attribute-based access control, ABAC policies, kubernetes authorization, policy files, access control, kubernetes security, authorization modes, RBAC vs ABAC, CKS]
 ---
 
 # Attribute-Based Access Control (ABAC) in Kubernetes

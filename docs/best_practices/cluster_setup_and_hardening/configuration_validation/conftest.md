@@ -2,6 +2,7 @@
 title: "Conftest"
 description: "Conftest helps you write tests against structured configuration data using Open Policy Agent (OPA) policies."
 sidebar_position: 4
+keywords: [kubernetes security tool, conftest, OPA, open policy agent, policy testing, configuration validation, rego, infrastructure testing, policy as code, CKS]
 ---
 
 # Conftest

@@ -2,6 +2,7 @@
 title: "Notation"
 description: "Notation is a CLI tool for signing and verifying container images using the OCI standard for artifact signatures."
 sidebar_position: 5
+keywords: [kubernetes security tool, notation, container signing, image verification, OCI artifacts, supply chain security, artifact signatures, container security, image signing, CNCF]
 ---
 
 # Notation

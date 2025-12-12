@@ -2,6 +2,7 @@
 title: "DNS Security in Kubernetes"
 description: "Protect CoreDNS from spoofing, cache poisoning, and unauthorized modifications to enhance cluster security."
 sidebar_position: 3
+keywords: [kubernetes security best practices, DNS security, CoreDNS, DNS spoofing, cache poisoning, DNS security hardening, kubernetes networking, service discovery, CKS]
 ---
 
 # DNS Security in Kubernetes

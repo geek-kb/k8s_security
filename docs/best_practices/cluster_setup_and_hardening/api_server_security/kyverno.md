@@ -2,6 +2,7 @@
 title: "Kyverno"
 description: "Kyverno is a Kubernetes-native policy engine used to validate, mutate, and generate resources, enabling security, compliance, and best practice enforcement."
 sidebar_position: 4
+keywords: [kubernetes security tool, kyverno, kubernetes policy, policy engine, admission control, policy validation, policy mutation, resource generation, kubernetes governance, CKS]
 ---
 
 # Kyverno

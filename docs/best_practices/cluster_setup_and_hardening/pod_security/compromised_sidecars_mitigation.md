@@ -2,6 +2,7 @@
 sidebar_position: 2
 title: "Securing Kubernetes Sidecars"
 description: "Best practices for securing sidecar containers to prevent data interception, privilege escalation, and persistence attacks."
+keywords: [kubernetes security best practices, sidecar security, sidecar containers, pod security, container isolation, network policies, privilege escalation prevention, CKS]
 ---
 
 # Securing Kubernetes Sidecars

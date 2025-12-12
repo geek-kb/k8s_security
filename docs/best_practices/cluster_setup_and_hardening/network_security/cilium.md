@@ -2,6 +2,7 @@
 title: "Cilium"
 description: "Cilium is an eBPF-powered Kubernetes networking, security, and observability solution that enables high-performance and fine-grained control over cluster communications."
 sidebar_position: 11
+keywords: [kubernetes security tool, cilium, eBPF, CNI plugin, network policies, service mesh, kubernetes networking, layer 7 security, observability, CKS]
 ---
 
 # Cilium

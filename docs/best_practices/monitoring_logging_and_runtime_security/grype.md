@@ -2,6 +2,7 @@
 sidebar_position: 3
 title: "Grype"
 description: "Scan container images and filesystems for known vulnerabilities to secure Kubernetes workloads."
+keywords: [kubernetes security tool, grype, vulnerability scanning, container scanning, image scanning, CVE detection, anchore, security scanning, SBOM, CKS]
 ---
 
 # Grype

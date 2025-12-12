@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "Insecure Secrets Management Mitigation"
 description: "Best practices to prevent the exposure of sensitive data in Kubernetes through secure secrets management techniques and external secret stores."
+keywords: [kubernetes security best practices, secrets management, kubernetes secrets, etcd encryption, sealed secrets, external secrets operator, vault, secrets security, encryption at rest, CIS kubernetes]
 ---
 
 # Insecure Secrets Management Mitigation

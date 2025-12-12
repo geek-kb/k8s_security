@@ -2,6 +2,7 @@
 title: "kube-linter"
 description: "KubeLinter is a static analysis tool that checks Kubernetes YAML manifests and Helm charts for security issues and best practices."
 sidebar_position: 6
+keywords: [kubernetes security tool, kube-linter, static analysis, manifest validation, YAML linting, security best practices, helm chart validation, kubernetes linting, CKS]
 ---
 
 # kube-linter

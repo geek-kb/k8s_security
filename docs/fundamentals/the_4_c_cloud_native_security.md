@@ -2,6 +2,7 @@
 sidebar_position: 3
 title: "The Four C's of Cloud Native Security"
 description: "Understand the Four C's of Cloud Native Security: Code, Container, Cluster, and Cloud, and learn best practices to secure Kubernetes environments."
+keywords: [kubernetes security, cloud native security, 4Cs security, code security, container security, cluster security, cloud security, security layers, defense in depth, CKS]
 ---
 
 # The Four C's of Cloud Native Security

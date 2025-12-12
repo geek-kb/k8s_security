@@ -2,6 +2,7 @@
 title: "Calico"
 description: "Calico is a networking and network security solution for Kubernetes that provides highly scalable, policy-driven networking and workload isolation."
 sidebar_position: 12
+keywords: [kubernetes security tool, calico, CNI plugin, network policies, kubernetes networking, workload isolation, BGP routing, network security, policy enforcement, CKS]
 ---
 
 # Calico

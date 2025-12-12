@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "Securing etcd in Kubernetes"
 description: "Best practices for securing etcd, Kubernetes' key-value store, to prevent unauthorized access and data compromise."
+keywords: [kubernetes security best practices, etcd security, etcd encryption, key-value store, control plane security, TLS encryption, RBAC, kubernetes secrets, CIS kubernetes, CKS]
 ---
 
 # Securing etcd in Kubernetes

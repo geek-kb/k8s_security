@@ -2,6 +2,7 @@
 sidebar_position: 8
 title: "Restricting HostPath Mounts in Kubernetes"
 description: "Best practices for securing Kubernetes hostPath mounts to prevent unauthorized access to the host filesystem."
+keywords: [kubernetes security best practices, hostPath security, volume security, pod security standards, host filesystem access, admission control, OPA gatekeeper, kyverno, CKS]
 ---
 
 # Restricting HostPath Mounts in Kubernetes

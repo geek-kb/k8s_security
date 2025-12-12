@@ -2,6 +2,7 @@
 title: "Polaris"
 description: "Polaris is a Kubernetes configuration validation tool that checks workloads against best practices and highlights potential security and stability issues."
 sidebar_position: 3
+keywords: [kubernetes security tool, polaris, configuration validation, best practices checker, workload validation, security audit, kubernetes linting, fairwinds, CKS]
 ---
 
 # Polaris

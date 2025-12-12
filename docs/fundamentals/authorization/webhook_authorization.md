@@ -1,6 +1,7 @@
 ---
 title: Webhook Authorization
 sidebar_position: 4
+keywords: [kubernetes webhook authorization, authorization webhook, external authorization, webhook authorizer, kubernetes authorization, access control webhook, authorization modes, kubernetes security, CKS]
 ---
 
 # Webhook Authorization in Kubernetes

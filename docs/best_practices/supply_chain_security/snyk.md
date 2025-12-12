@@ -2,6 +2,7 @@
 title: "Snyk"
 description: "Snyk is a developer-first security tool that scans containers, Kubernetes manifests, and code for vulnerabilities, license issues, and misconfigurations."
 sidebar_position: 6
+keywords: [kubernetes security tool, snyk, vulnerability scanning, container scanning, security scanning, kubernetes security, dependency scanning, license compliance, CVE detection, devops security]
 ---
 
 # Snyk

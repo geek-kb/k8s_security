@@ -2,6 +2,7 @@
 sidebar_position: 2
 title: "Supply Chain Security Best Practices"
 description: "Best practices for securing the Kubernetes software supply chain, including image signing, dependency verification, Helm security, and CI/CD hardening."
+keywords: [kubernetes security best practices, supply chain security, software supply chain, container image security, SBOM, image signing, cosign, CI/CD security, helm security, dependency verification, CKS]
 ---
 
 # Supply Chain Security Best Practices

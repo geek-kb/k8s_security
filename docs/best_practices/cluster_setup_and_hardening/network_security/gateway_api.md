@@ -2,6 +2,7 @@
 title: "Gateway API Security"
 description: "Secure Kubernetes traffic routing with Gateway API v1.4, the modern successor to Ingress with enhanced security features and role-based access control."
 sidebar_position: 7
+keywords: [kubernetes security best practices, gateway API, traffic routing, ingress alternative, RBAC, TLS termination, kubernetes networking, API gateway, CKS]
 ---
 
 # Gateway API Security
