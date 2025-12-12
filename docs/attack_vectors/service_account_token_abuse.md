@@ -82,6 +82,7 @@ curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
 ```
 
 **Output:**
+
 ```json
 {
   "username": "admin",

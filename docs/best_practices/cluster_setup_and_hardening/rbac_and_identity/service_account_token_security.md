@@ -105,6 +105,7 @@ echo $TOKEN | cut -d '.' -f 2 | base64 -d | jq .
 ```
 
 **Output shows:**
+
 ```json
 {
   "aud": ["api.company.com"],
@@ -147,7 +148,7 @@ spec:
         sources:
           - serviceAccountToken:
               path: token
-              expirationSeconds: 600  # 10 minutes
+              expirationSeconds: 600 # 10 minutes
 ```
 
 ---
@@ -169,7 +170,7 @@ rules:
   - apiGroups: [""]
     resources: ["configmaps"]
     verbs: ["get", "list"]
-    resourceNames: ["app-config"]  # Restrict to specific ConfigMap
+    resourceNames: ["app-config"] # Restrict to specific ConfigMap
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -202,12 +203,12 @@ rules:
   - apiGroups: [""]
     resources: ["secrets"]
     verbs: ["get", "list"]
-  
+
   # NEVER allow pod creation
   - apiGroups: [""]
     resources: ["pods"]
     verbs: ["create"]
-  
+
   # NEVER allow serviceaccounts/token
   - apiGroups: [""]
     resources: ["serviceaccounts/token"]
@@ -282,7 +283,7 @@ rules:
   # Explicitly deny token creation
   - apiGroups: [""]
     resources: ["serviceaccounts/token"]
-    verbs: []  # Empty verbs = no access
+    verbs: [] # Empty verbs = no access
 ```
 
 ### Audit TokenRequest Usage
@@ -335,7 +336,7 @@ metadata:
   namespace: production
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::123456789012:role/S3AccessRole
-automountServiceAccountToken: false  # No cluster API access needed
+automountServiceAccountToken: false # No cluster API access needed
 ---
 apiVersion: v1
 kind: Pod
@@ -532,5 +533,5 @@ kubectl logs -n kube-system kube-apiserver-master | \
 - [Kubernetes Service Accounts](https://kubernetes.io/docs/concepts/security/service-accounts/)
 - [Bound Service Account Tokens](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#bound-service-account-tokens)
 - [Configure Service Accounts](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
-- [RBAC Security](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/intro)
+- [RBAC Security](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)
 - [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)

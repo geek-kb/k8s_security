@@ -29,6 +29,9 @@ This section explores **common Kubernetes attack vectors**, including:
 - **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Injecting or abusing sidecars to intercept data or maintain persistence.
 - **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape)**: Escaping from a container to execute commands on the host node.
 - **[Compromised Helm Charts](/docs/attack_vectors/supply_chain_attacks)**: Installing malicious or unverified Helm charts that introduce backdoors or privilege escalation.
+- **[ImagePullSecrets Theft](/docs/attack_vectors/imagepullsecrets_theft)**: Extracting container registry credentials from Kubernetes secrets to access private registries.
+- **[Service Account Token Abuse](/docs/attack_vectors/service_account_token_abuse)**: Exploiting service account tokens to escalate privileges and access cluster resources.
+- **[Exec/Attach Credential Theft](/docs/attack_vectors/exec_attach_credential_theft)**: Using kubectl exec or attach to extract credentials from running containers.
 
 Each article provides **step-by-step exploitation techniques, real-world risks, and a link to the corresponding mitigation guide** to help you harden your Kubernetes environments.
 

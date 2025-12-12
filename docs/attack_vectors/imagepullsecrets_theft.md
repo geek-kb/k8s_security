@@ -41,6 +41,7 @@ kubectl get secret registry-credentials -n production -o jsonpath='{.data.\.dock
 ```
 
 **Output:**
+
 ```json
 {
   "auths": {
