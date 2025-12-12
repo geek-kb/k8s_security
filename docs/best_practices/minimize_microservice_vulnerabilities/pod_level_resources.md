@@ -387,10 +387,10 @@ metadata:
 spec:
   resources:
     requests:
-      cpu: "1.5"      # Slightly more than sum for flexibility
+      cpu: "1.5" # Slightly more than sum for flexibility
       memory: "3Gi"
     limits:
-      cpu: "3"        # Allows burst capacity
+      cpu: "3" # Allows burst capacity
       memory: "6Gi"
   containers:
     - name: app
