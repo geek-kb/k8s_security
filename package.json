@@ -20,7 +20,7 @@
     "@docusaurus/plugin-client-redirects": "^3.7.0",
     "@docusaurus/preset-classic": "3.7.0",
     "@docusaurus/theme-live-codeblock": "^3.7.0",
-    "@easyops-cn/docusaurus-search-local": "^0.48.5",
+    "@easyops-cn/docusaurus-search-local": "^0.44.5",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",

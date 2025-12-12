@@ -1,4 +1,5 @@
 import type {Config} from "@docusaurus/types";
+import {themes as prismThemes} from 'prism-react-renderer';
 
 const config: Config = {
   title: "K8s Security",
@@ -25,7 +26,7 @@ const config: Config = {
         docs: {
           path: "docs",
           routeBasePath: "docs",
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: "./sidebars.ts",
           sidebarItemsGenerator: undefined,
           sidebarCollapsible: true,
           showLastUpdateAuthor: true,
@@ -40,22 +41,13 @@ const config: Config = {
           postsPerPage: 1,
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: "./src/css/custom.css",
         },
       },
     ],
   ],
 
   plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "guides",
-        path: "guides",
-        routeBasePath: "guides",
-        sidebarPath: require.resolve("./sidebarsGuides.js"),
-      },
-    ],
     [
       "@easyops-cn/docusaurus-search-local",
       {
@@ -120,10 +112,6 @@ const config: Config = {
         {
           title: "Docs",
           items: [{label: "Introduction", to: "/docs/intro"}],
-        },
-        {
-          title: "Guides",
-          items: [{label: "Guides Introduction", to: "/guides/intro"}],
         },
         {
           title: "Community",
