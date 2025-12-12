@@ -487,4 +487,4 @@ Configure containerd to use mirror:
 - [Encrypting Secret Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
 - [External Secrets Operator](https://external-secrets.io/)
 - [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)
-- [RBAC Security](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/intro)
+- [RBAC Security](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)

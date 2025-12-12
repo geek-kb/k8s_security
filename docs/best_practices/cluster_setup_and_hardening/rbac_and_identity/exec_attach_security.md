@@ -78,8 +78,8 @@ kubectl get roles,clusterroles -A -o json | \
 
 # Find all role bindings with exec permissions
 kubectl get rolebindings,clusterrolebindings -A -o json | \
-  jq '.items[] | select(.roleRef.name as $role | 
-    [kubectl get role/$role -o json | select(.rules[]? | 
+  jq '.items[] | select(.roleRef.name as $role |
+    [kubectl get role/$role -o json | select(.rules[]? |
     select(.resources[]? | contains("exec")))] | length > 0)'
 
 # Check specific user's exec permissions
@@ -125,8 +125,8 @@ webhooks:
 // Deny exec to pods with sensitive labels
 func validateExec(ar *admissionv1.AdmissionReview) *admissionv1.AdmissionResponse {
     pod := getPod(ar.Request.Namespace, ar.Request.Name)
-    
-    if pod.Labels["env"] == "production" && 
+
+    if pod.Labels["env"] == "production" &&
        pod.Labels["sensitive"] == "true" {
         return &admissionv1.AdmissionResponse{
             Allowed: false,
@@ -135,7 +135,7 @@ func validateExec(ar *admissionv1.AdmissionReview) *admissionv1.AdmissionRespons
             },
         }
     }
-    
+
     return &admissionv1.AdmissionResponse{Allowed: true}
 }
 ```
@@ -161,7 +161,7 @@ rules:
         resources: ["pods/exec", "pods/attach"]
     omitStages:
       - RequestReceived
-  
+
   # Log portforward as well
   - level: RequestResponse
     verbs: ["create"]
@@ -180,8 +180,8 @@ kubectl logs -n kube-system kube-apiserver-master | \
 
 # Find exec operations by specific user
 kubectl logs -n kube-system kube-apiserver-master | \
-  jq 'select(.objectRef.resource == "pods" and 
-              .objectRef.subresource == "exec" and 
+  jq 'select(.objectRef.resource == "pods" and
+              .objectRef.subresource == "exec" and
               .user.username == "suspicious@company.com")'
 
 # Check what commands were executed (if container logging enabled)
@@ -493,9 +493,9 @@ roleRef:
 # Remove expired emergency access
 
 kubectl get rolebindings -A -o json | \
-  jq -r '.items[] | 
-    select(.metadata.annotations.expires != null) | 
-    select(.metadata.annotations.expires < now | strftime("%Y-%m-%dT%H:%M:%SZ")) | 
+  jq -r '.items[] |
+    select(.metadata.annotations.expires != null) |
+    select(.metadata.annotations.expires < now | strftime("%Y-%m-%dT%H:%M:%SZ")) |
     "\(.metadata.namespace) \(.metadata.name)"' | \
 while read ns name; do
   echo "Removing expired access: $ns/$name"

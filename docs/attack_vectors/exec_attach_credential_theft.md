@@ -45,6 +45,7 @@ kubectl exec -n production webapp-pod-abc123 -- env | grep -E '(PASSWORD|SECRET|
 ```
 
 **Output:**
+
 ```bash
 DATABASE_PASSWORD=P@ssw0rd123!
 API_KEY=sk-1234567890abcdef
@@ -85,17 +86,18 @@ kubectl exec -n production webapp-pod-abc123 -- cat /etc/app/credentials.conf
 ```
 
 **Example config exposure:**
+
 ```yaml
 database:
   host: postgres.production.svc.cluster.local
   port: 5432
   username: admin
   password: ProductionDB2024!
-  
+
 redis:
   host: redis-master.production.svc
   password: RedisPass789
-  
+
 aws:
   access_key_id: AKIAIOSFODNN7EXAMPLE
   secret_access_key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
