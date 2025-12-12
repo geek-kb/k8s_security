@@ -1,7 +1,7 @@
 ---
 title: "Blog Under Construction"
 description: "Stay tuned for insightful articles about Kubernetes security best practices."
-slug: /
+slug: under-construction
 ---
 
 # 🚧 Blog Under Construction 🚧

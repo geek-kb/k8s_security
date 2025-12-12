@@ -192,12 +192,12 @@ metadata:
   namespace: production
 status:
   changedBlocks:
-    - startOffset: 1048576      # 1 MB
-      length: 524288            # 512 KB
-    - startOffset: 104857600    # 100 MB
-      length: 1048576           # 1 MB
+    - startOffset: 1048576 # 1 MB
+      length: 524288 # 512 KB
+    - startOffset: 104857600 # 100 MB
+      length: 1048576 # 1 MB
   totalChangedBytes: 1572864
-  snapshotSizeBytes: 107374182400  # 100 GB
+  snapshotSizeBytes: 107374182400 # 100 GB
   percentageChanged: 0.00146
 ```
 

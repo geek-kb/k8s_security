@@ -25,6 +25,7 @@ Gateway API introduces three core resources that separate concerns between clust
 
 **Issue:** Ingress controllers often require cluster-wide permissions and lack standardized security features.<br/>
 **Fix:** Gateway API provides:
+
 - Role-based resource ownership and RBAC separation
 - Native support for multiple attachment points and cross-namespace routing with explicit ReferenceGrants
 - Built-in TLS configuration at the Gateway level
