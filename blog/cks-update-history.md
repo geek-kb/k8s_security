@@ -2,7 +2,7 @@
 title: "CKS Curriculum and Tooling Updates"
 description: "Stay up to date with the latest changes to the Certified Kubernetes Security Specialist (CKS) exam curriculum and associated tools."
 slug: cks-update-history
-date: 2025-03-24
+date: 2025-04-29
 authors: [itai]
 tags: [CKS, CNCF, Kubernetes, Certification]
 ---
@@ -15,6 +15,19 @@ The goal is to help CKS candidates stay on top of the exam’s scope and prepare
 ---
 
 ## Update Log
+
+### 2025-04-01 — **CKS Updated to Kubernetes v1.29 and Tooling Enhancements**
+
+- **New Kubernetes version**: v1.29
+- Exam tools updated to include:
+  - `kube-score` (configuration validation)
+  - `kubescape` (compliance scanning)
+- **Falco** added under "Runtime Security" domain as a required tool
+- Pod Security Admission (PSA) modes now included in detail under "Pod Security"
+- Emphasis on detecting **privilege escalation paths**
+- Updated `trivy` version includes SBOM and VEX support
+- Clarified importance of runtime eBPF tools for detection and alerting
+- New subtopic: **Workload identity hardening** (ServiceAccount tokens, projected volumes)
 
 ### 2024-07-01 — **CKS Updated to Kubernetes v1.28**
 
