@@ -58,7 +58,11 @@ openssl x509 -req -in user.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out use
 
 #### Cross-Reference
 
-For a detailed guide on issuing a certificate for a Kubernetes user, refer to the [Issuing a Certificate for a User](/guides/certificates/issue_certificate_for_k8s_user/).
+For a detailed guide on issuing a certificate for a Kubernetes user, refer to the guides section (coming soon).
+
+<!-- TODO: Re-enable when guides plugin is restored
+[Issuing a Certificate for a User](/guides/certificates/issue_certificate_for_k8s_user/)
+-->
 
 ---
 
@@ -179,4 +183,8 @@ spec:
 
 Certificates are a **core primitive** in Kubernetes security, providing **encryption** and **authentication** for **API server communications**, **Ingress traffic**, and **internal service interactions**. Implementing certificates with tools like **Cert-Manager** ensures your **cluster remains secure** and **compliant** with **best practices**.
 
-For more advanced scenarios, including **mTLS setup** between services or using **Cert-Manager** for dynamic certificate management, refer to the additional [How-To Guides](/guides/intro/).
+For more advanced scenarios, including **mTLS setup** between services or using **Cert-Manager** for dynamic certificate management, refer to the additional guides (coming soon).
+
+<!-- TODO: Re-enable when guides plugin is restored
+[How-To Guides](/guides/intro/)
+-->
