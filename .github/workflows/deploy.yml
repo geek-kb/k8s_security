@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main # Deploy when changes are pushed to main
+    paths-ignore:
+      - '.github/**'
+      - '.gitignore'
+      - 'README.md'
+      - 'LICENSE'
+      - '.vscode/**'
 
 permissions:
   contents: write
