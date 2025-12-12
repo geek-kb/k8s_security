@@ -2,6 +2,7 @@
 sidebar_position: 18
 title: "ImagePullSecrets Theft"
 description: "Attack scenario demonstrating how attackers extract image pull secrets to gain unauthorized access to private container registries."
+keywords: [kubernetes security, imagepullsecrets, container registry security, docker registry credentials, secrets theft, private registry access, registry authentication, kubernetes secrets, docker credentials, container security]
 ---
 
 # ImagePullSecrets Theft

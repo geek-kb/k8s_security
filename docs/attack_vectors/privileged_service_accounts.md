@@ -2,6 +2,7 @@
 sidebar_position: 13
 title: "Privileged Service Accounts"
 description: "How attackers exploit overly privileged Kubernetes Service Accounts to gain cluster-wide access and escalate privileges."
+keywords: [kubernetes security, service accounts, privileged service account, RBAC abuse, cluster-admin, privilege escalation, service account token, kubernetes authentication, overprivileged accounts, CKS]
 ---
 
 # Privileged Service Accounts

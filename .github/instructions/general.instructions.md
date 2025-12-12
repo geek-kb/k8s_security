@@ -151,7 +151,7 @@ All attack vector articles **must** follow this structure:
 
 ### Required Structure:
 
-1. **YAML Front Matter** - `sidebar_position`, `title`, `description`
+1. **YAML Front Matter** - `sidebar_position`, `title`, `description`, `keywords`
 2. **Title (H1)** - Same as in front matter
 3. **Introduction** - 1-2 paragraphs summarizing the attack and risk
 4. **Horizontal Rule** (`---`)
@@ -163,6 +163,30 @@ All attack vector articles **must** follow this structure:
 6. **### Result** - Subsection describing the outcome of the attack
 7. **Horizontal Rule** (`---`)
 8. **## Mitigation** - Section with link to the corresponding best practices article
+
+### YAML Front Matter Requirements:
+
+```yaml
+---
+sidebar_position: 1
+title: "Article Title"
+description: "Brief description of the article"
+keywords: [keyword1, keyword2, keyword3, keyword4, keyword5]
+---
+```
+
+**Keywords Field (CRITICAL for SEO):**
+- Include 5-10 relevant keywords optimized for Google search
+- Use terms that users would search for (e.g., "kubernetes security", "container escape", "privilege escalation")
+- Include both general terms and specific technical terms
+- Mix common searches with niche technical terms
+- Consider including:
+  - The main attack/technique name
+  - Related Kubernetes resources (pods, secrets, RBAC, etc.)
+  - Security concepts (privilege escalation, lateral movement, container escape)
+  - Related tools or CVEs if applicable
+  - Common variations and synonyms
+- Example: `keywords: [kubernetes security, privilege escalation, container escape, docker breakout, privileged containers, host access, pod security, CKS]`
 
 ### Formatting Requirements:
 
@@ -184,7 +208,7 @@ Best practices articles provide mitigation strategies and security guidance. The
 
 ### Required Structure:
 
-1. **YAML Front Matter** - `sidebar_position`, `title`, `description`
+1. **YAML Front Matter** - `sidebar_position`, `title`, `description`, `keywords`
 2. **Title (H1)** - Descriptive title of the practice/mitigation
 3. **Introduction** - 1-3 paragraphs explaining the security concern and approach
 4. **Horizontal Rule** (`---`)
@@ -195,6 +219,30 @@ Best practices articles provide mitigation strategies and security guidance. The
    - Step-by-step implementation guidance
    - Use subsections (H3 level) for specific tools or approaches
 6. When adding a new article, verify that the sidebar_position is unique within its category
+
+### YAML Front Matter Requirements:
+
+```yaml
+---
+sidebar_position: 1
+title: "Best Practice Title"
+description: "Brief description of the mitigation strategy"
+keywords: [keyword1, keyword2, keyword3, keyword4, keyword5]
+---
+```
+
+**Keywords Field (CRITICAL for SEO):**
+- Include 5-10 relevant keywords optimized for Google search
+- Focus on solution-oriented terms (e.g., "kubernetes security best practices", "secure secrets management", "RBAC hardening")
+- Include the security domain (secrets, RBAC, network policies, etc.)
+- Add implementation terms (encryption, rotation, least privilege, etc.)
+- Consider including:
+  - The main security practice/mitigation
+  - Related Kubernetes resources and APIs
+  - Security standards (CIS benchmark, Pod Security Standards, etc.)
+  - Tools mentioned in the article (Falco, OPA, Vault, etc.)
+  - Common problem terms users search for
+- Example: `keywords: [kubernetes secrets security, secrets encryption, etcd encryption, external secrets operator, secrets management, vault integration, CIS kubernetes, secrets rotation]`
 
 ### Content Requirements:
 
@@ -233,7 +281,7 @@ Tool articles are typically located within relevant best practices sections (e.g
 
 ### Required Content:
 
-- **Title and Description** - YAML front matter with `title`, `description`, `sidebar_position`
+- **Title and Description** - YAML front matter with `title`, `description`, `sidebar_position`, `keywords`
 - **Tool Name (H1)** - Clear heading matching the title
 - **Overview** - 1-2 paragraphs describing what the tool does
 - **## Usage** - Main section showing how to use the tool
@@ -242,6 +290,14 @@ Tool articles are typically located within relevant best practices sections (e.g
   - Realistic code blocks with proper language identifiers
 - **Integration examples** - Show how the tool integrates with Kubernetes
 - **Links to resources** - Official documentation and GitHub repository
+
+### Keywords for Tool Articles:
+
+- Include the tool name and common variations
+- Add the security domain the tool addresses
+- Include terms like "kubernetes security tool", "container security", etc.
+- Add related concepts (scanning, monitoring, policy enforcement, etc.)
+- Example: `keywords: [trivy, container vulnerability scanning, kubernetes security scanner, image scanning, CVE detection, security tool, docker scanning]`
 
 ### Formatting Requirements:
 
@@ -282,6 +338,9 @@ When updating an existing file:
 - Preserve existing structure unless explicitly instructed otherwise
 - Do not remove content unless it is incorrect or redundant
 - Follow the same formatting and structure rules as new articles
+- **ALWAYS update or add the `keywords` field** in YAML front matter with relevant SEO-optimized terms
+- When updating content, review and refresh keywords to ensure they match current content
+- If keywords are missing, add them based on the article's topic and content
 
 ---
 
@@ -292,6 +351,7 @@ When updating an existing file:
 - Do not introduce new categories without approval
 - Do not invent tools, features, or Kubernetes behavior
 - Do not reference external blogs as authoritative sources
+- Do not create or update articles without including SEO-optimized keywords
 
 ---
 

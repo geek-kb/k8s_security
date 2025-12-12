@@ -2,6 +2,7 @@
 sidebar_position: 7
 title: "Unrestricted etcd Access"
 description: "How attackers exploit unrestricted access to etcd to retrieve Kubernetes secrets and take control of the cluster."
+keywords: [kubernetes security, etcd security, etcd access, secrets exposure, cluster compromise, etcd encryption, control plane security, kubernetes secrets, etcd vulnerability, CKS]
 ---
 
 # Unrestricted etcd Access

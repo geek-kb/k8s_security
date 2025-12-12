@@ -2,6 +2,7 @@
 title: "Securing ImagePullSecrets"
 sidebar_position: 10
 description: "Best practices for protecting container registry credentials and preventing ImagePullSecrets theft in Kubernetes."
+keywords: [kubernetes security best practices, imagepullsecrets security, container registry security, secrets management, docker credentials, registry authentication, IRSA, workload identity, external secrets operator, secrets rotation]
 ---
 
 # Securing ImagePullSecrets

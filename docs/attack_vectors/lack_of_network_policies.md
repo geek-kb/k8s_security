@@ -2,6 +2,7 @@
 sidebar_position: 5
 title: "Lack of Network Policies"
 description: "How missing Kubernetes Network Policies enable lateral movement and data exfiltration by attackers."
+keywords: [kubernetes security, network policies, network segmentation, lateral movement, pod networking, network isolation, calico, cilium, network security, kubernetes networking]
 ---
 
 # Lack of Network Policies
