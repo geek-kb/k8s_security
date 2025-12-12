@@ -1,6 +1,6 @@
 ---
 title: "Security Profiles Operator"
-sidebar_position: 8
+sidebar_position: 10
 description: "Learn how to use the Security Profiles Operator to manage seccomp, AppArmor, and SELinux profiles at scale in Kubernetes."
 ---
 
