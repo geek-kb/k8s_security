@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://k8s-security.geek-kb.com/blog/</id>
     <title>K8s Security Blog</title>
-    <updated>2025-04-29T00:00:00.000Z</updated>
+    <updated>2025-12-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://k8s-security.geek-kb.com/blog/"/>
     <subtitle>K8s Security Blog</subtitle>
@@ -11,13 +11,41 @@
         <title type="html"><![CDATA[CKS Curriculum and Tooling Updates]]></title>
         <id>https://k8s-security.geek-kb.com/blog/cks-update-history/</id>
         <link href="https://k8s-security.geek-kb.com/blog/cks-update-history/"/>
-        <updated>2025-04-29T00:00:00.000Z</updated>
+        <updated>2025-12-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Stay up to date with the latest changes to the Certified Kubernetes Security Specialist (CKS) exam curriculum and associated tools.]]></summary>
         <content type="html"><![CDATA[<p>The Certified Kubernetes Security Specialist (CKS) exam is frequently updated to stay aligned with the Kubernetes ecosystem and its evolving security landscape.
 This post tracks <strong>official updates</strong> to the CKS curriculum and tooling environment provided by the CNCF.</p>
 <p>The goal is to help CKS candidates stay on top of the exam’s scope and prepare accordingly.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="update-log">Update Log<a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#update-log" class="hash-link" aria-label="Direct link to Update Log" title="Direct link to Update Log">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2025-10-15--cks-updated-to-kubernetes-v134">2025-10-15 — <strong>CKS Updated to Kubernetes v1.34</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2025-10-15--cks-updated-to-kubernetes-v134" class="hash-link" aria-label="Direct link to 2025-10-15--cks-updated-to-kubernetes-v134" title="Direct link to 2025-10-15--cks-updated-to-kubernetes-v134">​</a></h3>
+<ul>
+<li><strong>New Kubernetes version</strong>: v1.34</li>
+<li>Major exam environment update: Environment now running Kubernetes v1.34 (as of December 2025)</li>
+<li><strong>Pod Level Resources</strong> feature graduated to Beta and enabled by default</li>
+<li>Updated tooling versions aligned with Kubernetes v1.34:<!-- -->
+<ul>
+<li><code>kubectl</code> updated to v1.34</li>
+<li><code>kube-bench</code> updated for v1.34 compliance</li>
+<li><code>trivy</code> updated with enhanced SBOM scanning capabilities</li>
+</ul>
+</li>
+<li><strong>Gateway API v1.4</strong> reached GA with new networking features</li>
+<li>Enhanced focus on modern networking with <strong>Gateway API</strong> replacing some traditional Ingress patterns</li>
+<li>Emphasis on <strong>Changed Block Tracking API</strong> (alpha) for efficient volume snapshot management</li>
+<li><strong>Ingress NGINX</strong> retirement announced (maintenance until March 2026)</li>
+<li>Continued emphasis on runtime security with eBPF-based tools</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2025-06-15--cks-updated-to-kubernetes-v132-and-v133">2025-06-15 — <strong>CKS Updated to Kubernetes v1.32 and v1.33</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2025-06-15--cks-updated-to-kubernetes-v132-and-v133" class="hash-link" aria-label="Direct link to 2025-06-15--cks-updated-to-kubernetes-v132-and-v133" title="Direct link to 2025-06-15--cks-updated-to-kubernetes-v132-and-v133">​</a></h3>
+<ul>
+<li><strong>New Kubernetes versions</strong>: v1.32 and v1.33 released</li>
+<li>Exam environment updated to align with v1.32/v1.33 within 4-8 weeks of release</li>
+<li>Tooling updates for compatibility with newer Kubernetes versions</li>
+<li>Continued refinement of supply chain security topics</li>
+<li>Enhanced emphasis on <strong>workload identity and Pod-to-Pod encryption</strong> (Cilium, Istio)</li>
+<li>Updated <code>kube-score</code> and <code>kubescape</code> versions for better configuration validation</li>
+<li>Falco remains a required tool with updated detection rules for v1.32+ features</li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2025-04-01--cks-updated-to-kubernetes-v129-and-tooling-enhancements">2025-04-01 — <strong>CKS Updated to Kubernetes v1.29 and Tooling Enhancements</strong><a href="https://k8s-security.geek-kb.com/blog/cks-update-history/#2025-04-01--cks-updated-to-kubernetes-v129-and-tooling-enhancements" class="hash-link" aria-label="Direct link to 2025-04-01--cks-updated-to-kubernetes-v129-and-tooling-enhancements" title="Direct link to 2025-04-01--cks-updated-to-kubernetes-v129-and-tooling-enhancements">​</a></h3>
 <ul>
 <li><strong>New Kubernetes version</strong>: v1.29</li>
