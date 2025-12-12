@@ -2,7 +2,7 @@
 title: "CKS Curriculum and Tooling Updates"
 description: "Stay up to date with the latest changes to the Certified Kubernetes Security Specialist (CKS) exam curriculum and associated tools."
 slug: cks-update-history
-date: 2025-04-29
+date: 2025-12-12
 authors: [itai]
 tags: [CKS, CNCF, Kubernetes, Certification]
 ---
@@ -15,6 +15,31 @@ The goal is to help CKS candidates stay on top of the exam’s scope and prepare
 ---
 
 ## Update Log
+
+### 2025-10-15 — **CKS Updated to Kubernetes v1.34**
+
+- **New Kubernetes version**: v1.34
+- Major exam environment update: Environment now running Kubernetes v1.34 (as of December 2025)
+- **Pod Level Resources** feature graduated to Beta and enabled by default
+- Updated tooling versions aligned with Kubernetes v1.34:
+  - `kubectl` updated to v1.34
+  - `kube-bench` updated for v1.34 compliance
+  - `trivy` updated with enhanced SBOM scanning capabilities
+- **Gateway API v1.4** reached GA with new networking features
+- Enhanced focus on modern networking with **Gateway API** replacing some traditional Ingress patterns
+- Emphasis on **Changed Block Tracking API** (alpha) for efficient volume snapshot management
+- **Ingress NGINX** retirement announced (maintenance until March 2026)
+- Continued emphasis on runtime security with eBPF-based tools
+
+### 2025-06-15 — **CKS Updated to Kubernetes v1.32 and v1.33**
+
+- **New Kubernetes versions**: v1.32 and v1.33 released
+- Exam environment updated to align with v1.32/v1.33 within 4-8 weeks of release
+- Tooling updates for compatibility with newer Kubernetes versions
+- Continued refinement of supply chain security topics
+- Enhanced emphasis on **workload identity and Pod-to-Pod encryption** (Cilium, Istio)
+- Updated `kube-score` and `kubescape` versions for better configuration validation
+- Falco remains a required tool with updated detection rules for v1.32+ features
 
 ### 2025-04-01 — **CKS Updated to Kubernetes v1.29 and Tooling Enhancements**
 
