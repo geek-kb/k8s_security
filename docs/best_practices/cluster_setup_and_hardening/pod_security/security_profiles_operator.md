@@ -49,10 +49,11 @@ kubectl label ns security-profiles-operator \
   pod-security.kubernetes.io/enforce=privileged \
   --overwrite=true
 
-# Install using Helm
+# Download and install the Helm chart
+wget https://github.com/kubernetes-sigs/security-profiles-operator/releases/download/v0.10.0/security-profiles-operator-0.10.0.tgz
 helm install security-profiles-operator \
   --namespace security-profiles-operator \
-  https://github.com/kubernetes-sigs/security-profiles-operator/releases/download/v0.10.0/security-profiles-operator-0.10.0.tgz
+  ./security-profiles-operator-0.10.0.tgz
 ```
 
 ### Enable Log Enricher for Profile Recording
