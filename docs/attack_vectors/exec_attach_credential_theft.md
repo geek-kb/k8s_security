@@ -2,6 +2,7 @@
 sidebar_position: 20
 title: "Exec/Attach Credential Theft"
 description: "Attack scenario demonstrating how kubectl exec and attach commands can be abused to steal credentials and sensitive data from running containers."
+keywords: [kubernetes security, kubectl exec, kubectl attach, credential theft, container access, RBAC permissions, credential extraction, environment variables, secrets theft, lateral movement]
 ---
 
 # Exec/Attach Credential Theft

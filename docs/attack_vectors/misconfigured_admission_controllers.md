@@ -2,6 +2,7 @@
 sidebar_position: 8
 title: "Misconfigured Admission Controllers"
 description: "How attackers exploit misconfigured Kubernetes admission controllers and insecure webhooks to bypass security policies."
+keywords: [kubernetes security, admission controllers, webhook security, policy bypass, validating webhook, mutating webhook, OPA, pod security policy, admission control, security policy]
 ---
 
 # Misconfigured Admission Controllers

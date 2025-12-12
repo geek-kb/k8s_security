@@ -2,6 +2,7 @@
 sidebar_position: 5
 title: "Exposed Kubelet API"
 description: "How an exposed Kubelet API can be exploited to execute commands on nodes and compromise Kubernetes clusters."
+keywords: [kubernetes security, kubelet API, kubelet security, node security, kubelet exploit, port 10250, anonymous access, node compromise, container runtime, kubernetes nodes]
 ---
 
 # Exposed Kubelet API

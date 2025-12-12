@@ -2,6 +2,7 @@
 title: "Service Account Token Security"
 sidebar_position: 11
 description: "Best practices for securing Kubernetes service account tokens and preventing privilege escalation through token abuse."
+keywords: [kubernetes security best practices, service account security, token security, bound tokens, token projection, RBAC security, least privilege, workload identity, service account best practices, kubernetes authentication]
 ---
 
 # Service Account Token Security

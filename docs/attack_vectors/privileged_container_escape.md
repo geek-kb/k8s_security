@@ -2,6 +2,7 @@
 sidebar_position: 8
 title: "Container Escape"
 description: "How an attacker can break out of a container and gain control over the host system in Kubernetes."
+keywords: [kubernetes security, container escape, privileged container, docker breakout, host access, container security, pod security, namespace escape, kernel exploit, CKS]
 ---
 
 # Container Escape

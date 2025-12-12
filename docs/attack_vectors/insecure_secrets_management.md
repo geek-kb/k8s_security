@@ -2,6 +2,7 @@
 sidebar_position: 4
 title: Insecure Secrets Management
 description: Understanding the risks of insecure secrets management in Kubernetes and how it can lead to sensitive data exposure.
+keywords: [kubernetes security, secrets management, kubernetes secrets, etcd encryption, secrets leak, base64 secrets, sensitive data, credentials exposure, secrets security, vault integration]
 ---
 
 # Insecure Secrets Management

@@ -2,6 +2,7 @@
 sidebar_position: 8
 title: "Insecure RBAC Permissions"
 description: "How overly permissive Kubernetes RBAC configurations enable privilege escalation and full cluster compromise."
+keywords: [kubernetes security, RBAC, role-based access control, RBAC misconfiguration, privilege escalation, kubernetes permissions, overprivileged roles, RBAC security, cluster-admin, CKS]
 ---
 
 # Insecure RBAC Permissions

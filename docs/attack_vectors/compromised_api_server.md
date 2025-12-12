@@ -2,6 +2,7 @@
 sidebar_position: 2
 title: "Compromised API Server"
 description: "Exploiting Kubernetes API server vulnerabilities and how attackers gain unauthorized access."
+keywords: [kubernetes security, API server, kubernetes API, control plane security, API server attack, unauthorized access, authentication bypass, kube-apiserver, cluster compromise, CKS]
 ---
 
 # Compromised API Server

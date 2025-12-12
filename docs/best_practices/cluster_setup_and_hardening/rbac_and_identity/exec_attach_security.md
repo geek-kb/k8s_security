@@ -2,6 +2,7 @@
 title: "Securing Exec and Attach Access"
 sidebar_position: 12
 description: "Best practices for restricting kubectl exec and attach permissions to prevent credential theft and unauthorized container access."
+keywords: [kubernetes security best practices, kubectl exec security, RBAC restrictions, admission control, audit logging, ephemeral containers, distroless images, debug containers, pod security, container access control]
 ---
 
 # Securing Exec and Attach Access
