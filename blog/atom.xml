@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://k8s-security.guru/blog/</id>
-    <title>K8s Security Blog</title>
+    <title>K8s Security Guide Blog</title>
     <updated>2025-12-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://k8s-security.guru/blog/"/>
-    <subtitle>K8s Security Blog</subtitle>
+    <subtitle>K8s Security Guide Blog</subtitle>
     <icon>https://k8s-security.guru/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[CKS Curriculum and Tooling Updates]]></title>
