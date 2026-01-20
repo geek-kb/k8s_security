@@ -308,7 +308,7 @@ const config: Config = {
     announcementBar: {
       id: "new_domain",
       content:
-        '🚀 Welcome to our new domain! <a href="/docs/intro">Start learning Kubernetes security</a> or try our <a href="/practice">CKS Practice Questions</a>',
+        'Welcome to our new domain! <a href="/docs/intro">Start learning Kubernetes security</a> or try our <a href="/practice">CKS Practice Questions</a>',
       backgroundColor: "#22c55e",
       textColor: "#fff",
       isCloseable: true,
@@ -317,7 +317,7 @@ const config: Config = {
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
     // Code block features
     prism: {
