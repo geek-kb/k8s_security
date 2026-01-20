@@ -78,6 +78,7 @@ const config: Config = {
 
   plugins: [
     [
+      '@docusaurus/plugin-sitemap',
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         indexDocs: true,
