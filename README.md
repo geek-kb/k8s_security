@@ -16,7 +16,7 @@
 - **Data Protection:** Manage **secrets**, enforce **encryption**, and secure **persistent storage**.
 - **Monitoring and Auditing:** Utilize tools like **Falco**, **kube-bench**, and **kubescape** for runtime security.
 
-Visit the live site: **[K8s Security](https://k8s-security.geek-kb.com/docs/intro/)**
+Visit the live site: **[K8s Security](https://k8s-security.guru/docs/intro/)**
 
 ---
 

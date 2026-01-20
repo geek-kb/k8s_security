@@ -2,7 +2,7 @@
   "name": "k-8-s-security",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://k8s-security.geek-kb.com",
+  "homepage": "https://k8s-security.guru",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

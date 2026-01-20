@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://k8s-security.geek-kb.com/sitemap.xml
+Sitemap: https://k8s-security.guru/sitemap.xml

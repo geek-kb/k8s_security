@@ -10,6 +10,6 @@ We are currently working on creating valuable content for our blog. Stay tuned f
 
 <!-- truncate -->
 
-In the meantime, feel free to explore our [Documentation](https://k8s-security.geek-kb.com).
+In the meantime, feel free to explore our [Documentation](https://k8s-security.guru).
 
 See you soon!
