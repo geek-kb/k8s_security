@@ -3,6 +3,12 @@ sidebar_position: 10
 title: "Unrestricted HostPath Mounts"
 description: "How attackers exploit unrestricted hostPath mounts to gain access to the host filesystem and escalate privileges."
 keywords: [kubernetes security, hostPath, host filesystem, container escape, privilege escalation, volume security, pod security, node compromise, filesystem access, CKS]
+tags: [attack-vector, hostpath, volumes, pod-security, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/unrestricted_hostpath_mitigation/
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards/
+  - /docs/attack_vectors/privileged_container_escape/
+  - /docs/best_practices/cluster_setup_and_hardening/api_server_security/opa_gatekeeper/
 ---
 
 # Unrestricted HostPath Mounts

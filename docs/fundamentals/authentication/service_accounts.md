@@ -3,6 +3,12 @@ title: "Service Accounts"
 sidebar_position: 4
 description: "Learn how Kubernetes Service Accounts provide authentication for pods and how to securely configure them using RBAC."
 keywords: [kubernetes service accounts, service account authentication, pod identity, service account tokens, RBAC, kubernetes authentication, workload identity, automountServiceAccountToken, kubernetes security, CKS]
+tags: [fundamental, authentication, service-accounts, CKS]
+related:
+  - /docs/attack_vectors/privileged_service_accounts/
+  - /docs/attack_vectors/service_account_token_abuse/
+  - /docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/service_account_mitigation/
+  - /docs/fundamentals/authorization/rbac/
 ---
 
 # Service Accounts in Kubernetes

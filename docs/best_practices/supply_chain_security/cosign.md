@@ -3,6 +3,12 @@ title: "Cosign"
 description: "Cosign is a container signing and verification tool used to secure container images and enforce supply chain integrity."
 sidebar_position: 4
 keywords: [kubernetes security tool, cosign, container signing, image verification, supply chain security, sigstore, container security, image signing, artifact signing, kubernetes supply chain]
+tags: [tool, supply-chain, signing, images, CKS]
+related:
+  - /docs/attack_vectors/supply_chain_attacks/
+  - /docs/best_practices/supply_chain_security/notation/
+  - /docs/best_practices/monitoring_logging_and_runtime_security/trivy/
+  - /docs/best_practices/supply_chain_security/sbom/
 ---
 
 # Cosign

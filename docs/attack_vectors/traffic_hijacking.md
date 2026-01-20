@@ -3,6 +3,12 @@ sidebar_position: 11
 title: "Traffic Hijacking"
 description: "How attackers manipulate Kubernetes network traffic to intercept, redirect, or disrupt communication between workloads."
 keywords: [kubernetes security, traffic hijacking, network security, man-in-the-middle, MITM, service mesh, network policies, ingress security, egress control, network interception]
+tags: [attack-vector, network, mitm, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/traffic_hijacking_mitigation/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/service_mesh_security/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/network_policies/
+  - /docs/attack_vectors/lack_of_network_policies/
 ---
 
 # Traffic Hijacking

@@ -15,6 +15,12 @@ keywords:
     secrets theft,
     lateral movement,
   ]
+tags: [attack-vector, exec, rbac, secrets, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/exec_attach_security/
+  - /docs/attack_vectors/insecure_rbac_permissions/
+  - /docs/attack_vectors/insecure_secrets_management/
+  - /docs/fundamentals/authorization/rbac/
 ---
 
 # Exec/Attach Credential Theft

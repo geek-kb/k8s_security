@@ -3,6 +3,12 @@ sidebar_position: 19
 title: "Service Account Token Projection Abuse"
 description: "Attack scenario demonstrating exploitation of service account tokens with excessive permissions or long lifetimes."
 keywords: [kubernetes security, service account token, token abuse, privilege escalation, RBAC bypass, API server access, service account security, token projection, kubernetes authentication, JWT token]
+tags: [attack-vector, service-accounts, tokens, authentication, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/service_account_token_security/
+  - /docs/fundamentals/authentication/service_accounts/
+  - /docs/attack_vectors/privileged_service_accounts/
+  - /docs/attack_vectors/insecure_rbac_permissions/
 ---
 
 # Service Account Token Projection Abuse

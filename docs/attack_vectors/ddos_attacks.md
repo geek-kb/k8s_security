@@ -3,6 +3,12 @@ sidebar_position: 9
 title: "Denial of Service (DoS) Attacks"
 description: "How attackers exploit Kubernetes resources to exhaust system capacity, disrupt workloads, and cause service outages."
 keywords: [kubernetes security, denial of service, DoS attack, resource exhaustion, resource limits, kubernetes DDoS, pod disruption, cluster availability, resource quotas, limit ranges]
+tags: [attack-vector, network, availability, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/ddos_mitigation/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/network_policies/
+  - /docs/best_practices/minimize_microservice_vulnerabilities/pod_level_resources/
+  - /docs/attack_vectors/lack_of_network_policies/
 ---
 
 # Denial of Service (DoS) Attacks

@@ -3,6 +3,12 @@ sidebar_position: 7
 title: "Unrestricted etcd Access"
 description: "How attackers exploit unrestricted access to etcd to retrieve Kubernetes secrets and take control of the cluster."
 keywords: [kubernetes security, etcd security, etcd access, secrets exposure, cluster compromise, etcd encryption, control plane security, kubernetes secrets, etcd vulnerability, CKS]
+tags: [attack-vector, etcd, control-plane, secrets, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/control_plane_security/etcd_security_mitigation/
+  - /docs/attack_vectors/insecure_secrets_management/
+  - /docs/best_practices/cluster_setup_and_hardening/secrets_management/sealed_secrets/
+  - /docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_for_k8s/
 ---
 
 # Unrestricted etcd Access

@@ -3,6 +3,12 @@ sidebar_position: 8
 title: "Misconfigured Admission Controllers"
 description: "How attackers exploit misconfigured Kubernetes admission controllers and insecure webhooks to bypass security policies."
 keywords: [kubernetes security, admission controllers, webhook security, policy bypass, validating webhook, mutating webhook, OPA, pod security policy, admission control, security policy]
+tags: [attack-vector, admission-control, policy, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/api_server_security/misconfigured_admission_controllers_mitigation/
+  - /docs/best_practices/cluster_setup_and_hardening/api_server_security/opa_gatekeeper/
+  - /docs/best_practices/cluster_setup_and_hardening/api_server_security/kyverno/
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards/
 ---
 
 # Misconfigured Admission Controllers

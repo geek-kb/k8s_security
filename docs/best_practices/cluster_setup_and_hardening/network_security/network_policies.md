@@ -3,6 +3,12 @@ sidebar_position: 7
 title: "Network Policies"
 description: "Explore how Network Policies in Kubernetes control traffic flow and enhance security."
 keywords: [kubernetes security best practices, network policies, network segmentation, pod networking, ingress rules, egress rules, network isolation, calico, cilium, kubernetes networking, CKS]
+tags: [best-practice, network, isolation, CKS]
+related:
+  - /docs/attack_vectors/lack_of_network_policies/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/calico/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/cilium/
+  - /docs/attack_vectors/traffic_hijacking/
 ---
 
 # Network Policies

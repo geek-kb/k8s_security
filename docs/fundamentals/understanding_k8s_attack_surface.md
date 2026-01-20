@@ -3,6 +3,12 @@ sidebar_position: 2
 title: "Understanding the Kubernetes Attack Surface"
 description: "An overview of potential attack vectors in Kubernetes and strategies to mitigate security risks."
 keywords: [kubernetes security, attack surface, kubernetes vulnerabilities, security risks, threat modeling, kubernetes components, control plane security, attack vectors, kubernetes hardening, CKS]
+tags: [fundamental, overview, security, CKS]
+related:
+  - /docs/attack_vectors/intro/
+  - /docs/fundamentals/the_4_c_cloud_native_security/
+  - /docs/best_practices/intro/
+  - /docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_for_k8s/
 ---
 
 # Understanding the Kubernetes Attack Surface

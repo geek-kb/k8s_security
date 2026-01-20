@@ -3,6 +3,12 @@ sidebar_position: 2
 title: "DDoS Mitigation in Kubernetes"
 description: "Learn strategies to mitigate Distributed Denial-of-Service (DDoS) attacks in Kubernetes clusters."
 keywords: [kubernetes security best practices, DDoS mitigation, distributed denial of service, rate limiting, network policies, ingress protection, service mesh, kubernetes networking, CKS]
+tags: [best-practice, mitigation, network, availability, CKS]
+related:
+  - /docs/attack_vectors/ddos_attacks/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/network_policies/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/ingress_security/
+  - /docs/best_practices/minimize_microservice_vulnerabilities/pod_level_resources/
 ---
 
 # DDoS Mitigation in Kubernetes

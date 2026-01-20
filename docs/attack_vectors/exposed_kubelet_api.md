@@ -3,6 +3,12 @@ sidebar_position: 5
 title: "Exposed Kubelet API"
 description: "How an exposed Kubelet API can be exploited to execute commands on nodes and compromise Kubernetes clusters."
 keywords: [kubernetes security, kubelet API, kubelet security, node security, kubelet exploit, port 10250, anonymous access, node compromise, container runtime, kubernetes nodes]
+tags: [attack-vector, kubelet, node-security, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/node_security/kubelet_security/
+  - /docs/fundamentals/authentication/authentication_methods/
+  - /docs/attack_vectors/privileged_container_escape/
+  - /docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_for_k8s/
 ---
 
 # Exposed Kubelet API

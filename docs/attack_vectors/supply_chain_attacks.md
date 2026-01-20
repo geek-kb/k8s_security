@@ -3,6 +3,12 @@ sidebar_position: 6
 title: "Supply Chain Attacks"
 description: "How attackers compromise container images, dependencies, CI/CD pipelines, and Helm charts to infiltrate Kubernetes clusters."
 keywords: [kubernetes security, supply chain attack, container image security, malicious images, CI/CD security, helm chart security, image scanning, artifact signing, cosign, notary]
+tags: [attack-vector, supply-chain, images, CKS]
+related:
+  - /docs/best_practices/supply_chain_security/supply_chain_best_practices/
+  - /docs/best_practices/supply_chain_security/cosign/
+  - /docs/best_practices/supply_chain_security/syft/
+  - /docs/best_practices/monitoring_logging_and_runtime_security/trivy/
 ---
 
 # Supply Chain Attacks

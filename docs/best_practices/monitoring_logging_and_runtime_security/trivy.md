@@ -3,6 +3,12 @@ sidebar_position: 2
 title: "Trivy"
 description: "Overview, usage, and best practices for using Trivy to scan container images, file systems, and Kubernetes resources for vulnerabilities."
 keywords: [kubernetes security tool, trivy, vulnerability scanning, container scanning, image scanning, SBOM, security scanning, aqua security, CVE detection, CKS]
+tags: [tool, scanning, supply-chain, vulnerabilities, CKS]
+related:
+  - /docs/best_practices/monitoring_logging_and_runtime_security/grype/
+  - /docs/best_practices/supply_chain_security/sbom/
+  - /docs/attack_vectors/supply_chain_attacks/
+  - /docs/best_practices/supply_chain_security/cosign/
 ---
 
 # Trivy

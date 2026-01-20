@@ -3,6 +3,12 @@ sidebar_position: 3
 title: "Exposed Kubernetes Dashboard"
 description: "How an exposed and over-privileged Kubernetes Dashboard can become an entry point for full cluster compromise."
 keywords: [kubernetes security, kubernetes dashboard, dashboard security, exposed dashboard, kubernetes UI, dashboard vulnerability, cluster compromise, authentication bypass, dashboard access, web interface security]
+tags: [attack-vector, dashboard, authentication, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/exposed_dashboard_mitigation/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/ingress_security/
+  - /docs/fundamentals/authentication/authentication_methods/
+  - /docs/attack_vectors/compromised_api_server/
 ---
 
 # Exposed Kubernetes Dashboard

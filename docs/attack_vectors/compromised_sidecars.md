@@ -3,6 +3,12 @@ sidebar_position: 14
 title: "Compromised Sidecars"
 description: "How attackers exploit insecure or malicious sidecar containers to intercept data, escalate privileges, and persist within Kubernetes clusters."
 keywords: [kubernetes security, sidecar containers, sidecar injection, service mesh security, istio security, envoy proxy, data interception, privilege escalation, pod security, container security]
+tags: [attack-vector, sidecars, service-mesh, pod-security, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/compromised_sidecars_mitigation/
+  - /docs/best_practices/cluster_setup_and_hardening/network_security/service_mesh_security/
+  - /docs/attack_vectors/privileged_container_escape/
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards/
 ---
 
 # Compromised Sidecars

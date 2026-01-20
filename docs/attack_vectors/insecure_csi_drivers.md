@@ -3,6 +3,12 @@ sidebar_position: 12
 title: "Insecure CSI Drivers"
 description: "How attackers exploit insecure Container Storage Interface (CSI) drivers to gain unauthorized access to persistent volumes and sensitive data."
 keywords: [kubernetes security, CSI drivers, container storage interface, persistent volumes, storage security, volume security, PV security, CSI vulnerability, storage access, data breach]
+tags: [attack-vector, storage, csi, volumes, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/csi_driver_mitigation/
+  - /docs/attack_vectors/unrestricted_hostpath_mounts/
+  - /docs/best_practices/cluster_setup_and_hardening/secrets_management/insecure_secrets_management_mitigation/
+  - /docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation/
 ---
 
 # Insecure CSI Drivers

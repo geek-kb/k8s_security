@@ -3,6 +3,12 @@ title: "Falco"
 description: "Falco is a runtime security tool for Kubernetes that detects abnormal behavior and threats based on system call monitoring and security rules."
 sidebar_position: 4
 keywords: [kubernetes security tool, falco, runtime security, threat detection, system call monitoring, intrusion detection, CNCF, container security, security rules, CKS]
+tags: [tool, runtime-security, detection, CKS]
+related:
+  - /docs/best_practices/monitoring_logging_and_runtime_security/tetragon/
+  - /docs/best_practices/monitoring_logging_and_runtime_security/tracee/
+  - /docs/attack_vectors/privileged_container_escape/
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods/
 ---
 
 # Falco

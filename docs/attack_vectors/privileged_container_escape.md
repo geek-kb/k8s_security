@@ -3,6 +3,12 @@ sidebar_position: 8
 title: "Container Escape"
 description: "How an attacker can break out of a container and gain control over the host system in Kubernetes."
 keywords: [kubernetes security, container escape, privileged container, docker breakout, host access, container security, pod security, namespace escape, kernel exploit, CKS]
+tags: [attack-vector, container-escape, pod-security, runtime, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/container_escape_mitigation/
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards/
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods/
+  - /docs/attack_vectors/unrestricted_hostpath_mounts/
 ---
 
 # Container Escape

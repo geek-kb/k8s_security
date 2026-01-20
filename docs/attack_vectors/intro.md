@@ -13,6 +13,12 @@ keywords:
   - kubernetes penetration testing
 sidebar_class_name: hidden
 image: /img/k8s-security-social-card.png
+tags: [attack-vector, overview, CKS]
+related:
+  - /docs/best_practices/intro/
+  - /docs/fundamentals/understanding_k8s_attack_surface/
+  - /docs/tools/intro/
+  - /docs/fundamentals/intro/
 ---
 
 # Kubernetes Attack Vectors

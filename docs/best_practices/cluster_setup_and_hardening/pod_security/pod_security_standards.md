@@ -3,6 +3,12 @@ title: "Pod Security Standards (PSS)"
 sidebar_position: 6
 description: "Learn how Kubernetes Pod Security Standards (PSS) enforce security controls for workloads and replace the deprecated Pod Security Policies (PSP)."
 keywords: [kubernetes security best practices, pod security standards, PSS, pod security policy, PSP replacement, restricted profile, baseline profile, privileged profile, pod security admission, CKS]
+tags: [best-practice, pod-security, admission-control, CKS]
+related:
+  - /docs/attack_vectors/privileged_container_escape/
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods/
+  - /docs/best_practices/cluster_setup_and_hardening/pod_security/app_armor_profiles/
+  - /docs/best_practices/cluster_setup_and_hardening/api_server_security/opa_gatekeeper/
 ---
 
 # Pod Security Standards (PSS) in Kubernetes

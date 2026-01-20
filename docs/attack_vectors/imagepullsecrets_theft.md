@@ -3,6 +3,12 @@ sidebar_position: 18
 title: "ImagePullSecrets Theft"
 description: "Attack scenario demonstrating how attackers extract image pull secrets to gain unauthorized access to private container registries."
 keywords: [kubernetes security, imagepullsecrets, container registry security, docker registry credentials, secrets theft, private registry access, registry authentication, kubernetes secrets, docker credentials, container security]
+tags: [attack-vector, secrets, registry, supply-chain, CKS]
+related:
+  - /docs/best_practices/cluster_setup_and_hardening/secrets_management/imagepullsecrets_security/
+  - /docs/attack_vectors/insecure_secrets_management/
+  - /docs/attack_vectors/supply_chain_attacks/
+  - /docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation/
 ---
 
 # ImagePullSecrets Theft
