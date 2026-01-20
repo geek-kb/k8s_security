@@ -346,6 +346,7 @@ const config: Config = {
             {label: "System Hardening", to: "/docs/best_practices/system_hardening/intro"},
             {label: "Microservice Security", to: "/docs/best_practices/minimize_microservice_vulnerabilities/intro"},
             {label: "Supply Chain Security", to: "/docs/best_practices/supply_chain_security/intro"},
+            {label: "Monitoring & Runtime Security", to: "/docs/best_practices/monitoring_logging_and_runtime_security/intro"},
           ],
         },
         {

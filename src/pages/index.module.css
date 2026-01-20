@@ -229,6 +229,19 @@
   font-weight: 600;
   color: #f8fafc;
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.domainWeight {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
 }
 
 .cksDomain p {
@@ -366,6 +379,11 @@
 
 [data-theme="light"] .cksDomain h3 {
   color: #0f172a;
+}
+
+[data-theme="light"] .domainWeight {
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.1);
 }
 
 [data-theme="light"] .cksDomain p {

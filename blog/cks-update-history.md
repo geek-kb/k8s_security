@@ -5,6 +5,13 @@ slug: cks-update-history
 date: 2025-12-12
 authors: [itai]
 tags: [CKS, CNCF, Kubernetes, Certification]
+keywords:
+  - CKS exam updates
+  - CKS curriculum changes
+  - certified kubernetes security specialist
+  - CKS 2025
+  - kubernetes certification
+image: /img/k8s-security-social-card.png
 ---
 
 The Certified Kubernetes Security Specialist (CKS) exam is frequently updated to stay aligned with the Kubernetes ecosystem and its evolving security landscape. <!-- truncate -->

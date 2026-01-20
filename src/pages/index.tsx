@@ -38,7 +38,7 @@ const features = [
 
 const stats = [
   {value: "1200+", label: "Documentation Pages"},
-  {value: "4", label: "CKS Domains Covered"},
+  {value: "6", label: "CKS Domains Covered"},
   {value: "50+", label: "Security Topics"},
 ];
 
@@ -108,24 +108,32 @@ function CKSSection() {
           Aligned with CKS Certification Domains
         </h2>
         <p className={styles.sectionDescription}>
-          Content organized around the four domains of the Certified Kubernetes Security Specialist exam.
+          Content organized around all six domains of the Certified Kubernetes Security Specialist exam.
         </p>
         <div className={styles.cksDomains}>
           <div className={styles.cksDomain}>
-            <h3>Cluster Setup & Hardening</h3>
-            <p>Network policies, CIS benchmarks, ingress security, API server hardening</p>
+            <h3>Cluster Setup <span className={styles.domainWeight}>15%</span></h3>
+            <p>Network policies, CIS benchmarks, ingress security, secure cluster configuration</p>
           </div>
           <div className={styles.cksDomain}>
-            <h3>System Hardening</h3>
+            <h3>Cluster Hardening <span className={styles.domainWeight}>15%</span></h3>
+            <p>API server hardening, RBAC, service accounts, upgrade procedures</p>
+          </div>
+          <div className={styles.cksDomain}>
+            <h3>System Hardening <span className={styles.domainWeight}>10%</span></h3>
             <p>Host OS security, IAM roles, kernel hardening, attack surface reduction</p>
           </div>
           <div className={styles.cksDomain}>
-            <h3>Minimize Microservice Vulnerabilities</h3>
+            <h3>Minimize Microservice Vulnerabilities <span className={styles.domainWeight}>20%</span></h3>
             <p>Pod Security Standards, secrets management, runtime sandboxing</p>
           </div>
           <div className={styles.cksDomain}>
-            <h3>Supply Chain Security</h3>
+            <h3>Supply Chain Security <span className={styles.domainWeight}>20%</span></h3>
             <p>Image scanning, admission controllers, artifact signing, SBOM</p>
+          </div>
+          <div className={styles.cksDomain}>
+            <h3>Monitoring, Logging & Runtime Security <span className={styles.domainWeight}>20%</span></h3>
+            <p>Audit logging, Falco, behavioral analytics, incident response</p>
           </div>
         </div>
       </div>
