@@ -1,23 +1,386 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+  padding: 6rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+  color: #fff;
+  text-decoration: none;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  border-color: #22c55e;
+  color: #22c55e;
+  text-decoration: none;
+}
+
+/* Stats Section */
+.stats {
+  background: #0f172a;
+  padding: 3rem 2rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.stats .container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #22c55e;
+  line-height: 1;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Features Section */
+.features {
+  background: #0f172a;
+  padding: 5rem 2rem;
+}
+
+.sectionTitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionDescription {
+  font-size: 1.125rem;
+  color: #94a3b8;
+  text-align: center;
+  max-width: 600px;
+  margin: -1.5rem auto 3rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.featureCard:hover {
+  border-color: #22c55e;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.featureIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CKS Section */
+.cks {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  padding: 5rem 2rem;
+}
+
+.cksDomains {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.cksDomain {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid #334155;
+  border-left: 4px solid #22c55e;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.cksDomain h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.cksDomain p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.cta {
+  background: #0f172a;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+}
+
+.cta h2 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.125rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .stats .container {
+    gap: 2rem;
+  }
+
+  .statValue {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Light mode overrides */
+[data-theme="light"] .hero {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f8fafc 100%);
+}
+
+[data-theme="light"] .hero::before {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+}
+
+[data-theme="light"] .heroTitle {
+  color: #0f172a;
+}
+
+[data-theme="light"] .heroSubtitle {
+  color: #475569;
+}
+
+[data-theme="light"] .secondaryButton {
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .secondaryButton:hover {
+  border-color: #16a34a;
+  color: #16a34a;
+}
+
+[data-theme="light"] .stats {
+  background: #f1f5f9;
+  border-bottom-color: #e2e8f0;
+}
+
+[data-theme="light"] .statLabel {
+  color: #64748b;
+}
+
+[data-theme="light"] .features {
+  background: #ffffff;
+}
+
+[data-theme="light"] .sectionTitle {
+  color: #0f172a;
+}
+
+[data-theme="light"] .sectionDescription {
+  color: #475569;
+}
+
+[data-theme="light"] .featureCard {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .featureCard:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .featureTitle {
+  color: #0f172a;
+}
+
+[data-theme="light"] .featureDescription {
+  color: #475569;
+}
+
+[data-theme="light"] .cks {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+[data-theme="light"] .cksDomain {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .cksDomain h3 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .cksDomain p {
+  color: #64748b;
+}
+
+[data-theme="light"] .cta {
+  background: #f8fafc;
+  border-top-color: #e2e8f0;
+}
+
+[data-theme="light"] .cta h2 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .cta p {
+  color: #475569;
 }
