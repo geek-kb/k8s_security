@@ -1,0 +1,51 @@
+.root {
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 720px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.code {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--ifm-color-primary);
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.reasons {
+  margin-top: 1.5rem;
+  text-align: left;
+  display: inline-block;
+  font-size: 0.95rem;
+  color: var(--ifm-color-content);
+}
+
+.reasons ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.actions {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
