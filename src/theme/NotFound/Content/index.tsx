@@ -32,7 +32,7 @@ export default function NotFoundContent(): JSX.Element {
             Go to Introduction
           </Link>
 
-          <Link className="button button--secondary" to="/docs">
+          <Link className="button button--secondary" to="/docs/intro">
             Browse Documentation
           </Link>
 
