@@ -2,7 +2,6 @@ import React from "react";
 import Footer from "@theme-original/DocItem/Footer";
 import type FooterType from "@theme/DocItem/Footer";
 import type {WrapperProps} from "@docusaurus/types";
-import {useDoc} from "@docusaurus/plugin-content-docs/client";
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
 
@@ -72,25 +71,42 @@ function getRelatedArticles(path: string): Array<{title: string; path: string}> 
   return [];
 }
 
-export default function FooterWrapper(props: Props): JSX.Element {
-  const {metadata} = useDoc();
-  const related = getRelatedArticles(metadata.permalink);
+// Safely get doc metadata using dynamic import to avoid SSG issues
+function RelatedArticlesSection(): JSX.Element | null {
+  // Use try-catch to safely handle when not in doc context
+  try {
+    // Dynamic require to avoid build-time issues
+    const {useDoc} = require("@docusaurus/plugin-content-docs/client");
+    const {metadata} = useDoc();
+    const related = getRelatedArticles(metadata.permalink);
 
+    if (related.length === 0) {
+      return null;
+    }
+
+    return (
+      <div className={styles.relatedSection}>
+        <h3 className={styles.relatedTitle}>Related Articles</h3>
+        <div className={styles.relatedGrid}>
+          {related.slice(0, 3).map((article) => (
+            <Link key={article.path} to={article.path} className={styles.relatedCard}>
+              <span className={styles.relatedCardTitle}>{article.title}</span>
+              <span className={styles.relatedCardArrow}>→</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  } catch {
+    // Not in a doc context, skip related articles
+    return null;
+  }
+}
+
+export default function FooterWrapper(props: Props): JSX.Element {
   return (
     <>
-      {related.length > 0 && (
-        <div className={styles.relatedSection}>
-          <h3 className={styles.relatedTitle}>Related Articles</h3>
-          <div className={styles.relatedGrid}>
-            {related.slice(0, 3).map((article) => (
-              <Link key={article.path} to={article.path} className={styles.relatedCard}>
-                <span className={styles.relatedCardTitle}>{article.title}</span>
-                <span className={styles.relatedCardArrow}>→</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+      <RelatedArticlesSection />
       <Footer {...props} />
     </>
   );
