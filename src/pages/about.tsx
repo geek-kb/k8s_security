@@ -21,7 +21,8 @@ export default function About(): JSX.Element {
       sameAs: [
         "https://github.com/geek-kb",
         "https://linkedin.com/in/itaiganot",
-        "https://serverfault.com/users/71616/itai-ganot",
+        "https://serverfault.com/users/109833/itai-ganot",
+        "https://stackoverflow.com/users/1702942/itai-ganot",
       ],
       knowsAbout: [
         "Kubernetes",
@@ -140,6 +141,19 @@ export default function About(): JSX.Element {
             </section>
 
             <section className={styles.section}>
+              <h2>Community Contributions</h2>
+              <p>
+                I'm an active contributor to the DevOps and systems engineering 
+                community, with over 13 years on Stack Exchange:
+              </p>
+              <ul className={styles.list}>
+                <li><strong>Server Fault</strong>: 11K+ reputation, 2.9M people reached, #187 overall</li>
+                <li><strong>Stack Overflow</strong>: 6K+ reputation, 1.2M people reached</li>
+                <li><strong>Top tags</strong>: Linux, Jenkins, AWS, Git, Bash, Puppet</li>
+              </ul>
+            </section>
+
+            <section className={styles.section}>
               <h2>Get in Touch</h2>
               <p>
                 This project is open source. Contributions, corrections, and 
@@ -163,12 +177,20 @@ export default function About(): JSX.Element {
                   GitHub
                 </a>
                 <a
-                  href="https://serverfault.com/users/71616/itai-ganot"
+                  href="https://serverfault.com/users/109833/itai-ganot"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.link}
                 >
                   Server Fault
+                </a>
+                <a
+                  href="https://stackoverflow.com/users/1702942/itai-ganot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
+                  Stack Overflow
                 </a>
                 <a
                   href="https://github.com/geek-kb/k8s_security"

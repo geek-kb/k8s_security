@@ -64,12 +64,19 @@ const config: Config = {
           editUrl: "https://github.com/geek-kb/k8s_security/edit/main/",
         },
         blog: {
-          showReadingTime: false,
+          showReadingTime: true,
           onInlineAuthors: "ignore",
           routeBasePath: "blog",
-          blogSidebarTitle: "Under Construction",
+          blogSidebarTitle: "Recent Posts",
           blogSidebarCount: "ALL",
-          postsPerPage: 1,
+          postsPerPage: 10,
+          feedOptions: {
+            type: "all",
+            title: "K8s Security Guide Blog",
+            description: "Latest Kubernetes security articles, CKS updates, and best practices",
+            copyright: `Copyright © ${new Date().getFullYear()} K8s Security Guide by Itai Ganot`,
+            language: "en",
+          },
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -93,6 +100,45 @@ const config: Config = {
       {
         trackingID: "G-QNPKC33Q9L",
         anonymizeIP: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: false,
+        offlineModeActivationStrategies: ["appInstalled", "standalone", "queryString"],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "/img/logo.svg",
+          },
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "#22c55e",
+          },
+          {
+            tagName: "meta",
+            name: "apple-mobile-web-app-capable",
+            content: "yes",
+          },
+          {
+            tagName: "meta",
+            name: "apple-mobile-web-app-status-bar-style",
+            content: "#22c55e",
+          },
+          {
+            tagName: "link",
+            rel: "apple-touch-icon",
+            href: "/img/logo.svg",
+          },
+        ],
       },
     ],
   ],
@@ -276,6 +322,27 @@ const config: Config = {
   ],
 
   themeConfig: {
+    // Announcement bar
+    announcementBar: {
+      id: "new_domain",
+      content:
+        '🚀 Welcome to our new domain! <a href="/docs/intro">Start learning Kubernetes security</a> or try our <a href="/practice">CKS Practice Questions</a>',
+      backgroundColor: "#22c55e",
+      textColor: "#fff",
+      isCloseable: true,
+    },
+    // Dark mode by default
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    // Code block features
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash", "yaml", "json", "docker", "nginx"],
+    },
     image: "img/k8s-security-social-card.png",
     metadata: [
       {
@@ -318,6 +385,8 @@ const config: Config = {
       },
       items: [
         {to: "/docs/intro", label: "Docs", position: "left"},
+        {to: "/glossary", label: "Glossary", position: "left"},
+        {to: "/practice", label: "Practice", position: "left"},
         {to: "/blog", label: "Blog", position: "left"},
         {to: "/about", label: "About", position: "left"},
         {
@@ -338,6 +407,8 @@ const config: Config = {
             {label: "Attack Vectors", to: "/docs/attack_vectors/intro"},
             {label: "Best Practices", to: "/docs/best_practices/intro"},
             {label: "Security Tools", to: "/docs/tools/intro"},
+            {label: "Glossary", to: "/glossary"},
+            {label: "Practice Questions", to: "/practice"},
           ],
         },
         {

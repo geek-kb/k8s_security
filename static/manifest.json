@@ -1,0 +1,17 @@
+{
+  "name": "K8s Security Guide",
+  "short_name": "K8s Security",
+  "description": "Comprehensive Kubernetes security documentation and CKS certification guide",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#22c55e",
+  "icons": [
+    {
+      "src": "/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

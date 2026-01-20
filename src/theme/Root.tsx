@@ -1,20 +1,18 @@
-import React from 'react';
-import type { Props } from '@theme/Root';
-import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import React from "react";
+import {useLocation} from "@docusaurus/router";
+import ReadingProgress from "./ReadingProgress";
 
-export default function Root({ children }: Props): JSX.Element {
+interface Props {
+  children: React.ReactNode;
+}
+
+export default function Root({children}: Props): JSX.Element {
+  const location = useLocation();
+  const isDocPage = location.pathname.startsWith("/docs/");
+
   return (
     <>
-      {!ExecutionEnvironment.canUseDOM && (
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KD86KG"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-      )}
+      {isDocPage && <ReadingProgress />}
       {children}
     </>
   );
