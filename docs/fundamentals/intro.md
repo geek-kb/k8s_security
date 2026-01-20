@@ -1,13 +1,22 @@
 ---
 sidebar_position: 1
-title: "Section Introduction"
-description: "An introduction to Kubernetes security, covering key concepts, challenges, and foundational security principles."
+title: "Kubernetes Security Fundamentals"
+description: "Learn Kubernetes security fundamentals including authentication, authorization, RBAC, attack surfaces, and the 4C's of cloud-native security."
+keywords:
+  - kubernetes security fundamentals
+  - k8s security basics
+  - kubernetes authentication
+  - kubernetes authorization
+  - kubernetes RBAC
+  - kubernetes attack surface
+  - cloud native security
 sidebar_class_name: hidden
+image: /img/k8s-security-social-card.png
 ---
 
 # Kubernetes Security Fundamentals
 
-Kubernetes is a powerful container orchestration platform, but its security requires careful planning and implementation. This article introduces fundamental security concepts in Kubernetes, ensuring a foundational understanding before exploring specific security measures, attack vectors, or best practices.
+Kubernetes is a powerful container orchestration platform, but its security requires careful planning and implementation. This section introduces fundamental security concepts in Kubernetes, ensuring a foundational understanding before exploring specific security measures, attack vectors, or best practices.
 
 ## Understanding Kubernetes Security
 
@@ -24,12 +33,12 @@ Kubernetes security follows a **shared responsibility model**, where different s
 
 Security in Kubernetes is an ongoing process that requires collaboration across these roles.
 
-## This section covers the following topics
+## Topics Covered in This Section
 
 - **[Understanding Kubernetes Attack Surfaces](/docs/fundamentals/understanding_k8s_attack_surface)**: Learn how attackers target different layers of Kubernetes.
 - **[The Four C's of Cloud Native Security](/docs/fundamentals/the_4_c_cloud_native_security)**: Follow a layered security model to protect Kubernetes environments.
 - **[Authentication and Access Control](/docs/fundamentals/authentication/authentication_methods)**: Secure API access using strong authentication mechanisms.
-- **[Authorization](/docs/fundamentals/authorization/authorization_methods)**: Secure API access using strong authentication mechanisms.
+- **[Authorization](/docs/fundamentals/authorization/authorization_methods)**: Control access to Kubernetes resources using RBAC and other methods.
 
 This section serves as a **starting point for learning Kubernetes security** and implementing foundational security practices.
 
@@ -37,19 +46,20 @@ This section serves as a **starting point for learning Kubernetes security** and
 
 A proactive security mindset is essential for securing Kubernetes environments. The following principles help guide security strategies:
 
-1. **Zero Trust Approach**
+### Zero Trust Approach
 
-   - Every request should be authenticated and authorized, even within the cluster.
-   - Default-deny policies should be applied to workloads and network traffic.
+- Every request should be authenticated and authorized, even within the cluster.
+- Default-deny policies should be applied to workloads and network traffic.
 
-2. **Least Privilege Principle**
+### Least Privilege Principle
 
-   - Workloads, users, and services should only have the minimum permissions necessary.
-   - Privileged containers should be avoided unless explicitly required.
+- Workloads, users, and services should only have the minimum permissions necessary.
+- Privileged containers should be avoided unless explicitly required.
 
-3. **Defense in Depth**
-   - Security controls should be layered across cloud, cluster, container, and application levels.
-   - Multiple security mechanisms should be used to minimize the impact of a security breach.
+### Defense in Depth
+
+- Security controls should be layered across cloud, cluster, container, and application levels.
+- Multiple security mechanisms should be used to minimize the impact of a security breach.
 
 ## Conclusion
 

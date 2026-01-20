@@ -1,8 +1,17 @@
 ---
 sidebar_position: 1
-title: "Section Introduction"
-description: "Explore best practices for securing Kubernetes environments across cluster setup, system hardening, microservice security, runtime monitoring, and supply chain protection."
+title: "Kubernetes Security Best Practices"
+description: "Comprehensive Kubernetes security best practices covering cluster hardening, system security, microservice protection, runtime monitoring, and supply chain security for CKS certification."
+keywords:
+  - kubernetes security best practices
+  - k8s hardening
+  - kubernetes cluster security
+  - CKS best practices
+  - kubernetes hardening guide
+  - container security best practices
+  - kubernetes CIS benchmark
 sidebar_class_name: hidden
+image: /img/k8s-security-social-card.png
 ---
 
 # Kubernetes Security Best Practices
@@ -21,13 +30,22 @@ Kubernetes offers powerful orchestration capabilities, but its flexibility also 
 
 Implementing Kubernetes security best practices helps mitigate these risks by enforcing security controls and hardening each layer of the stack.
 
-## This section covers the following topics
+## Topics Covered in This Section
 
-- **[Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro)**: Secure the Kubernetes control plane, workloads, and networking using CIS benchmarks and validated tooling.
-- **[System Hardening](/docs/best_practices/system_hardening/intro)**: Lock down the host operating system and node configurations.
-- **[Microservice Security](/docs/best_practices/minimize_microservice_vulnerabilities/intro)**: Minimize application-layer vulnerabilities and reduce workload risk.
-- **[Monitoring, Logging, and Runtime Security](/docs/best_practices/monitoring_logging_and_runtime_security/intro)**: Gain visibility into cluster activity and respond to anomalies in real time.
-- **[Supply Chain Security](/docs/best_practices/supply_chain_security/intro)**: Protect workloads from tampering, malware, and untrusted sources during the build and deployment process.
+### [Cluster Setup and Hardening](/docs/best_practices/cluster_setup_and_hardening/intro)
+Secure the Kubernetes control plane, workloads, and networking using CIS benchmarks and validated tooling. Covers API server hardening, etcd encryption, and network policies.
+
+### [System Hardening](/docs/best_practices/system_hardening/intro)
+Lock down the host operating system and node configurations. Includes kernel hardening, reducing attack surface, and securing the container runtime.
+
+### [Microservice Security](/docs/best_practices/minimize_microservice_vulnerabilities/intro)
+Minimize application-layer vulnerabilities and reduce workload risk. Covers Pod Security Standards, secrets management, and secure container configurations.
+
+### [Monitoring, Logging, and Runtime Security](/docs/best_practices/monitoring_logging_and_runtime_security/intro)
+Gain visibility into cluster activity and respond to anomalies in real time. Includes audit logging, runtime threat detection with Falco, and incident response.
+
+### [Supply Chain Security](/docs/best_practices/supply_chain_security/intro)
+Protect workloads from tampering, malware, and untrusted sources during the build and deployment process. Covers image scanning, admission controllers, and artifact signing.
 
 These sections contain in-depth articles, tools, and actionable controls mapped to real-world threats.
 
@@ -35,17 +53,17 @@ These sections contain in-depth articles, tools, and actionable controls mapped 
 
 These best practices align with key cloud-native security principles:
 
-1. **Secure by Default**
-   - Use tools and settings that prioritize safety, like restricted admission controllers and default-deny network policies.
+### Secure by Default
+Use tools and settings that prioritize safety, like restricted admission controllers and default-deny network policies.
 
-2. **Least Privilege**
-   - Assign only the minimum permissions required to users, workloads, and service accounts.
+### Least Privilege
+Assign only the minimum permissions required to users, workloads, and service accounts.
 
-3. **Defense in Depth**
-   - Apply layered security from infrastructure and cluster components to application code and containers.
+### Defense in Depth
+Apply layered security from infrastructure and cluster components to application code and containers.
 
-4. **Continuous Verification**
-   - Monitor workloads and enforce policy throughout the runtime lifecycle, not just at deployment time.
+### Continuous Verification
+Monitor workloads and enforce policy throughout the runtime lifecycle, not just at deployment time.
 
 ## Conclusion
 

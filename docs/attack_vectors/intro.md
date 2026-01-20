@@ -1,46 +1,74 @@
 ---
 sidebar_position: 1
-title: "Section Introduction"
-description: "An overview of common Kubernetes attack vectors and how attackers exploit misconfigurations."
+title: "Kubernetes Attack Vectors"
+description: "Comprehensive guide to Kubernetes attack vectors including container escapes, privilege escalation, RBAC exploitation, and cluster compromise techniques."
+keywords:
+  - kubernetes attack vectors
+  - kubernetes vulnerabilities
+  - container escape
+  - kubernetes privilege escalation
+  - kubernetes security threats
+  - k8s exploits
+  - kubernetes hacking
+  - kubernetes penetration testing
 sidebar_class_name: hidden
+image: /img/k8s-security-social-card.png
 ---
 
-# Common Kubernetes Attack Vectors
+# Kubernetes Attack Vectors
 
 Kubernetes security threats arise from **misconfigurations, weak access controls, and unprotected workloads**. Attackers exploit these vulnerabilities to **escalate privileges, move laterally, and compromise clusters**.
 
-This section explores **common Kubernetes attack vectors**, including:
+This section explores common Kubernetes attack vectors and exploitation techniques used by attackers to compromise clusters.
 
-- **[Compromised API Server](/docs/attack_vectors/compromised_api_server)**: Exploiting exposed API endpoints.
-- **[Exposed Dashboard](/docs/attack_vectors/exposed_dashboard)**: Unauthorized access to Kubernetes dashboards.
-- **[Insecure Secrets Management](/docs/attack_vectors/insecure_secrets_management)**: Leaking secrets due to weak storage and access controls.
-- **[Lack of Network Policies](/docs/attack_vectors/lack_of_network_policies)**: Allowing lateral movement within the cluster.
-- **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape)**: Exploiting vulnerabilities to break out of a container and gain host access.
-- **[Insecure RBAC Permissions](/docs/attack_vectors/insecure_rbac_permissions)**: Misconfigured Role-Based Access Control (RBAC) settings leading to unauthorized access.
-- **[Exposed Kubelet API](/docs/attack_vectors/exposed_kubelet_api)**: Unauthorized access to Kubelet APIs allowing attackers to control nodes or pods.
-- **[Supply Chain Attacks](/docs/attack_vectors/supply_chain_attacks)**: Injecting malicious code into container images, dependencies, or CI/CD pipelines.
-- **[Unrestricted etcd Access](/docs/attack_vectors/unrestricted_etcd_access)**: Accessing etcd storage to retrieve secrets and cluster configurations.
-- **[Cluster Takeover via Misconfigured Admission Controllers](/docs/attack_vectors/misconfigured_admission_controllers)**: Exploiting insecure admission controllers and malicious webhooks to bypass policies.
-- **[Denial of Service (DoS) Attacks](/docs/attack_vectors/ddos_attacks)**: Exploiting Kubernetes resource limits to exhaust cluster resources.
-- **[Unrestricted HostPath Mounts](/docs/attack_vectors/unrestricted_hostpath_mounts)**: Allowing pods to mount the host filesystem, leading to full node compromise.
-- **[Ingress/Egress Traffic Hijacking](/docs/attack_vectors/traffic_hijacking)**: Manipulating network policies to intercept or redirect cluster traffic.
-- **[Exploiting Insecure CSI Drivers](/docs/attack_vectors/insecure_csi_drivers)**: Abusing insecure Container Storage Interface drivers to access or tamper with persistent volumes.
-- **[Privileged Service Accounts](/docs/attack_vectors/privileged_service_accounts)**: Overprivileged service accounts granting unauthorized access and escalation.
-- **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Injecting or abusing sidecars to intercept data or maintain persistence.
-- **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape)**: Escaping from a container to execute commands on the host node.
-- **[Compromised Helm Charts](/docs/attack_vectors/supply_chain_attacks)**: Installing malicious or unverified Helm charts that introduce backdoors or privilege escalation.
-- **[ImagePullSecrets Theft](/docs/attack_vectors/imagepullsecrets_theft)**: Extracting container registry credentials from Kubernetes secrets to access private registries.
-- **[Service Account Token Abuse](/docs/attack_vectors/service_account_token_abuse)**: Exploiting service account tokens to escalate privileges and access cluster resources.
-- **[Exec/Attach Credential Theft](/docs/attack_vectors/exec_attach_credential_theft)**: Using kubectl exec or attach to extract credentials from running containers.
+## Attack Vector Categories
+
+### API and Control Plane Attacks
+- **[Compromised API Server](/docs/attack_vectors/compromised_api_server)**: Exploiting exposed API endpoints
+- **[Exposed Dashboard](/docs/attack_vectors/exposed_dashboard)**: Unauthorized access to Kubernetes dashboards
+- **[Unrestricted etcd Access](/docs/attack_vectors/unrestricted_etcd_access)**: Accessing etcd storage to retrieve secrets and cluster configurations
+
+### Container and Runtime Attacks
+- **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape)**: Breaking out of containers to gain host access
+- **[Unrestricted HostPath Mounts](/docs/attack_vectors/unrestricted_hostpath_mounts)**: Mounting host filesystem for full node compromise
+- **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Injecting or abusing sidecars to intercept data
+
+### Identity and Access Attacks
+- **[Insecure RBAC Permissions](/docs/attack_vectors/insecure_rbac_permissions)**: Exploiting misconfigured Role-Based Access Control
+- **[Privileged Service Accounts](/docs/attack_vectors/privileged_service_accounts)**: Overprivileged service accounts enabling escalation
+- **[Service Account Token Abuse](/docs/attack_vectors/service_account_token_abuse)**: Exploiting service account tokens for privilege escalation
+- **[Exec/Attach Credential Theft](/docs/attack_vectors/exec_attach_credential_theft)**: Using kubectl exec to extract credentials
+
+### Network Attacks
+- **[Lack of Network Policies](/docs/attack_vectors/lack_of_network_policies)**: Lateral movement within the cluster
+- **[Ingress/Egress Traffic Hijacking](/docs/attack_vectors/traffic_hijacking)**: Manipulating network traffic flow
+- **[Exposed Kubelet API](/docs/attack_vectors/exposed_kubelet_api)**: Unauthorized access to Kubelet APIs
+
+### Secrets and Data Attacks
+- **[Insecure Secrets Management](/docs/attack_vectors/insecure_secrets_management)**: Leaking secrets due to weak storage
+- **[ImagePullSecrets Theft](/docs/attack_vectors/imagepullsecrets_theft)**: Extracting container registry credentials
+
+### Supply Chain Attacks
+- **[Supply Chain Attacks](/docs/attack_vectors/supply_chain_attacks)**: Injecting malicious code into images or CI/CD pipelines
+- **[Compromised Helm Charts](/docs/attack_vectors/supply_chain_attacks)**: Installing malicious Helm charts with backdoors
+- **[Exploiting Insecure CSI Drivers](/docs/attack_vectors/insecure_csi_drivers)**: Abusing storage drivers to access volumes
+
+### Policy and Configuration Attacks
+- **[Misconfigured Admission Controllers](/docs/attack_vectors/misconfigured_admission_controllers)**: Bypassing security policies via webhook exploitation
+- **[Denial of Service (DoS) Attacks](/docs/attack_vectors/ddos_attacks)**: Exhausting cluster resources
 
 Each article provides **step-by-step exploitation techniques, real-world risks, and a link to the corresponding mitigation guide** to help you harden your Kubernetes environments.
 
 ---
 
-## **Warning: Security Risk**
+## Security Warning
 
-The information and the scripts included in this section are intended for **educational and security research purposes only**. They demonstrate how attackers exploit misconfigurations and vulnerabilities in Kubernetes clusters. Running these scripts on a production system or in an unauthorized environment can lead to **severe security breaches, data loss, and system compromise**.
+:::danger Educational Content Only
+The information and scripts in this section are intended for **educational and security research purposes only**. They demonstrate how attackers exploit misconfigurations and vulnerabilities in Kubernetes clusters.
 
-Use this content only in a **controlled, isolated testing environment** where you have explicit permission. Misuse of this information may violate company policies or legal regulations.
+**Do not run these techniques on production systems or unauthorized environments.**
 
-**You are responsible for how you use this information. Proceed with caution.**
+Use this content only in controlled, isolated testing environments where you have explicit permission. Misuse may violate company policies or legal regulations.
+
+**You are responsible for how you use this information.**
+:::

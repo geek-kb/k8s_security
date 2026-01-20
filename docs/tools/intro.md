@@ -1,17 +1,31 @@
 ---
 sidebar_position: 1
-title: "Section Introduction"
-description: "A curated list of tools used to secure, audit, and monitor Kubernetes environments across various stages of the container lifecycle."
+title: "Kubernetes Security Tools"
+description: "Comprehensive guide to Kubernetes security tools including Trivy, Falco, kube-bench, OPA Gatekeeper, Kyverno, and other CKS-required tools for scanning, monitoring, and policy enforcement."
+keywords:
+  - kubernetes security tools
+  - k8s security scanner
+  - trivy kubernetes
+  - falco kubernetes
+  - kube-bench
+  - OPA gatekeeper
+  - kyverno
+  - kubernetes vulnerability scanner
+  - container security tools
+  - CKS tools
 sidebar_class_name: hidden
+image: /img/k8s-security-social-card.png
 ---
 
-# Security Tooling for Kubernetes
+# Kubernetes Security Tools
 
 Securing Kubernetes requires more than just applying best practices—it also involves using specialized tools to **detect misconfigurations, prevent supply chain risks, monitor runtime behavior, and audit compliance**. This section provides an overview of popular open-source tools used by Kubernetes security professionals, with a focus on **practical usage and integration** into real-world environments.
 
 This list includes tools for vulnerability scanning, access control, runtime security, configuration auditing, and more. These tools are referenced throughout this site and can be integrated into CI/CD pipelines or deployed in production clusters to enhance visibility and reduce risk.
 
-> If you're preparing for the **Certified Kubernetes Security Specialist (CKS)** exam, many of these tools are either required or highly recommended. CKS-required tools are clearly marked.
+:::tip CKS Exam Preparation
+If you're preparing for the **Certified Kubernetes Security Specialist (CKS)** exam, many of these tools are either required or highly recommended. CKS-required tools are clearly marked.
+:::
 
 ---
 
@@ -89,7 +103,7 @@ Audit live clusters and YAML specs to detect insecure configurations.
 
 ### [Kube-Hunter](/docs/best_practices/cluster_setup_and_hardening/network_security/kube_hunter)
 
-Actively probes clusters to find security issues from an attacker’s perspective.
+Actively probes clusters to find security issues from an attacker's perspective.
 
 ### [KubeAudit](/docs/best_practices/cluster_setup_and_hardening/pod_security/kubeaudit)
 
@@ -187,6 +201,8 @@ Scans IaC to prevent misconfigurations from reaching production environments.
 
 ## Conclusion
 
-Using the right tools is crucial for securing Kubernetes across its entire lifecycle—from development and CI/CD to deployment and runtime. In this section, you’ll find detailed breakdowns of how these tools work, how to configure them securely, and how they support security best practices discussed throughout the site.
+Using the right tools is crucial for securing Kubernetes across its entire lifecycle—from development and CI/CD to deployment and runtime. In this section, you'll find detailed breakdowns of how these tools work, how to configure them securely, and how they support security best practices discussed throughout the site.
 
-> For CKS candidates, it is essential to become familiar with the tools that are marked as (**CKS-required**). These tools appear frequently in exam scenarios and real-world production environments alike.
+:::note CKS Candidates
+It is essential to become familiar with the tools marked as **CKS-required**. These tools appear frequently in exam scenarios and real-world production environments alike.
+:::
