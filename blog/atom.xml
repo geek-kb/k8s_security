@@ -5,8 +5,9 @@
     <updated>2025-12-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://k8s-security.guru/blog/"/>
-    <subtitle>K8s Security Guide Blog</subtitle>
+    <subtitle>Latest Kubernetes security articles, CKS updates, and best practices</subtitle>
     <icon>https://k8s-security.guru/img/favicon.ico</icon>
+    <rights>Copyright © 2026 K8s Security Guide by Itai Ganot</rights>
     <entry>
         <title type="html"><![CDATA[CKS Curriculum and Tooling Updates]]></title>
         <id>https://k8s-security.guru/blog/cks-update-history/</id>
