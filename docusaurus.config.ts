@@ -319,6 +319,7 @@ const config: Config = {
       items: [
         {to: "/docs/intro", label: "Docs", position: "left"},
         {to: "/blog", label: "Blog", position: "left"},
+        {to: "/about", label: "About", position: "left"},
         {
           href: "https://github.com/geek-kb/k8s_security",
           label: "GitHub",
@@ -352,6 +353,7 @@ const config: Config = {
         {
           title: "Community",
           items: [
+            {label: "About the Author", to: "/about"},
             {label: "GitHub", href: "https://github.com/geek-kb/k8s_security"},
             {label: "Contribute", href: "https://github.com/geek-kb/k8s_security/blob/main/CONTRIBUTING.md"},
           ],
