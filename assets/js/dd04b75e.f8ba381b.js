@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkk_8_s_security=globalThis.webpackChunkk_8_s_security||[]).push([[1672],{3024(t){t.exports=JSON.parse('{"authors":[{"name":"Itai Ganot","title":"Site Creator","url":"https://github.com/geek-kb","key":"itai","page":null,"count":1}]}')}}]);
