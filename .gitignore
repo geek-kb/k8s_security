@@ -50,7 +50,7 @@ coverage/
 
 # Ignore local npm package files
 *.tgz
-package-lock.json
+# package-lock.json - keep committed for reproducible builds
 
 
 # Snyk Security Extension - AI Rules (auto-generated)
