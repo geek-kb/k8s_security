@@ -13,12 +13,17 @@ interface RelatedArticle {
   path: string;
 }
 
+// Helper to normalize paths for comparison (ensure trailing slash)
+function normalizePath(path: string): string {
+  return path.endsWith("/") ? path : path + "/";
+}
+
 // Fallback related articles by path prefix (used when frontmatter is missing)
 const fallbackRelated: Record<string, RelatedArticle[]> = {
   "/docs/fundamentals/": [
     {title: "Understanding Attack Surfaces", path: "/docs/fundamentals/understanding_k8s_attack_surface/"},
     {title: "The 4C's of Cloud Native Security", path: "/docs/fundamentals/the_4_c_cloud_native_security/"},
-    {title: "Authentication Methods", path: "/docs/fundamentals/authentication/authentication_methods/"},
+    {title: "RBAC Authorization", path: "/docs/fundamentals/authorization/rbac/"},
   ],
   "/docs/attack_vectors/": [
     {title: "Best Practices Overview", path: "/docs/best_practices/intro/"},
@@ -114,13 +119,15 @@ function getRelatedArticles(
   frontmatter: Record<string, unknown>
 ): RelatedArticle[] {
   const related: RelatedArticle[] = [];
+  const normalizedPermalink = normalizePath(permalink);
 
   // 1. First priority: Use frontmatter 'related' field if available
   if (frontmatter.related && Array.isArray(frontmatter.related)) {
     for (const path of frontmatter.related) {
-      if (typeof path === "string" && path !== permalink) {
-        const title = pathToTitle[path] || path.split("/").slice(-2, -1)[0].replace(/_/g, " ");
-        related.push({title, path});
+      if (typeof path === "string" && normalizePath(path) !== normalizedPermalink) {
+        const normalizedPath = normalizePath(path);
+        const title = pathToTitle[normalizedPath] || pathToTitle[path] || path.split("/").slice(-2, -1)[0].replace(/_/g, " ");
+        related.push({title, path: normalizedPath});
       }
     }
   }
@@ -133,9 +140,10 @@ function getRelatedArticles(
   // 3. Fall back to path-based matching if needed
   if (related.length < 3) {
     for (const [prefix, articles] of Object.entries(fallbackRelated)) {
-      if (permalink.startsWith(prefix) && !permalink.endsWith("/intro/")) {
+      if (normalizedPermalink.startsWith(prefix) && !normalizedPermalink.endsWith("/intro/")) {
         for (const article of articles) {
-          if (article.path !== permalink && !related.some((r) => r.path === article.path)) {
+          const normalizedArticlePath = normalizePath(article.path);
+          if (normalizedArticlePath !== normalizedPermalink && !related.some((r) => normalizePath(r.path) === normalizedArticlePath)) {
             related.push(article);
             if (related.length >= 4) break;
           }
