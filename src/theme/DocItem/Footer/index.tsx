@@ -34,16 +34,16 @@ const relatedArticles: Record<string, Array<{title: string; path: string}>> = {
   "/docs/best_practices/cluster_setup_and_hardening/": [
     {title: "Network Policies", path: "/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies"},
     {title: "Pod Security Standards", path: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards"},
-    {title: "API Server Security", path: "/docs/best_practices/cluster_setup_and_hardening/api_server_security/intro"},
+    {title: "API Server Security", path: "/docs/best_practices/cluster_setup_and_hardening/api_server_security/compromised_api_server_mitigation"},
   ],
   "/docs/best_practices/cluster_setup_and_hardening/network_security/": [
     {title: "Calico CNI", path: "/docs/best_practices/cluster_setup_and_hardening/network_security/calico"},
     {title: "Cilium CNI", path: "/docs/best_practices/cluster_setup_and_hardening/network_security/cilium"},
   ],
   "/docs/best_practices/cluster_setup_and_hardening/pod_security/": [
-    {title: "Security Context", path: "/docs/best_practices/cluster_setup_and_hardening/pod_security/security_context"},
-    {title: "Seccomp Profiles", path: "/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp"},
-    {title: "AppArmor", path: "/docs/best_practices/cluster_setup_and_hardening/pod_security/apparmor"},
+    {title: "Pod Security Standards", path: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards"},
+    {title: "Seccomp Profiles", path: "/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods"},
+    {title: "AppArmor Profiles", path: "/docs/best_practices/cluster_setup_and_hardening/pod_security/app_armor_profiles"},
   ],
   "/docs/best_practices/supply_chain_security/": [
     {title: "Image Signing with Cosign", path: "/docs/best_practices/supply_chain_security/cosign"},

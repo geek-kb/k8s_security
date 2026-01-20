@@ -87,12 +87,18 @@ const config: Config = {
 
   plugins: [
     [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
+      require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         indexDocs: true,
         indexBlog: true,
-        indexPages: true,
+        indexPages: false,
         language: "en",
+        hashed: true,
+        docsRouteBasePath: "/docs",
+        blogRouteBasePath: "/blog",
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
       },
     ],
     [

@@ -22,7 +22,7 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "AppArmor",
     definition: "A Linux kernel security module that restricts programs' capabilities with per-program profiles. Can be applied to pods to limit container actions.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/apparmor",
+    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/app_armor_profiles",
     tags: ["CKS", "Runtime"],
   },
   {
@@ -124,7 +124,7 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Encryption at Rest",
     definition: "Encrypting data stored on disk, including Kubernetes Secrets stored in etcd. Configured via EncryptionConfiguration.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/secrets_management/intro",
+    link: "/docs/best_practices/cluster_setup_and_hardening/secrets_management/sealed_secrets",
     tags: ["CKS", "Secrets"],
   },
   {
@@ -232,7 +232,7 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Pod Security Admission (PSA)",
     definition: "Built-in Kubernetes admission controller that enforces Pod Security Standards at the namespace level. Replaced PodSecurityPolicy in Kubernetes 1.25+.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_admission",
+    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards",
     tags: ["CKS", "Pod"],
   },
   {
@@ -270,7 +270,7 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Seccomp",
     definition: "Secure Computing Mode — a Linux kernel feature that restricts the system calls a process can make, reducing attack surface.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp",
+    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods",
     tags: ["CKS", "Runtime"],
   },
   {
@@ -282,7 +282,7 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Security Context",
     definition: "Pod and container settings that define privilege and access control, including runAsUser, runAsNonRoot, readOnlyRootFilesystem, and capabilities.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/security_context",
+    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards",
     tags: ["CKS", "Pod"],
   },
   {
