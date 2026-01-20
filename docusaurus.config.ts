@@ -1,10 +1,10 @@
 import type {Config} from "@docusaurus/types";
-import {themes as prismThemes} from 'prism-react-renderer';
+import {themes as prismThemes} from "prism-react-renderer";
 
 const config: Config = {
   title: "K8s Security",
   tagline: "Mastering Kubernetes Security Best Practices",
-  url: "https://k8s-security.geek-kb.com",
+  url: "https://k8s-security.guru",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -22,22 +22,26 @@ const config: Config = {
           changefreq: "weekly",
           priority: 0.7,
           filename: "sitemap.xml",
-          ignorePatterns: ['/tags/**'],
-          lastmod: 'date',
+          ignorePatterns: ["/tags/**"],
+          lastmod: "date",
           createSitemapItems: async (params: any) => {
             const {defaultCreateSitemapItems, ...rest} = params;
             const items = await defaultCreateSitemapItems(rest);
-            
+
             // Boost priority for important pages
             return items.map((item: any) => {
-              if (item.url.includes('/docs/intro') || 
-                  item.url.includes('/docs/attack_vectors/intro') ||
-                  item.url.includes('/docs/best_practices/intro') ||
-                  item.url.includes('/docs/fundamentals/intro')) {
-                return {...item, priority: 0.9, changefreq: 'weekly'};
+              if (
+                item.url.includes("/docs/intro") ||
+                item.url.includes("/docs/attack_vectors/intro") ||
+                item.url.includes("/docs/best_practices/intro") ||
+                item.url.includes("/docs/fundamentals/intro")
+              ) {
+                return {...item, priority: 0.9, changefreq: "weekly"};
               }
-              if (item.url.includes('/docs/attack_vectors/') ||
-                  item.url.includes('/docs/best_practices/')) {
+              if (
+                item.url.includes("/docs/attack_vectors/") ||
+                item.url.includes("/docs/best_practices/")
+              ) {
                 return {...item, priority: 0.8};
               }
               return item;
@@ -52,7 +56,7 @@ const config: Config = {
           sidebarCollapsible: true,
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          editUrl: 'https://github.com/geek-kb/k8s_security/edit/main/',
+          editUrl: "https://github.com/geek-kb/k8s_security/edit/main/",
         },
         blog: {
           showReadingTime: false,
@@ -102,18 +106,20 @@ const config: Config = {
         type: "application/ld+json",
       },
       innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: 'K8s Security Guide',
-        description: 'Comprehensive Kubernetes security documentation and best practices for CKS certification',
-        url: 'https://k8s-security.geek-kb.com',
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "K8s Security Guide",
+        description:
+          "Comprehensive Kubernetes security documentation and best practices for CKS certification",
+        url: "https://k8s-security.guru",
         author: {
-          '@type': 'Organization',
-          name: 'geek-kb',
-          url: 'https://github.com/geek-kb'
+          "@type": "Organization",
+          name: "geek-kb",
+          url: "https://github.com/geek-kb",
         },
-        keywords: 'kubernetes security, CKS, container security, kubernetes hardening, pod security',
-        inLanguage: 'en-US',
+        keywords:
+          "kubernetes security, CKS, container security, kubernetes hardening, pod security",
+        inLanguage: "en-US",
       }),
     },
     {
@@ -122,17 +128,18 @@ const config: Config = {
         type: "application/ld+json",
       },
       innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        headline: 'Kubernetes Security Best Practices',
-        description: 'Learn Kubernetes security from attack vectors to mitigation strategies, covering CKS exam topics',
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        headline: "Kubernetes Security Best Practices",
+        description:
+          "Learn Kubernetes security from attack vectors to mitigation strategies, covering CKS exam topics",
         publisher: {
-          '@type': 'Organization',
-          name: 'geek-kb',
+          "@type": "Organization",
+          name: "geek-kb",
         },
         about: {
-          '@type': 'Thing',
-          name: 'Kubernetes Security',
+          "@type": "Thing",
+          name: "Kubernetes Security",
         },
       }),
     },
@@ -156,22 +163,47 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/k8s-security-social-card.png', // Default social card image
+    image: "img/k8s-security-social-card.png", // Default social card image
     metadata: [
-      {name: 'keywords', content: 'kubernetes security, k8s security, kubernetes best practices, CKS, certified kubernetes security, kubernetes hardening, container security, pod security, RBAC kubernetes, kubernetes vulnerabilities, kubernetes attack vectors, kubernetes security tools, kubernetes compliance, CIS kubernetes'},
-      {name: 'description', content: 'Comprehensive guide to Kubernetes security best practices, attack vectors, and security tools. Master CKS certification topics including RBAC, network policies, pod security standards, runtime security, and kubernetes hardening techniques.'},
-      {name: 'author', content: 'geek-kb'},
-      {property: 'og:type', content: 'website'},
-      {property: 'og:image', content: 'https://k8s-security.geek-kb.com/img/k8s-security-social-card.png'},
-      {property: 'og:image:width', content: '1200'},
-      {property: 'og:image:height', content: '630'},
-      {property: 'og:image:alt', content: 'Kubernetes Security Best Practices Guide - Master K8s Security'},
-      {property: 'og:site_name', content: 'K8s Security Guide'},
-      {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:image', content: 'https://k8s-security.geek-kb.com/img/k8s-security-social-card.png'},
-      {name: 'twitter:image:alt', content: 'Kubernetes Security Best Practices Guide'},
-      {name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'},
-      {name: 'googlebot', content: 'index, follow'},
+      {
+        name: "keywords",
+        content:
+          "kubernetes security, k8s security, kubernetes best practices, CKS, certified kubernetes security, kubernetes hardening, container security, pod security, RBAC kubernetes, kubernetes vulnerabilities, kubernetes attack vectors, kubernetes security tools, kubernetes compliance, CIS kubernetes",
+      },
+      {
+        name: "description",
+        content:
+          "Comprehensive guide to Kubernetes security best practices, attack vectors, and security tools. Master CKS certification topics including RBAC, network policies, pod security standards, runtime security, and kubernetes hardening techniques.",
+      },
+      {name: "author", content: "geek-kb"},
+      {property: "og:type", content: "website"},
+      {
+        property: "og:image",
+        content: "https://k8s-security.guru/img/k8s-security-social-card.png",
+      },
+      {property: "og:image:width", content: "1200"},
+      {property: "og:image:height", content: "630"},
+      {
+        property: "og:image:alt",
+        content:
+          "Kubernetes Security Best Practices Guide - Master K8s Security",
+      },
+      {property: "og:site_name", content: "K8s Security Guide"},
+      {name: "twitter:card", content: "summary_large_image"},
+      {
+        name: "twitter:image",
+        content: "https://k8s-security.guru/img/k8s-security-social-card.png",
+      },
+      {
+        name: "twitter:image:alt",
+        content: "Kubernetes Security Best Practices Guide",
+      },
+      {
+        name: "robots",
+        content:
+          "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
+      {name: "googlebot", content: "index, follow"},
     ],
     navbar: {
       title: "K8s Security",
