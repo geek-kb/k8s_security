@@ -153,7 +153,10 @@ function getRelatedArticles(
     }
   }
 
-  return related.slice(0, 3);
+  // Final safety filter: ensure current page is never in the list
+  return related
+    .filter((article) => normalizePath(article.path) !== normalizedPermalink)
+    .slice(0, 3);
 }
 
 export default function FooterWrapper(props: Props): JSX.Element {
