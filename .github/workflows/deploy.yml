@@ -3,9 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Deploy when changes are pushed to main
+      - main
     paths-ignore:
-      - ".github/**"
       - ".gitignore"
       - "README.md"
       - "LICENSE"
@@ -19,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -27,17 +26,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: "npm"
 
       - name: Install dependencies
-        run: |
-          rm -f package-lock.json
-          npm install
+        run: npm ci
 
       - name: Build Docusaurus site
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
