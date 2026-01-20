@@ -160,11 +160,13 @@ export default function Home(): JSX.Element {
     description:
       "Comprehensive guide to Kubernetes security best practices, attack vectors, and hardening techniques. Prepare for CKS certification with in-depth documentation.",
     url: "https://k8s-security.guru/",
+    image: "https://k8s-security.guru/img/k8s-security-social-card.png",
     mainEntity: {
       "@type": "Article",
       headline: "Kubernetes Security Best Practices and CKS Certification Guide",
       description:
         "Learn Kubernetes security from fundamentals to advanced techniques. Covers RBAC, network policies, Pod Security Standards, and more.",
+      image: "https://k8s-security.guru/img/k8s-security-social-card.png",
       author: {
         "@type": "Person",
         name: "Itai Ganot",

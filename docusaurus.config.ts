@@ -103,7 +103,7 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         name: "google-site-verification",
-        content: "YOUR_VERIFICATION_CODE_HERE", // Get this from Google Search Console
+        content: "yrB3LatWvI_jt5pwLIMIoYLq_VXr2CjHgpoZdWDjFw0",
       },
     },
     // Canonical URL for domain migration
