@@ -24,10 +24,6 @@ const config: Config = {
           filename: "sitemap.xml",
           ignorePatterns: [
             "/tags/**",
-            "/blog/**",
-            "/markdown-page",
-            "/docs/tutorial**",
-            "/docs/category/tutorial**",
           ],
           lastmod: "date",
           createSitemapItems: async (params: any) => {
@@ -64,15 +60,15 @@ const config: Config = {
           showLastUpdateTime: true,
           editUrl: "https://github.com/geek-kb/k8s_security/edit/main/",
         },
-        blog: false,
-        //     {
-        //          showReadingTime: false,
-        //          onInlineAuthors: "ignore",
-        //          routeBasePath: "blog",
-        //          blogSidebarTitle: "Under Construction",
-        //          blogSidebarCount: "ALL",
-        //          postsPerPage: 1,
-        //      },
+        blog:
+          {
+            showReadingTime: false,
+            onInlineAuthors: "ignore",
+            routeBasePath: "blog",
+            blogSidebarTitle: "Under Construction",
+            blogSidebarCount: "ALL",
+            postsPerPage: 1,
+          },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -85,7 +81,7 @@ const config: Config = {
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         indexDocs: true,
-        indexBlog: false,
+        indexBlog: true,
         indexPages: false, // Homepage is just a redirect, no content to index
         language: "en",
       },
@@ -222,7 +218,7 @@ const config: Config = {
       items: [
         {to: "/docs/intro", label: "Docs", position: "left"},
         // { to: '/guides/intro', label: 'Guides', position: 'left' },
-        //{to: "/blog", label: "Blog", position: "left"},
+        {to: "/blog", label: "Blog", position: "left"},
         {
           href: "https://github.com/geek-kb/k8s_security",
           label: "GitHub",
