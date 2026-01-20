@@ -5,11 +5,11 @@ on:
     branches:
       - main # Deploy when changes are pushed to main
     paths-ignore:
-      - '.github/**'
-      - '.gitignore'
-      - 'README.md'
-      - 'LICENSE'
-      - '.vscode/**'
+      - ".github/**"
+      - ".gitignore"
+      - "README.md"
+      - "LICENSE"
+      - ".vscode/**"
 
 permissions:
   contents: write
@@ -26,10 +26,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          rm -f package-lock.json
+          npm install
 
       - name: Build Docusaurus site
         run: npm run build

@@ -108,36 +108,12 @@ const config: Config = {
         debug: false,
         offlineModeActivationStrategies: ["appInstalled", "standalone", "queryString"],
         pwaHead: [
-          {
-            tagName: "link",
-            rel: "icon",
-            href: "/img/logo.svg",
-          },
-          {
-            tagName: "link",
-            rel: "manifest",
-            href: "/manifest.json",
-          },
-          {
-            tagName: "meta",
-            name: "theme-color",
-            content: "#22c55e",
-          },
-          {
-            tagName: "meta",
-            name: "apple-mobile-web-app-capable",
-            content: "yes",
-          },
-          {
-            tagName: "meta",
-            name: "apple-mobile-web-app-status-bar-style",
-            content: "#22c55e",
-          },
-          {
-            tagName: "link",
-            rel: "apple-touch-icon",
-            href: "/img/logo.svg",
-          },
+          {tagName: "link", rel: "icon", href: "/img/logo.svg"},
+          {tagName: "link", rel: "manifest", href: "/manifest.json"},
+          {tagName: "meta", name: "theme-color", content: "#22c55e"},
+          {tagName: "meta", name: "apple-mobile-web-app-capable", content: "yes"},
+          {tagName: "meta", name: "apple-mobile-web-app-status-bar-style", content: "#22c55e"},
+          {tagName: "link", rel: "apple-touch-icon", href: "/img/logo.svg"},
         ],
       },
     ],
