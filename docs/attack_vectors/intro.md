@@ -59,6 +59,9 @@ This section explores common Kubernetes attack vectors and exploitation techniqu
 - **[Compromised Helm Charts](/docs/attack_vectors/supply_chain_attacks)**: Installing malicious Helm charts with backdoors
 - **[Exploiting Insecure CSI Drivers](/docs/attack_vectors/insecure_csi_drivers)**: Abusing storage drivers to access volumes
 
+### Cloud Infrastructure Attacks
+- **[Cloud Metadata Service Abuse](/docs/attack_vectors/cloud_metadata_service_abuse)**: Stealing cloud IAM credentials via IMDS from pods
+
 ### Policy and Configuration Attacks
 - **[Misconfigured Admission Controllers](/docs/attack_vectors/misconfigured_admission_controllers)**: Bypassing security policies via webhook exploitation
 - **[Denial of Service (DoS) Attacks](/docs/attack_vectors/ddos_attacks)**: Exhausting cluster resources
