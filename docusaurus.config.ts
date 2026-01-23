@@ -301,6 +301,15 @@ const config: Config = {
         gtag('config', 'G-QNPKC33Q9L');
       `,
     },
+    // Google AdSense
+    {
+      tagName: "script",
+      attributes: {
+        async: "true",
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8445622451057816",
+        crossorigin: "anonymous",
+      },
+    },
   ],
 
   themeConfig: {
