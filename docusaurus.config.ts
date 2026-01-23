@@ -126,12 +126,20 @@ const config: Config = {
   ],
 
   headTags: [
-    // Google Search Console verification - UPDATE THIS with your actual verification code
+    // Google Search Console verification
     {
       tagName: "meta",
       attributes: {
         name: "google-site-verification",
         content: "yrB3LatWvI_jt5pwLIMIoYLq_VXr2CjHgpoZdWDjFw0",
+      },
+    },
+    // Google AdSense account verification
+    {
+      tagName: "meta",
+      attributes: {
+        name: "google-adsense-account",
+        content: "ca-pub-8445622451057816",
       },
     },
     // Canonical URL for domain migration
