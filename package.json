@@ -5,8 +5,9 @@
   "homepage": "https://k8s-security.guru",
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "rm -rf build && docusaurus build",
+    "count-docs": "node scripts/count-docs.js",
+    "start": "npm run count-docs && docusaurus start",
+    "build": "npm run count-docs && rm -rf build && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

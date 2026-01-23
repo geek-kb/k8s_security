@@ -4,6 +4,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import styles from "./index.module.css";
+import docCount from "../data/doc-count.json";
 
 const features = [
   {
@@ -37,7 +38,7 @@ const features = [
 ];
 
 const stats = [
-  {value: "1200+", label: "Documentation Pages"},
+  {value: `${docCount.count}+`, label: "Documentation Pages"},
   {value: "6", label: "CKS Domains Covered"},
   {value: "50+", label: "Security Topics"},
 ];

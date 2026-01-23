@@ -2,7 +2,7 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
-    "jsx": "react-jsx", // Ensure React JSX support
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -10,7 +10,8 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "target": "ES2020",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "resolveJsonModule": true
   },
   "exclude": [
     ".docusaurus",
