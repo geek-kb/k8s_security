@@ -87,6 +87,38 @@ const config: Config = {
 
   plugins: [
     [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          // Redirect old guides URLs to relevant docs
+          {
+            from: "/guides/intro",
+            to: "/docs/intro",
+          },
+          {
+            from: "/guides/intro/",
+            to: "/docs/intro",
+          },
+          {
+            from: "/guides/certificates/issue_certificate_for_k8s_user",
+            to: "/docs/fundamentals/authentication/intro",
+          },
+          {
+            from: "/guides/certificates/issue_certificate_for_k8s_user/",
+            to: "/docs/fundamentals/authentication/intro",
+          },
+          {
+            from: "/guides/getting_started",
+            to: "/docs/intro",
+          },
+          {
+            from: "/guides/getting_started/",
+            to: "/docs/intro",
+          },
+        ],
+      },
+    ],
+    [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         indexDocs: true,
