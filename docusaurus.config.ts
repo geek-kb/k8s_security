@@ -22,7 +22,20 @@ const config: Config = {
           changefreq: "weekly",
           priority: 0.7,
           filename: "sitemap.xml",
-          ignorePatterns: ["/tags/**"],
+          ignorePatterns: [
+            // Exclude all tag pages
+            "/tags/**",
+            "/docs/tags/**",
+            "/blog/tags/**",
+            // Exclude pagination and utility pages
+            "/blog/page/**",
+            "/search/**",
+            // Exclude auto-generated listing pages
+            "/blog/archive/**",
+            "/blog/authors/**",
+            // Exclude category pages (auto-generated)
+            "/docs/category/**",
+          ],
           lastmod: "date",
           createSitemapItems: async (params: any) => {
             const {defaultCreateSitemapItems, ...rest} = params;
@@ -91,29 +104,18 @@ const config: Config = {
       {
         redirects: [
           // Redirect old guides URLs to relevant docs
+          // Note: trailingSlash: true handles both /path and /path/ automatically
           {
             from: "/guides/intro",
-            to: "/docs/intro",
-          },
-          {
-            from: "/guides/intro/",
-            to: "/docs/intro",
+            to: "/docs/intro/",
           },
           {
             from: "/guides/certificates/issue_certificate_for_k8s_user",
-            to: "/docs/fundamentals/authentication/intro",
-          },
-          {
-            from: "/guides/certificates/issue_certificate_for_k8s_user/",
-            to: "/docs/fundamentals/authentication/intro",
+            to: "/docs/fundamentals/authentication/certificates/",
           },
           {
             from: "/guides/getting_started",
-            to: "/docs/intro",
-          },
-          {
-            from: "/guides/getting_started/",
-            to: "/docs/intro",
+            to: "/docs/intro/",
           },
         ],
       },
@@ -172,14 +174,6 @@ const config: Config = {
       attributes: {
         name: "google-adsense-account",
         content: "ca-pub-8445622451057816",
-      },
-    },
-    // Canonical URL for domain migration
-    {
-      tagName: "link",
-      attributes: {
-        rel: "canonical",
-        href: "https://k8s-security.guru/",
       },
     },
     // WebSite structured data

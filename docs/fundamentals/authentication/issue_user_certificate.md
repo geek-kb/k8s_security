@@ -1,10 +1,18 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 title: "How to Issue a Certificate for a Kubernetes User"
 description: "Step-by-step guide on generating and issuing a certificate for a Kubernetes user, including creating roles and configuring kubeconfig."
+keywords: [kubernetes user certificate, certificate signing request, CSR, kubeconfig, kubectl credentials, x509 authentication, kubernetes authentication, RBAC, role binding, CKS]
+tags: [fundamental, authentication, certificates, rbac, CKS]
+related:
+  - /docs/fundamentals/authentication/certificates/
+  - /docs/fundamentals/authentication/authentication_methods/
+  - /docs/fundamentals/authorization/rbac/
 ---
 
 # How to Issue a Certificate for a Kubernetes User
+
+**Required knowledge for the CKS certification.**
 
 A few steps are required in order to get a normal user to be able to authenticate and invoke an API. First, this user must have a certificate issued by the Kubernetes cluster, and then present that certificate to the Kubernetes API.
 
