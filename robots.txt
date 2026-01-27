@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# Exclude low-value pages from crawling
+Disallow: /blog/tags/
+Disallow: /docs/tags/
+Disallow: /search/
+Disallow: /blog/page/
+Disallow: /blog/archive/
+Disallow: /blog/authors/
+Disallow: /docs/category/
+
+# Allow important content explicitly
+Allow: /docs/
+Allow: /blog/cks-update-history/
+
 Sitemap: https://k8s-security.guru/sitemap.xml

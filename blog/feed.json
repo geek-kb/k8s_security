@@ -21,15 +21,6 @@
                 "Kubernetes",
                 "Certification"
             ]
-        },
-        {
-            "id": "https://k8s-security.guru/blog/under-construction/",
-            "content_html": "<p>We are currently working on creating valuable content for our blog. Stay tuned for insightful articles about <strong>Kubernetes security best practices</strong>, <strong>cluster hardening</strong>, <strong>attack vector mitigations</strong>, and more.</p>\n<p>In the meantime, feel free to explore our <a href=\"https://k8s-security.guru/\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation</a>.</p>\n<p>See you soon!</p>",
-            "url": "https://k8s-security.guru/blog/under-construction/",
-            "title": "Blog Under Construction",
-            "summary": "Stay tuned for insightful articles about Kubernetes security best practices.",
-            "date_modified": "2025-03-10T19:23:46.000Z",
-            "tags": []
         }
     ]
 }

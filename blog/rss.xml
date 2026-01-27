@@ -117,15 +117,5 @@ This post tracks <strong>official updates</strong> to the CKS curriculum and too
             <category>Kubernetes</category>
             <category>Certification</category>
         </item>
-        <item>
-            <title><![CDATA[Blog Under Construction]]></title>
-            <link>https://k8s-security.guru/blog/under-construction/</link>
-            <guid>https://k8s-security.guru/blog/under-construction/</guid>
-            <pubDate>Mon, 10 Mar 2025 19:23:46 GMT</pubDate>
-            <description><![CDATA[Stay tuned for insightful articles about Kubernetes security best practices.]]></description>
-            <content:encoded><![CDATA[<p>We are currently working on creating valuable content for our blog. Stay tuned for insightful articles about <strong>Kubernetes security best practices</strong>, <strong>cluster hardening</strong>, <strong>attack vector mitigations</strong>, and more.</p>
-<p>In the meantime, feel free to explore our <a href="https://k8s-security.guru/" target="_blank" rel="noopener noreferrer">Documentation</a>.</p>
-<p>See you soon!</p>]]></content:encoded>
-        </item>
     </channel>
 </rss>

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkk_8_s_security=globalThis.webpackChunkk_8_s_security||[]).push([[7472],{5513(s){s.exports=JSON.parse('{"title":"Recent Posts","items":[{"title":"CKS Curriculum and Tooling Updates","permalink":"/blog/cks-update-history","unlisted":false,"date":"2025-12-12T00:00:00.000Z"}]}')}}]);
