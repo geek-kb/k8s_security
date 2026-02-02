@@ -59,10 +59,10 @@ const books: Book[] = [
   },
   {
     title: "The Kubernetes Book",
-    author: "Nigel Poulton, Pushkar Joglekar",
-    asin: "1835464459",
+    author: "Nigel Poulton",
+    asin: "1916585000",
     description:
-      "Foundational and advanced Kubernetes concepts including RBAC, workload security, and hands-on exercises. Updated 3rd edition with modern security practices.",
+      "The #1 best-selling Kubernetes book, updated for 2025. Covers architecture, Pods, Deployments, Services, networking, and security with hands-on exercises.",
     category: "Kubernetes Fundamentals",
   },
   {
@@ -94,7 +94,7 @@ const books: Book[] = [
   {
     title: "The Developer's Playbook for Large Language Model Security",
     author: "Steve Wilson",
-    asin: "1098162207",
+    asin: "109816220X",
     description:
       "Practical guide to LLM security from the creator of OWASP Top 10 for LLMs. Covers prompt injection, data exposure, trust boundaries, and building secure AI applications.",
     category: "AI/ML Security",

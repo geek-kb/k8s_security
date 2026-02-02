@@ -28,13 +28,25 @@ Topics covered:
 
 ```
 k8s_security/
-├── .github/workflows/       # GitHub Actions for CI/CD
-├── blog/                    # Blog posts
-├── docs/                    # Documentation articles
-├── src/                     # Custom React components and pages
-├── static/                  # Static assets (images, files)
+├── .github/workflows/       # GitHub Actions for CI/CD deployment
+├── blog/                    # Blog posts (Markdown)
+├── docs/                    # Documentation articles (Markdown)
+│   ├── attack_vectors/      # Security attack scenarios
+│   ├── best_practices/      # Security mitigations and guidance
+│   ├── fundamentals/        # Core security concepts
+│   └── tools/               # Security tools documentation
+├── scripts/                 # Utility scripts (doc counter)
+├── src/
+│   ├── components/          # Reusable React components
+│   ├── css/                 # Global custom styles
+│   ├── data/                # Generated data (doc count)
+│   ├── pages/               # Static pages (about, books, glossary, practice)
+│   └── theme/               # Docusaurus theme overrides
+├── static/                  # Static assets (images, robots.txt, manifest)
 ├── docusaurus.config.ts     # Main Docusaurus configuration
+├── sidebars.ts              # Documentation sidebar configuration
 ├── package.json             # Project dependencies and scripts
+├── tsconfig.json            # TypeScript configuration
 └── README.md                # This file
 ```
 
