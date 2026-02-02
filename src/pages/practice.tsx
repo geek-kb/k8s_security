@@ -316,7 +316,7 @@ export default function Practice(): JSX.Element {
           name="keywords"
           content="CKS practice questions, kubernetes security quiz, CKS exam prep, kubernetes security test, CKS study guide"
         />
-        <link rel="canonical" href="https://k8s-security.guru/practice" />
+        <link rel="canonical" href="https://k8s-security.guru/practice/" />
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>

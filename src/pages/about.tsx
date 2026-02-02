@@ -45,7 +45,7 @@ export default function About(): JSX.Element {
     >
       <Head>
         <meta name="keywords" content="Itai Ganot, k8s security author, kubernetes security expert, DevOps engineer" />
-        <link rel="canonical" href="https://k8s-security.guru/about" />
+        <link rel="canonical" href="https://k8s-security.guru/about/" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

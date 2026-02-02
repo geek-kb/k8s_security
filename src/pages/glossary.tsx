@@ -393,7 +393,7 @@ export default function Glossary(): JSX.Element {
           name="keywords"
           content="kubernetes glossary, k8s security terms, RBAC definition, pod security standards, kubernetes terminology, CKS glossary, container security terms"
         />
-        <link rel="canonical" href="https://k8s-security.guru/glossary" />
+        <link rel="canonical" href="https://k8s-security.guru/glossary/" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

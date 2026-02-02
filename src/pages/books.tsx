@@ -69,9 +69,9 @@ const books: Book[] = [
   {
     title: "Container Security",
     author: "Liz Rice",
-    asin: "1492056707",
+    asin: "B0F6T216R6",
     description:
-      "Fundamental technology concepts that underpin container security, from Linux primitives to container runtimes and orchestration.",
+      "Fundamental technology concepts that underpin container security, from Linux primitives to container runtimes and orchestration. Updated 2nd edition with new chapters on supply chain security and GitOps.",
     category: "Container Security",
   },
   // Cloud Security
@@ -111,7 +111,7 @@ export default function Books(): JSX.Element {
           name="keywords"
           content="kubernetes security books, container security books, CKS study materials, kubernetes learning resources, cloud security books"
         />
-        <link rel="canonical" href="https://k8s-security.guru/books" />
+        <link rel="canonical" href="https://k8s-security.guru/books/" />
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
