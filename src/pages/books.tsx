@@ -34,19 +34,35 @@ const books: Book[] = [
   },
   {
     title: "Learning Kubernetes Security",
-    author: "Kaizhe Huang, Pranjal Jumde",
-    asin: "1839216506",
+    author: "Raul Lapaz",
+    asin: "1835886388",
     description:
-      "Comprehensive guide to securing Kubernetes clusters from build to runtime, covering authentication, authorization, network policies, and secrets management.",
+      "Comprehensive guide to securing Kubernetes clusters from build to runtime, covering authentication, authorization, network policies, secrets management, and incident response with Falco and Cilium. Updated 2nd edition.",
     category: "Kubernetes Security",
   },
-  // Kubernetes Core
+  {
+    title: "Docker and Kubernetes Security",
+    author: "Mohammad-Ali A'râbi",
+    asin: "B0F17KHFTL",
+    description:
+      "Implementing supply chain security and runtime protection for containers. Covers SBOMs, image hardening, vulnerability scanning with Trivy and Snyk, and CI/CD pipeline security. DevOps Dozen 2025 finalist.",
+    category: "Kubernetes Security",
+  },
+  // Kubernetes Fundamentals
   {
     title: "Kubernetes: Up and Running",
     author: "Brendan Burns, Joe Beda, Kelsey Hightower",
     asin: "109811020X",
     description:
       "The definitive guide to Kubernetes from its creators. Essential reading for understanding the platform before diving into security.",
+    category: "Kubernetes Fundamentals",
+  },
+  {
+    title: "The Kubernetes Book",
+    author: "Nigel Poulton, Pushkar Joglekar",
+    asin: "1835464459",
+    description:
+      "Foundational and advanced Kubernetes concepts including RBAC, workload security, and hands-on exercises. Updated 3rd edition with modern security practices.",
     category: "Kubernetes Fundamentals",
   },
   {
@@ -73,6 +89,23 @@ const books: Book[] = [
     description:
       "Fundamental technology concepts that underpin container security, from Linux primitives to container runtimes and orchestration. Updated 2nd edition with new chapters on supply chain security and GitOps.",
     category: "Container Security",
+  },
+  // AI/ML Security
+  {
+    title: "The Developer's Playbook for Large Language Model Security",
+    author: "Steve Wilson",
+    asin: "1098162207",
+    description:
+      "Practical guide to LLM security from the creator of OWASP Top 10 for LLMs. Covers prompt injection, data exposure, trust boundaries, and building secure AI applications.",
+    category: "AI/ML Security",
+  },
+  {
+    title: "Machine Learning Security Principles",
+    author: "John Paul Mueller, Rod Stephens",
+    asin: "1804618853",
+    description:
+      "Comprehensive coverage of ML security including adversarial attacks, model integrity, deepfakes, fraud detection, and ethical considerations in machine learning systems.",
+    category: "AI/ML Security",
   },
   // Cloud Security
   {
@@ -109,7 +142,7 @@ export default function Books(): JSX.Element {
       <Head>
         <meta
           name="keywords"
-          content="kubernetes security books, container security books, CKS study materials, kubernetes learning resources, cloud security books"
+          content="kubernetes security books, container security books, CKS study materials, kubernetes learning resources, cloud security books, AI security books, LLM security, machine learning security"
         />
         <link rel="canonical" href="https://k8s-security.guru/books/" />
       </Head>
