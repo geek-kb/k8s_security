@@ -4,6 +4,25 @@ import Head from "@docusaurus/Head";
 import styles from "./about.module.css";
 
 export default function Terms(): JSX.Element {
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://k8s-security.guru/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Terms of Service",
+        item: "https://k8s-security.guru/terms/",
+      },
+    ],
+  };
+
   return (
     <Layout
       title="Terms of Service | K8s Security Guide"
@@ -11,6 +30,9 @@ export default function Terms(): JSX.Element {
     >
       <Head>
         <link rel="canonical" href="https://k8s-security.guru/terms/" />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>

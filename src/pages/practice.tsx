@@ -306,6 +306,61 @@ export default function Practice(): JSX.Element {
     setShowExplanation(false);
   };
 
+  // Quiz structured data for SEO
+  const quizStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    name: "CKS Practice Questions - Kubernetes Security Quiz",
+    description: "Test your Kubernetes security knowledge with practice questions covering all CKS certification domains including cluster hardening, RBAC, network policies, and supply chain security.",
+    url: "https://k8s-security.guru/practice/",
+    educationalLevel: "Advanced",
+    learningResourceType: "Quiz",
+    assesses: [
+      "Kubernetes Security",
+      "CKS Certification",
+      "Cluster Hardening",
+      "RBAC",
+      "Network Policies",
+      "Pod Security Standards",
+      "Supply Chain Security",
+      "Runtime Security",
+    ],
+    numberOfQuestions: questions.length,
+    educationalAlignment: {
+      "@type": "AlignmentObject",
+      alignmentType: "teaches",
+      educationalFramework: "CKS Certification",
+      targetName: "Certified Kubernetes Security Specialist",
+    },
+    provider: {
+      "@type": "Organization",
+      name: "K8s Security Guide",
+      url: "https://k8s-security.guru",
+    },
+    isAccessibleForFree: true,
+    inLanguage: "en-US",
+  };
+
+  // Breadcrumb structured data
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://k8s-security.guru/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Practice Questions",
+        item: "https://k8s-security.guru/practice/",
+      },
+    ],
+  };
+
   return (
     <Layout
       title="CKS Practice Questions | Kubernetes Security Quiz"
@@ -314,9 +369,15 @@ export default function Practice(): JSX.Element {
       <Head>
         <meta
           name="keywords"
-          content="CKS practice questions, kubernetes security quiz, CKS exam prep, kubernetes security test, CKS study guide"
+          content="CKS practice questions, kubernetes security quiz, CKS exam prep, kubernetes security test, CKS study guide, kubernetes certification practice, CKS mock exam"
         />
         <link rel="canonical" href="https://k8s-security.guru/practice/" />
+        <script type="application/ld+json">
+          {JSON.stringify(quizStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>

@@ -4,6 +4,25 @@ import Head from "@docusaurus/Head";
 import styles from "./about.module.css";
 
 export default function Privacy(): JSX.Element {
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://k8s-security.guru/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Privacy Policy",
+        item: "https://k8s-security.guru/privacy/",
+      },
+    ],
+  };
+
   return (
     <Layout
       title="Privacy Policy | K8s Security Guide"
@@ -11,6 +30,9 @@ export default function Privacy(): JSX.Element {
     >
       <Head>
         <link rel="canonical" href="https://k8s-security.guru/privacy/" />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>

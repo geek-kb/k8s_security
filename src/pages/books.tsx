@@ -134,6 +134,51 @@ function getAmazonLink(asin: string): string {
 }
 
 export default function Books(): JSX.Element {
+  // ItemList structured data for better SEO
+  const itemListStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Recommended Kubernetes Security Books",
+    description: "Curated list of recommended books for learning Kubernetes security, container security, and cloud-native security practices.",
+    url: "https://k8s-security.guru/books/",
+    numberOfItems: books.length,
+    itemListElement: books.map((book, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Book",
+        name: book.title,
+        author: {
+          "@type": "Person",
+          name: book.author,
+        },
+        description: book.description,
+        url: getAmazonLink(book.asin),
+        genre: book.category,
+      },
+    })),
+  };
+
+  // Breadcrumb structured data
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://k8s-security.guru/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Recommended Books",
+        item: "https://k8s-security.guru/books/",
+      },
+    ],
+  };
+
   return (
     <Layout
       title="Recommended Books | Kubernetes Security Resources"
@@ -142,9 +187,15 @@ export default function Books(): JSX.Element {
       <Head>
         <meta
           name="keywords"
-          content="kubernetes security books, container security books, CKS study materials, kubernetes learning resources, cloud security books, AI security books, LLM security, machine learning security"
+          content="kubernetes security books, container security books, CKS study materials, kubernetes learning resources, cloud security books, AI security books, LLM security, machine learning security, DevSecOps books"
         />
         <link rel="canonical" href="https://k8s-security.guru/books/" />
+        <script type="application/ld+json">
+          {JSON.stringify(itemListStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>

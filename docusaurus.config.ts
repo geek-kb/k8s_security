@@ -314,8 +314,62 @@ const config: Config = {
               text: "Pod Security Standards (PSS) are predefined security profiles that define different levels of pod security restrictions: Privileged (unrestricted), Baseline (minimally restrictive to prevent known privilege escalations), and Restricted (heavily restricted following security best practices).",
             },
           },
+          {
+            "@type": "Question",
+            name: "What is RBAC in Kubernetes?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Role-Based Access Control (RBAC) is a Kubernetes authorization mechanism that regulates access to resources based on user roles. It uses Role, ClusterRole, RoleBinding, and ClusterRoleBinding resources to define and assign permissions to users and service accounts.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How do I secure etcd in Kubernetes?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Secure etcd by enabling encryption at rest for secrets, using TLS for client-server communication, restricting access to etcd endpoints via firewall rules, enabling authentication, and running regular backups. etcd stores all cluster data including secrets.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What is a container escape attack?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "A container escape attack occurs when a process breaks out of container isolation to access the host system or other containers. Common vectors include privileged containers, hostPath mounts, and kernel exploits. Mitigate with Pod Security Standards and seccomp profiles.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What tools are used for Kubernetes security scanning?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Popular Kubernetes security tools include Trivy (vulnerability scanning), Falco (runtime security), kube-bench (CIS benchmarks), OPA Gatekeeper and Kyverno (policy enforcement), Kubescape (security posture), and Cosign (image signing).",
+            },
+          },
         ],
       }),
+    },
+    // Preconnect hints for performance
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://www.googletagmanager.com",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://pagead2.googlesyndication.com",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "dns-prefetch",
+        href: "https://images-na.ssl-images-amazon.com",
+      },
     },
     // Google Analytics
     {

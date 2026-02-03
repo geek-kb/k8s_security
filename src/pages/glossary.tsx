@@ -375,12 +375,31 @@ export default function Glossary(): JSX.Element {
     name: "Kubernetes Security Glossary",
     description:
       "Comprehensive glossary of Kubernetes security terms, concepts, and tools for CKS certification and production security.",
-    url: "https://k8s-security.guru/glossary",
+    url: "https://k8s-security.guru/glossary/",
     hasDefinedTerm: glossaryTerms.map((t) => ({
       "@type": "DefinedTerm",
       name: t.term,
       description: t.definition,
     })),
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://k8s-security.guru/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Glossary",
+        item: "https://k8s-security.guru/glossary/",
+      },
+    ],
   };
 
   return (
@@ -391,11 +410,14 @@ export default function Glossary(): JSX.Element {
       <Head>
         <meta
           name="keywords"
-          content="kubernetes glossary, k8s security terms, RBAC definition, pod security standards, kubernetes terminology, CKS glossary, container security terms"
+          content="kubernetes glossary, k8s security terms, RBAC definition, pod security standards, kubernetes terminology, CKS glossary, container security terms, kubernetes definitions"
         />
         <link rel="canonical" href="https://k8s-security.guru/glossary/" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
         </script>
       </Head>
       <main className={styles.main}>

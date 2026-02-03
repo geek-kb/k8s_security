@@ -17,7 +17,7 @@ export default function About(): JSX.Element {
         name: "Payoneer",
       },
       description: "DevOps Tech Lead with 22+ years of experience specializing in Kubernetes, platform engineering, and security automation",
-      url: "https://k8s-security.guru/about",
+      url: "https://k8s-security.guru/about/",
       sameAs: [
         "https://github.com/geek-kb",
         "https://linkedin.com/in/itaiganot",
@@ -38,16 +38,38 @@ export default function About(): JSX.Element {
     },
   };
 
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://k8s-security.guru/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: "https://k8s-security.guru/about/",
+      },
+    ],
+  };
+
   return (
     <Layout
       title="About the Author | Itai Ganot"
       description="Learn about Itai Ganot, the DevOps engineer behind K8s Security Guide — a comprehensive Kubernetes security documentation resource."
     >
       <Head>
-        <meta name="keywords" content="Itai Ganot, k8s security author, kubernetes security expert, DevOps engineer" />
+        <meta name="keywords" content="Itai Ganot, k8s security author, kubernetes security expert, DevOps engineer, CKS certification" />
         <link rel="canonical" href="https://k8s-security.guru/about/" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
         </script>
       </Head>
       <main className={styles.main}>
