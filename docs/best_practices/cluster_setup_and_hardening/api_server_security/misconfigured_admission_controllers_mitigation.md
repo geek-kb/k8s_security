@@ -115,3 +115,13 @@ failurePolicy: "Fail"
 ## Conclusion
 
 **Securing Kubernetes Admission Controllers** is critical for **enforcing security policies, preventing unauthorized workloads, and protecting cluster integrity**. By **restricting webhook access, enforcing failure policies, enabling audit logs, and carefully configuring admission controllers**, you can significantly **reduce attack surfaces**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Using Admission Controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/) - Kubernetes Documentation
+2. [Dynamic Admission Control](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/) - Kubernetes Documentation
+3. [ValidatingWebhookConfiguration](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.28/#validatingwebhookconfiguration-v1-admissionregistration-k8s-io) - Kubernetes API Reference

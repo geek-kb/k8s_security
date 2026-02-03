@@ -168,3 +168,14 @@ kube-apiserver --anonymous-auth=false --client-ca-file=/etc/kubernetes/pki/ca.cr
 ## Conclusion: Authentication as the First Line of Defense
 
 Authentication is the **first step** in **securing Kubernetes clusters**. Properly managing authentication methods helps to ensure that only **authorized users** and **services** interact with **cluster resources**, providing a strong foundation for further **authorization** and **security policies**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Authenticating](https://kubernetes.io/docs/reference/access-authn-authz/authentication/) - Kubernetes Documentation
+2. [Certificate Signing Requests](https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/) - Kubernetes Documentation
+3. [Bootstrap Tokens](https://kubernetes.io/docs/reference/access-authn-authz/bootstrap-tokens/) - Kubernetes Documentation
+4. [Service Accounts](https://kubernetes.io/docs/concepts/security/service-accounts/) - Kubernetes Documentation

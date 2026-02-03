@@ -113,3 +113,13 @@ Add a GitHub Action, for example:
 
 - **GitHub:** [https://github.com/snyk](https://github.com/snyk)
 - **Official Documentation:** [https://docs.snyk.io](https://docs.snyk.io)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Snyk Container Documentation](https://docs.snyk.io/scan-with-snyk/snyk-container) - Snyk Documentation
+2. [Snyk IaC Documentation](https://docs.snyk.io/scan-with-snyk/snyk-iac) - Snyk Documentation
+3. [Snyk CLI Reference](https://docs.snyk.io/snyk-cli) - Snyk Documentation

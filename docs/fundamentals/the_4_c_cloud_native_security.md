@@ -89,3 +89,13 @@ The **Four C's** provide a **layered approach** to security. Each **layer builds
 ## Conclusion
 
 By addressing each of the **Four C's of Cloud Native Security**, you can create a **robust security posture** for your **Kubernetes environments**. Combining **security best practices** across **Code**, **Container**, **Cluster**, and **Cloud** layers helps mitigate **risks** and **protect** your **applications** and **data**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Overview of Cloud Native Security](https://kubernetes.io/docs/concepts/security/overview/) - Kubernetes Documentation
+2. [Cloud Native Security Whitepaper](https://www.cncf.io/reports/cloud-native-security-whitepaper/) - CNCF (Cloud Native Computing Foundation)
+3. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation

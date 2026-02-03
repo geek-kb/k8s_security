@@ -216,3 +216,13 @@ The attacker now has:
 See the mitigation strategies in:
 
 [Securing Exec and Attach Access](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/exec_attach_security)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+2. [Get a Shell to a Running Container](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/) - Kubernetes Documentation
+3. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) - Kubernetes Documentation

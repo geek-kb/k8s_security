@@ -81,5 +81,9 @@ kubectl apply -f block-netcat.yaml
 
 ## References
 
-- **Official Documentation:** [https://docs.cilium.io/en/stable/observability/tetragon/](https://docs.cilium.io/en/stable/observability/tetragon/)
-- **GitHub Repository:** [https://github.com/cilium/tetragon](https://github.com/cilium/tetragon)
+This article is based on information from the following official sources:
+
+1. [Tetragon Documentation](https://tetragon.io/docs/) - Cilium Project
+2. [Tetragon GitHub Repository](https://github.com/cilium/tetragon) - Cilium
+3. [What is eBPF?](https://ebpf.io/what-is-ebpf/) - eBPF Foundation
+4. [Cilium Documentation](https://docs.cilium.io/) - Cilium Project

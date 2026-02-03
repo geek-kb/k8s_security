@@ -100,3 +100,13 @@ To protect against **unrestricted hostPath mounts**, follow the security best pr
 ➡ **[Restricting HostPath Mounts in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/pod_security/unrestricted_hostpath_mitigation)**
 
 This guide covers techniques such as **disabling hostPath, enforcing PodSecurityAdmission policies, using AppArmor and Seccomp profiles, and restricting privileged containers** to prevent unauthorized access to the host filesystem.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Volumes - hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) - Kubernetes Documentation
+2. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation
+3. [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) - Kubernetes Documentation

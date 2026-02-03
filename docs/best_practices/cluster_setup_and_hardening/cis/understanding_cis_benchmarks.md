@@ -55,8 +55,10 @@ CIS Benchmarks offer a **valuable resource** for **organizations** aiming to **e
 
 ---
 
-## Further Reading
+## References
 
-- [CIS Benchmarks Official Site](https://www.cisecurity.org/cis-benchmarks)
-- [CIS Controls](https://www.cisecurity.org/controls/)
-- [How to Use CIS-CAT Pro](https://www.cisecurity.org/cybersecurity-tools/cis-cat-pro)
+This article is based on information from the following official sources:
+
+1. [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) - Center for Internet Security
+2. [CIS Controls](https://www.cisecurity.org/controls/) - Center for Internet Security
+3. [CIS-CAT Pro Assessor](https://www.cisecurity.org/cybersecurity-tools/cis-cat-pro) - Center for Internet Security

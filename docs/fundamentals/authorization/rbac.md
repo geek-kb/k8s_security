@@ -76,4 +76,12 @@ RBAC helps enforce the **principle of least privilege** by ensuring that **users
 
 **Role-Based Access Control (RBAC)** is an essential **security primitive** in Kubernetes, providing **fine-grained authorization** and enforcing the **principle of least privilege**. By correctly defining **roles**, **role bindings**, and **permissions**, you can significantly **reduce the attack surface** of your cluster and maintain **tight access controls**.
 
->
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+2. [Authorization Overview](https://kubernetes.io/docs/reference/access-authn-authz/authorization/) - Kubernetes Documentation
+3. [Role-Based Access Control Good Practices](https://kubernetes.io/docs/concepts/security/rbac-good-practices/) - Kubernetes Documentation

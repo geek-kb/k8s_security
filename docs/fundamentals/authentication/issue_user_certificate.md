@@ -112,3 +112,13 @@ kubectl config use-context myuser
 ## Key Takeaway
 
 By following these steps, you can securely create a certificate for a Kubernetes user, assign appropriate roles, and configure kubeconfig to authenticate the user with the Kubernetes API server.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Certificate Signing Requests](https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/) - Kubernetes Documentation
+2. [Certificates and Certificate Signing Requests](https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/#normal-user) - Kubernetes Documentation
+3. [Configure Access to Multiple Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/) - Kubernetes Documentation

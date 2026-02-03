@@ -129,3 +129,13 @@ This ensures that only **explicitly allowed system calls** are executed.
 Using **seccomp** in Kubernetes enhances **container security** by restricting **unnecessary system calls**. By enforcing **the RuntimeDefault profile** or **custom security policies**, you can **minimize risks**, **prevent privilege escalation**, and **ensure secure workloads**.
 
 For high-security environments, **combine seccomp with AppArmor and Pod Security Standards** to achieve **comprehensive container security**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Restrict a Container's Syscalls with seccomp](https://kubernetes.io/docs/tutorials/security/seccomp/) - Kubernetes Documentation
+2. [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) - Kubernetes Documentation
+3. [Seccomp Security Profiles for Docker](https://docs.docker.com/engine/security/seccomp/) - Docker Documentation

@@ -114,3 +114,13 @@ A misconfigured CSI driver may enable:
 ## Mitigation
 
 ➡ [Securing Kubernetes CSI Drivers](/docs/best_practices/cluster_setup_and_hardening/pod_security/csi_driver_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Container Storage Interface (CSI)](https://kubernetes.io/docs/concepts/storage/volumes/#csi) - Kubernetes Documentation
+2. [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) - Kubernetes Documentation
+3. [CSI Driver Development](https://kubernetes-csi.github.io/docs/) - Kubernetes CSI Documentation

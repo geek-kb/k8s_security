@@ -91,7 +91,10 @@ tracee-ebpf | tracee-rules
 
 ---
 
-## Resources
+## References
 
-- **GitHub:** [https://github.com/aquasecurity/tracee](https://github.com/aquasecurity/tracee)
-- **Official Documentation:** [https://aquasecurity.github.io/tracee](https://aquasecurity.github.io/tracee)
+This article is based on information from the following official sources:
+
+1. [Tracee Documentation](https://aquasecurity.github.io/tracee/) - Aqua Security
+2. [Tracee GitHub Repository](https://github.com/aquasecurity/tracee) - Aqua Security
+3. [What is eBPF?](https://ebpf.io/what-is-ebpf/) - eBPF Foundation

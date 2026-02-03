@@ -199,3 +199,14 @@ rules:
 ## Conclusion
 
 To secure Kubernetes CSI drivers, administrators should **enforce strict RBAC controls, disable privileged mode, restrict volume access, enable encryption, and monitor storage activity**. These best practices ensure **secure storage provisioning and prevent unauthorized data access**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Container Storage Interface (CSI)](https://kubernetes.io/docs/concepts/storage/volumes/#csi) - Kubernetes Documentation
+2. [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/) - Kubernetes Documentation
+3. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+4. [Auditing](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/) - Kubernetes Documentation

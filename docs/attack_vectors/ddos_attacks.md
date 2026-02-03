@@ -104,3 +104,14 @@ The attacker causes **resource exhaustion, service unavailability, latency spike
 ## Mitigation
 
 ➡ [Mitigating DoS Attacks in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/network_security/ddos_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) - Kubernetes Documentation
+2. [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/) - Kubernetes Documentation
+3. [Limit Ranges](https://kubernetes.io/docs/concepts/policy/limit-range/) - Kubernetes Documentation
+4. [API Priority and Fairness](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) - Kubernetes Documentation

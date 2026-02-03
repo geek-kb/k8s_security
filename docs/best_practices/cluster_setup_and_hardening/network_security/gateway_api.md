@@ -425,3 +425,14 @@ spec:
 - [Gateway API Security Model](https://gateway-api.sigs.k8s.io/concepts/security-model/)
 - [Kubernetes SIG Network](https://github.com/kubernetes-sigs/gateway-api)
 - [Gateway API Implementations](https://gateway-api.sigs.k8s.io/implementations/)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Gateway API Documentation](https://gateway-api.sigs.k8s.io/) - Kubernetes SIG Network
+2. [Gateway API Security Model](https://gateway-api.sigs.k8s.io/concepts/security-model/) - Kubernetes SIG Network
+3. [ReferenceGrant](https://gateway-api.sigs.k8s.io/api-types/referencegrant/) - Kubernetes SIG Network
+4. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation

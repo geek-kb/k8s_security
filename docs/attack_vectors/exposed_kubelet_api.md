@@ -73,3 +73,13 @@ Exposing the Kubelet API without authentication or access controls can lead to:
 ## Mitigation
 
 ➡ [Kubelet Security](/docs/best_practices/cluster_setup_and_hardening/node_security/kubelet_security)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) - Kubernetes Documentation
+2. [Kubelet authentication/authorization](https://kubernetes.io/docs/reference/access-authn-authz/kubelet-authn-authz/) - Kubernetes Documentation
+3. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security

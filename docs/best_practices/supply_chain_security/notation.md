@@ -80,3 +80,13 @@ Notation can integrate with Kubernetes admission controllers or supply chain sec
 
 - **Official Documentation:** [https://notaryproject.dev](https://notaryproject.dev)
 - **GitHub Repository:** [https://github.com/notaryproject/notation](https://github.com/notaryproject/notation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Notation CLI Overview](https://notaryproject.dev/docs/user-guides/cli-reference/notation/) - Notary Project Documentation
+2. [Sign and Verify Container Images](https://notaryproject.dev/docs/user-guides/how-to/sign-verify/) - Notary Project Documentation
+3. [Notation GitHub Repository](https://github.com/notaryproject/notation) - Notary Project

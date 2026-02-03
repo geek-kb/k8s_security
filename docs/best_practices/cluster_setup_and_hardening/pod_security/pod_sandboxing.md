@@ -154,4 +154,15 @@ This method ensures that workloads requiring **extra isolation** can run securel
 
 ## Conclusion
 
-Pod sandboxing is an essential technique for securing **multi-tenant Kubernetes clusters** and **high-security workloads**. By leveraging technologies like **Kata Containers, gVisor, and Firecracker**, organizations can **reduce the risk of container breakouts**, \*\*limit exposure to host reso
+Pod sandboxing is an essential technique for securing **multi-tenant Kubernetes clusters** and **high-security workloads**. By leveraging technologies like **Kata Containers, gVisor, and Firecracker**, organizations can **reduce the risk of container breakouts** and **limit exposure to host resources**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Runtime Class](https://kubernetes.io/docs/concepts/containers/runtime-class/) - Kubernetes Documentation
+2. [gVisor](https://gvisor.dev/docs/) - gVisor Documentation
+3. [Kata Containers](https://katacontainers.io/docs/) - Kata Containers Documentation
+4. [Firecracker](https://firecracker-microvm.github.io/) - Firecracker Documentation

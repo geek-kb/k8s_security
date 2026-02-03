@@ -109,3 +109,13 @@ You can visualize:
 - **Official Documentation:** [https://docs.cilium.io](https://docs.cilium.io)
 - **Cilium GitHub Repository:** [https://github.com/cilium/cilium](https://github.com/cilium/cilium)
 - **Policy Examples:** [https://docs.cilium.io/en/stable/policy/language/](https://docs.cilium.io/en/stable/policy/language/)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Cilium Documentation](https://docs.cilium.io/en/stable/) - Cilium Project (CNCF)
+2. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation
+3. [Cilium Network Policy](https://docs.cilium.io/en/stable/security/policy/) - Cilium Project (CNCF)

@@ -232,11 +232,12 @@ trivy image --download-db-only
 
 ---
 
-## Resources
+## References
 
-- **Official Documentation**: [https://aquasecurity.github.io/trivy](https://aquasecurity.github.io/trivy)
-- **GitHub Repository**: [https://github.com/aquasecurity/trivy](https://github.com/aquasecurity/trivy)
+This article is based on information from the following official sources:
 
----
-
-Trivy helps enforce runtime security posture and supports vulnerability management and visibility across Kubernetes environments.
+1. [Trivy Documentation](https://aquasecurity.github.io/trivy/) - Aqua Security
+2. [Trivy GitHub Repository](https://github.com/aquasecurity/trivy) - Aqua Security
+3. [CycloneDX Specification](https://cyclonedx.org/specification/overview/) - OWASP CycloneDX
+4. [SPDX Specification](https://spdx.dev/specifications/) - Linux Foundation
+5. [VEX (Vulnerability Exploitability eXchange)](https://www.cisa.gov/sites/default/files/2023-04/minimum-requirements-for-vex-508c.pdf) - CISA

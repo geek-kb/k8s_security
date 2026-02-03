@@ -69,8 +69,10 @@ kubectl trace delete <trace-id>
 
 ---
 
-## Resources
+## References
 
-- **GitHub Repository:** [https://github.com/iovisor/kubectl-trace](https://github.com/iovisor/kubectl-trace)
-- **Official Docs & Examples:** [https://github.com/iovisor/kubectl-trace/blob/master/docs](https://github.com/iovisor/kubectl-trace/blob/master/docs)
-- **bpftrace Reference:** [https://github.com/iovisor/bpftrace](https://github.com/iovisor/bpftrace)
+This article is based on information from the following official sources:
+
+1. [kubectl-trace GitHub Repository](https://github.com/iovisor/kubectl-trace) - IO Visor Project
+2. [bpftrace Reference Guide](https://github.com/bpftrace/bpftrace/blob/master/docs/reference_guide.md) - bpftrace Project
+3. [What is eBPF?](https://ebpf.io/what-is-ebpf/) - eBPF Foundation

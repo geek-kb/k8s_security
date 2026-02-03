@@ -221,3 +221,13 @@ spec:
 ## Conclusion
 
 To secure Kubernetes sidecars, administrators should **enforce strict security policies, restrict privileges, control network access, monitor sidecar activity, and secure service mesh interactions**. These best practices help prevent **data interception, privilege escalation, and persistent attacks**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) - Kubernetes Documentation
+2. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation
+3. [Peer Authentication](https://istio.io/latest/docs/reference/config/security/peer_authentication/) - Istio Documentation

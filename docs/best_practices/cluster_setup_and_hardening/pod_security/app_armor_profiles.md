@@ -123,3 +123,13 @@ This ensures that the container follows the **custom AppArmor profile restrictio
 **AppArmor profiles** provide a **powerful way** to **restrict container behavior** and **enforce security policies** in Kubernetes. By using **default or custom profiles**, you can **reduce the attack surface**, **prevent privilege escalation**, and **improve container security**.
 
 For maximum protection, **combine AppArmor with seccomp and Pod Security Standards** to create **a defense-in-depth security strategy** for Kubernetes workloads.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Restrict a Container's Access to Resources with AppArmor](https://kubernetes.io/docs/tutorials/security/apparmor/) - Kubernetes Documentation
+2. [AppArmor Security Profiles for Docker](https://docs.docker.com/engine/security/apparmor/) - Docker Documentation
+3. [AppArmor](https://wiki.ubuntu.com/AppArmor) - Ubuntu Wiki

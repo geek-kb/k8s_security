@@ -181,3 +181,14 @@ spec:
 Certificates are a **core primitive** in Kubernetes security, providing **encryption** and **authentication** for **API server communications**, **Ingress traffic**, and **internal service interactions**. Implementing certificates with tools like **Cert-Manager** ensures your **cluster remains secure** and **compliant** with **best practices**.
 
 For more advanced scenarios, including **mTLS setup** between services or using **Cert-Manager** for dynamic certificate management, see the related documentation in this section.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [PKI Certificates and Requirements](https://kubernetes.io/docs/setup/best-practices/certificates/) - Kubernetes Documentation
+2. [Certificate Signing Requests](https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/) - Kubernetes Documentation
+3. [Manage TLS Certificates in a Cluster](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/) - Kubernetes Documentation
+4. [cert-manager Documentation](https://cert-manager.io/docs/) - CNCF cert-manager Project

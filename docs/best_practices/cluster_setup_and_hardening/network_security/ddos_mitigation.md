@@ -171,3 +171,14 @@ This **monitors traffic patterns** to detect potential **DDoS activity**.
 - **Monitor network traffic** using **eBPF-based tools** like Cilium.
 
 By **combining multiple security layers**, you can effectively **mitigate DDoS attacks** and **maintain cluster availability**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation
+2. [NGINX Ingress Controller Annotations](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/) - Kubernetes NGINX Ingress Controller Documentation
+3. [API Priority and Fairness](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) - Kubernetes Documentation
+4. [Cilium Hubble](https://docs.cilium.io/en/stable/observability/hubble/) - Cilium Project (CNCF)

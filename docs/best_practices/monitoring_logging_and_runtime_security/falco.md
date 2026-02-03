@@ -164,5 +164,9 @@ Use Falco plugins or sidecars to forward alerts to:
 
 ## References
 
-- **Official Documentation:** [https://falco.org/docs](https://falco.org/docs)
-- **GitHub Repository:** [https://github.com/falcosecurity/falco](https://github.com/falcosecurity/falco)
+This article is based on information from the following official sources:
+
+1. [Falco Documentation](https://falco.org/docs/) - Falco Official Documentation
+2. [Falco GitHub Repository](https://github.com/falcosecurity/falco) - Falco Security
+3. [Auditing](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/) - Kubernetes Documentation
+4. [Falco Rules](https://falco.org/docs/reference/rules/) - Falco Official Documentation

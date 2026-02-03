@@ -78,3 +78,13 @@ An attacker with access to a misconfigured API server can:
 ## Mitigation
 
 ➡ [Securing the Kubernetes API Server](/docs/best_practices/cluster_setup_and_hardening/api_server_security/compromised_api_server_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Controlling Access to the Kubernetes API](https://kubernetes.io/docs/concepts/security/controlling-access/) - Kubernetes Documentation
+2. [API Server](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/) - Kubernetes Documentation
+3. [Authenticating](https://kubernetes.io/docs/reference/access-authn-authz/authentication/) - Kubernetes Documentation

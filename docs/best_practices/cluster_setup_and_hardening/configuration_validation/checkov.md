@@ -92,7 +92,11 @@ Checkov also integrates with Jenkins, GitLab, CircleCI, and more.
 
 ---
 
-## Resources
+---
 
-- **GitHub:** [https://github.com/bridgecrewio/checkov](https://github.com/bridgecrewio/checkov)
-- **Official Documentation:** [https://www.checkov.io/](https://www.checkov.io/)
+## References
+
+This article is based on information from the following official sources:
+
+1. [Checkov Documentation](https://www.checkov.io/1.Welcome/What%20is%20Checkov.html) - Bridgecrew by Prisma Cloud
+2. [Checkov GitHub Repository](https://github.com/bridgecrewio/checkov) - Bridgecrew

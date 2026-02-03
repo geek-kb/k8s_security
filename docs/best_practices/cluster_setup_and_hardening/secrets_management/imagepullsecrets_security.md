@@ -482,10 +482,11 @@ Configure containerd to use mirror:
 
 ---
 
-## Links
+## References
 
-- [Kubernetes Secrets Documentation](https://kubernetes.io/docs/concepts/configuration/secret/)
-- [Encrypting Secret Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
-- [External Secrets Operator](https://external-secrets.io/)
-- [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)
-- [RBAC Security](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)
+This article is based on information from the following official sources:
+
+1. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) - Kubernetes Documentation
+2. [Pull an Image from a Private Registry](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/) - Kubernetes Documentation
+3. [Encrypting Secret Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) - Kubernetes Documentation
+4. [External Secrets Operator](https://external-secrets.io/) - External Secrets Project

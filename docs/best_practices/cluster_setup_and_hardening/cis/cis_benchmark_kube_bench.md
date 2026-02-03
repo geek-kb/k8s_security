@@ -103,3 +103,13 @@ spec:
 ## Key Takeaway
 
 Using **Kube-Bench** to **regularly assess** your **Kubernetes cluster** against the **CIS Benchmarks** can **identify vulnerabilities** and **guide remediation efforts**. Integrate **Kube-Bench** into your **CI/CD pipelines** and **monitoring workflows** to **maintain a strong security posture**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Kube-Bench GitHub Repository](https://github.com/aquasecurity/kube-bench) - Aqua Security
+2. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security
+3. [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/) - Kubernetes Documentation

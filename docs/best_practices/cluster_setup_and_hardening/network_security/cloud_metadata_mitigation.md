@@ -346,3 +346,15 @@ To prevent cloud metadata service abuse in Kubernetes:
 3. Configure IMDSv2 with hop limit 1 on AWS
 4. Monitor for metadata access attempts with Falco and cloud audit logs
 5. Apply least-privilege IAM policies to workload identities
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Use IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html) - AWS Documentation
+2. [Workload Identity](https://cloud.google.com/kubernetes-engine/docs/concepts/workload-identity) - Google Cloud Documentation
+3. [Azure Workload Identity](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) - Microsoft Azure Documentation
+4. [IAM Roles for Service Accounts](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) - AWS EKS Documentation
+5. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation

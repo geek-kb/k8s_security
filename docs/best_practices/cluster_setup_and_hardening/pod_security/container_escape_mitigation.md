@@ -263,3 +263,14 @@ spec:
 ## Conclusion
 
 Preventing container escape is essential for Kubernetes security. By **disabling privileged containers, enforcing security profiles, restricting filesystem access, and using sandboxed runtimes**, administrators can significantly reduce the risk of container breakout attacks.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) - Kubernetes Documentation
+2. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation
+3. [Restrict a Container's Syscalls with seccomp](https://kubernetes.io/docs/tutorials/security/seccomp/) - Kubernetes Documentation
+4. [Runtime Class](https://kubernetes.io/docs/concepts/containers/runtime-class/) - Kubernetes Documentation

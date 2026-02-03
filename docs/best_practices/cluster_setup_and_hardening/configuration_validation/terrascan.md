@@ -73,8 +73,12 @@ Terrascan can be embedded into CI/CD systems like GitHub Actions, GitLab CI, Jen
 
 ---
 
-## Resources
+---
 
-- **GitHub Repository:** [https://github.com/tenable/terrascan](https://github.com/tenable/terrascan)
-- **Official Docs:** [https://docs.tenable.com/terrascan](https://docs.tenable.com/terrascan)
-- **Policy Documentation:** [https://docs.tenable.com/terrascan/policies](https://docs.tenable.com/terrascan/policies)
+## References
+
+This article is based on information from the following official sources:
+
+1. [Terrascan Documentation](https://runterrascan.io/docs/) - Tenable
+2. [Terrascan GitHub Repository](https://github.com/tenable/terrascan) - Tenable
+3. [Terrascan Policy Documentation](https://runterrascan.io/docs/policies/) - Tenable

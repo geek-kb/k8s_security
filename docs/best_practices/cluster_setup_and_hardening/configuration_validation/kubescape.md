@@ -60,7 +60,12 @@ kubescape scan --format json --output results.json
 
 ---
 
+---
+
 ## References
 
-- **Official Documentation:** [https://kubescape.io/docs](https://kubescape.io/docs)
-- **GitHub Repository:** [https://github.com/kubescape/kubescape](https://github.com/kubescape/kubescape)
+This article is based on information from the following official sources:
+
+1. [Kubescape Documentation](https://kubescape.io/docs/) - ARMO
+2. [Kubescape GitHub Repository](https://github.com/kubescape/kubescape) - CNCF
+3. [NSA/CISA Kubernetes Hardening Guide](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/2716980/nsa-cisa-release-kubernetes-hardening-guidance/) - NSA/CISA

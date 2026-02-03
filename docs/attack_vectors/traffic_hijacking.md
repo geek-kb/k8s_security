@@ -103,3 +103,13 @@ The attacker successfully intercepts or manipulates network traffic, leading to:
 ## Mitigation
 
 ➡ [Securing Kubernetes Network Traffic](/docs/best_practices/cluster_setup_and_hardening/network_security/traffic_hijacking_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation
+2. [DNS for Services and Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/) - Kubernetes Documentation
+3. [Customizing DNS Service](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/) - Kubernetes Documentation

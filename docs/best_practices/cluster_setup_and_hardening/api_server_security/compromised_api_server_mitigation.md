@@ -201,3 +201,14 @@ Securing the Kubernetes API server is critical to preventing unauthorized access
 - Monitor API requests through audit logging.
 
 By implementing these best practices, Kubernetes administrators can reduce the risk of API server compromise and unauthorized cluster access.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Controlling Access to the Kubernetes API](https://kubernetes.io/docs/concepts/security/controlling-access/) - Kubernetes Documentation
+2. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+3. [Auditing](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/) - Kubernetes Documentation
+4. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation

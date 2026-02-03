@@ -116,3 +116,13 @@ Calico also supports **flow logs**, **IP sets**, and **policy enforcement metric
 - **Official Documentation:** [https://projectcalico.docs.tigera.io](https://projectcalico.docs.tigera.io)
 - **GitHub Repository:** [https://github.com/projectcalico/calico](https://github.com/projectcalico/calico)
 - **Network Policy Tutorial:** [https://projectcalico.docs.tigera.io/security/kubernetes-network-policy](https://projectcalico.docs.tigera.io/security/kubernetes-network-policy)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Calico Documentation](https://docs.tigera.io/calico/latest/about/) - Tigera / Project Calico
+2. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation
+3. [Calico Network Policy](https://docs.tigera.io/calico/latest/network-policy/) - Tigera / Project Calico

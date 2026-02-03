@@ -93,7 +93,11 @@ Example GitHub Action step:
 
 ---
 
-## Resources
+---
 
-- **GitHub:** [https://github.com/stackrox/kube-linter](https://github.com/stackrox/kube-linter)
-- **Documentation:** [https://docs.kubelinter.io/](https://docs.kubelinter.io/)
+## References
+
+This article is based on information from the following official sources:
+
+1. [KubeLinter Documentation](https://docs.kubelinter.io/) - StackRox
+2. [KubeLinter GitHub Repository](https://github.com/stackrox/kube-linter) - StackRox

@@ -184,3 +184,13 @@ spec:
 ## Conclusion
 
 **Network Policies** provide critical security controls for **traffic segmentation, access control, and workload isolation** in Kubernetes. By **defaulting to deny-all, restricting ingress and egress, securing the API server, and enforcing namespace isolation**, administrators can prevent unauthorized access and **minimize the attack surface**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation
+2. [Declare Network Policy](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/) - Kubernetes Documentation
+3. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security

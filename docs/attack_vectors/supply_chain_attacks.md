@@ -182,3 +182,14 @@ The attacker successfully compromises the Kubernetes cluster via supply chain ve
 ## Mitigation
 
 ➡ [Securing the Kubernetes Supply Chain](/docs/best_practices/supply_chain_security/intro)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Supply Chain Security](https://kubernetes.io/docs/concepts/security/supply-chain-security/) - Kubernetes Documentation
+2. [Sigstore](https://www.sigstore.dev/) - Sigstore Project
+3. [SLSA Framework](https://slsa.dev/) - Supply-chain Levels for Software Artifacts
+4. [Helm Provenance and Integrity](https://helm.sh/docs/topics/provenance/) - Helm Documentation

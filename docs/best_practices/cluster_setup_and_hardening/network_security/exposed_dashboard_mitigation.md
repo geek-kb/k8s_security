@@ -182,3 +182,14 @@ To prevent Kubernetes Dashboard exploitation:
 - Enable auditing to track its usage and detect abuse.
 
 These defensive layers collectively reduce the likelihood and impact of an exposed Dashboard in any environment.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Kubernetes Dashboard](https://github.com/kubernetes/dashboard) - Kubernetes Dashboard Project
+2. [Accessing Kubernetes Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) - Kubernetes Documentation
+3. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+4. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation

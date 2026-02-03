@@ -446,10 +446,11 @@ spec:
 
 ---
 
-## Additional Resources
+## References
 
-- [Kubernetes Pod-Level Resources Documentation](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
-- [Kubernetes Resource Management Best Practices](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
-- [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/)
-- [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
-- [Limit Ranges](https://kubernetes.io/docs/concepts/policy/limit-range/)
+This article is based on information from the following official sources:
+
+1. [Managing Resources for Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) - Kubernetes Documentation
+2. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation
+3. [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/) - Kubernetes Documentation
+4. [Limit Ranges](https://kubernetes.io/docs/concepts/policy/limit-range/) - Kubernetes Documentation

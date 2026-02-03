@@ -99,8 +99,12 @@ Gatekeeper will deny the request with a message explaining the violation.
 
 ---
 
-## Resources
+---
 
-- **OPA Website:** [https://www.openpolicyagent.org](https://www.openpolicyagent.org)
-- **Gatekeeper Project:** [https://github.com/open-policy-agent/gatekeeper](https://github.com/open-policy-agent/gatekeeper)
-- **OPA GitHub:** [https://github.com/open-policy-agent/opa](https://github.com/open-policy-agent/opa)
+## References
+
+This article is based on information from the following official sources:
+
+1. [Open Policy Agent Documentation](https://www.openpolicyagent.org/docs/latest/) - Open Policy Agent
+2. [Gatekeeper GitHub Repository](https://github.com/open-policy-agent/gatekeeper) - CNCF
+3. [Gatekeeper Policy Library](https://open-policy-agent.github.io/gatekeeper-library/website/) - Open Policy Agent

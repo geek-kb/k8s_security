@@ -81,3 +81,13 @@ Cosign signatures can be used with **Sigstore’s policy-controller** to enforce
 
 - **Official Documentation:** [https://docs.sigstore.dev/cosign](https://docs.sigstore.dev/cosign)
 - **GitHub Repository:** [https://github.com/sigstore/cosign](https://github.com/sigstore/cosign)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Cosign Overview](https://docs.sigstore.dev/cosign/signing/overview/) - Sigstore Documentation
+2. [Sigstore Policy Controller](https://docs.sigstore.dev/policy-controller/overview/) - Sigstore Documentation
+3. [Cosign GitHub Repository](https://github.com/sigstore/cosign) - Sigstore Project

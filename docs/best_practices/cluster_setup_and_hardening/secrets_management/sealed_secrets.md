@@ -79,7 +79,10 @@ The controller will decrypt it into a standard Kubernetes Secret.
 
 ---
 
-## Resources
+## References
 
-- **Official Documentation:** [https://github.com/bitnami-labs/sealed-secrets#readme](https://github.com/bitnami-labs/sealed-secrets#readme)
-- **GitHub Repository:** [https://github.com/bitnami-labs/sealed-secrets](https://github.com/bitnami-labs/sealed-secrets)
+This article is based on information from the following official sources:
+
+1. [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets) - Bitnami Labs GitHub Repository
+2. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) - Kubernetes Documentation
+3. [Encrypting Secret Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) - Kubernetes Documentation

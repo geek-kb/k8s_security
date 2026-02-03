@@ -132,3 +132,13 @@ The attacker successfully **exploits Service Account misconfigurations** to:
 ## Mitigation
 
 ➡ [Securing Kubernetes Service Accounts](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/service_account_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Service Accounts](https://kubernetes.io/docs/concepts/security/service-accounts/) - Kubernetes Documentation
+2. [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) - Kubernetes Documentation
+3. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation

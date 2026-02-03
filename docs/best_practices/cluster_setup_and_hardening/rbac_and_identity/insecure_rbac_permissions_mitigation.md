@@ -160,3 +160,13 @@ metadata:
 ## Conclusion
 
 RBAC misconfigurations **open doors for attackers** to escalate privileges and compromise Kubernetes clusters. Following best practices—**principle of least privilege, avoiding wildcards, restricting cluster-wide privileges, auditing access, and using service accounts**—ensures a secure RBAC model.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+2. [Auditing](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/) - Kubernetes Documentation
+3. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security

@@ -92,3 +92,13 @@ data:
 ## Conclusion: Why Use Node Authorization?
 
 **Node Authorization** provides an **additional layer of security** by ensuring that **nodes** have **access only to their own resources**. This minimizes the **impact of a node compromise** and strengthens your **cluster's security posture**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Using Node Authorization](https://kubernetes.io/docs/reference/access-authn-authz/node/) - Kubernetes Documentation
+2. [Authorization Overview](https://kubernetes.io/docs/reference/access-authn-authz/authorization/) - Kubernetes Documentation
+3. [Kubelet Authentication/Authorization](https://kubernetes.io/docs/reference/access-authn-authz/kubelet-authn-authz/) - Kubernetes Documentation

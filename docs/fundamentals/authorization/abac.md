@@ -123,3 +123,13 @@ kube-apiserver \
 ## Conclusion: Is ABAC Right for You?
 
 **ABAC** offers **flexibility** and **fine-grained control** for specific scenarios, but its **static nature** and **management complexity** make it less suited for **dynamic environments**. Whenever possible, prefer **RBAC** for **modern Kubernetes clusters** due to its **ease of use**, **auditability**, and **integration with the Kubernetes API**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [ABAC Mode](https://kubernetes.io/docs/reference/access-authn-authz/abac/) - Kubernetes Documentation
+2. [Authorization Overview](https://kubernetes.io/docs/reference/access-authn-authz/authorization/) - Kubernetes Documentation
+3. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation

@@ -215,3 +215,14 @@ spec:
 ## Conclusion
 
 **Securing the Kubernetes supply chain** requires **signed images, dependency verification, Helm security enforcement, CI/CD hardening, and policy enforcement**. By following these best practices, organizations can **mitigate supply chain attacks and prevent unauthorized access**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Cosign Overview](https://docs.sigstore.dev/cosign/signing/overview/) - Sigstore Documentation
+2. [Helm Provenance and Integrity](https://helm.sh/docs/topics/provenance/) - Helm Documentation
+3. [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/docs/) - Open Policy Agent Documentation
+4. [Supply Chain Security Best Practices](https://kubernetes.io/docs/concepts/security/supply-chain-security/) - Kubernetes Documentation

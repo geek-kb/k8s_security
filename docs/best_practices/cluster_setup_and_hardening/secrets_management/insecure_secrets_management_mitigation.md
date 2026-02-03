@@ -211,3 +211,14 @@ To securely manage secrets in Kubernetes:
 - Apply strict RBAC to ensure only authorized components and users have access to secrets.
 
 A layered approach that combines Kubernetes-native capabilities with purpose-built secret management tools is the most effective strategy to mitigate the risks associated with insecure secret handling.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) - Kubernetes Documentation
+2. [Encrypting Secret Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) - Kubernetes Documentation
+3. [External Secrets Operator](https://external-secrets.io/) - External Secrets Project
+4. [Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/) - Kubernetes SIG Auth

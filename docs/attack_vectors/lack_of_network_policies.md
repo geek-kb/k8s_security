@@ -71,3 +71,13 @@ Without any Network Policies in place:
 To prevent lateral movement and reduce your cluster's attack surface:
 
 ➡ [Harden your cluster with Kubernetes Network Policies](/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation
+2. [Declare Network Policy](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/) - Kubernetes Documentation
+3. [Calico Network Policy](https://docs.tigera.io/calico/latest/network-policy/) - Calico Documentation

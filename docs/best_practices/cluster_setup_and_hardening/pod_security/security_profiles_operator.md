@@ -519,9 +519,11 @@ When enabled, only pods labeled with `spo.x-k8s.io/enable-recording=true` are tr
 
 ---
 
-## Links
+## References
 
-- [Security Profiles Operator GitHub](https://github.com/kubernetes-sigs/security-profiles-operator)
-- [Kubernetes seccomp Documentation](https://kubernetes.io/docs/tutorials/security/seccomp/)
-- [Seccomp in Pods](/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods)
-- [AppArmor Profiles](/docs/best_practices/cluster_setup_and_hardening/pod_security/app_armor_profiles)
+This article is based on information from the following official sources:
+
+1. [Security Profiles Operator](https://github.com/kubernetes-sigs/security-profiles-operator) - Kubernetes SIG Security GitHub Repository
+2. [Restrict a Container's Syscalls with seccomp](https://kubernetes.io/docs/tutorials/security/seccomp/) - Kubernetes Documentation
+3. [Restrict a Container's Access to Resources with AppArmor](https://kubernetes.io/docs/tutorials/security/apparmor/) - Kubernetes Documentation
+4. [Security Profiles Operator Installation Guide](https://github.com/kubernetes-sigs/security-profiles-operator/blob/main/installation-usage.md) - Kubernetes SIG Security Documentation

@@ -123,3 +123,13 @@ The attacker successfully **bypasses admission controllers**, injects **maliciou
 ## Mitigation
 
 ➡ [See Mitigation Guide for Misconfigured Admission Controllers](/docs/best_practices/cluster_setup_and_hardening/api_server_security/misconfigured_admission_controllers_mitigation.md)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Admission Controllers Reference](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/) - Kubernetes Documentation
+2. [Dynamic Admission Control](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/) - Kubernetes Documentation
+3. [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) - Kubernetes Documentation

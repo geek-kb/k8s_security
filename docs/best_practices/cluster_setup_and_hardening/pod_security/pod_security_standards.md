@@ -165,3 +165,13 @@ For securing authentication and authorization in Kubernetes, refer to [Role-Base
 - **Applying the right PSS level** helps prevent **security misconfigurations** and **workload vulnerabilities**.
 
 For more on securing workloads in Kubernetes, refer to [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards).
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation
+2. [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) - Kubernetes Documentation
+3. [Enforce Pod Security Standards with Namespace Labels](https://kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-namespace-labels/) - Kubernetes Documentation

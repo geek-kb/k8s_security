@@ -413,7 +413,8 @@ const config: Config = {
         {to: "/glossary", label: "Glossary", position: "left"},
         {to: "/practice", label: "Practice", position: "left"},
         {to: "/books", label: "Books", position: "left"},
-        {to: "/blog", label: "Blog", position: "left"},
+        // Blog hidden until more content is available
+        // {to: "/blog", label: "Blog", position: "left"},
         {to: "/about", label: "About", position: "left"},
         {
           href: "https://github.com/geek-kb/k8s_security",

@@ -101,3 +101,13 @@ The attacker has **full administrative control** over the cluster. They can exfi
 ## Mitigation
 
 ➡ [See Mitigation Guide for Insecure RBAC Permissions](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+2. [Authorization Overview](https://kubernetes.io/docs/reference/access-authn-authz/authorization/) - Kubernetes Documentation
+3. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security

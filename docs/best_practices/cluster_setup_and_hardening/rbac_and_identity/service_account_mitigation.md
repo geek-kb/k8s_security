@@ -210,3 +210,14 @@ kubectl logs -n kube-system | grep "serviceaccount"
 ## Conclusion
 
 To protect Kubernetes from **Service Account abuse**, administrators should **disable automatic token mounting, enforce least privilege, restrict role bindings, limit Service Account scope, rotate tokens, and monitor SA usage**. These best practices **prevent privilege escalation and unauthorized access**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Service Accounts](https://kubernetes.io/docs/concepts/security/service-accounts/) - Kubernetes Documentation
+2. [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) - Kubernetes Documentation
+3. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+4. [Auditing](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/) - Kubernetes Documentation

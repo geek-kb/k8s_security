@@ -84,3 +84,13 @@ If etcd is not protected, the **entire cluster is at risk**.
 ## Mitigation
 
 ➡ [Securing etcd in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/control_plane_security/etcd_security_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Operating etcd clusters for Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/) - Kubernetes Documentation
+2. [etcd Security Model](https://etcd.io/docs/v3.5/op-guide/security/) - etcd Documentation
+3. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security

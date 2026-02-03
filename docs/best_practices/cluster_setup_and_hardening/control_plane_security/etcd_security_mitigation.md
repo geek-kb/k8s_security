@@ -121,3 +121,14 @@ iptables -A INPUT -p tcp --dport 2379 -j DROP
 ## Conclusion
 
 **Securing etcd** is essential for **protecting cluster secrets, RBAC policies, and workload configurations**. By **enabling TLS, restricting access, enforcing authentication, securing backups, and isolating etcd from external networks**, you can **prevent unauthorized access and maintain Kubernetes integrity**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Operating etcd clusters for Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/) - Kubernetes Documentation
+2. [Encrypting Secret Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) - Kubernetes Documentation
+3. [etcd Security Model](https://etcd.io/docs/v3.5/op-guide/security/) - etcd Documentation
+4. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security

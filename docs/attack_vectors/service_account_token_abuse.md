@@ -205,3 +205,13 @@ The attacker now has:
 See the mitigation strategies in:
 
 [Service Account Token Security](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/service_account_token_security)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Service Account Tokens](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/) - Kubernetes Documentation
+2. [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) - Kubernetes Documentation
+3. [TokenRequest API](https://kubernetes.io/docs/reference/kubernetes-api/authentication-resources/token-request-v1/) - Kubernetes API Reference

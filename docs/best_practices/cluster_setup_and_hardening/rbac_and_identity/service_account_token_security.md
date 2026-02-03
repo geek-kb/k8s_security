@@ -529,10 +529,11 @@ kubectl logs -n kube-system kube-apiserver-master | \
 
 ---
 
-## Links
+## References
 
-- [Kubernetes Service Accounts](https://kubernetes.io/docs/concepts/security/service-accounts/)
-- [Bound Service Account Tokens](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#bound-service-account-tokens)
-- [Configure Service Accounts](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
-- [RBAC Security](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/insecure_rbac_permissions_mitigation)
-- [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)
+This article is based on information from the following official sources:
+
+1. [Service Accounts](https://kubernetes.io/docs/concepts/security/service-accounts/) - Kubernetes Documentation
+2. [Bound Service Account Tokens](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#bound-service-account-tokens) - Kubernetes Documentation
+3. [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) - Kubernetes Documentation
+4. [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) - Kubernetes Documentation

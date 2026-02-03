@@ -82,3 +82,14 @@ Refer to the following tools for generating, analyzing, and verifying SBOMs:
 ## Conclusion
 
 SBOMs are a critical component of Kubernetes supply chain security. They provide the transparency required to assess risk, respond to vulnerabilities, and validate compliance. By integrating SBOM generation and validation into CI/CD and runtime workflows, organizations can strengthen their defenses against emerging threats and improve overall visibility into their software systems.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [SPDX Specification](https://spdx.dev/specifications/) - SPDX Project (Linux Foundation)
+2. [CycloneDX Specification](https://cyclonedx.org/specification/overview/) - CycloneDX (OWASP)
+3. [SBOM at a Glance](https://www.cisa.gov/sbom) - Cybersecurity and Infrastructure Security Agency (CISA)
+4. [Syft Documentation](https://github.com/anchore/syft) - Anchore

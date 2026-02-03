@@ -70,7 +70,10 @@ Typical issues KubeAudit detects:
 
 ---
 
-## Resources
+## References
 
-- **Official Documentation:** [https://kubeaudit.dev](https://kubeaudit.dev)
-- **GitHub Repository:** [https://github.com/Shopify/kubeaudit](https://github.com/Shopify/kubeaudit)
+This article is based on information from the following official sources:
+
+1. [KubeAudit](https://github.com/Shopify/kubeaudit) - Shopify GitHub Repository
+2. [KubeAudit Documentation](https://kubeaudit.dev) - Official KubeAudit Documentation
+3. [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) - Kubernetes Documentation

@@ -61,7 +61,11 @@ helm install polaris fairwinds-stable/polaris --namespace polaris --create-names
 
 ---
 
+---
+
 ## References
 
-- **Official Documentation:** [https://polaris.docs.fairwinds.com](https://polaris.docs.fairwinds.com)
-- **GitHub Repository:** [https://github.com/FairwindsOps/polaris](https://github.com/FairwindsOps/polaris)
+This article is based on information from the following official sources:
+
+1. [Polaris Documentation](https://polaris.docs.fairwinds.com/) - Fairwinds
+2. [Polaris GitHub Repository](https://github.com/FairwindsOps/polaris) - Fairwinds

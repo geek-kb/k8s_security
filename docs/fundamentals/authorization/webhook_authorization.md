@@ -123,3 +123,13 @@ timeoutSeconds: 5
 ## Conclusion: Flexibility and Control with Webhook Authorization
 
 **Webhook Authorization** offers **flexibility** by allowing **custom authorization logic** via **external services**. It is particularly useful in **enterprise environments** with **complex authorization requirements** that need to integrate with **external identity or policy services**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Webhook Mode](https://kubernetes.io/docs/reference/access-authn-authz/webhook/) - Kubernetes Documentation
+2. [Authorization Overview](https://kubernetes.io/docs/reference/access-authn-authz/authorization/) - Kubernetes Documentation
+3. [SubjectAccessReview API](https://kubernetes.io/docs/reference/kubernetes-api/authorization-resources/subject-access-review-v1/) - Kubernetes API Reference

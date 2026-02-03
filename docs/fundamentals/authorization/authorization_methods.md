@@ -180,3 +180,14 @@ kube-apiserver --authorization-mode=RBAC,Webhook
 ## Conclusion: Authorization as the Key to Secure Access Control
 
 Authorization ensures that only **trusted users** and **components** can perform specific **actions** in a Kubernetes cluster. Properly configuring **RBAC**, **Node Authorization**, and **Webhook Authorization** helps prevent **unauthorized access**, **privilege escalation**, and **security breaches**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Authorization Overview](https://kubernetes.io/docs/reference/access-authn-authz/authorization/) - Kubernetes Documentation
+2. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+3. [Using Node Authorization](https://kubernetes.io/docs/reference/access-authn-authz/node/) - Kubernetes Documentation
+4. [Webhook Mode](https://kubernetes.io/docs/reference/access-authn-authz/webhook/) - Kubernetes Documentation

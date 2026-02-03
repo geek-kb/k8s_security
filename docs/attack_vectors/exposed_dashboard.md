@@ -93,3 +93,13 @@ This attack relies on a combination of insecure defaults, missing access control
 ## Mitigation
 
 ➡ [Exposed Dashboard Mitigation](/docs/best_practices/cluster_setup_and_hardening/network_security/exposed_dashboard_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) - Kubernetes Documentation
+2. [Accessing Dashboard](https://github.com/kubernetes/dashboard/blob/master/docs/user/accessing-dashboard/README.md) - Kubernetes Dashboard GitHub
+3. [Creating sample user](https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md) - Kubernetes Dashboard GitHub

@@ -80,7 +80,11 @@ grype nginx:latest -o json > results.json
 
 ---
 
-## Resources
+## References
 
-- **Official Documentation**: [https://docs.anchore.com/current/docs/overview/what-is-grype/](https://docs.anchore.com/current/docs/overview/what-is-grype/)
-- **GitHub Repository**: [https://github.com/anchore/grype](https://github.com/anchore/grype)
+This article is based on information from the following official sources:
+
+1. [Grype Documentation](https://github.com/anchore/grype#readme) - Anchore
+2. [Grype GitHub Repository](https://github.com/anchore/grype) - Anchore
+3. [Syft Documentation](https://github.com/anchore/syft#readme) - Anchore
+4. [National Vulnerability Database](https://nvd.nist.gov/) - NIST

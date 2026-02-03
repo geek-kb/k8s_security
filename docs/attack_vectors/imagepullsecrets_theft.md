@@ -123,3 +123,13 @@ The attacker now has:
 See the mitigation strategies in:
 
 [Securing ImagePullSecrets](/docs/best_practices/cluster_setup_and_hardening/secrets_management/imagepullsecrets_security)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Pull an Image from a Private Registry](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/) - Kubernetes Documentation
+2. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) - Kubernetes Documentation
+3. [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) - Kubernetes Documentation

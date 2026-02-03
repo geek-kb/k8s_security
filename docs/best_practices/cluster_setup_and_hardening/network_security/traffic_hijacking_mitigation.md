@@ -142,3 +142,14 @@ cilium monitor --type drop
 To protect Kubernetes from **traffic hijacking**, administrators should **enforce network policies, secure DNS, encrypt intra-cluster traffic, restrict service exposure, and implement traffic monitoring**. These best practices help mitigate **man-in-the-middle attacks, unauthorized service access, and network-based exploitation**.
 
 ➡ For more security recommendations, see **[Kubernetes Network Security](/docs/best_practices/cluster_setup_and_hardening/network_security/intro)**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) - Kubernetes Documentation
+2. [Customizing DNS Service](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/) - Kubernetes Documentation
+3. [Istio Security](https://istio.io/latest/docs/concepts/security/) - Istio Documentation
+4. [Cilium Network Monitoring](https://docs.cilium.io/en/stable/observability/) - Cilium Project (CNCF)

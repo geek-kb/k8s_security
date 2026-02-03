@@ -77,7 +77,10 @@ You can observe which identities are making specific API calls, making it easier
 
 ---
 
-## Resources
+## References
 
-- **GitHub Repository:** [https://github.com/eldadru/kubectl-snoop](https://github.com/eldadru/kubectl-snoop)
-- **Krew Plugin Index:** [https://krew.sigs.k8s.io/plugins/snoop](https://krew.sigs.k8s.io/plugins/snoop)
+This article is based on information from the following official sources:
+
+1. [kubectl-snoop GitHub Repository](https://github.com/eldadru/kubectl-snoop) - Eldad Rudich
+2. [Krew Plugin Manager](https://krew.sigs.k8s.io/) - Kubernetes SIG CLI
+3. [Auditing](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/) - Kubernetes Documentation

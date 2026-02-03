@@ -467,9 +467,11 @@ As an alpha feature in Kubernetes v1.34, Changed Block Tracking has important li
 
 ---
 
-## Additional Resources
+## References
 
-- [Kubernetes Changed Block Tracking KEP](https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage)
-- [CSI Driver Documentation](https://kubernetes-csi.github.io/docs/)
-- [Volume Snapshot Best Practices](https://kubernetes.io/docs/concepts/storage/volume-snapshots/)
-- [Velero Backup and Restore](https://velero.io/docs/)
+This article is based on information from the following official sources:
+
+1. [Volume Snapshots](https://kubernetes.io/docs/concepts/storage/volume-snapshots/) - Kubernetes Documentation
+2. [CSI Driver Documentation](https://kubernetes-csi.github.io/docs/) - Kubernetes CSI Developer Documentation
+3. [Kubernetes Enhancement Proposals - sig-storage](https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage) - Kubernetes GitHub
+4. [Velero Documentation](https://velero.io/docs/) - Velero Project

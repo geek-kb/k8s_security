@@ -139,3 +139,14 @@ For securing API access and authentication mechanisms, see [Kubernetes API Secur
 - **Rotating tokens and auditing permissions** helps strengthen **service account security**.
 
 For a deeper understanding of securing workloads in Kubernetes, refer to [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards).
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Service Accounts](https://kubernetes.io/docs/concepts/security/service-accounts/) - Kubernetes Documentation
+2. [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) - Kubernetes Documentation
+3. [Managing Service Accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/) - Kubernetes Documentation
+4. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation

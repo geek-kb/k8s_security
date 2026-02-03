@@ -114,3 +114,13 @@ Kong supports:
 - **GitHub:** [https://github.com/Kong/kong](https://github.com/Kong/kong)
 - **Official Docs:** [https://docs.konghq.com/](https://docs.konghq.com/)
 - **Kong Ingress Controller:** [https://docs.konghq.com/kubernetes-ingress-controller/](https://docs.konghq.com/kubernetes-ingress-controller/)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Kong Documentation](https://docs.konghq.com/) - Kong Inc.
+2. [Kong Ingress Controller](https://docs.konghq.com/kubernetes-ingress-controller/latest/) - Kong Inc.
+3. [Kong Plugins](https://docs.konghq.com/hub/) - Kong Inc.

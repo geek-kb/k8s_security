@@ -524,10 +524,11 @@ done
 
 ---
 
-## Links
+## References
 
-- [Kubernetes RBAC Documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
-- [Ephemeral Debug Containers](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/)
-- [Distroless Container Images](https://github.com/GoogleContainerTools/distroless)
-- [Pod Security Standards](/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards)
-- [Network Policies](/docs/best_practices/cluster_setup_and_hardening/network_security/intro)
+This article is based on information from the following official sources:
+
+1. [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) - Kubernetes Documentation
+2. [Debug Running Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/) - Kubernetes Documentation
+3. [Auditing](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/) - Kubernetes Documentation
+4. [Distroless Container Images](https://github.com/GoogleContainerTools/distroless) - Google Container Tools

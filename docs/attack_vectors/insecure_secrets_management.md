@@ -60,3 +60,13 @@ The attacker can access and exfiltrate sensitive data, potentially causing data 
 For guidance on how to prevent this attack vector, refer to the mitigation article:
 
 [Securing Secrets in Kubernetes](/docs/best_practices/cluster_setup_and_hardening/secrets_management/insecure_secrets_management_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) - Kubernetes Documentation
+2. [Encrypting Secret Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) - Kubernetes Documentation
+3. [Good practices for Kubernetes Secrets](https://kubernetes.io/docs/concepts/security/secrets-good-practices/) - Kubernetes Documentation

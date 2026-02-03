@@ -75,7 +75,10 @@ SOPS can be integrated into GitOps workflows by combining with tools like **Kust
 
 ---
 
-## Resources
+## References
 
-- **Official Documentation:** [https://github.com/mozilla/sops#readme](https://github.com/mozilla/sops#readme)
-- **GitHub Repository:** [https://github.com/mozilla/sops](https://github.com/mozilla/sops)
+This article is based on information from the following official sources:
+
+1. [SOPS: Secrets OPerationS](https://github.com/getsops/sops) - SOPS GitHub Repository
+2. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) - Kubernetes Documentation
+3. [AWS Key Management Service](https://docs.aws.amazon.com/kms/) - AWS Documentation

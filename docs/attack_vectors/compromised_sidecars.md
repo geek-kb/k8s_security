@@ -142,3 +142,13 @@ A compromised or malicious sidecar enables the attacker to:
 ## Mitigation
 
 ➡ [Securing Kubernetes Sidecars](/docs/best_practices/cluster_setup_and_hardening/pod_security/compromised_sidecars_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Sidecar Containers](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/) - Kubernetes Documentation
+2. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation
+3. [Security Best Practices](https://istio.io/latest/docs/ops/best-practices/security/) - Istio Documentation

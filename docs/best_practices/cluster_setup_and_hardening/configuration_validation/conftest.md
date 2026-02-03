@@ -82,8 +82,12 @@ conftest test Dockerfile --input docker --parser docker
 
 ---
 
-## Resources
+---
 
-- **GitHub Repository:** [https://github.com/open-policy-agent/conftest](https://github.com/open-policy-agent/conftest)
-- **Documentation:** [https://www.conftest.dev](https://www.conftest.dev)
-- **OPA Policy Examples:** [https://www.openpolicyagent.org/docs/latest/policy-language/](https://www.openpolicyagent.org/docs/latest/policy-language/)
+## References
+
+This article is based on information from the following official sources:
+
+1. [Conftest Documentation](https://www.conftest.dev/) - Open Policy Agent
+2. [Conftest GitHub Repository](https://github.com/open-policy-agent/conftest) - CNCF
+3. [Rego Policy Language](https://www.openpolicyagent.org/docs/latest/policy-language/) - Open Policy Agent

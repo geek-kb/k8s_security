@@ -60,7 +60,11 @@ Each issue is categorized by severity (`CRITICAL`, `WARNING`, `OK`) and includes
 
 ---
 
-## Official Documentation and Source
+---
 
-- Documentation: [https://kube-score.com](https://kube-score.com)
-- GitHub: [https://github.com/zegl/kube-score](https://github.com/zegl/kube-score)
+## References
+
+This article is based on information from the following official sources:
+
+1. [kube-score Documentation](https://kube-score.com/) - kube-score Project
+2. [kube-score GitHub Repository](https://github.com/zegl/kube-score) - zegl

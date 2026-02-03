@@ -169,3 +169,13 @@ spec:
 ## Conclusion
 
 To prevent **hostPath mount abuse**, Kubernetes administrators should **disable unnecessary hostPath volumes, enforce read-only mounts, use AppArmor, restrict container privileges, and implement admission controls**. These best practices ensure that **containers cannot compromise the host system**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Volumes - hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) - Kubernetes Documentation
+2. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation
+3. [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/docs/) - Open Policy Agent Documentation

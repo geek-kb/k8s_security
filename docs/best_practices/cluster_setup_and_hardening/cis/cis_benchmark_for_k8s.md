@@ -86,3 +86,13 @@ curl -L https://github.com/aquasecurity/kube-bench/releases/download/v0.6.9/kube
 ## Conclusion
 
 CIS Benchmarks for Kubernetes are a **critical tool** for securing your cluster against common threats. By implementing these **best practices** and using tools like **kube-bench**, you can ensure that your Kubernetes environment is not only **compliant** but also **resilient to attacks**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security
+2. [Kube-Bench GitHub Repository](https://github.com/aquasecurity/kube-bench) - Aqua Security
+3. [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/) - Kubernetes Documentation

@@ -158,3 +158,14 @@ For more on securing workloads and limiting resource consumption, see [Cluster S
 - **Regular updates** and **audit logging** are essential for detecting and mitigating security risks.
 
 By following these best practices, you can significantly **reduce the attack surface** of your Kubernetes **nodes** and **ensure a secure cluster environment**.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Kubelet Authentication/Authorization](https://kubernetes.io/docs/reference/access-authn-authz/kubelet-authn-authz/) - Kubernetes Documentation
+2. [Kubelet Configuration](https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/) - Kubernetes Documentation
+3. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation
+4. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security

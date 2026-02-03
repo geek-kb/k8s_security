@@ -70,3 +70,14 @@ Comprehensive strategies for securing Kubernetes clusters are detailed in the [B
 ## **Conclusion**
 
 Understanding Kubernetes' attack surface is essential for securing your clusters against real-world threats. By addressing common attack vectors and following security best practices, you can significantly reduce risk and improve your overall cluster security posture.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Overview of Cloud Native Security](https://kubernetes.io/docs/concepts/security/overview/) - Kubernetes Documentation
+2. [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/) - Kubernetes Documentation
+3. [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) - Center for Internet Security
+4. [Kubernetes Threat Model](https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit) - Kubernetes SIG Security

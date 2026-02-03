@@ -80,4 +80,14 @@ kube-hunter may report:
 
 ## Summary
 
-kube-hunter helps security teams and cluster operators identify Kubernetes misconfigurations before attackers do. It’s a valuable addition to Kubernetes security assessments, especially during penetration testing, threat modeling, or pre-production readiness checks.
+kube-hunter helps security teams and cluster operators identify Kubernetes misconfigurations before attackers do. It's a valuable addition to Kubernetes security assessments, especially during penetration testing, threat modeling, or pre-production readiness checks.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [kube-hunter Documentation](https://aquasecurity.github.io/kube-hunter/) - Aqua Security
+2. [kube-hunter GitHub Repository](https://github.com/aquasecurity/kube-hunter) - Aqua Security
+3. [Penetration Testing](https://kubernetes.io/docs/reference/glossary/?all=true#term-penetration-testing) - Kubernetes Documentation

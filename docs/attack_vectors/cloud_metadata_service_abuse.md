@@ -188,3 +188,14 @@ kubectl logs -n falco -l app.kubernetes.io/name=falco --tail=1000 | grep "169.25
 For guidance on how to prevent this attack vector, refer to the mitigation article:
 
 [Cloud Metadata Service Mitigation](/docs/best_practices/cluster_setup_and_hardening/network_security/cloud_metadata_mitigation/)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) - AWS Documentation
+2. [Storing and retrieving instance metadata](https://cloud.google.com/compute/docs/metadata/overview) - Google Cloud Documentation
+3. [Azure Instance Metadata Service](https://learn.microsoft.com/en-us/azure/virtual-machines/instance-metadata-service) - Microsoft Azure Documentation
+4. [EKS Best Practices Guide - Restrict access to the instance profile](https://aws.github.io/aws-eks-best-practices/security/docs/iam/#restrict-access-to-the-instance-profile-assigned-to-the-worker-node) - AWS EKS Best Practices

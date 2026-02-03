@@ -129,3 +129,13 @@ The attacker achieves **interactive root access on the host node**. This breaks 
 ## Mitigation
 
 ➡ [Preventing Container Escape](/docs/best_practices/cluster_setup_and_hardening/pod_security/container_escape_mitigation)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) - Kubernetes Documentation
+2. [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) - Kubernetes Documentation
+3. [Linux namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html) - Linux Manual Pages

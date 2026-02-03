@@ -83,3 +83,13 @@ syft dir:/usr/local/my-app
 
 - **Official Documentation**: [https://anchore.com/docs/syft](https://anchore.com/docs/syft)
 - **GitHub Repository**: [https://github.com/anchore/syft](https://github.com/anchore/syft)
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Syft GitHub Repository](https://github.com/anchore/syft) - Anchore
+2. [SPDX Specification](https://spdx.dev/specifications/) - SPDX Project (Linux Foundation)
+3. [CycloneDX Specification](https://cyclonedx.org/specification/overview/) - CycloneDX (OWASP)

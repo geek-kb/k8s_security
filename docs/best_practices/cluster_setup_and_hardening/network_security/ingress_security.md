@@ -79,3 +79,14 @@ Given the **March 2026 end-of-life** for Ingress NGINX, organizations should beg
 5. **Q1 2026** - Decommission Ingress NGINX before EOL
 
 For detailed migration guidance, see the [Gateway API Security](/docs/best_practices/cluster_setup_and_hardening/network_security/gateway_api) article.
+
+---
+
+## References
+
+This article is based on information from the following official sources:
+
+1. [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) - Kubernetes Documentation
+2. [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/) - Kubernetes NGINX Ingress Controller Documentation
+3. [cert-manager Documentation](https://cert-manager.io/docs/) - cert-manager Project (CNCF)
+4. [Gateway API](https://gateway-api.sigs.k8s.io/) - Kubernetes SIG Network

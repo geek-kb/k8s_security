@@ -133,8 +133,12 @@ spec:
 
 ---
 
-## Resources
+---
 
-- **Official Documentation:** [https://kyverno.io](https://kyverno.io)
-- **Kyverno GitHub Repository:** [https://github.com/kyverno/kyverno](https://github.com/kyverno/kyverno)
-- **Policy Library:** [https://kyverno.io/policies](https://kyverno.io/policies)
+## References
+
+This article is based on information from the following official sources:
+
+1. [Kyverno Documentation](https://kyverno.io/docs/) - Kyverno Project
+2. [Kyverno GitHub Repository](https://github.com/kyverno/kyverno) - CNCF
+3. [Kyverno Policy Library](https://kyverno.io/policies/) - Kyverno Project
