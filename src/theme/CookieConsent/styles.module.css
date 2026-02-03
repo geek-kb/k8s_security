@@ -1,0 +1,115 @@
+.cookieBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--ifm-background-surface-color);
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.text {
+  flex: 1;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+  color: var(--ifm-font-color-base);
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--ifm-font-color-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.link {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.acceptButton,
+.declineButton {
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.acceptButton {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.acceptButton:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+.declineButton {
+  background: transparent;
+  color: var(--ifm-font-color-secondary);
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.declineButton:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .acceptButton,
+  .declineButton {
+    flex: 1;
+    max-width: 150px;
+  }
+}

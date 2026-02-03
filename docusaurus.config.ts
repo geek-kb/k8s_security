@@ -456,6 +456,13 @@ const config: Config = {
             {label: "Contribute", href: "https://github.com/geek-kb/k8s_security/blob/main/CONTRIBUTING.md"},
           ],
         },
+        {
+          title: "Legal",
+          items: [
+            {label: "Privacy Policy", to: "/privacy"},
+            {label: "Terms of Service", to: "/terms"},
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} K8s Security Guide by Itai Ganot. Built with Docusaurus.`,
     },
