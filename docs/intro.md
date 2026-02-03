@@ -13,7 +13,11 @@ keywords:
 image: /img/k8s-security-social-card.png
 ---
 
+import LastContentUpdate from '@site/src/components/LastContentUpdate';
+
 # Introduction to Kubernetes Security
+
+<LastContentUpdate />
 
 Welcome to **K8s Security Guide**, a comprehensive resource created by **Itai Ganot** to provide in-depth guides and best practices for securing Kubernetes environments.
 

@@ -6,8 +6,10 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "count-docs": "node scripts/count-docs.js",
-    "start": "npm run count-docs && docusaurus start",
-    "build": "npm run count-docs && rm -rf build && docusaurus build",
+    "last-update": "node scripts/last-content-update.js",
+    "prebuild": "npm run count-docs && npm run last-update",
+    "start": "npm run count-docs && npm run last-update && docusaurus start",
+    "build": "npm run prebuild && rm -rf build && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

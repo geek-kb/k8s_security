@@ -23,16 +23,13 @@ const config: Config = {
           priority: 0.7,
           filename: "sitemap.xml",
           ignorePatterns: [
+            // Exclude entire blog from sitemap (hidden from navigation)
+            "/blog/**",
             // Exclude all tag pages
             "/tags/**",
             "/docs/tags/**",
-            "/blog/tags/**",
             // Exclude pagination and utility pages
-            "/blog/page/**",
             "/search/**",
-            // Exclude auto-generated listing pages
-            "/blog/archive/**",
-            "/blog/authors/**",
             // Exclude category pages (auto-generated)
             "/docs/category/**",
           ],
