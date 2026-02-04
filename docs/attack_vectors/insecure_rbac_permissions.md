@@ -104,6 +104,17 @@ The attacker has **full administrative control** over the cluster. They can exfi
 
 ---
 
+import BookRecommendation from '@site/src/components/BookRecommendation';
+
+<BookRecommendation
+  asin="1492081736"
+  title="Hacking Kubernetes"
+  author="Andrew Martin, Michael Hausenblas"
+  context="Threat-driven analysis covering RBAC attack patterns, privilege escalation techniques, and defensive strategies. Includes real-world scenarios demonstrating how attackers exploit misconfigured permissions."
+/>
+
+---
+
 ## References
 
 This article is based on information from the following official sources:

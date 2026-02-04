@@ -63,6 +63,17 @@ For guidance on how to prevent this attack vector, refer to the mitigation artic
 
 ---
 
+import BookRecommendation from '@site/src/components/BookRecommendation';
+
+<BookRecommendation
+  asin="1098107101"
+  title="Kubernetes Security and Observability"
+  author="Brendan Creane, Amit Gupta"
+  context="Covers secrets management, workload isolation, and security best practices. Includes guidance on protecting sensitive data in Kubernetes environments."
+/>
+
+---
+
 ## References
 
 This article is based on information from the following official sources:

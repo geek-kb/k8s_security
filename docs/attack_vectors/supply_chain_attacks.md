@@ -185,6 +185,17 @@ The attacker successfully compromises the Kubernetes cluster via supply chain ve
 
 ---
 
+import BookRecommendation from '@site/src/components/BookRecommendation';
+
+<BookRecommendation
+  asin="B0F17KHFTL"
+  title="Docker and Kubernetes Security"
+  author="Mohammad-Ali A'râbi"
+  context="Covers supply chain security in depth, including SBOMs, image hardening, vulnerability scanning with Trivy and Snyk, and CI/CD pipeline security. Directly relevant to defending against the attacks described in this article."
+/>
+
+---
+
 ## References
 
 This article is based on information from the following official sources:

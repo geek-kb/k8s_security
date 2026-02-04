@@ -71,7 +71,8 @@ Open-source tools for vulnerability scanning, runtime security, policy enforceme
 2. Explore **[Attack Vectors](/docs/attack_vectors/intro)** to understand common Kubernetes threats
 3. Follow **[Best Practices](/docs/best_practices/intro)** to implement security hardening techniques
 4. Use **[Security Tools](/docs/tools/intro)** to enhance your security posture
-5. Use the **Search** feature (top right) to find specific security topics
+5. Browse **[Recommended Books](/books/)** for deeper learning resources
+6. Use the **Search** feature (top right) to find specific security topics
 
 ---
 

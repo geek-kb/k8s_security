@@ -132,6 +132,17 @@ The attacker achieves **interactive root access on the host node**. This breaks 
 
 ---
 
+import BookRecommendation from '@site/src/components/BookRecommendation';
+
+<BookRecommendation
+  asin="B0F6T216R6"
+  title="Container Security"
+  author="Liz Rice"
+  context="Deep dive into Linux primitives that underpin container isolation, including namespaces, cgroups, and capabilities. Essential for understanding how container escapes work and how to prevent them."
+/>
+
+---
+
 ## References
 
 This article is based on information from the following official sources:

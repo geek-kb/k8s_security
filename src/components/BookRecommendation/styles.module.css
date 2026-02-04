@@ -1,0 +1,115 @@
+.container {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.card {
+  display: flex;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  text-decoration: none;
+}
+
+.card:hover .cta {
+  background: var(--ifm-color-primary-dark);
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+  width: 80px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+  margin-bottom: 0.25rem;
+}
+
+.author {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.5rem;
+}
+
+.context {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  background: var(--ifm-color-primary);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.disclosure {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  font-size: 0.7rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .container {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .title {
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme="dark"] .disclosure {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imageWrapper {
+    width: 100px;
+  }
+}
