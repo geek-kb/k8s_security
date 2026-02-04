@@ -3,6 +3,7 @@ import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
 import styles from "./about.module.css";
+import docCount from "@site/src/data/doc-count.json";
 
 export default function About(): JSX.Element {
   const structuredData = {
@@ -145,7 +146,7 @@ export default function About(): JSX.Element {
               <h2>What You'll Find Here</h2>
               <ul className={styles.list}>
                 <li>
-                  <strong>1200+ pages</strong> of documentation covering all CKS exam domains
+                  <strong>{docCount.count}+ pages</strong> of documentation covering all CKS exam domains
                 </li>
                 <li>
                   <strong>Attack vectors</strong> with step-by-step exploitation examples
