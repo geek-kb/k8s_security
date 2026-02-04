@@ -1,11 +1,11 @@
 ---
-title: "Seccomp in Pods"
+title: "Seccomp Kubernetes: Restricting System Calls in Pods"
 sidebar_position: 7
-description: "Learn how to use seccomp to restrict system calls in Kubernetes pods and enhance container security."
-keywords: [kubernetes security best practices, seccomp, secure computing mode, system call filtering, pod security, container security, linux security, CKS]
+description: "How to configure seccomp in Kubernetes to restrict system calls, prevent container escapes, and enhance pod security with profiles."
+keywords: [seccomp kubernetes, kubernetes seccomp profile, seccomp pods, system call filtering kubernetes, container security seccomp, seccomp RuntimeDefault, custom seccomp profile, kubernetes pod security, CKS]
 ---
 
-# Seccomp in Pods
+# Seccomp Kubernetes: Restricting System Calls in Pods
 
 **Required knowledge for the CKS certification.**
 

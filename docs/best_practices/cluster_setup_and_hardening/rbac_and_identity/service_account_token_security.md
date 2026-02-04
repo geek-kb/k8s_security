@@ -1,11 +1,11 @@
 ---
-title: "Service Account Token Security"
+title: "Kubernetes Service Account Token Security: Expiration, Lifetime & Best Practices"
 sidebar_position: 11
-description: "Best practices for securing Kubernetes service account tokens and preventing privilege escalation through token abuse."
-keywords: [kubernetes security best practices, service account security, token security, bound tokens, token projection, RBAC security, least privilege, workload identity, service account best practices, kubernetes authentication]
+description: "How to secure Kubernetes service account tokens with short expiration, bound tokens, and disable auto-mounting. Covers EKS, AKS, and GKE workload identity."
+keywords: [kubernetes service account token, service account token expiration, service account token lifetime, aks service account token, eks service account token, bound service account tokens, automountServiceAccountToken, workload identity, kubernetes token security, CKS]
 ---
 
-# Service Account Token Security
+# Kubernetes Service Account Token Security
 
 **Required knowledge for the CKS certification.**
 

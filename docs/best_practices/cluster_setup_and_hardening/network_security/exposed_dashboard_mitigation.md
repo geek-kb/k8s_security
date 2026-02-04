@@ -1,11 +1,11 @@
 ---
 sidebar_position: 5
-title: "Exposed Kubernetes Dashboard Mitigation"
-description: "Techniques and configuration examples to prevent unauthorized access to the Kubernetes Dashboard."
-keywords: [kubernetes security best practices, kubernetes dashboard, dashboard security, authentication, authorization, RBAC, ingress security, TLS encryption, kubectl proxy, CKS]
+title: "How to Secure Kubernetes Dashboard: Authentication, RBAC & Network Policies"
+description: "Complete guide to securing Kubernetes Dashboard with authentication, RBAC least privilege, network policies, and when to disable it in production."
+keywords: [securing kubernetes dashboard, kubernetes dashboard security, kubernetes dashboard authentication, dashboard RBAC, kubernetes dashboard network policy, disable kubernetes dashboard, kubernetes dashboard best practices, CKS]
 ---
 
-# Exposed Kubernetes Dashboard Mitigation
+# How to Secure Kubernetes Dashboard
 
 **Required knowledge for the CKS certification.**
 

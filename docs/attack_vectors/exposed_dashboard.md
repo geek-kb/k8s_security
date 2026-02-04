@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
-title: "Exposed Kubernetes Dashboard"
-description: "How an exposed and over-privileged Kubernetes Dashboard can become an entry point for full cluster compromise."
-keywords: [kubernetes security, kubernetes dashboard, dashboard security, exposed dashboard, kubernetes UI, dashboard vulnerability, cluster compromise, authentication bypass, dashboard access, web interface security]
+title: "Security Risks of Exposing Kubernetes Dashboard Publicly"
+description: "Learn the security risks of exposing Kubernetes Dashboard publicly and how attackers exploit misconfigured dashboards for full cluster compromise."
+keywords: [kubernetes dashboard security risks, exposing kubernetes dashboard publicly, securing kubernetes dashboard, kubernetes dashboard vulnerability, kubernetes dashboard authentication, dashboard cluster compromise, kubernetes UI security, exposed dashboard attack, kubernetes web interface security, CKS]
 tags: [attack-vector, dashboard, authentication, CKS]
 related:
   - /docs/best_practices/cluster_setup_and_hardening/network_security/exposed_dashboard_mitigation/
@@ -11,11 +11,11 @@ related:
   - /docs/attack_vectors/compromised_api_server/
 ---
 
-# Exposed Kubernetes Dashboard
+# Security Risks of Exposing Kubernetes Dashboard Publicly
 
-The Kubernetes Dashboard is a web-based interface for managing cluster resources and workloads. While helpful for development and debugging, an exposed and misconfigured Dashboard can allow attackers to gain administrative control over the entire cluster.
+The **security risks of exposing Kubernetes Dashboard publicly** are severe. The Kubernetes Dashboard is a web-based interface for managing cluster resources and workloads. While helpful for development and debugging, exposing it publicly without proper authentication allows attackers to gain administrative control over the entire cluster.
 
-This article explores how multiple misconfigurations can align to turn the Dashboard into a critical attack vector.
+This article covers the specific risks of an exposed Kubernetes Dashboard and demonstrates how attackers exploit these misconfigurations for full cluster compromise.
 
 ---
 
