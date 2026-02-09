@@ -30,14 +30,16 @@ This section explores common Kubernetes attack vectors and exploitation techniqu
 ## Attack Vector Categories
 
 ### API and Control Plane Attacks
-- **[Compromised API Server](/docs/attack_vectors/compromised_api_server)**: Exploiting exposed API endpoints
-- **[Exposed Dashboard](/docs/attack_vectors/exposed_dashboard)**: Unauthorized access to Kubernetes dashboards
-- **[Unrestricted etcd Access](/docs/attack_vectors/unrestricted_etcd_access)**: Accessing etcd storage to retrieve secrets and cluster configurations
+- **[Compromised API Server](/docs/attack_vectors/compromised_api_server/)**: Exploiting exposed API endpoints
+- **[Exposed Dashboard](/docs/attack_vectors/exposed_dashboard/)**: Unauthorized access to Kubernetes dashboards
+- **[Unrestricted etcd Access](/docs/attack_vectors/unrestricted_etcd_access/)**: Accessing etcd storage to retrieve secrets and cluster configurations
+- **[Kubelet Anonymous Authentication Abuse](/docs/attack_vectors/kubelet_anonymous_auth/)**: Exploiting unauthenticated kubelet API access to execute commands and steal credentials
 
 ### Container and Runtime Attacks
-- **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape)**: Breaking out of containers to gain host access
-- **[Unrestricted HostPath Mounts](/docs/attack_vectors/unrestricted_hostpath_mounts)**: Mounting host filesystem for full node compromise
-- **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars)**: Injecting or abusing sidecars to intercept data
+- **[Privileged Container Escape](/docs/attack_vectors/privileged_container_escape/)**: Breaking out of containers to gain host access
+- **[Unrestricted HostPath Mounts](/docs/attack_vectors/unrestricted_hostpath_mounts/)**: Mounting host filesystem for full node compromise
+- **[Compromised Sidecars](/docs/attack_vectors/compromised_sidecars/)**: Injecting or abusing sidecars to intercept data
+- **[Ephemeral Debug Container Abuse](/docs/attack_vectors/ephemeral_container_abuse/)**: Exploiting kubectl debug to inject containers and access process namespaces
 
 ### Identity and Access Attacks
 - **[Insecure RBAC Permissions](/docs/attack_vectors/insecure_rbac_permissions)**: Exploiting misconfigured Role-Based Access Control
@@ -51,8 +53,9 @@ This section explores common Kubernetes attack vectors and exploitation techniqu
 - **[Exposed Kubelet API](/docs/attack_vectors/exposed_kubelet_api)**: Unauthorized access to Kubelet APIs
 
 ### Secrets and Data Attacks
-- **[Insecure Secrets Management](/docs/attack_vectors/insecure_secrets_management)**: Leaking secrets due to weak storage
-- **[ImagePullSecrets Theft](/docs/attack_vectors/imagepullsecrets_theft)**: Extracting container registry credentials
+- **[Insecure Secrets Management](/docs/attack_vectors/insecure_secrets_management/)**: Leaking secrets due to weak storage
+- **[ImagePullSecrets Theft](/docs/attack_vectors/imagepullsecrets_theft/)**: Extracting container registry credentials
+- **[Persistent Volume Data Exposure](/docs/attack_vectors/persistent_volume_data_exposure/)**: Accessing sensitive data from orphaned or shared PersistentVolumes
 
 ### Supply Chain Attacks
 - **[Supply Chain Attacks](/docs/attack_vectors/supply_chain_attacks)**: Injecting malicious code into images or CI/CD pipelines
