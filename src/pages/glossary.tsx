@@ -16,45 +16,45 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Admission Controller",
     definition: "A piece of code that intercepts requests to the Kubernetes API server before persistence of the object, used to validate or mutate resources. Examples include PodSecurity, OPA Gatekeeper, and Kyverno.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/api_server_security/opa_gatekeeper",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/opa-gatekeeper",
     tags: ["CKS", "API"],
   },
   {
     term: "AppArmor",
     definition: "A Linux kernel security module that restricts programs' capabilities with per-program profiles. Can be applied to pods to limit container actions.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/app_armor_profiles",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/app-armor-profiles",
     tags: ["CKS", "Runtime"],
   },
   {
     term: "Audit Logging",
     definition: "Kubernetes feature that records all requests to the API server, providing a chronological record of activities for security analysis and compliance.",
-    link: "/docs/best_practices/monitoring_logging_and_runtime_security/intro",
+    link: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/intro",
     tags: ["CKS", "Monitoring"],
   },
   {
     term: "Authentication",
     definition: "The process of verifying the identity of a user or service attempting to access the Kubernetes API. Methods include certificates, tokens, and OIDC.",
-    link: "/docs/fundamentals/authentication/authentication_methods",
+    link: "/kubernetes-security/fundamentals/authentication/authentication-methods",
     tags: ["CKS", "Identity"],
   },
   {
     term: "Authorization",
     definition: "The process of determining whether an authenticated user has permission to perform a requested action. Kubernetes supports RBAC, ABAC, Node, and Webhook modes.",
-    link: "/docs/fundamentals/authorization/authorization_methods",
+    link: "/kubernetes-security/fundamentals/authorization/authorization-methods",
     tags: ["CKS", "Identity"],
   },
   // B
   {
     term: "Base Image",
     definition: "The foundational container image from which other images are built. Securing base images is critical for supply chain security.",
-    link: "/docs/best_practices/supply_chain_security/intro",
+    link: "/kubernetes-security/best-practices/supply-chain-security/intro",
     tags: ["Supply Chain"],
   },
   // C
   {
     term: "Calico",
     definition: "A popular CNI plugin that provides networking and network policy enforcement for Kubernetes clusters.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/network_security/calico",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/network-security/calico",
     tags: ["CKS", "Network"],
   },
   {
@@ -65,13 +65,13 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Cilium",
     definition: "An eBPF-based CNI plugin providing advanced networking, observability, and security features including L7 network policies.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/network_security/cilium",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/network-security/cilium",
     tags: ["CKS", "Network"],
   },
   {
     term: "CIS Benchmark",
     definition: "Security configuration guidelines published by the Center for Internet Security. The CIS Kubernetes Benchmark provides hardening recommendations for clusters.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/intro",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/intro",
     tags: ["CKS", "Compliance"],
   },
   {
@@ -82,13 +82,13 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "CNI (Container Network Interface)",
     definition: "A specification and libraries for configuring network interfaces in Linux containers. CNI plugins like Calico and Cilium implement network policies.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/network_security/intro",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/network-security/intro",
     tags: ["CKS", "Network"],
   },
   {
     term: "Container Escape",
     definition: "An attack where a process breaks out of container isolation to access the host system or other containers.",
-    link: "/docs/attack_vectors/privileged_container_escape",
+    link: "/kubernetes-security/attack-vectors/privileged-container-escape",
     tags: ["Attack"],
   },
   {
@@ -99,20 +99,20 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Cosign",
     definition: "A tool for signing and verifying container images and other artifacts, supporting keyless signing with OIDC identities.",
-    link: "/docs/best_practices/supply_chain_security/cosign",
+    link: "/kubernetes-security/best-practices/supply-chain-security/cosign",
     tags: ["CKS", "Supply Chain"],
   },
   {
     term: "CSI (Container Storage Interface)",
     definition: "A standard for exposing storage systems to containerized workloads. CSI drivers can introduce security risks if misconfigured.",
-    link: "/docs/attack_vectors/insecure_csi_drivers",
+    link: "/kubernetes-security/attack-vectors/insecure-csi-drivers",
     tags: ["Storage"],
   },
   // D
   {
     term: "Defense in Depth",
     definition: "A security strategy employing multiple layers of security controls throughout a system, so if one layer fails, others continue to provide protection.",
-    link: "/docs/fundamentals/intro",
+    link: "/kubernetes-security/fundamentals/intro",
     tags: ["Principle"],
   },
   // E
@@ -124,47 +124,47 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Encryption at Rest",
     definition: "Encrypting data stored on disk, including Kubernetes Secrets stored in etcd. Configured via EncryptionConfiguration.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/secrets_management/sealed_secrets",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/secrets-management/sealed-secrets",
     tags: ["CKS", "Secrets"],
   },
   {
     term: "etcd",
     definition: "The distributed key-value store used by Kubernetes to store all cluster data, including Secrets. Securing etcd is critical for cluster security.",
-    link: "/docs/attack_vectors/unrestricted_etcd_access",
+    link: "/kubernetes-security/attack-vectors/unrestricted-etcd-access",
     tags: ["CKS", "Storage"],
   },
   // F
   {
     term: "Falco",
     definition: "A cloud-native runtime security tool that detects abnormal behavior and security threats using system call monitoring and custom rules.",
-    link: "/docs/best_practices/monitoring_logging_and_runtime_security/falco",
+    link: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/falco",
     tags: ["CKS", "Runtime"],
   },
   {
     term: "4C's of Cloud Native Security",
     definition: "A security model with four layers: Code, Container, Cluster, and Cloud. Each layer builds on the security of the layers beneath it.",
-    link: "/docs/fundamentals/the_4_c_cloud_native_security",
+    link: "/kubernetes-security/fundamentals/the-4-c-cloud-native-security",
     tags: ["Principle"],
   },
   // G
   {
     term: "Gatekeeper",
     definition: "A Kubernetes-native policy controller built on Open Policy Agent (OPA) that enforces policies via admission control.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/api_server_security/opa_gatekeeper",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/opa-gatekeeper",
     tags: ["CKS", "Policy"],
   },
   // H
   {
     term: "HostPath",
     definition: "A volume type that mounts a file or directory from the host node's filesystem into a pod. Can be exploited for container escape if unrestricted.",
-    link: "/docs/attack_vectors/unrestricted_hostpath_mounts",
+    link: "/kubernetes-security/attack-vectors/unrestricted-hostpath-mounts",
     tags: ["CKS", "Attack"],
   },
   // I
   {
     term: "Image Scanning",
     definition: "The process of analyzing container images for known vulnerabilities, misconfigurations, and malware before deployment.",
-    link: "/docs/best_practices/monitoring_logging_and_runtime_security/trivy",
+    link: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/trivy",
     tags: ["CKS", "Supply Chain"],
   },
   {
@@ -176,26 +176,26 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Kube-bench",
     definition: "A tool that checks whether Kubernetes is deployed according to CIS Kubernetes Benchmark security recommendations.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/intro",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/intro",
     tags: ["CKS", "Compliance"],
   },
   {
     term: "Kubelet",
     definition: "The primary node agent that runs on each node, responsible for managing pods. The Kubelet API must be secured to prevent unauthorized access.",
-    link: "/docs/attack_vectors/exposed_kubelet_api",
+    link: "/kubernetes-security/attack-vectors/exposed-kubelet-api",
     tags: ["CKS", "Node"],
   },
   {
     term: "Kyverno",
     definition: "A Kubernetes-native policy engine that validates, mutates, and generates resources using YAML policies without requiring a new language.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/api_server_security/kyverno",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/kyverno",
     tags: ["CKS", "Policy"],
   },
   // L
   {
     term: "Least Privilege",
     definition: "A security principle stating that users and processes should have only the minimum permissions necessary to perform their functions.",
-    link: "/docs/fundamentals/intro",
+    link: "/kubernetes-security/fundamentals/intro",
     tags: ["CKS", "Principle"],
   },
   // M
@@ -213,7 +213,7 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Network Policy",
     definition: "A Kubernetes resource that specifies how pods are allowed to communicate with each other and external endpoints. Requires a CNI that supports network policies.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/network-security/network-policies",
     tags: ["CKS", "Network"],
   },
   {
@@ -225,70 +225,70 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "OPA (Open Policy Agent)",
     definition: "A general-purpose policy engine that enables unified policy enforcement across the stack. Used with Gatekeeper for Kubernetes admission control.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/api_server_security/opa_gatekeeper",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/opa-gatekeeper",
     tags: ["CKS", "Policy"],
   },
   // P
   {
     term: "Pod Security Admission (PSA)",
     definition: "Built-in Kubernetes admission controller that enforces Pod Security Standards at the namespace level. Replaced PodSecurityPolicy in Kubernetes 1.25+.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/pod-security-standards",
     tags: ["CKS", "Pod"],
   },
   {
     term: "Pod Security Standards (PSS)",
     definition: "Three predefined security profiles — Privileged, Baseline, and Restricted — that define different levels of pod security restrictions.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/pod-security-standards",
     tags: ["CKS", "Pod"],
   },
   {
     term: "Privileged Container",
     definition: "A container running with elevated privileges equivalent to root on the host. Should be avoided as it enables container escape attacks.",
-    link: "/docs/attack_vectors/privileged_container_escape",
+    link: "/kubernetes-security/attack-vectors/privileged-container-escape",
     tags: ["CKS", "Attack"],
   },
   // R
   {
     term: "RBAC (Role-Based Access Control)",
     definition: "Kubernetes authorization mechanism that regulates access based on the roles of individual users. Uses Role, ClusterRole, RoleBinding, and ClusterRoleBinding resources.",
-    link: "/docs/fundamentals/authorization/rbac",
+    link: "/kubernetes-security/fundamentals/authorization/rbac",
     tags: ["CKS", "Identity"],
   },
   {
     term: "Runtime Security",
     definition: "Security measures that detect and prevent threats during container execution, including syscall monitoring, behavioral analysis, and threat detection.",
-    link: "/docs/best_practices/monitoring_logging_and_runtime_security/intro",
+    link: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/intro",
     tags: ["CKS", "Runtime"],
   },
   // S
   {
     term: "SBOM (Software Bill of Materials)",
     definition: "A formal record of components and dependencies in software, enabling vulnerability tracking and supply chain transparency.",
-    link: "/docs/best_practices/supply_chain_security/syft",
+    link: "/kubernetes-security/best-practices/supply-chain-security/syft",
     tags: ["CKS", "Supply Chain"],
   },
   {
     term: "Seccomp",
     definition: "Secure Computing Mode — a Linux kernel feature that restricts the system calls a process can make, reducing attack surface.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp_in_pods",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/seccomp-in-pods",
     tags: ["CKS", "Runtime"],
   },
   {
     term: "Secret",
     definition: "A Kubernetes object that stores sensitive data like passwords, tokens, and keys. Secrets should be encrypted at rest and accessed via RBAC.",
-    link: "/docs/attack_vectors/insecure_secrets_management",
+    link: "/kubernetes-security/attack-vectors/insecure-secrets-management",
     tags: ["CKS", "Secrets"],
   },
   {
     term: "Security Context",
     definition: "Pod and container settings that define privilege and access control, including runAsUser, runAsNonRoot, readOnlyRootFilesystem, and capabilities.",
-    link: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards",
+    link: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/pod-security-standards",
     tags: ["CKS", "Pod"],
   },
   {
     term: "Service Account",
     definition: "An identity for processes running in pods to authenticate to the API server. Each namespace has a default service account.",
-    link: "/docs/attack_vectors/service_account_token_abuse",
+    link: "/kubernetes-security/attack-vectors/service-account-token-abuse",
     tags: ["CKS", "Identity"],
   },
   {
@@ -299,14 +299,14 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Supply Chain Security",
     definition: "Practices that protect software from tampering throughout the development, build, and deployment pipeline, including image signing and vulnerability scanning.",
-    link: "/docs/best_practices/supply_chain_security/intro",
+    link: "/kubernetes-security/best-practices/supply-chain-security/intro",
     tags: ["CKS", "Supply Chain"],
   },
   // T
   {
     term: "Trivy",
     definition: "A comprehensive security scanner for vulnerabilities, misconfigurations, secrets, and SBOM in container images, filesystems, and Kubernetes.",
-    link: "/docs/best_practices/monitoring_logging_and_runtime_security/trivy",
+    link: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/trivy",
     tags: ["CKS", "Scanning"],
   },
   // V
@@ -319,7 +319,7 @@ const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Zero Trust",
     definition: "A security model that requires strict identity verification for every person and device trying to access resources, regardless of network location.",
-    link: "/docs/fundamentals/intro",
+    link: "/kubernetes-security/fundamentals/intro",
     tags: ["Principle"],
   },
 ];
@@ -512,7 +512,7 @@ export default function Glossary(): JSX.Element {
 
           <div className={styles.cta}>
             <p>Looking for more detail on a specific topic?</p>
-            <Link to="/docs/intro" className={styles.ctaButton}>
+            <Link to="/kubernetes-security/intro" className={styles.ctaButton}>
               Browse Full Documentation
             </Link>
           </div>

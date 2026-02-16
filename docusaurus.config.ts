@@ -27,11 +27,11 @@ const config: Config = {
             "/blog/**",
             // Exclude all tag pages
             "/tags/**",
-            "/docs/tags/**",
+            "/kubernetes-security/tags/**",
             // Exclude pagination and utility pages
             "/search/**",
             // Exclude category pages (auto-generated)
-            "/docs/category/**",
+            "/kubernetes-security/category/**",
           ],
           lastmod: "date",
           createSitemapItems: async (params: any) => {
@@ -40,22 +40,22 @@ const config: Config = {
 
             return items.map((item: any) => {
               // Homepage gets highest priority
-              if (item.url === "https://k8s-security.guru/" || item.url.endsWith("/docs/intro/")) {
+              if (item.url === "https://k8s-security.guru/" || item.url.endsWith("/kubernetes-security/intro/")) {
                 return {...item, priority: 1.0, changefreq: "daily"};
               }
               // Main category intros
               if (
-                item.url.includes("/docs/attack_vectors/intro") ||
-                item.url.includes("/docs/best_practices/intro") ||
-                item.url.includes("/docs/fundamentals/intro") ||
-                item.url.includes("/docs/tools/intro")
+                item.url.includes("/kubernetes-security/attack-vectors/intro") ||
+                item.url.includes("/kubernetes-security/best-practices/intro") ||
+                item.url.includes("/kubernetes-security/fundamentals/intro") ||
+                item.url.includes("/kubernetes-security/tools/intro")
               ) {
                 return {...item, priority: 0.9, changefreq: "weekly"};
               }
               // Best practices and attack vectors content
               if (
-                item.url.includes("/docs/attack_vectors/") ||
-                item.url.includes("/docs/best_practices/")
+                item.url.includes("/kubernetes-security/attack-vectors/") ||
+                item.url.includes("/kubernetes-security/best-practices/")
               ) {
                 return {...item, priority: 0.8};
               }
@@ -65,7 +65,7 @@ const config: Config = {
         },
         docs: {
           path: "docs",
-          routeBasePath: "docs",
+          routeBasePath: "kubernetes-security",
           sidebarPath: "./sidebars.ts",
           sidebarItemsGenerator: undefined,
           sidebarCollapsible: true,
@@ -100,20 +100,85 @@ const config: Config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
-          // Redirect old guides URLs to relevant docs
-          // Note: trailingSlash: true handles both /path and /path/ automatically
-          {
-            from: "/guides/intro",
-            to: "/docs/intro/",
-          },
-          {
-            from: "/guides/certificates/issue_certificate_for_k8s_user",
-            to: "/docs/fundamentals/authentication/certificates/",
-          },
-          {
-            from: "/guides/getting_started",
-            to: "/docs/intro/",
-          },
+          // Redirect old guides URLs to new structure
+          {from: "/guides/intro", to: "/kubernetes-security/intro/"},
+          {from: "/guides/certificates/issue_certificate_for_k8s_user", to: "/kubernetes-security/fundamentals/authentication/certificates/"},
+          {from: "/guides/getting_started", to: "/kubernetes-security/intro/"},
+          // Legacy /docs/ redirects to /kubernetes-security/
+          {from: "/docs", to: "/kubernetes-security/intro/"},
+          {from: "/docs/intro", to: "/kubernetes-security/intro/"},
+          // Fundamentals
+          {from: "/docs/fundamentals", to: "/kubernetes-security/fundamentals/intro/"},
+          {from: "/docs/fundamentals/intro", to: "/kubernetes-security/fundamentals/intro/"},
+          {from: "/docs/fundamentals/authentication/certificates", to: "/kubernetes-security/fundamentals/authentication/certificates/"},
+          {from: "/docs/fundamentals/authentication/service_accounts", to: "/kubernetes-security/fundamentals/authentication/service-accounts/"},
+          {from: "/docs/fundamentals/authentication/authentication_methods", to: "/kubernetes-security/fundamentals/authentication/authentication-methods/"},
+          {from: "/docs/fundamentals/authentication/issue_user_certificate", to: "/kubernetes-security/fundamentals/authentication/issue-user-certificate/"},
+          {from: "/docs/fundamentals/authorization/rbac", to: "/kubernetes-security/fundamentals/authorization/rbac/"},
+          {from: "/docs/fundamentals/authorization/abac", to: "/kubernetes-security/fundamentals/authorization/abac/"},
+          {from: "/docs/fundamentals/authorization/authorization_methods", to: "/kubernetes-security/fundamentals/authorization/authorization-methods/"},
+          {from: "/docs/fundamentals/authorization/node_authorization", to: "/kubernetes-security/fundamentals/authorization/node-authorization/"},
+          {from: "/docs/fundamentals/authorization/webhook_authorization", to: "/kubernetes-security/fundamentals/authorization/webhook-authorization/"},
+          {from: "/docs/fundamentals/the_4_c_cloud_native_security", to: "/kubernetes-security/fundamentals/the-4-c-cloud-native-security/"},
+          {from: "/docs/fundamentals/understanding_k8s_attack_surface", to: "/kubernetes-security/fundamentals/understanding-k8s-attack-surface/"},
+          // Attack vectors
+          {from: "/docs/attack_vectors", to: "/kubernetes-security/attack-vectors/intro/"},
+          {from: "/docs/attack_vectors/intro", to: "/kubernetes-security/attack-vectors/intro/"},
+          {from: "/docs/attack_vectors/exposed_dashboard", to: "/kubernetes-security/attack-vectors/exposed-dashboard/"},
+          {from: "/docs/attack_vectors/exposed_kubelet_api", to: "/kubernetes-security/attack-vectors/exposed-kubelet-api/"},
+          {from: "/docs/attack_vectors/privileged_container_escape", to: "/kubernetes-security/attack-vectors/privileged-container-escape/"},
+          {from: "/docs/attack_vectors/unrestricted_etcd_access", to: "/kubernetes-security/attack-vectors/unrestricted-etcd-access/"},
+          {from: "/docs/attack_vectors/unrestricted_hostpath_mounts", to: "/kubernetes-security/attack-vectors/unrestricted-hostpath-mounts/"},
+          {from: "/docs/attack_vectors/insecure_rbac_permissions", to: "/kubernetes-security/attack-vectors/insecure-rbac-permissions/"},
+          {from: "/docs/attack_vectors/insecure_secrets_management", to: "/kubernetes-security/attack-vectors/insecure-secrets-management/"},
+          {from: "/docs/attack_vectors/lack_of_network_policies", to: "/kubernetes-security/attack-vectors/lack-of-network-policies/"},
+          {from: "/docs/attack_vectors/misconfigured_admission_controllers", to: "/kubernetes-security/attack-vectors/misconfigured-admission-controllers/"},
+          {from: "/docs/attack_vectors/supply_chain_attacks", to: "/kubernetes-security/attack-vectors/supply-chain-attacks/"},
+          {from: "/docs/attack_vectors/ddos_attacks", to: "/kubernetes-security/attack-vectors/ddos-attacks/"},
+          {from: "/docs/attack_vectors/traffic_hijacking", to: "/kubernetes-security/attack-vectors/traffic-hijacking/"},
+          {from: "/docs/attack_vectors/compromised_api_server", to: "/kubernetes-security/attack-vectors/compromised-api-server/"},
+          {from: "/docs/attack_vectors/compromised_sidecars", to: "/kubernetes-security/attack-vectors/compromised-sidecars/"},
+          {from: "/docs/attack_vectors/insecure_csi_drivers", to: "/kubernetes-security/attack-vectors/insecure-csi-drivers/"},
+          {from: "/docs/attack_vectors/privileged_service_accounts", to: "/kubernetes-security/attack-vectors/privileged-service-accounts/"},
+          {from: "/docs/attack_vectors/service_account_token_abuse", to: "/kubernetes-security/attack-vectors/service-account-token-abuse/"},
+          {from: "/docs/attack_vectors/imagepullsecrets_theft", to: "/kubernetes-security/attack-vectors/imagepullsecrets-theft/"},
+          {from: "/docs/attack_vectors/exec_attach_credential_theft", to: "/kubernetes-security/attack-vectors/exec-attach-credential-theft/"},
+          {from: "/docs/attack_vectors/cloud_metadata_service_abuse", to: "/kubernetes-security/attack-vectors/cloud-metadata-service-abuse/"},
+          {from: "/docs/attack_vectors/kubelet_anonymous_auth", to: "/kubernetes-security/attack-vectors/kubelet-anonymous-auth/"},
+          {from: "/docs/attack_vectors/ephemeral_container_abuse", to: "/kubernetes-security/attack-vectors/ephemeral-container-abuse/"},
+          {from: "/docs/attack_vectors/persistent_volume_data_exposure", to: "/kubernetes-security/attack-vectors/persistent-volume-data-exposure/"},
+          // Best practices
+          {from: "/docs/best_practices", to: "/kubernetes-security/best-practices/intro/"},
+          {from: "/docs/best_practices/intro", to: "/kubernetes-security/best-practices/intro/"},
+          {from: "/docs/best_practices/cluster_setup_and_hardening", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/intro/"},
+          {from: "/docs/best_practices/cluster_setup_and_hardening/intro", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/intro/"},
+          {from: "/docs/best_practices/system_hardening", to: "/kubernetes-security/best-practices/system-hardening/intro/"},
+          {from: "/docs/best_practices/system_hardening/intro", to: "/kubernetes-security/best-practices/system-hardening/intro/"},
+          {from: "/docs/best_practices/minimize_microservice_vulnerabilities", to: "/kubernetes-security/best-practices/minimize-microservice-vulnerabilities/intro/"},
+          {from: "/docs/best_practices/minimize_microservice_vulnerabilities/intro", to: "/kubernetes-security/best-practices/minimize-microservice-vulnerabilities/intro/"},
+          {from: "/docs/best_practices/minimize_microservice_vulnerabilities/pod_level_resources", to: "/kubernetes-security/best-practices/minimize-microservice-vulnerabilities/pod-level-resources/"},
+          {from: "/docs/best_practices/monitoring_logging_and_runtime_security", to: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/intro/"},
+          {from: "/docs/best_practices/monitoring_logging_and_runtime_security/intro", to: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/intro/"},
+          {from: "/docs/best_practices/monitoring_logging_and_runtime_security/falco", to: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/falco/"},
+          {from: "/docs/best_practices/monitoring_logging_and_runtime_security/tetragon", to: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/tetragon/"},
+          {from: "/docs/best_practices/monitoring_logging_and_runtime_security/trivy", to: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/trivy/"},
+          {from: "/docs/best_practices/supply_chain_security", to: "/kubernetes-security/best-practices/supply-chain-security/intro/"},
+          {from: "/docs/best_practices/supply_chain_security/intro", to: "/kubernetes-security/best-practices/supply-chain-security/intro/"},
+          {from: "/docs/best_practices/supply_chain_security/cosign", to: "/kubernetes-security/best-practices/supply-chain-security/cosign/"},
+          {from: "/docs/best_practices/supply_chain_security/trivy_operator", to: "/kubernetes-security/best-practices/supply-chain-security/trivy-operator/"},
+          // Key nested pages with actual files
+          {from: "/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/network-security/network-policies/"},
+          {from: "/docs/best_practices/cluster_setup_and_hardening/network_security/intro", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/network-security/intro/"},
+          {from: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/pod-security-standards/"},
+          {from: "/docs/best_practices/cluster_setup_and_hardening/secrets_management/sealed_secrets", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/secrets-management/sealed-secrets/"},
+          {from: "/docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_for_k8s", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/cis/cis-benchmark-for-k8s/"},
+          {from: "/docs/best_practices/cluster_setup_and_hardening/cis/cis_benchmark_kube_bench", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/cis/cis-benchmark-kube-bench/"},
+          // Tools
+          {from: "/docs/tools", to: "/kubernetes-security/tools/intro/"},
+          {from: "/docs/tools/intro", to: "/kubernetes-security/tools/intro/"},
+          {from: "/docs/tools/cdk", to: "/kubernetes-security/tools/cdk/"},
+          {from: "/docs/tools/kdigger", to: "/kubernetes-security/tools/kdigger/"},
+          {from: "/docs/tools/red_kube", to: "/kubernetes-security/tools/red-kube/"},
         ],
       },
     ],
@@ -125,7 +190,7 @@ const config: Config = {
         indexPages: false,
         language: "en",
         hashed: true,
-        docsRouteBasePath: "/docs",
+        docsRouteBasePath: "/kubernetes-security",
         blogRouteBasePath: "/blog",
         highlightSearchTermsOnTargetPage: true,
         searchResultLimits: 8,
@@ -402,7 +467,7 @@ const config: Config = {
     announcementBar: {
       id: "new_domain",
       content:
-        'Welcome to our new domain! <a href="/docs/intro">Start learning Kubernetes security</a> or try our <a href="/practice">CKS Practice Questions</a>',
+        'Welcome to our new domain! <a href="/kubernetes-security/intro">Start learning Kubernetes security</a> or try our <a href="/practice">CKS Practice Questions</a>',
       backgroundColor: "#22c55e",
       textColor: "#fff",
       isCloseable: true,
@@ -460,7 +525,7 @@ const config: Config = {
         href: "/",
       },
       items: [
-        {to: "/docs/intro", label: "Docs", position: "left"},
+        {to: "/kubernetes-security/intro", label: "Docs", position: "left"},
         {to: "/glossary", label: "Glossary", position: "left"},
         {to: "/practice", label: "Practice", position: "left"},
         {to: "/books", label: "Books", position: "left"},
@@ -480,11 +545,11 @@ const config: Config = {
         {
           title: "Documentation",
           items: [
-            {label: "Introduction", to: "/docs/intro"},
-            {label: "Fundamentals", to: "/docs/fundamentals/intro"},
-            {label: "Attack Vectors", to: "/docs/attack_vectors/intro"},
-            {label: "Best Practices", to: "/docs/best_practices/intro"},
-            {label: "Security Tools", to: "/docs/tools/intro"},
+            {label: "Introduction", to: "/kubernetes-security/intro"},
+            {label: "Fundamentals", to: "/kubernetes-security/fundamentals/intro"},
+            {label: "Attack Vectors", to: "/kubernetes-security/attack-vectors/intro"},
+            {label: "Best Practices", to: "/kubernetes-security/best-practices/intro"},
+            {label: "Security Tools", to: "/kubernetes-security/tools/intro"},
             {label: "Glossary", to: "/glossary"},
             {label: "Practice Questions", to: "/practice"},
           ],
@@ -492,11 +557,11 @@ const config: Config = {
         {
           title: "CKS Exam Domains",
           items: [
-            {label: "Cluster Setup & Hardening", to: "/docs/best_practices/cluster_setup_and_hardening/intro"},
-            {label: "System Hardening", to: "/docs/best_practices/system_hardening/intro"},
-            {label: "Microservice Security", to: "/docs/best_practices/minimize_microservice_vulnerabilities/intro"},
-            {label: "Supply Chain Security", to: "/docs/best_practices/supply_chain_security/intro"},
-            {label: "Monitoring & Runtime Security", to: "/docs/best_practices/monitoring_logging_and_runtime_security/intro"},
+            {label: "Cluster Setup & Hardening", to: "/kubernetes-security/best-practices/cluster-setup-and-hardening/intro"},
+            {label: "System Hardening", to: "/kubernetes-security/best-practices/system-hardening/intro"},
+            {label: "Microservice Security", to: "/kubernetes-security/best-practices/minimize-microservice-vulnerabilities/intro"},
+            {label: "Supply Chain Security", to: "/kubernetes-security/best-practices/supply-chain-security/intro"},
+            {label: "Monitoring & Runtime Security", to: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/intro"},
           ],
         },
         {

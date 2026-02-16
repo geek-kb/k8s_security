@@ -5,11 +5,11 @@ import Head from "@docusaurus/Head";
 import styles from "./styles.module.css";
 
 const popularPages = [
-  {title: "Network Policies", path: "/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies/"},
-  {title: "Pod Security Standards", path: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards/"},
-  {title: "RBAC Authorization", path: "/docs/fundamentals/authorization/rbac/"},
-  {title: "Container Escape Attacks", path: "/docs/attack_vectors/privileged_container_escape/"},
-  {title: "Falco Runtime Security", path: "/docs/best_practices/monitoring_logging_and_runtime_security/falco/"},
+  {title: "Network Policies", path: "/kubernetes-security/best-practices/cluster-setup-and-hardening/network-security/network-policies/"},
+  {title: "Pod Security Standards", path: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/pod-security-standards/"},
+  {title: "RBAC Authorization", path: "/kubernetes-security/fundamentals/authorization/rbac/"},
+  {title: "Container Escape Attacks", path: "/kubernetes-security/attack-vectors/privileged-container-escape/"},
+  {title: "Falco Runtime Security", path: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/falco/"},
   {title: "CKS Practice Questions", path: "/practice/"},
 ];
 
@@ -40,7 +40,7 @@ export default function NotFoundContent(): JSX.Element {
           </div>
 
           <div className={styles.actions}>
-            <Link className="button button--primary" to="/docs/intro">
+            <Link className="button button--primary" to="/kubernetes-security/intro">
               Start from Introduction
             </Link>
 
@@ -63,16 +63,16 @@ export default function NotFoundContent(): JSX.Element {
           <div className={styles.categoriesSection}>
             <h2 className={styles.categoriesTitle}>Browse by Category</h2>
             <div className={styles.categoriesGrid}>
-              <Link to="/docs/fundamentals/intro" className={styles.categoryLink}>
+              <Link to="/kubernetes-security/fundamentals/intro" className={styles.categoryLink}>
                 Security Fundamentals
               </Link>
-              <Link to="/docs/attack_vectors/intro" className={styles.categoryLink}>
+              <Link to="/kubernetes-security/attack-vectors/intro" className={styles.categoryLink}>
                 Attack Vectors
               </Link>
-              <Link to="/docs/best_practices/intro" className={styles.categoryLink}>
+              <Link to="/kubernetes-security/best-practices/intro" className={styles.categoryLink}>
                 Best Practices
               </Link>
-              <Link to="/docs/tools/intro" className={styles.categoryLink}>
+              <Link to="/kubernetes-security/tools/intro" className={styles.categoryLink}>
                 Security Tools
               </Link>
             </div>

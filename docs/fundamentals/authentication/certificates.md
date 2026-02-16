@@ -59,7 +59,7 @@ openssl x509 -req -in user.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out use
 
 #### Cross-Reference
 
-For a detailed step-by-step guide on issuing a certificate for a Kubernetes user, see [How to Issue a Certificate for a Kubernetes User](/docs/fundamentals/authentication/issue_user_certificate/).
+For a detailed step-by-step guide on issuing a certificate for a Kubernetes user, see [How to Issue a Certificate for a Kubernetes User](/kubernetes-security/fundamentals/authentication/issue-user-certificate/).
 
 ---
 

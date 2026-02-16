@@ -25,6 +25,11 @@ This site is dedicated to helping developers, DevOps engineers, and Kubernetes a
 
 Topics relevant for the CKS certification exam are marked accordingly throughout the documentation.
 
+| | |
+|---|---|
+| **Current Kubernetes Version** | 1.35 |
+| **CKS Exam Last Updated** | October 15, 2024 |
+
 :::info Work in Progress
 The site is actively being developed. More CKS-related topics are being added regularly.
 Content is kept up to date with the latest Kubernetes versions and security tools based on the CKS curriculum.
@@ -36,20 +41,20 @@ Content is kept up to date with the latest Kubernetes versions and security tool
 
 The **K8s Security Guide** is organized into four main categories:
 
-### [Security Fundamentals](/docs/fundamentals/intro)
+### [Security Fundamentals](/kubernetes-security/fundamentals/intro)
 Core security principles including authentication, authorization, RBAC, and the Kubernetes security model. Essential foundation for understanding how Kubernetes security works.
 
-### [Attack Vectors](/docs/attack_vectors/intro)
+### [Attack Vectors](/kubernetes-security/attack-vectors/intro)
 Common security risks, real-world Kubernetes exploits, container escapes, and privilege escalation techniques. Understanding threats is the first step to defending against them.
 
-### [Best Practices](/docs/best_practices/intro)
+### [Best Practices](/kubernetes-security/best-practices/intro)
 Production-grade security configurations for hardening Kubernetes clusters, workloads, and network configurations. Covers all four CKS exam domains:
 - Cluster Setup & Hardening
 - System Hardening
 - Minimize Microservice Vulnerabilities
 - Supply Chain Security
 
-### [Security Tools](/docs/tools/intro)
+### [Security Tools](/kubernetes-security/tools/intro)
 Open-source tools for vulnerability scanning, runtime security, policy enforcement, and compliance auditing. Includes tools like Trivy, Falco, kube-bench, and more.
 
 ---
@@ -67,10 +72,10 @@ Open-source tools for vulnerability scanning, runtime security, policy enforceme
 
 ## How to Navigate
 
-1. Start with **[Fundamentals](/docs/fundamentals/intro)** to build a strong security foundation
-2. Explore **[Attack Vectors](/docs/attack_vectors/intro)** to understand common Kubernetes threats
-3. Follow **[Best Practices](/docs/best_practices/intro)** to implement security hardening techniques
-4. Use **[Security Tools](/docs/tools/intro)** to enhance your security posture
+1. Start with **[Fundamentals](/kubernetes-security/fundamentals/intro)** to build a strong security foundation
+2. Explore **[Attack Vectors](/kubernetes-security/attack-vectors/intro)** to understand common Kubernetes threats
+3. Follow **[Best Practices](/kubernetes-security/best-practices/intro)** to implement security hardening techniques
+4. Use **[Security Tools](/kubernetes-security/tools/intro)** to enhance your security posture
 5. Browse **[Recommended Books](/books/)** for deeper learning resources
 6. Use the **Search** feature (top right) to find specific security topics
 

@@ -10,7 +10,7 @@ interface Props {
 
 export default function Root({children}: Props): JSX.Element {
   const location = useLocation();
-  const isDocPage = location.pathname.startsWith("/docs/");
+  const isDocPage = location.pathname.startsWith("/kubernetes-security/");
 
   return (
     <>

@@ -35,10 +35,10 @@ Security in Kubernetes is an ongoing process that requires collaboration across 
 
 ## Topics Covered in This Section
 
-- **[Understanding Kubernetes Attack Surfaces](/docs/fundamentals/understanding_k8s_attack_surface)**: Learn how attackers target different layers of Kubernetes.
-- **[The Four C's of Cloud Native Security](/docs/fundamentals/the_4_c_cloud_native_security)**: Follow a layered security model to protect Kubernetes environments.
-- **[Authentication and Access Control](/docs/fundamentals/authentication/authentication_methods)**: Secure API access using strong authentication mechanisms.
-- **[Authorization](/docs/fundamentals/authorization/authorization_methods)**: Control access to Kubernetes resources using RBAC and other methods.
+- **[Understanding Kubernetes Attack Surfaces](/kubernetes-security/fundamentals/understanding-k8s-attack-surface)**: Learn how attackers target different layers of Kubernetes.
+- **[The Four C's of Cloud Native Security](/kubernetes-security/fundamentals/the-4-c-cloud-native-security)**: Follow a layered security model to protect Kubernetes environments.
+- **[Authentication and Access Control](/kubernetes-security/fundamentals/authentication/authentication-methods)**: Secure API access using strong authentication mechanisms.
+- **[Authorization](/kubernetes-security/fundamentals/authorization/authorization-methods)**: Control access to Kubernetes resources using RBAC and other methods.
 
 This section serves as a **starting point for learning Kubernetes security** and implementing foundational security practices.
 

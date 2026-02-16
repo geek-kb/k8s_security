@@ -227,7 +227,7 @@ export default function About(): JSX.Element {
             </section>
 
             <div className={styles.cta}>
-              <Link to="/docs/intro" className={styles.ctaButton}>
+              <Link to="/kubernetes-security/intro" className={styles.ctaButton}>
                 Start Reading the Documentation
               </Link>
             </div>

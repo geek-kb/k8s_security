@@ -4,7 +4,7 @@
 
 Comprehensive Kubernetes security documentation covering CKS certification topics, attack vectors, cluster hardening, and container security best practices.
 
-**Live site:** [https://k8s-security.guru](https://k8s-security.guru/docs/intro/)
+**Live site:** [https://k8s-security.guru](https://k8s-security.guru/kubernetes-security/intro/)
 
 ---
 
@@ -31,8 +31,8 @@ k8s_security/
 ├── .github/workflows/       # GitHub Actions for CI/CD deployment
 ├── blog/                    # Blog posts (Markdown)
 ├── docs/                    # Documentation articles (Markdown)
-│   ├── attack_vectors/      # Security attack scenarios
-│   ├── best_practices/      # Security mitigations and guidance
+│   ├── attack-vectors/      # Security attack scenarios
+│   ├── best-practices/      # Security mitigations and guidance
 │   ├── fundamentals/        # Core security concepts
 │   └── tools/               # Security tools documentation
 ├── scripts/                 # Utility scripts (doc counter)
@@ -49,6 +49,18 @@ k8s_security/
 ├── tsconfig.json            # TypeScript configuration
 └── README.md                # This file
 ```
+
+## URL Structure
+
+Documentation is served at `/kubernetes-security/` with SEO-optimized hyphenated paths:
+
+- `/kubernetes-security/intro/` - Introduction
+- `/kubernetes-security/attack-vectors/` - Attack vector documentation
+- `/kubernetes-security/best-practices/` - Security best practices
+- `/kubernetes-security/fundamentals/` - Core security concepts
+- `/kubernetes-security/tools/` - Security tools
+
+301 redirects are configured for all legacy `/docs/` URLs.
 
 ---
 

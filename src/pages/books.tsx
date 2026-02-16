@@ -255,7 +255,7 @@ export default function Books(): JSX.Element {
               explore:
             </p>
             <div className={styles.ctaLinks}>
-              <Link to="/docs/intro" className={styles.ctaLink}>
+              <Link to="/kubernetes-security/intro" className={styles.ctaLink}>
                 Documentation
               </Link>
               <Link to="/practice" className={styles.ctaLink}>

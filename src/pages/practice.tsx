@@ -28,7 +28,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "NetworkPolicy is a Kubernetes resource that specifies how groups of pods are allowed to communicate with each other and other network endpoints. It acts as a firewall for your cluster.",
-    docLink: "/docs/best_practices/cluster_setup_and_hardening/network_security/network_policies",
+    docLink: "/kubernetes-security/best-practices/cluster-setup-and-hardening/network-security/network-policies",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "kube-bench is a tool that checks whether Kubernetes is deployed according to the CIS Kubernetes Benchmark security recommendations. It runs automated checks against your cluster configuration.",
-    docLink: "/docs/best_practices/cluster_setup_and_hardening/intro",
+    docLink: "/kubernetes-security/best-practices/cluster-setup-and-hardening/intro",
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 2,
     explanation: "PodSecurity is the built-in admission controller that enforces Pod Security Standards (PSS) at the namespace level. PodSecurityPolicy was deprecated in Kubernetes 1.21 and removed in 1.25.",
-    docLink: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_admission",
+    docLink: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/pod-security-admission",
   },
   {
     id: 4,
@@ -70,7 +70,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 0,
     explanation: "The --audit-log-path flag specifies the path where audit logs should be written. Additional flags like --audit-policy-file define what events to record.",
-    docLink: "/docs/best_practices/monitoring_logging_and_runtime_security/intro",
+    docLink: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/intro",
   },
   // System Hardening
   {
@@ -85,7 +85,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 2,
     explanation: "Seccomp (Secure Computing Mode) is a Linux kernel feature that can restrict the system calls a process can make. Kubernetes allows you to apply seccomp profiles to pods.",
-    docLink: "/docs/best_practices/cluster_setup_and_hardening/pod_security/seccomp",
+    docLink: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/seccomp",
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 2,
     explanation: "The Principle of Least Privilege states that every program and user should operate using the least amount of privilege necessary to complete the job. This reduces the potential damage from attacks.",
-    docLink: "/docs/fundamentals/intro",
+    docLink: "/kubernetes-security/fundamentals/intro",
   },
   // Minimize Microservice Vulnerabilities
   {
@@ -114,7 +114,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 2,
     explanation: "The Restricted profile is the most restrictive PSS level, following current pod hardening best practices. It disallows privilege escalation, requires running as non-root, and enforces many other security controls.",
-    docLink: "/docs/best_practices/cluster_setup_and_hardening/pod_security/pod_security_standards",
+    docLink: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/pod-security-standards",
   },
   {
     id: 8,
@@ -128,7 +128,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "runAsNonRoot: true in a SecurityContext ensures the container must run as a non-root user. The kubelet will reject running the container if it would run as root (UID 0).",
-    docLink: "/docs/best_practices/cluster_setup_and_hardening/pod_security/security_context",
+    docLink: "/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/security-context",
   },
   {
     id: 9,
@@ -142,7 +142,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "ConfigMaps store data in plain text and are not designed for sensitive data. Secrets should be used instead, and ideally encrypted at rest. Never store passwords, tokens, or keys in ConfigMaps.",
-    docLink: "/docs/attack_vectors/insecure_secrets_management",
+    docLink: "/kubernetes-security/attack-vectors/insecure-secrets-management",
   },
   // Supply Chain Security
   {
@@ -157,7 +157,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "Cosign is a tool for signing and verifying container images, enabling supply chain security. It supports keyless signing using OIDC identities and integrates with registries and Kubernetes admission controllers.",
-    docLink: "/docs/best_practices/supply_chain_security/cosign",
+    docLink: "/kubernetes-security/best-practices/supply-chain-security/cosign",
   },
   {
     id: 11,
@@ -171,7 +171,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "SBOM (Software Bill of Materials) is a formal record of the components and dependencies in software. It enables vulnerability tracking and supply chain transparency. Tools like Syft generate SBOMs.",
-    docLink: "/docs/best_practices/supply_chain_security/syft",
+    docLink: "/kubernetes-security/best-practices/supply-chain-security/syft",
   },
   {
     id: 12,
@@ -185,7 +185,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 2,
     explanation: "Trivy is a comprehensive security scanner that detects vulnerabilities, misconfigurations, and secrets in container images, filesystems, and Kubernetes manifests.",
-    docLink: "/docs/best_practices/monitoring_logging_and_runtime_security/trivy",
+    docLink: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/trivy",
   },
   // Monitoring, Logging & Runtime Security
   {
@@ -200,7 +200,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "Falco is a cloud-native runtime security tool that detects abnormal behavior, security threats, and compliance violations using system call monitoring and custom rules.",
-    docLink: "/docs/best_practices/monitoring_logging_and_runtime_security/falco",
+    docLink: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/falco",
   },
   {
     id: 14,
@@ -214,7 +214,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "Audit logging records all requests to the Kubernetes API server, providing a chronological record of activities for security analysis, compliance, and incident investigation.",
-    docLink: "/docs/best_practices/monitoring_logging_and_runtime_security/intro",
+    docLink: "/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/intro",
   },
   // RBAC
   {
@@ -229,7 +229,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 2,
     explanation: "A Role grants permissions within a specific namespace. For cluster-wide permissions, you would use a ClusterRole. Roles are bound to subjects using RoleBindings.",
-    docLink: "/docs/fundamentals/authorization/rbac",
+    docLink: "/kubernetes-security/fundamentals/authorization/rbac",
   },
   {
     id: 16,
@@ -243,7 +243,7 @@ const questions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "Using wildcard (*) verbs grants all possible permissions including get, list, create, update, patch, delete, and watch. This violates the principle of least privilege and can lead to privilege escalation.",
-    docLink: "/docs/attack_vectors/insecure_rbac_permissions",
+    docLink: "/kubernetes-security/attack-vectors/insecure-rbac-permissions",
   },
 ];
 
@@ -482,7 +482,7 @@ export default function Practice(): JSX.Element {
 
           <div className={styles.cta}>
             <p>Want to dive deeper into these topics?</p>
-            <Link to="/docs/intro" className={styles.ctaButton}>
+            <Link to="/kubernetes-security/intro" className={styles.ctaButton}>
               Read the Full Documentation
             </Link>
           </div>

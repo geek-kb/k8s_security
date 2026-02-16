@@ -5,9 +5,9 @@ description: "kdigger is a Kubernetes-focused container assessment and context d
 keywords: [kubernetes security tool, kdigger, container assessment, penetration testing, kubernetes security, context discovery, security assessment, red team, CKS]
 tags: [tool, penetration-testing, container-security]
 related:
-  - /docs/tools/cdk/
-  - /docs/tools/red_kube/
-  - /docs/attack_vectors/privileged_container_escape/
+  - /kubernetes-security/tools/cdk/
+  - /kubernetes-security/tools/red-kube/
+  - /kubernetes-security/attack-vectors/privileged-container-escape/
 ---
 
 # kdigger

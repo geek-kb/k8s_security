@@ -11,28 +11,28 @@ const features = [
     title: "Security Fundamentals",
     description:
       "Master Kubernetes authentication, authorization, RBAC, and the 4C's of cloud-native security.",
-    link: "/docs/fundamentals/intro",
+    link: "/kubernetes-security/fundamentals/intro",
     icon: "🛡️",
   },
   {
     title: "Attack Vectors",
     description:
       "Understand real-world Kubernetes vulnerabilities, container escapes, and privilege escalation techniques.",
-    link: "/docs/attack_vectors/intro",
+    link: "/kubernetes-security/attack-vectors/intro",
     icon: "⚠️",
   },
   {
     title: "Best Practices",
     description:
       "Implement cluster hardening, network policies, Pod Security Standards, and supply chain security.",
-    link: "/docs/best_practices/intro",
+    link: "/kubernetes-security/best-practices/intro",
     icon: "✓",
   },
   {
     title: "Security Tools",
     description:
       "Discover tools for vulnerability scanning, runtime security, policy enforcement, and compliance.",
-    link: "/docs/tools/intro",
+    link: "/kubernetes-security/tools/intro",
     icon: "🔧",
   },
 ];
@@ -53,10 +53,10 @@ function HeroSection() {
           and implementing production-grade container security.
         </p>
         <div className={styles.heroButtons}>
-          <Link className={styles.primaryButton} to="/docs/intro">
+          <Link className={styles.primaryButton} to="/kubernetes-security/intro">
             Get Started
           </Link>
-          <Link className={styles.secondaryButton} to="/docs/best_practices/intro">
+          <Link className={styles.secondaryButton} to="/kubernetes-security/best-practices/intro">
             Best Practices
           </Link>
         </div>
@@ -151,7 +151,7 @@ function CTASection() {
           From fundamentals to advanced hardening techniques — everything you need
           to build secure, production-ready Kubernetes environments.
         </p>
-        <Link className={styles.primaryButton} to="/docs/intro">
+        <Link className={styles.primaryButton} to="/kubernetes-security/intro">
           Read the Documentation
         </Link>
       </div>

@@ -5,9 +5,9 @@ description: "CDK is a zero-dependency container penetration toolkit for assessi
 keywords: [kubernetes security tool, CDK, container penetration testing, container escape, security assessment, red team, kubernetes security testing, container toolkit, CKS]
 tags: [tool, penetration-testing, container-security]
 related:
-  - /docs/tools/kdigger/
-  - /docs/tools/red_kube/
-  - /docs/attack_vectors/privileged_container_escape/
+  - /kubernetes-security/tools/kdigger/
+  - /kubernetes-security/tools/red-kube/
+  - /kubernetes-security/attack-vectors/privileged-container-escape/
 ---
 
 # CDK (Container Penetration Toolkit)
