@@ -25,10 +25,8 @@ This site is dedicated to helping developers, DevOps engineers, and Kubernetes a
 
 Topics relevant for the CKS certification exam are marked accordingly throughout the documentation.
 
-| | |
-|---|---|
-| **Current Kubernetes Version** | 1.35 |
-| **CKS Exam Last Updated** | October 15, 2024 |
+- **Current Kubernetes Version:** 1.35
+- **CKS Exam Last Updated:** October 15, 2024
 
 :::info Work in Progress
 The site is actively being developed. More CKS-related topics are being added regularly.
