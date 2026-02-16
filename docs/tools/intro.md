@@ -183,6 +183,140 @@ Collects low-level syscall traces and performance data for on-node container int
 
 Run BPFTrace programs inside your Kubernetes cluster to trace detailed system behavior.
 
+### [kubectl-dig](/docs/best_practices/monitoring_logging_and_runtime_security/kubectl_dig)
+
+Provides deep visibility into Kubernetes cluster activity using eBPF-based tracing for real-time system call and network analysis.
+
+### [Deepfence ThreatMapper](/docs/best_practices/monitoring_logging_and_runtime_security/threatmapper)
+
+Runtime vulnerability scanner and threat detection platform that discovers threats across Kubernetes clusters, VMs, and containers.
+
+---
+
+## Penetration Testing and Adversary Emulation
+
+Tools for security assessments, red team exercises, and testing Kubernetes defenses from an attacker's perspective.
+
+### [CDK (Container Penetration Toolkit)](/docs/tools/cdk)
+
+Zero-dependency container penetration toolkit for assessing container security and discovering escape vectors.
+
+### [kdigger](/docs/tools/kdigger)
+
+Kubernetes-focused container assessment and context discovery tool for understanding the security environment during penetration tests.
+
+### [red-kube](/docs/tools/red_kube)
+
+Kubernetes adversary emulation framework based on kubectl, providing attack simulations aligned with MITRE ATT&CK tactics.
+
+---
+
+## RBAC Analysis and Auditing
+
+Tools for analyzing, visualizing, and auditing Kubernetes RBAC configurations.
+
+### [kubectl-who-can](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/kubectl_who_can)
+
+Shows which subjects have RBAC permissions to perform specific actions on Kubernetes resources.
+
+### [rakkess](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/rakkess)
+
+Displays an access matrix showing which resources a user, group, or service account can access.
+
+### [rback](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/rback)
+
+Generates visual diagrams of Kubernetes RBAC configurations for security reviews and documentation.
+
+### [kubectl-bindrole](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/kubectl_bindrole)
+
+Finds all roles and cluster roles bound to a specified ServiceAccount, User, or Group.
+
+### [audit2rbac](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/audit2rbac)
+
+Automatically generates RBAC policies from Kubernetes audit logs for least-privilege configurations.
+
+### [kubernetes-rbac-audit](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/kubernetes_rbac_audit)
+
+Security auditing tool that analyzes RBAC configurations to identify risky permissions and misconfigurations.
+
+---
+
+## Cloud IAM Integration
+
+Tools for integrating Kubernetes pods with cloud provider identity systems.
+
+### [kube2iam](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/kube2iam)
+
+Enables Kubernetes pods to assume AWS IAM roles for fine-grained AWS credential management.
+
+### [kiam](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/kiam)
+
+Provides AWS IAM credentials to pods using a secure client-server architecture.
+
+### [aad-pod-identity](/docs/best_practices/cluster_setup_and_hardening/rbac_and_identity/aad_pod_identity)
+
+Enables Kubernetes pods on Azure to use Azure Active Directory managed identities.
+
+---
+
+## Extended Secrets Management
+
+### [Kubernetes External Secrets](/docs/best_practices/cluster_setup_and_hardening/secrets_management/kubernetes_external_secrets)
+
+Synchronizes secrets from external providers like AWS Secrets Manager, HashiCorp Vault, and Azure Key Vault into Kubernetes.
+
+### [Vault Secrets Operator](/docs/best_practices/cluster_setup_and_hardening/secrets_management/vault_secrets_operator)
+
+HashiCorp's official Kubernetes operator for synchronizing secrets from Vault into Kubernetes Secrets.
+
+---
+
+## Supply Chain and Inventory
+
+### [KBOM](/docs/best_practices/supply_chain_security/kbom)
+
+Kubernetes Bill of Materials toolkit that generates comprehensive inventories of cluster components, images, and configurations.
+
+### [Kubei](/docs/best_practices/supply_chain_security/kubei)
+
+Kubernetes runtime vulnerability scanner that identifies CVEs in container images across your cluster.
+
+### [Trivy Operator](/docs/best_practices/supply_chain_security/trivy_operator)
+
+Kubernetes-native security scanning operator that automatically scans workloads for vulnerabilities, misconfigurations, and secrets.
+
+---
+
+## Additional Configuration Validation
+
+### [cnspec](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/cnspec)
+
+Cloud-native security scanner from Mondoo that assesses Kubernetes clusters against security policies and compliance frameworks.
+
+### [kube-scan](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/kube_scan)
+
+Kubernetes risk assessment tool that calculates risk scores for workloads based on security configurations.
+
+### [kubectl-kubesec](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/kubectl_kubesec)
+
+kubectl plugin that scans Kubernetes resources using kubesec.io to identify security risks.
+
+### [Steampipe for Kubernetes](/docs/best_practices/cluster_setup_and_hardening/configuration_validation/steampipe)
+
+SQL-based querying of Kubernetes resources and compliance scanning using CIS and NSA/CISA benchmarks.
+
+### [kube-psp-advisor](/docs/best_practices/cluster_setup_and_hardening/pod_security/kube_psp_advisor)
+
+Generates Pod Security Policies and Standards recommendations based on actual workload requirements.
+
+---
+
+## Network Testing
+
+### [netchecks](/docs/best_practices/cluster_setup_and_hardening/network_security/netchecks)
+
+Validates network connectivity assumptions and verifies that network policies work as expected using declarative tests.
+
 ---
 
 ## CI/CD and GitOps Security
