@@ -76,7 +76,11 @@ export default function About(): JSX.Element {
       <main className={styles.main}>
         <div className={styles.container}>
           <div className={styles.header}>
-            <div className={styles.avatar}>IG</div>
+            <img 
+              src="/img/itai-ganot.png" 
+              alt="Itai Ganot" 
+              className={styles.avatar}
+            />
             <div className={styles.headerText}>
               <h1 className={styles.name}>Itai Ganot</h1>
               <p className={styles.role}>DevOps Tech Lead @ Payoneer</p>

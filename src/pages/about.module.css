@@ -21,16 +21,10 @@
 .avatar {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
+  object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid #22c55e;
 }
 
 .headerText {
