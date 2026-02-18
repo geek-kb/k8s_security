@@ -87,7 +87,7 @@ export default function About(): JSX.Element {
             />
             <div className={styles.headerText}>
               <h1 className={styles.name}>Itai Ganot</h1>
-              <p className={styles.role}>DevOps Tech Lead @ Payoneer</p>
+              <p className={styles.role}>DevOps Group Tech Lead @ Payoneer</p>
             </div>
           </div>
 
