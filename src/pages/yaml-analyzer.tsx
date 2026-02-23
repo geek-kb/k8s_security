@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useRef} from "react";
+import React, {useState, useCallback, useRef, useEffect} from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import * as jsYaml from "js-yaml";
@@ -634,12 +634,56 @@ spec:
             privileged: true
             runAsUser: 0`;
 
+function encodeYaml(content: string): string {
+  return btoa(unescape(encodeURIComponent(content)));
+}
+
+function decodeYaml(encoded: string): string {
+  return decodeURIComponent(escape(atob(encoded)));
+}
+
 export default function YamlAnalyzer(): React.ReactElement {
   const [yaml, setYaml] = useState<string>("");
   const [reports, setReports] = useState<ResourceReport[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [copyState, setCopyState] = useState<"idle" | "copied">("idle");
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const encoded = params.get("yaml");
+    if (!encoded) return;
+    try {
+      const decoded = decodeYaml(encoded);
+      setYaml(decoded);
+      // auto-run analysis when loaded from a shared URL
+      try {
+        const docs = jsYaml.loadAll(decoded) as any[];
+        const validDocs = docs.filter(
+          (d) => d && typeof d === "object" && d.kind
+        );
+        if (validDocs.length > 0) {
+          setReports(validDocs.map(analyzeResource));
+        }
+      } catch {
+        // parse error handled silently; user can still click Analyze
+      }
+    } catch {
+      // ignore malformed base64 in URL
+    }
+  }, []);
+
+  const handleShare = useCallback(() => {
+    if (typeof window === "undefined" || !yaml.trim()) return;
+    const encoded = encodeYaml(yaml);
+    const url = `${window.location.origin}/yaml-analyzer/?yaml=${encoded}`;
+    navigator.clipboard.writeText(url).then(() => {
+      setCopyState("copied");
+      setTimeout(() => setCopyState("idle"), 2000);
+    });
+  }, [yaml]);
 
   const analyze = useCallback(() => {
     setError(null);
@@ -812,6 +856,15 @@ export default function YamlAnalyzer(): React.ReactElement {
               >
                 Analyze
               </button>
+              {yaml.trim() && (
+                <button
+                  className={styles.btnSecondary}
+                  onClick={handleShare}
+                  type="button"
+                >
+                  {copyState === "copied" ? "Link copied!" : "Copy share link"}
+                </button>
+              )}
               {yaml.trim() && (
                 <span className={styles.charCount}>
                   {yaml.split("\n").length} lines
