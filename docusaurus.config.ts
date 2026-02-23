@@ -528,6 +528,7 @@ const config: Config = {
         {to: "/kubernetes-security/intro", label: "Docs", position: "left"},
         {to: "/glossary", label: "Glossary", position: "left"},
         {to: "/practice", label: "Practice", position: "left"},
+        {to: "/yaml-analyzer", label: "YAML Analyzer", position: "left"},
         {to: "/books", label: "Books", position: "left"},
         // Blog hidden until more content is available
         // {to: "/blog", label: "Blog", position: "left"},
