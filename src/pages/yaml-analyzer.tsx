@@ -648,7 +648,7 @@ export default function YamlAnalyzer(): React.ReactElement {
   const [reports, setReports] = useState<ResourceReport[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
-  const [copyState, setCopyState] = useState<"idle" | "copied">("idle");
+  const [copyState, setCopyState] = useState<"idle" | "shortening" | "copied" | "fallback">("idle");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -676,14 +676,32 @@ export default function YamlAnalyzer(): React.ReactElement {
     }
   }, []);
 
-  const handleShare = useCallback(() => {
+  const handleShare = useCallback(async () => {
     if (typeof window === "undefined" || !yaml.trim()) return;
     const encoded = encodeYaml(yaml);
-    const url = `${window.location.origin}/yaml-analyzer/?yaml=${encoded}`;
-    navigator.clipboard.writeText(url).then(() => {
+    const fullUrl = `${window.location.origin}/yaml-analyzer/?yaml=${encoded}`;
+
+    setCopyState("shortening");
+    try {
+      const resp = await fetch(
+        `https://is.gd/create.php?format=simple&url=${encodeURIComponent(fullUrl)}`
+      );
+      if (!resp.ok) throw new Error("non-ok response");
+      const shortUrl = (await resp.text()).trim();
+      if (!shortUrl.startsWith("http")) throw new Error("unexpected response");
+      await navigator.clipboard.writeText(shortUrl);
       setCopyState("copied");
-      setTimeout(() => setCopyState("idle"), 2000);
-    });
+    } catch {
+      // Fallback: copy the compressed URL directly
+      try {
+        await navigator.clipboard.writeText(fullUrl);
+        setCopyState("fallback");
+      } catch {
+        setCopyState("idle");
+        return;
+      }
+    }
+    setTimeout(() => setCopyState("idle"), 2500);
   }, [yaml]);
 
   const analyze = useCallback(() => {
@@ -862,8 +880,15 @@ export default function YamlAnalyzer(): React.ReactElement {
                   className={styles.btnSecondary}
                   onClick={handleShare}
                   type="button"
+                  disabled={copyState === "shortening"}
                 >
-                  {copyState === "copied" ? "Link copied!" : "Copy share link"}
+                  {copyState === "shortening"
+                    ? "Shortening..."
+                    : copyState === "copied"
+                    ? "Short link copied!"
+                    : copyState === "fallback"
+                    ? "Link copied!"
+                    : "Share"}
                 </button>
               )}
               {yaml.trim() && (
