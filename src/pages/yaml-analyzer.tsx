@@ -2,6 +2,7 @@ import React, {useState, useCallback, useRef, useEffect} from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import * as jsYaml from "js-yaml";
+import LZString from "lz-string";
 import styles from "./yaml-analyzer.module.css";
 
 type Severity = "critical" | "high" | "medium" | "low" | "info" | "pass";
@@ -635,11 +636,11 @@ spec:
             runAsUser: 0`;
 
 function encodeYaml(content: string): string {
-  return btoa(unescape(encodeURIComponent(content)));
+  return LZString.compressToEncodedURIComponent(content);
 }
 
 function decodeYaml(encoded: string): string {
-  return decodeURIComponent(escape(atob(encoded)));
+  return LZString.decompressFromEncodedURIComponent(encoded) ?? "";
 }
 
 export default function YamlAnalyzer(): React.ReactElement {
