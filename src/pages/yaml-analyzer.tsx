@@ -3,6 +3,7 @@ import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import * as jsYaml from "js-yaml";
 import LZString from "lz-string";
+import pako from "pako";
 import styles from "./yaml-analyzer.module.css";
 
 type Severity = "critical" | "high" | "medium" | "low" | "info" | "pass";
@@ -635,11 +636,32 @@ spec:
             privileged: true
             runAsUser: 0`;
 
+// Encode with pako deflate + base64url (prefix "p-" marks the new format)
 function encodeYaml(content: string): string {
-  return LZString.compressToEncodedURIComponent(content);
+  const compressed = pako.deflate(content, {level: 9});
+  let binary = "";
+  for (let i = 0; i < compressed.length; i++) {
+    binary += String.fromCharCode(compressed[i]);
+  }
+  const b64url = btoa(binary)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=/g, "");
+  return "p-" + b64url;
 }
 
+// Decode both new pako format ("p-" prefix) and legacy lz-string URLs
 function decodeYaml(encoded: string): string {
+  if (encoded.startsWith("p-")) {
+    const b64 = encoded.slice(2).replace(/-/g, "+").replace(/_/g, "/");
+    const binary = atob(b64);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+      bytes[i] = binary.charCodeAt(i);
+    }
+    return pako.inflate(bytes, {to: "string"});
+  }
+  // Legacy lz-string fallback
   return LZString.decompressFromEncodedURIComponent(encoded) ?? "";
 }
 
