@@ -58,3 +58,6 @@ coverage/
 
 # Cursor AI rules file (local configuration)
 .cursorrules
+
+CLAUDE.md
+.claude/
