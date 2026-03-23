@@ -415,6 +415,15 @@ const config: Config = {
   ],
 
   themeConfig: {
+    // Announcement bar
+    announcementBar: {
+      id: "cks_practice",
+      content:
+        'New: <a href="/practice">CKS Practice Questions</a> and interactive <a href="/yaml-analyzer">YAML Security Analyzer</a> are now available.',
+      backgroundColor: "#22c55e",
+      textColor: "#0f172a",
+      isCloseable: true,
+    },
     // Dark mode by default
     colorMode: {
       defaultMode: "dark",

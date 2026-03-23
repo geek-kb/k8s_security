@@ -125,7 +125,7 @@
 .statLabel {
   display: block;
   font-size: 0.875rem;
-  color: #64748b;
+  color: #94a3b8;
   margin-top: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -246,7 +246,7 @@
 
 .cksDomain p {
   font-size: 0.875rem;
-  color: #64748b;
+  color: #94a3b8;
   margin: 0;
   line-height: 1.5;
 }
@@ -336,7 +336,7 @@
 }
 
 [data-theme="light"] .statLabel {
-  color: #64748b;
+  color: #475569;
 }
 
 [data-theme="light"] .features {
