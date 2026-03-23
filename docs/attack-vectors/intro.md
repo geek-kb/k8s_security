@@ -31,6 +31,7 @@ This section explores common Kubernetes attack vectors and exploitation techniqu
 
 ### API and Control Plane Attacks
 - **[Compromised API Server](/kubernetes-security/attack-vectors/compromised-api-server/)**: Exploiting exposed API endpoints
+- **[Anonymous API Server Access Exploitation](/kubernetes-security/attack-vectors/anonymous-api-server-access/)**: Accessing cluster resources via the default anonymous identity without credentials
 - **[Exposed Dashboard](/kubernetes-security/attack-vectors/exposed-dashboard/)**: Unauthorized access to Kubernetes dashboards
 - **[Unrestricted etcd Access](/kubernetes-security/attack-vectors/unrestricted-etcd-access/)**: Accessing etcd storage to retrieve secrets and cluster configurations
 - **[Kubelet Anonymous Authentication Abuse](/kubernetes-security/attack-vectors/kubelet-anonymous-auth/)**: Exploiting unauthenticated kubelet API access to execute commands and steal credentials
@@ -40,6 +41,7 @@ This section explores common Kubernetes attack vectors and exploitation techniqu
 - **[Unrestricted HostPath Mounts](/kubernetes-security/attack-vectors/unrestricted-hostpath-mounts/)**: Mounting host filesystem for full node compromise
 - **[Compromised Sidecars](/kubernetes-security/attack-vectors/compromised-sidecars/)**: Injecting or abusing sidecars to intercept data
 - **[Ephemeral Debug Container Abuse](/kubernetes-security/attack-vectors/ephemeral-container-abuse/)**: Exploiting kubectl debug to inject containers and access process namespaces
+- **[Container Image Supplemental Group Injection](/kubernetes-security/attack-vectors/supplemental-group-injection/)**: Injecting unauthorized group IDs via /etc/group in container images to bypass policy controls
 
 ### Identity and Access Attacks
 - **[Insecure RBAC Permissions](/kubernetes-security/attack-vectors/insecure-rbac-permissions)**: Exploiting misconfigured Role-Based Access Control

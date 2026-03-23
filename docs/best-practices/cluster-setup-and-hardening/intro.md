@@ -31,6 +31,7 @@ Harden the Kubernetes API server to reduce exposure and control access:
 - [Misconfigured Admission Controllers Mitigation](/kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/misconfigured-admission-controllers-mitigation)
 - [OPA/Gatekeeper](/kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/opa-gatekeeper)
 - [Kyverno](/kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/kyverno)
+- [Restricting Anonymous API Server Access](/kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/anonymous-api-access)
 
 ---
 
@@ -82,6 +83,7 @@ Enforce strict security boundaries within workloads:
 - [Seccomp in Pods](/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/seccomp-in-pods)
 - [Unrestricted hostPath Mitigation](/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/unrestricted-hostpath-mitigation)
 - [KubeAudit](/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/kubeaudit)
+- [Controlling Supplemental Group IDs with SupplementalGroupsPolicy](/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/supplemental-groups-policy)
 
 ---
 
