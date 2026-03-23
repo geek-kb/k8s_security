@@ -31,7 +31,6 @@ This section explores common Kubernetes attack vectors and exploitation techniqu
 
 ### API and Control Plane Attacks
 - **[Compromised API Server](/kubernetes-security/attack-vectors/compromised-api-server/)**: Exploiting exposed API endpoints
-- **[Anonymous API Server Access Exploitation](/kubernetes-security/attack-vectors/anonymous-api-server-access/)**: Accessing cluster resources via the default anonymous identity without credentials
 - **[Exposed Dashboard](/kubernetes-security/attack-vectors/exposed-dashboard/)**: Unauthorized access to Kubernetes dashboards
 - **[Unrestricted etcd Access](/kubernetes-security/attack-vectors/unrestricted-etcd-access/)**: Accessing etcd storage to retrieve secrets and cluster configurations
 - **[Kubelet Anonymous Authentication Abuse](/kubernetes-security/attack-vectors/kubelet-anonymous-auth/)**: Exploiting unauthenticated kubelet API access to execute commands and steal credentials

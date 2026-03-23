@@ -5,7 +5,6 @@ description: "How to restrict anonymous access to the Kubernetes API server to s
 keywords: [kubernetes anonymous access, api server security, AuthenticationConfiguration, anonymous auth, kubernetes hardening, CKS, cluster security]
 tags: [best-practice, mitigation, api-server, authentication, CKS]
 related:
-  - /kubernetes-security/attack-vectors/anonymous-api-server-access/
   - /kubernetes-security/attack-vectors/compromised-api-server/
   - /kubernetes-security/attack-vectors/kubelet-anonymous-auth/
   - /kubernetes-security/best-practices/cluster-setup-and-hardening/api-server-security/compromised-api-server-mitigation/
