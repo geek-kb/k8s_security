@@ -415,15 +415,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Announcement bar
-    announcementBar: {
-      id: "new_domain",
-      content:
-        'Welcome to our new domain! <a href="/kubernetes-security/intro">Start learning Kubernetes security</a> or try our <a href="/practice">CKS Practice Questions</a>',
-      backgroundColor: "#22c55e",
-      textColor: "#fff",
-      isCloseable: true,
-    },
     // Dark mode by default
     colorMode: {
       defaultMode: "dark",
@@ -434,7 +425,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["bash", "yaml", "json", "docker", "nginx"],
+      additionalLanguages: ["bash", "yaml", "json"],
     },
     image: "img/k8s-security-social-card.png",
     metadata: [
@@ -475,6 +466,8 @@ const config: Config = {
         alt: "K8s Security Logo - Kubernetes Security Guide",
         src: "img/logo.svg",
         href: "/",
+        width: 32,
+        height: 32,
       },
       items: [
         {to: "/kubernetes-security/intro", label: "Docs", position: "left"},
