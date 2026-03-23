@@ -2,8 +2,6 @@ User-agent: *
 Allow: /
 
 # Exclude low-value pages from crawling
-Disallow: /blog/tags/
-Disallow: /docs/tags/
 Disallow: /search/
 Disallow: /blog/page/
 Disallow: /blog/archive/
