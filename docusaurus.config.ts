@@ -230,14 +230,6 @@ const config: Config = {
         content: "yrB3LatWvI_jt5pwLIMIoYLq_VXr2CjHgpoZdWDjFw0",
       },
     },
-    // Google AdSense account verification
-    {
-      tagName: "meta",
-      attributes: {
-        name: "google-adsense-account",
-        content: "ca-pub-8445622451057816",
-      },
-    },
     // WebSite structured data
     {
       tagName: "script",
@@ -417,46 +409,6 @@ const config: Config = {
       attributes: {
         rel: "preconnect",
         href: "https://www.googletagmanager.com",
-      },
-    },
-    {
-      tagName: "link",
-      attributes: {
-        rel: "preconnect",
-        href: "https://pagead2.googlesyndication.com",
-      },
-    },
-    {
-      tagName: "link",
-      attributes: {
-        rel: "dns-prefetch",
-        href: "https://images-na.ssl-images-amazon.com",
-      },
-    },
-    // Google Analytics
-    {
-      tagName: "script",
-      attributes: {
-        async: "true",
-        src: "https://www.googletagmanager.com/gtag/js?id=G-QNPKC33Q9L",
-      },
-    },
-    {
-      tagName: "script",
-      attributes: {},
-      innerHTML: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QNPKC33Q9L');
-      `,
-    },
-    // Google AdSense
-    {
-      tagName: "script",
-      attributes: {
-        async: "true",
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8445622451057816",
         crossorigin: "anonymous",
       },
     },

@@ -116,35 +116,6 @@ export default function Privacy(): JSX.Element {
                 </a>
               </p>
 
-              <h3>Google AdSense</h3>
-              <p>
-                We use Google AdSense to display advertisements on our Site. Google 
-                AdSense uses cookies to serve ads based on your prior visits to our 
-                Site or other websites. Google's use of advertising cookies enables 
-                it and its partners to serve ads based on your visit to our Site 
-                and/or other sites on the Internet.
-              </p>
-              <p>
-                You may opt out of personalized advertising by visiting{" "}
-                <a 
-                  href="https://www.google.com/settings/ads" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Google Ads Settings
-                </a>
-                . Alternatively, you can opt out of a third-party vendor's use of 
-                cookies for personalized advertising by visiting{" "}
-                <a 
-                  href="https://www.aboutads.info/choices/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  www.aboutads.info
-                </a>
-                .
-              </p>
-
               <h3>Amazon Affiliate Program</h3>
               <p>
                 K8s Security Guide is a participant in the Amazon Services LLC 

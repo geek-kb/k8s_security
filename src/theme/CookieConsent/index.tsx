@@ -26,7 +26,7 @@ export default function CookieConsent(): JSX.Element | null {
     localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
     setConsentStatus("accepted");
     setIsVisible(false);
-    // Google Analytics and AdSense are already loaded, consent is noted
+    // Google Analytics is already loaded, consent is noted
   };
 
   const handleDecline = () => {
@@ -34,8 +34,6 @@ export default function CookieConsent(): JSX.Element | null {
     setConsentStatus("declined");
     setIsVisible(false);
     // Optionally disable tracking here
-    // For full compliance, you'd need to conditionally load GA/AdSense
-    // based on consent, but that requires significant refactoring
   };
 
   // Don't render if user has already made a choice
@@ -49,8 +47,7 @@ export default function CookieConsent(): JSX.Element | null {
         <div className={styles.text}>
           <p className={styles.title}>Cookie Notice</p>
           <p className={styles.description}>
-            We use cookies and similar technologies to analyze traffic, personalize 
-            content, and serve targeted advertisements. By clicking "Accept", you 
+            We use cookies to analyze traffic and improve your experience. By clicking "Accept", you
             consent to our use of cookies. Read our{" "}
             <Link to="/privacy/" className={styles.link}>
               Privacy Policy
