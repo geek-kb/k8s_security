@@ -27,6 +27,10 @@ This section provides guidance on **effective observability** and **real-time se
 - Store logs in a **centralized and immutable** logging system for auditability.
 - Implement **log rotation and retention policies** to manage storage efficiently.
 
+### **Key Articles**
+
+- [Kubernetes Audit Logging](/kubernetes-security/best-practices/monitoring-logging-and-runtime-security/kubernetes-audit-logging/)
+
 ### **Runtime Security**
 
 **Required knowledge for the CKS certification.**

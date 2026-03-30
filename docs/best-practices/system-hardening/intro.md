@@ -26,6 +26,11 @@ This section provides best practices to **harden Kubernetes nodes, secure the OS
 - Use **hardened container runtimes** (e.g., **containerd**, **gVisor**, **Kata Containers**).
 - Enable **AppArmor** or **SELinux** to restrict process execution.
 
+### **Key Articles**
+
+- [Dropping Linux Capabilities in Containers](/kubernetes-security/best-practices/system-hardening/linux-capabilities/)
+- [Sysctl Security in Kubernetes](/kubernetes-security/best-practices/system-hardening/sysctl-security/)
+
 ### **Kernel Security Enhancements**
 
 **Required knowledge for the CKS certification.**

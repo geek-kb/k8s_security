@@ -128,7 +128,9 @@ The attacker achieves **interactive root access on the host node**. This breaks 
 
 ## Mitigation
 
-➡ [Preventing Container Escape](/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/container-escape-mitigation)
+➡ [Preventing Container Escape](/kubernetes-security/best-practices/cluster-setup-and-hardening/pod-security/container-escape-mitigation/)
+
+➡ [Dropping Linux Capabilities in Containers](/kubernetes-security/best-practices/system-hardening/linux-capabilities/)
 
 ---
 
